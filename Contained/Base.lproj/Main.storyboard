@@ -17,11 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="RQV-sh-oJR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swF-Xw-ZM5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="swF-Xw-ZM5" firstAttribute="top" secondItem="T7y-6p-yUK" secondAttribute="top" id="35X-Oy-LOv"/>
+                            <constraint firstItem="swF-Xw-ZM5" firstAttribute="leading" secondItem="T7y-6p-yUK" secondAttribute="leading" id="PUW-a8-nN0"/>
+                            <constraint firstItem="swF-Xw-ZM5" firstAttribute="trailing" secondItem="T7y-6p-yUK" secondAttribute="trailing" id="WL2-vD-bwg"/>
+                            <constraint firstItem="T7y-6p-yUK" firstAttribute="bottom" secondItem="swF-Xw-ZM5" secondAttribute="bottom" id="wg5-fK-NZc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T7y-6p-yUK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="0sa-l5-GlG"/>
                     <navigationItem key="navigationItem" title="Title" id="ld4-Mn-5Uc"/>
+                    <connections>
+                        <outlet property="skview" destination="swF-Xw-ZM5" id="rLn-ML-oe0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6J-OP-xE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,7 +152,52 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="wlc-He-pMC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s4o-fK-DZ7">
+                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-oS-beI">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7j-nr-1Ic">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pah-xm-utB">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="O8b-pU-IpT" eventType="valueChanged" id="pCW-Yh-P0P"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f0y-iD-7aJ">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqg-4V-yPP">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eMT-EI-cOs">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="O8b-pU-IpT" eventType="valueChanged" id="sfT-4Q-0el"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s4o-fK-DZ7" firstAttribute="centerY" secondItem="wlc-He-pMC" secondAttribute="centerY" id="CZI-qX-wmT"/>
+                            <constraint firstItem="s4o-fK-DZ7" firstAttribute="centerX" secondItem="wlc-He-pMC" secondAttribute="centerX" id="M9C-tg-HzH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4u3-i3-Tim"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="HiV-VO-Yqo"/>
@@ -159,8 +218,8 @@ the crab</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="A7L-2C-YVV" kind="relationship" relationship="viewControllers" id="DLa-ju-K6X"/>
                         <segue destination="pAX-ve-6XV" kind="relationship" relationship="viewControllers" id="dtx-Xe-28E"/>
+                        <segue destination="A7L-2C-YVV" kind="relationship" relationship="viewControllers" id="DLa-ju-K6X"/>
                         <segue destination="O8b-pU-IpT" kind="relationship" relationship="viewControllers" id="oQn-OS-ftK"/>
                     </connections>
                 </tabBarController>
