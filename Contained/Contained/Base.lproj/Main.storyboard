@@ -13,14 +13,28 @@
         <!--Play-->
         <scene sceneID="6yn-CF-my8">
             <objects>
-                <viewController id="d13-KL-HzY" sceneMemberID="viewController">
+                <viewController id="d13-KL-HzY" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VIH-Rp-6gv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWI-XC-JWb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FWI-XC-JWb" firstAttribute="top" secondItem="XL8-lN-Vra" secondAttribute="top" id="TJz-cg-62N"/>
+                            <constraint firstItem="XL8-lN-Vra" firstAttribute="bottom" secondItem="FWI-XC-JWb" secondAttribute="bottom" id="qCj-Hc-ZpO"/>
+                            <constraint firstItem="XL8-lN-Vra" firstAttribute="trailing" secondItem="FWI-XC-JWb" secondAttribute="trailing" id="vuX-cD-vvt"/>
+                            <constraint firstItem="FWI-XC-JWb" firstAttribute="leading" secondItem="XL8-lN-Vra" secondAttribute="leading" id="wdK-na-oyT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XL8-lN-Vra"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="zR9-ZF-2OR"/>
+                    <connections>
+                        <outlet property="skview" destination="FWI-XC-JWb" id="Vjb-UY-dmt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAU-fY-iRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
