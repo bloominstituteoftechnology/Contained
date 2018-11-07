@@ -120,10 +120,24 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="ZEO-Pz-2CK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpB-82-Sfa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dqh-Lt-tsj" firstAttribute="bottom" secondItem="PpB-82-Sfa" secondAttribute="bottom" id="CFV-If-093"/>
+                            <constraint firstItem="PpB-82-Sfa" firstAttribute="leading" secondItem="Dqh-Lt-tsj" secondAttribute="leading" id="KE6-5p-zgb"/>
+                            <constraint firstItem="PpB-82-Sfa" firstAttribute="top" secondItem="Dqh-Lt-tsj" secondAttribute="top" id="LuM-aa-Duv"/>
+                            <constraint firstItem="Dqh-Lt-tsj" firstAttribute="trailing" secondItem="PpB-82-Sfa" secondAttribute="trailing" id="iky-Fh-3YH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dqh-Lt-tsj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="4IS-tq-rbx"/>
+                    <connections>
+                        <outlet property="skview" destination="PpB-82-Sfa" id="eTD-qu-roy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bts-JK-Usj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +166,7 @@ the crab</string>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0B3-DY-NbW">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="AER-3C-fVr" eventType="valueChanged" id="dbF-AT-NT8"/>
+                                                    <action selector="toggleRoll:" destination="AER-3C-fVr" eventType="valueChanged" id="kwY-e9-2wu"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -185,6 +199,10 @@ the crab</string>
                         <viewLayoutGuide key="safeArea" id="YWC-E4-tSQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="1UB-EK-wXO"/>
+                    <connections>
+                        <outlet property="rollSwitch" destination="0B3-DY-NbW" id="day-0v-qGG"/>
+                        <outlet property="zoomSwitch" destination="QAt-cT-aRN" id="EuO-7P-WZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pu3-VB-WwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
