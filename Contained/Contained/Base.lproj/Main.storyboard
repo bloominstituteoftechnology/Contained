@@ -12,18 +12,32 @@
         <!--Play-->
         <scene sceneID="w9k-xI-e5h">
             <objects>
-                <viewController title="Play" id="t0S-KC-iCR" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController title="Play" id="t0S-KC-iCR" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YB1-3u-QfG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUx-zN-lud">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KUx-zN-lud" firstAttribute="leading" secondItem="zze-mU-ZHT" secondAttribute="leading" id="D5O-9m-Dnv"/>
+                            <constraint firstItem="zze-mU-ZHT" firstAttribute="bottom" secondItem="KUx-zN-lud" secondAttribute="bottom" id="WTM-0q-0FU"/>
+                            <constraint firstItem="KUx-zN-lud" firstAttribute="top" secondItem="zze-mU-ZHT" secondAttribute="top" id="tlH-6s-u6Q"/>
+                            <constraint firstItem="zze-mU-ZHT" firstAttribute="trailing" secondItem="KUx-zN-lud" secondAttribute="trailing" id="y8d-mg-krt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zze-mU-ZHT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="ELt-Jj-Bkg"/>
+                    <connections>
+                        <outlet property="skview" destination="KUx-zN-lud" id="CbF-0I-jQz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuP-mj-BwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3922" y="-1535"/>
+            <point key="canvasLocation" x="-4038" y="-1535"/>
         </scene>
         <!--Info-->
         <scene sceneID="I2n-0k-xtS">
@@ -95,28 +109,62 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="FZs-ym-aTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-9T-Gxz">
+                                <rect key="frame" x="106" y="304" width="162" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cDf-CK-Fjt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Wwu-PA-zp3">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="oiY-7X-pOj">
+                    <navigationItem key="navigationItem" id="Wwu-PA-zp3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oiY-7X-pOj">
                             <connections>
-                                <segue destination="0CZ-G3-CVi" kind="show" id="IXq-xD-h30"/>
+                                <action selector="Done:" destination="GiP-lZ-FDv" id="Rp1-bf-I1U"/>
+                                <segue destination="G6K-QN-OaZ" kind="show" id="ub1-wi-4nr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82m-QZ-5A7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GiP-lZ-FDv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-936.79999999999995" y="-851.42428785607206"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Ich-38-5r7">
             <objects>
-                <viewController title="Settings" id="hUl-H0-jPX" sceneMemberID="viewController">
+                <viewController title="Settings" id="hUl-H0-jPX" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUj-54-UwH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gor-mZ-B47">
+                                <rect key="frame" x="85" y="319" width="65" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ati-Ip-Qyd">
+                                <rect key="frame" x="85" y="268" width="43" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-KF-pcs">
+                                <rect key="frame" x="164" y="268" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-a1-PZy">
+                                <rect key="frame" x="164" y="317" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VKV-oq-KVZ"/>
                     </view>
@@ -163,7 +211,7 @@ the crab</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IL-lJ-nxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3146" y="-851"/>
+            <point key="canvasLocation" x="-3191" y="-851"/>
         </scene>
     </scenes>
     <resources>
@@ -171,8 +219,4 @@ the crab</string>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="NFE-DS-hM4"/>
-        <segue reference="IXq-xD-h30"/>
-    </inferredMetricsTieBreakers>
 </document>
