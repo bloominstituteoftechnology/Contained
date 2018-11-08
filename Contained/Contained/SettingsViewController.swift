@@ -10,4 +10,11 @@ class SettingsViewController: UIViewController {
         Model.shared.shouldZoom = sender.isOn
     }
     
+    @IBAction func whichCrab(_ sender: UISwitch) {
+        if sender.isOn {
+            Model.shared.whichCrab = "HappyCrab"
+        }else {
+            Model.shared.whichCrab = "WaitingCrab"
+        }
+    }
 }

@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class Model {
     static let shared = Model()
@@ -6,5 +6,6 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
+    var whichCrab = ""
     
 }

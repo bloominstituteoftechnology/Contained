@@ -152,39 +152,61 @@ the crab!</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RM1-RK-EHu">
-                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-u8-Mza">
+                                <rect key="frame" x="109.5" y="279" width="156.5" height="109"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-W1-YiA">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RM1-RK-EHu">
+                                        <rect key="frame" x="55" y="0.0" width="101.5" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-Ow-mff">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-qN-2M1">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="toggleRoll:" destination="3rZ-fe-GTY" eventType="valueChanged" id="E8p-R4-NUG"/>
-                                                </connections>
-                                            </switch>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-W1-YiA">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-Ow-mff">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-qN-2M1">
+                                                        <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="toggleRoll:" destination="3rZ-fe-GTY" eventType="valueChanged" id="E8p-R4-NUG"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FSj-9K-8ih">
+                                                <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfM-q3-DeW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-PL-JXA">
+                                                        <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="toggleZoom:" destination="3rZ-fe-GTY" eventType="valueChanged" id="eZh-Ca-4k0"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FSj-9K-8ih">
-                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hu3-OS-3sY">
+                                        <rect key="frame" x="0.0" y="78" width="156.5" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfM-q3-DeW">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLV-TJ-J63">
+                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-PL-JXA">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lsz-mX-0g5">
+                                                <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="3rZ-fe-GTY" eventType="valueChanged" id="eZh-Ca-4k0"/>
+                                                    <action selector="whichCrab:" destination="3rZ-fe-GTY" eventType="valueChanged" id="PvY-dY-0wa"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -194,8 +216,8 @@ the crab!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RM1-RK-EHu" firstAttribute="centerX" secondItem="Xyz-cJ-iqn" secondAttribute="centerX" id="1bG-Zb-SCv"/>
-                            <constraint firstItem="RM1-RK-EHu" firstAttribute="centerY" secondItem="Xyz-cJ-iqn" secondAttribute="centerY" id="4o1-Pl-PNL"/>
+                            <constraint firstItem="tpG-u8-Mza" firstAttribute="centerY" secondItem="Xyz-cJ-iqn" secondAttribute="centerY" id="5ee-7f-Vr5"/>
+                            <constraint firstItem="tpG-u8-Mza" firstAttribute="centerX" secondItem="Xyz-cJ-iqn" secondAttribute="centerX" id="SY0-P6-4dQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fls-yf-gCs"/>
                     </view>
