@@ -6,6 +6,8 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
-    var waiting = 1
+    var waiting = 0
+    var clickCount = 0
+    var position = (0.0,0.0)
     
 }

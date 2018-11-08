@@ -10,6 +10,7 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    static var count = 0
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
@@ -23,7 +24,14 @@ class CustomScene: SKScene {
         }
         
         crab.loadTextures(named: crabName, forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        if(Model.shared.clickCount > 0){
+            print(Model.shared.clickCount)
+            crab.position = CGPoint(x: Model.shared.position.0, y: Model.shared.position.1)
+        } else {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        }
+        
     }
     
     // Move to touch
@@ -34,10 +42,14 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+        Model.shared.clickCount = Model.shared.clickCount + 1
+        
+        Model.shared.position = (Double(position.x), Double(position.y))
         
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
+        
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
