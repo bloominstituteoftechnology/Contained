@@ -17,12 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="bDD-c9-LWo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyu-We-nkX">
+                                <rect key="frame" x="126" y="304.5" width="123" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qyu-We-nkX" firstAttribute="centerX" secondItem="bDD-c9-LWo" secondAttribute="centerX" id="YDp-i1-RHL"/>
+                            <constraint firstItem="Qyu-We-nkX" firstAttribute="centerY" secondItem="bDD-c9-LWo" secondAttribute="centerY" id="Zpk-Rj-xqH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RtQ-0G-5pm"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="moy-mG-rdN">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="e9n-53-Nb4">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="e9n-53-Nb4">
                             <connections>
                                 <segue destination="naX-11-D9y" kind="show" id="MOv-jK-B03"/>
                             </connections>
@@ -41,12 +53,26 @@
                     <view key="view" contentMode="scaleToFill" id="F0K-Q7-wq7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-yO-j70">
+                                <rect key="frame" x="125" y="305" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JLF-yO-j70" firstAttribute="centerY" secondItem="F0K-Q7-wq7" secondAttribute="centerY" id="7Z7-DC-M8l"/>
+                            <constraint firstItem="JLF-yO-j70" firstAttribute="centerX" secondItem="F0K-Q7-wq7" secondAttribute="centerX" id="zeV-hu-WiM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yD4-9h-JvB"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="thi-OJ-uM9">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="R17-M1-u0M">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="R17-M1-u0M">
                             <connections>
                                 <segue destination="uYY-3p-SCe" kind="show" id="ILH-rR-fog"/>
                             </connections>
@@ -136,12 +162,28 @@
                     <view key="view" contentMode="scaleToFill" id="rtB-wS-b1u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEl-k8-qxX">
+                                <rect key="frame" x="135" y="319" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CEl-k8-qxX" firstAttribute="centerY" secondItem="rtB-wS-b1u" secondAttribute="centerY" id="CL5-4y-y97"/>
+                            <constraint firstItem="CEl-k8-qxX" firstAttribute="centerX" secondItem="rtB-wS-b1u" secondAttribute="centerX" id="aZ9-mG-rhK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0O2-wf-80F"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5eA-TD-bM6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="dZQ-ug-RSg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dZQ-ug-RSg">
+                            <connections>
+                                <action selector="done:" destination="uYY-3p-SCe" id="Idx-e2-ZUl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
