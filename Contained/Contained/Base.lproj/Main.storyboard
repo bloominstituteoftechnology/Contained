@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bYh-PO-ihf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Info View Controller-->
+        <!--View Controller-->
         <scene sceneID="3UX-gw-MpD">
             <objects>
-                <viewController id="KOY-2W-CeS" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KOY-2W-CeS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7N-AY-HAx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,8 @@ the crabs</string>
                         <constraints>
                             <constraint firstItem="TNt-g9-vdn" firstAttribute="centerY" secondItem="qoq-XL-DD2" secondAttribute="centerY" id="0ex-8n-YCH"/>
                             <constraint firstItem="TNt-g9-vdn" firstAttribute="centerX" secondItem="qoq-XL-DD2" secondAttribute="centerX" id="7pt-fJ-HaJ"/>
+                            <constraint firstItem="TNt-g9-vdn" firstAttribute="centerY" secondItem="qoq-XL-DD2" secondAttribute="centerY" id="dKH-iT-Iam"/>
+                            <constraint firstItem="TNt-g9-vdn" firstAttribute="centerX" secondItem="qoq-XL-DD2" secondAttribute="centerX" id="uXE-yH-jeB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0fP-Sc-800"/>
                     </view>
@@ -80,10 +82,10 @@ the crabs</string>
             </objects>
             <point key="canvasLocation" x="606" y="-34"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="p6h-Va-uEb">
             <objects>
-                <viewController id="TTc-Wo-AMs" sceneMemberID="viewController">
+                <viewController id="TTc-Wo-AMs" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sg3-Nd-5PY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +99,8 @@ the crabs</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerX" secondItem="sg3-Nd-5PY" secondAttribute="centerX" id="6zT-G7-4UY"/>
+                            <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerY" secondItem="sg3-Nd-5PY" secondAttribute="centerY" id="PRE-gA-JOp"/>
                             <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerX" secondItem="sg3-Nd-5PY" secondAttribute="centerX" id="hyj-zb-t7e"/>
                             <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerY" secondItem="sg3-Nd-5PY" secondAttribute="centerY" id="kHF-nB-YHW"/>
                         </constraints>
@@ -118,22 +122,27 @@ the crabs</string>
         <!--Play-->
         <scene sceneID="zEK-mz-JZH">
             <objects>
-                <viewController id="cOR-dz-ERw" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cOR-dz-ERw" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9k8-71-2OL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-ct-TwS">
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-ct-TwS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RAV-ct-TwS" firstAttribute="leading" secondItem="nKd-69-6bg" secondAttribute="leading" id="4wE-Dn-lrj"/>
+                            <constraint firstItem="RAV-ct-TwS" firstAttribute="top" secondItem="9k8-71-2OL" secondAttribute="top" id="XUW-qR-FdN"/>
+                            <constraint firstItem="RAV-ct-TwS" firstAttribute="bottom" secondItem="nKd-69-6bg" secondAttribute="bottom" id="sQn-gN-qLQ"/>
+                            <constraint firstItem="RAV-ct-TwS" firstAttribute="trailing" secondItem="nKd-69-6bg" secondAttribute="trailing" id="uvJ-lX-kcf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nKd-69-6bg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="fEe-jy-SSP"/>
                     <connections>
-                        <outlet property="crabs" destination="RAV-ct-TwS" id="Fv5-i7-jdZ"/>
+                        <outlet property="skview" destination="RAV-ct-TwS" id="cqt-uU-prE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1P-D9-fO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,9 +157,8 @@ the crabs</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1hN-Ih-jlO">
-                                <rect key="frame" x="137" y="298" width="101.5" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1hN-Ih-jlO">
+                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vUE-xP-afz">
                                         <rect key="frame" x="16.5" y="0.0" width="85" height="31"/>
@@ -190,6 +198,10 @@ the crabs</string>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1hN-Ih-jlO" firstAttribute="centerY" secondItem="znN-ZQ-f2V" secondAttribute="centerY" id="9Nc-sG-Ext"/>
+                            <constraint firstItem="1hN-Ih-jlO" firstAttribute="centerX" secondItem="znN-ZQ-f2V" secondAttribute="centerX" id="nxO-3F-WgA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0gr-uo-XwX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="FRL-Ow-iuv"/>
