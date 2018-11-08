@@ -1,12 +1,15 @@
-import UIKit
+import SpriteKit
 
-class InfoViewController: UIViewController {
+
+class GameViewController: UIViewController {
+
+    @IBOutlet weak var skview: SKView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    var skscene: CustomScene? = nil
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        skscene = CustomScene(size: view.bounds.size)
+        skview.presentScene(skscene)
     }
-    
-   
-    
 }
