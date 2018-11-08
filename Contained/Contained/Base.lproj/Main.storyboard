@@ -122,10 +122,19 @@ the crabs</string>
                     <view key="view" contentMode="scaleToFill" id="9k8-71-2OL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAV-ct-TwS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nKd-69-6bg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="fEe-jy-SSP"/>
+                    <connections>
+                        <outlet property="crabs" destination="RAV-ct-TwS" id="Fv5-i7-jdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1P-D9-fO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +163,9 @@ the crabs</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5l-DJ-sf9">
                                                 <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="nqa-N3-f8h" eventType="valueChanged" id="4bt-mX-nio"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -168,6 +180,9 @@ the crabs</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-a1-qE1">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="nqa-N3-f8h" eventType="valueChanged" id="IT1-VG-sSS"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -189,6 +204,7 @@ the crabs</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bYh-PO-ihf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GBo-c3-gXj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
