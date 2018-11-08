@@ -153,19 +153,40 @@ the crab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RcZ-mE-BeN">
-                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
+                                <rect key="frame" x="40.5" y="212" width="294" height="243"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2g9-4u-cJg">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="129"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happycrab000" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-uH-X3T">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="129"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingcrab000" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-3x-KCn">
+                                                <rect key="frame" x="163" y="0.0" width="131" height="129"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JFw-zY-ELd">
+                                        <rect key="frame" x="0.0" y="137" width="294" height="29"/>
+                                        <segments>
+                                            <segment title="HappyCrab"/>
+                                            <segment title="WaitingCrab"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="crabChoice:" destination="tsA-aZ-2FR" eventType="valueChanged" id="hDN-Ql-Ext"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T94-gE-8GM">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="173" width="294" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7T-Qh-92P">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="237" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z1w-HC-zoj">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="245" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="tsA-aZ-2FR" eventType="valueChanged" id="5UJ-Hf-jjk"/>
                                                     <action selector="toggleRoll:" destination="IKY-Fn-gHi" eventType="valueChanged" id="v67-lN-PCg"/>
@@ -174,16 +195,16 @@ the crab</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sJy-eh-1Mn">
-                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="212" width="294" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgd-VG-qeD">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="237" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="76y-x8-J2O">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="245" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="tsA-aZ-2FR" eventType="valueChanged" id="CSE-Il-Y6O"/>
                                                     <action selector="toggleZoom:" destination="IKY-Fn-gHi" eventType="valueChanged" id="uBw-br-9fZ"/>
@@ -206,7 +227,7 @@ the crab</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkT-c1-PpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IKY-Fn-gHi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="134" y="974"/>
+            <point key="canvasLocation" x="133.59999999999999" y="973.76311844077964"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vxo-9U-If1">
@@ -250,7 +271,9 @@ the crab</string>
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="happycrab000" width="131" height="129"/>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
+        <image name="waitingcrab000" width="131" height="129"/>
     </resources>
 </document>

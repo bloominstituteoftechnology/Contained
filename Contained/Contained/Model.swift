@@ -6,4 +6,5 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
+    var crabChoice = ["HappyCrab", "WaitingCrab"]
 }

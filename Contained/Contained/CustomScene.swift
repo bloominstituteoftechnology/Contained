@@ -43,6 +43,8 @@ class CustomScene: SKScene {
         if Model.shared.shouldZoom {
             crab.run(rollAction)
         }
-    }
-    
+  
+        // TBD: Need Switch statement for SEGEMENTED input from SettingsViewController and assign it to a variable crabChoice 
+        
+}
 }
