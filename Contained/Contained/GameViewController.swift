@@ -10,7 +10,6 @@ class GameViewController: UIViewController {
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Model.shared.shouldZoom.toggle()
-        
     }
     
 }
