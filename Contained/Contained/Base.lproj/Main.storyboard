@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="O7N-AY-HAx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-2B-46E">
+                                <rect key="frame" x="126.5" y="305" width="122.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4gI-2B-46E" firstAttribute="centerY" secondItem="O7N-AY-HAx" secondAttribute="centerY" id="Ao6-ey-gRY"/>
+                            <constraint firstItem="4gI-2B-46E" firstAttribute="centerX" secondItem="O7N-AY-HAx" secondAttribute="centerX" id="RIe-w3-BMR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="L5p-OZ-fKH"/>
                     </view>
                     <navigationItem key="navigationItem" id="4zi-s2-oqK">
@@ -32,17 +44,31 @@
             </objects>
             <point key="canvasLocation" x="607.20000000000005" y="-786.65667166416802"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="MhQ-lq-b4X">
             <objects>
                 <viewController id="wpU-ph-zlN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoq-XL-DD2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNt-g9-vdn">
+                                <rect key="frame" x="125" y="305" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crabs</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TNt-g9-vdn" firstAttribute="centerY" secondItem="qoq-XL-DD2" secondAttribute="centerY" id="0ex-8n-YCH"/>
+                            <constraint firstItem="TNt-g9-vdn" firstAttribute="centerX" secondItem="qoq-XL-DD2" secondAttribute="centerX" id="7pt-fJ-HaJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0fP-Sc-800"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="BKb-Bh-VQ2">
+                    <navigationItem key="navigationItem" id="BKb-Bh-VQ2">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="iCy-Hl-e3C" userLabel="Next">
                             <connections>
                                 <segue destination="TTc-Wo-AMs" kind="show" id="Njz-hF-zXp"/>
@@ -54,17 +80,29 @@
             </objects>
             <point key="canvasLocation" x="606" y="-34"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="p6h-Va-uEb">
             <objects>
                 <viewController id="TTc-Wo-AMs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sg3-Nd-5PY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTj-cO-EDJ">
+                                <rect key="frame" x="135" y="319" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerX" secondItem="sg3-Nd-5PY" secondAttribute="centerX" id="hyj-zb-t7e"/>
+                            <constraint firstItem="uTj-cO-EDJ" firstAttribute="centerY" secondItem="sg3-Nd-5PY" secondAttribute="centerY" id="kHF-nB-YHW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RhW-FJ-zwT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MO5-Y8-gdB">
+                    <navigationItem key="navigationItem" id="MO5-Y8-gdB">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="zXW-Hs-nga" userLabel="Done">
                             <connections>
                                 <action selector="doneButtonTapped:" destination="i9V-nZ-4fY" id="qiz-29-nzb"/>
@@ -100,6 +138,42 @@
                     <view key="view" contentMode="scaleToFill" id="znN-ZQ-f2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1hN-Ih-jlO">
+                                <rect key="frame" x="137" y="298" width="101.5" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vUE-xP-afz">
+                                        <rect key="frame" x="16.5" y="0.0" width="85" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-3h-wgL">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5l-DJ-sf9">
+                                                <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WfS-zx-lQ2">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-Hn-wqR">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-a1-qE1">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0gr-uo-XwX"/>
                     </view>
