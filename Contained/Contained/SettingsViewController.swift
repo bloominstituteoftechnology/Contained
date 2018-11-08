@@ -11,6 +11,13 @@ import Foundation
 
 class SettingsViewController: UIViewController {
     
+    
+    @IBAction func segmentChange(_ sender: UISegmentedControl) {
+        let segmentState = sender.selectedSegmentIndex
+        Model.shared.waiting = segmentState
+        
+    }
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
         let switchState = sender.isOn
         Model.shared.shouldRoll = switchState

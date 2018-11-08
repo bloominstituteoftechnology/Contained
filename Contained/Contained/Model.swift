@@ -6,5 +6,6 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
+    var waiting = 1
     
 }

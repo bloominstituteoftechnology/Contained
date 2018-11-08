@@ -15,7 +15,14 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        
+        // switch to waiting crab if settings selected as waiting
+        var crabName = "HappyCrab"
+        if(Model.shared.waiting == 1){
+            crabName = "WaitingCrab"
+        }
+        
+        crab.loadTextures(named: crabName, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
@@ -48,4 +55,5 @@ class CustomScene: SKScene {
             crab.run(rollAction)
         }
     }
+    
 }
