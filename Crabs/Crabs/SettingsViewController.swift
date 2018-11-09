@@ -1,9 +1,12 @@
-//
-//  SettingsViewController.swift
-//  Crabs
-//
-//  Created by Rob Herold on 11/7/18.
-//  Copyright © 2018 Rob Herold. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class SettingsViewController: UIViewController {
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        Model.shared.shouldRoll = sender.isOn
+    }
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Model.shared.shouldZoom = sender.isOn
+    }
+}
+
