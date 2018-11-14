@@ -11,6 +11,7 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
         crab.loadTextures(named: Model.shared.switchCrab(), forKey: SKSpriteNode.textureKey)
+        // I should be able to pass this into my startPoint func just not sure what to pass into the function call. 
     }
     
     func startPoint(in view: Set<UITouch>){
@@ -35,7 +36,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         let shrinkAction = SKAction.scale(to: 0.5, duration: 0.3)
-        let fadeAction = SKAction.fadeAlpha(by: 0.5, duration: 0.3)
+        let fadeAction = SKAction.fadeAlpha(by: 0.1, duration: 0.3)
         
         switch Model.shared.shouldZoom {
         case false:

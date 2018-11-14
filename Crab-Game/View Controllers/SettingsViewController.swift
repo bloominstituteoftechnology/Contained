@@ -2,6 +2,12 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+        
+    }
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Model.shared.shouldRoll.toggle()
         print(Model.shared.shouldRoll)
@@ -17,29 +23,14 @@ class SettingsViewController: UIViewController {
         print(Model.shared.shouldGoCrazy)
     }
     
+    @IBAction func CrabSegControlAction(_ sender: UISegmentedControl) {
+        Model.shared.switchCrab()
+    }
     
     @IBOutlet weak var crabSegControl: UISegmentedControl!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateViews()
-    }
-    
-    var segmentName = "HappyCrab"
-    var segmentIndex = 0
-    
     func updateViews() {
-    
-        switch segmentIndex {
-        case 0:
-            segmentName = "HappyCrab"
-        case 1:
-            segmentName = "WaitingCrab"
-        default:
-            break
-        }
-        
-        crabSegControl.selectedSegmentIndex = segmentIndex
+        crabSegControl.selectedSegmentIndex = Model.shared.segmentIndex
     }
     // I'm not finding a good way to connect this with the Model and View using the singleton pattern as we are. 
 }

@@ -24,9 +24,12 @@ Your completed application will look like the following GIF:
 
 Demonstrate your understanding of today's concepts by answering the following free-form questions. Submit them as a text file along with your project.
 
-* What is controller containment and what does it offer developers?
-* What is the difference between navigation and tab controllers? Under what circumstances do you use each one?
-* Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
+•    What is controller containment and what does it offer developers?
+Answer:    It allows for easy organization of parallel views that might not make sense to be nested inside each other 
+•    What is the difference between navigation and tab controllers? Under what circumstances do you use each one?
+Answer:    Tab bar controllers let us setup of easy navigation between parallel views while navigation controllers allow us to navigate into a network of views and easily return. 
+•    Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
+Answer:    I think the setting app would be a good example. each area of settings you navigate into is full of options and presets but it is for the most part as clean as it can be with so many varied categories of setting thanks to a navigation controller. 
 
 ## Project Setup
 

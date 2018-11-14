@@ -10,11 +10,11 @@ class Model {
     
     var segmentName = "HappyCrab"
     var segmentIndex = 0
-    
-    func switchCrab() -> String{
+
+    func switchCrab() -> String {
         switch segmentIndex {
         case 0:
-            segmentName = "HappyCrab"
+            segmentName = "HappyCrab" // WaitingCrab // HappyCrab
         case 1:
             segmentName = "WaitingCrab"
         default:
