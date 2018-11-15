@@ -6,4 +6,15 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
+    //
+    
+    private(set) var lastPosition: CGPoint? = nil
+    
+    func updatPosition(position: CGPoint) {
+        lastPosition = position
+
+  }
+    
+    
+    
 }

@@ -8,7 +8,6 @@ class SettingsViewController: UIViewController {
         Model.shared.shouldRoll = sender.isOn
     }
     
-   
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Model.shared.shouldZoom = sender.isOn
              

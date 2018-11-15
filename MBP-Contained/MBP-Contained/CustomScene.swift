@@ -10,13 +10,21 @@ class CustomScene: SKScene {
         
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+
+        
+        let startingPoint = CGPoint(x: frame.midX, y: frame.midY)
+        let updatedLocation = Model.shared.lastPosition
+        
+        crab.position = updatedLocation ?? startingPoint
+        
     }
     
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard !touches.isEmpty, let touch = touches.first else { return }
         
         let position = touch.location(in: self)
+        Model.shared.updatPosition(position: position)
         
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
@@ -30,7 +38,7 @@ class CustomScene: SKScene {
         case false:
             crab.run(moveAction)
         case true:
-            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction)
+            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
             crab.run(sequenceAction)
         }
         
