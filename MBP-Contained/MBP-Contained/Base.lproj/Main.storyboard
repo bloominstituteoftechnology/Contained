@@ -123,10 +123,24 @@ play!</string>
                     <view key="view" contentMode="scaleToFill" id="dEa-bk-MaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arX-0Q-MNA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eEF-Gy-CLQ" firstAttribute="bottom" secondItem="arX-0Q-MNA" secondAttribute="bottom" id="jM9-mc-Gy3"/>
+                            <constraint firstItem="arX-0Q-MNA" firstAttribute="leading" secondItem="eEF-Gy-CLQ" secondAttribute="leading" id="r08-ak-CJh"/>
+                            <constraint firstItem="arX-0Q-MNA" firstAttribute="top" secondItem="eEF-Gy-CLQ" secondAttribute="top" id="uwW-ac-HWR"/>
+                            <constraint firstItem="eEF-Gy-CLQ" firstAttribute="trailing" secondItem="arX-0Q-MNA" secondAttribute="trailing" id="xv1-HO-Wwz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eEF-Gy-CLQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="TgA-wa-phT"/>
+                    <connections>
+                        <outlet property="skview" destination="arX-0Q-MNA" id="P6X-ve-4Z5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAd-d6-DyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +169,7 @@ play!</string>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-tq-AoQ">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="7Z7-qM-kTr" eventType="valueChanged" id="asS-D9-Qxu"/>
+                                                    <action selector="toggleRoll:" destination="7Z7-qM-kTr" eventType="valueChanged" id="9tI-D8-9ka"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -172,7 +186,7 @@ play!</string>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-97-udz">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="7Z7-qM-kTr" eventType="valueChanged" id="O4d-4U-LbY"/>
+                                                    <action selector="toggleZoom:" destination="7Z7-qM-kTr" eventType="valueChanged" id="5Px-V6-gLU"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -199,6 +213,7 @@ play!</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="emO-nw-gNQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="11e-Hg-XwV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
