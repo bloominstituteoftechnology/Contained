@@ -24,16 +24,13 @@ class CustomScene: SKScene {
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
-        let extraActionOnZoom = SKAction.fadeOut(withDuration: 0.5)
- 
-
         let unzoomAction = SKAction.scale(by: 1.0, duration: 0.1)
         
         switch Model.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
-            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction, extraActionOnZoom])
+            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction)
             crab.run(sequenceAction)
         }
         
