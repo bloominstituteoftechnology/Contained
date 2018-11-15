@@ -1,9 +1,10 @@
-//
-//  Model.swift
-//  Crabs_11-14-18
-//
-//  Created by Rob Herold on 11/14/18.
-//  Copyright © 2018 Rob Herold. All rights reserved.
-//
-
 import Foundation
+
+class Model {
+    static let shared = Model()
+    private init() {}
+    
+    var shouldRoll = false
+    var shouldZoom = false
+    
+}
