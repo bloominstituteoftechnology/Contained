@@ -51,10 +51,24 @@
                     <view key="view" contentMode="scaleToFill" id="WJA-e4-Rxg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-16-tlI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WmW-16-tlI" firstAttribute="leading" secondItem="ZP5-dw-bjw" secondAttribute="leading" id="3jo-4X-bzg"/>
+                            <constraint firstItem="ZP5-dw-bjw" firstAttribute="trailing" secondItem="WmW-16-tlI" secondAttribute="trailing" id="F8u-wg-U5r"/>
+                            <constraint firstItem="WmW-16-tlI" firstAttribute="top" secondItem="ZP5-dw-bjw" secondAttribute="top" id="UsJ-V2-JBf"/>
+                            <constraint firstItem="ZP5-dw-bjw" firstAttribute="bottom" secondItem="WmW-16-tlI" secondAttribute="bottom" id="xLx-Wg-9eE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZP5-dw-bjw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="mYr-4v-LCg"/>
+                    <connections>
+                        <outlet property="skview" destination="WmW-16-tlI" id="zpB-Od-l5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZu-I1-zke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="3279" y="-1967"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="cDT-Hf-J4p">
             <objects>
-                <viewController id="eoX-jz-9dI" sceneMemberID="viewController">
+                <viewController id="eoX-jz-9dI" customClass="InfoViewController" customModule="Contained___Crab_Game_MBP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ga-V0-xgi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,10 +191,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="4676" y="-442"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Aay-wQ-GcL">
             <objects>
-                <viewController id="1By-ZI-7f1" sceneMemberID="viewController">
+                <viewController id="1By-ZI-7f1" customClass="InfoViewController" customModule="Contained___Crab_Game_MBP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHC-4q-kSJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,13 +216,12 @@ the crab</string>
                     <navigationItem key="navigationItem" id="eER-q3-DLt">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="YfY-Q6-A66">
                             <connections>
-                                <action selector="done:" destination="axZ-Id-rwH" id="h5L-Wp-jrF"/>
+                                <action selector="done:" destination="1By-ZI-7f1" id="jZE-iV-XEE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEZ-te-nhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="axZ-Id-rwH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5369" y="-442"/>
         </scene>
