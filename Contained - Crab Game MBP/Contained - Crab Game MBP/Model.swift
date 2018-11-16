@@ -2,11 +2,9 @@
 //  Model.swift
 //  Contained - Crab Game MBP
 //
-//  Created by Audrey Seversen on 11/14/18.
-//  Copyright © 2018 Audrey Welch. All rights reserved.
-//
 
-import Foundation
+
+import UIKit
 
 class Model {
     // "Singleton Pattern" - create an instance of the Model itself with a static property
@@ -17,4 +15,11 @@ class Model {
     // Set the properties that will be implemented with the toggle switch to false
     var shouldRoll = false
     var shouldZoom = false
+    
+    // Set the property that will store the last position touched
+    var lastPosition: CGPoint? = nil
+    
+    func updatePosition() {
+        
+    }
 }
