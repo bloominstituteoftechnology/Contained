@@ -18,4 +18,6 @@ class SettingsViewController: UIViewController {
         Model.shared.shouldZoom = sender.isOn ? true : false
     }
     
+    //Removed picker.  Will attempt to complete the stretch goals
+    
 }
