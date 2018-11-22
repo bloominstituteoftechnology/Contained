@@ -9,7 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    var isOn = false
+    
     @IBOutlet var crabImage: UIImageView!
     
    override func viewDidLoad() {
@@ -24,8 +25,12 @@ class SettingsViewController: UIViewController {
         Model.shared.shouldZoom = sender.isOn ? true : false
     }
     
-    @IBAction func pickCrab(_ sender: SLRCrabButton) {
-        print("Not doing anything")
+    @IBAction func pickCrab(_ sender: UIButton) {
+        isOn = !isOn
+        
+        let crabImage = isOn ? "waitingcrab000" : "happycrab000"
+        sender.setBackgroundImage(UIImage(named: crabImage), for: .normal)
+        Model.shared.setCrab(UIImage(named: crabImage)!)
     }
     
     

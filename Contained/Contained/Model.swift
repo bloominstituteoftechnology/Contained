@@ -22,12 +22,8 @@ class Model {
     var whichCrab: String = "HappyCrab"
     
     func setCrab (_ crab: UIImage){
-        if(crab == happyCrab) {
-            whichCrab = "HappyCrab"
-        }
-        else {
-            whichCrab = "WaitingCrab"
-        }
+        //Select which crab to play
+        whichCrab = (crab == happyCrab) ? "HappyCrab" : "WaitingCrab"
     }
 
     func getCrab() -> String {
