@@ -4,13 +4,20 @@
 //
 //  Created by Sameera Leola on 11/14/18.
 //  Copyright © 2018 Sameera Leola. All rights reserved.
+//  Modified by Sameera Leola on 11/22/2018
 //
 
 import UIKit
 
 class SettingsViewController: UIViewController {
+
+    @IBOutlet var crabImage: UIImageView!
     
-    @IBAction func toggleRool(_ sender: UISwitch) {
+   override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
         Model.shared.shouldRoll = sender.isOn ? true : false
     }
     
@@ -18,6 +25,19 @@ class SettingsViewController: UIViewController {
         Model.shared.shouldZoom = sender.isOn ? true : false
     }
     
-    //Removed picker.  Will attempt to complete the stretch goals
+    @IBAction func pickCrab(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            //Set the UIImageView = the happy crab
+            crabImage.image = UIImage(named: "happycrab000")!
+            //Set the selected crab (via the UISegmentedControl
+            Model.shared.selectCrab("HappyCrab")
+        }
+        else {
+            //Set the UIImageView = the waiting crab
+            crabImage.image = UIImage(named: "waitingcrab000")!
+            //Set the selected crab (via the UISegmentedControl
+            Model.shared.selectCrab("WaitingCrab")
+        }
+    }
     
 }

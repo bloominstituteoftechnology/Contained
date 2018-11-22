@@ -15,8 +15,16 @@ class Model {
     
     var shouldRoll = false
     var shouldZoom = false
-
-    var whichCrab = ["Happy Crab", "Waiting Crab"]
+    
+    var whichCrab: String = "HappyCrab"
+    
+    func selectCrab (_ crab: String) {
+        whichCrab = crab
+    }
+    
+    func getCrab() -> String {
+        return whichCrab
+    }
     
     //Saving last position
     private(set) var lastPosition: CGPoint? = nil
@@ -24,5 +32,10 @@ class Model {
     func saveLastPosition (position: CGPoint) {
         lastPosition = position
     }
+    
+    func getLastPosition() -> CGPoint {
+        return lastPosition!
+    }
+    
     
 }
