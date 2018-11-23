@@ -43,10 +43,46 @@ class SLRCrabButton: UIButton {
         
         //Clear the question mark
         setTitle("", for: .normal)
+        
         //Set the button image
         let crabImage = bool ? "waitingcrab000" : "happycrab000"
         setBackgroundImage(UIImage(named: crabImage), for: .normal)
+        
+        //Tell the model which image to use
         Model.shared.setCrab(UIImage(named: crabImage)!)
     }
-
 }
+    
+    
+    /*
+ @IBAction func pickCrab(_ sender: UIButton) {
+ isOn = !isOn
+ 
+ Select the crab image to display on the button
+ let crabToUse = isOn ? "waitingcrab000" : "happycrab000"
+  let crabToUse = isOn ? "waitingcrab000" : UIImage(named: happyImages[0])
+ Display the first image on the button
+ sender.setBackgroundImage(UIImage(named: crabToUse), for: .normal)
+         sender.imageView!.animationImages = happyImages
+         sender.imageView!.animationDuration = 1.0
+         sender.imageView!.startAnimating()
+  sender.setBackgroundImage(sender.imageView!, for: .normal)
+ 
+ Set animated image as background
+ 
+         pickCrab.animationImages! = happyImages
+ 
+         //animationImages = isOn ? waitingImages : happyImages]
+         pickCrab.self!.animationDuration = 1.0
+         pickCrab.self!.animationRepeatCount = 0
+         pickCrab.self!.startAnimating()
+     
+     //Select the crab image to play with(named: crabToUse!, for: .normal)
+     Model.shared.setCrab(UIImage(named: crabToUse)!)
+     }
+ */
+ 
+ 
+
+
+
