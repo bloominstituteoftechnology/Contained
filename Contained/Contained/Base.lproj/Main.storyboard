@@ -184,10 +184,24 @@ crabs, baby</string>
                     <view key="view" contentMode="scaleToFill" id="a5t-55-9bt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npj-Kw-2vO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="npj-Kw-2vO" firstAttribute="top" secondItem="ndy-ms-GjU" secondAttribute="top" id="7fa-BY-hor"/>
+                            <constraint firstItem="npj-Kw-2vO" firstAttribute="leading" secondItem="ndy-ms-GjU" secondAttribute="leading" id="Ex5-vN-Kut"/>
+                            <constraint firstItem="ndy-ms-GjU" firstAttribute="bottom" secondItem="npj-Kw-2vO" secondAttribute="bottom" id="P5B-0w-DzH"/>
+                            <constraint firstItem="ndy-ms-GjU" firstAttribute="trailing" secondItem="npj-Kw-2vO" secondAttribute="trailing" id="caM-sT-lcN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ndy-ms-GjU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="jyb-sn-9wv"/>
+                    <connections>
+                        <outlet property="skview" destination="npj-Kw-2vO" id="BNd-kc-Voy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0Y-Vk-m7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
