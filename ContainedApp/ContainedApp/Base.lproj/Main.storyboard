@@ -87,7 +87,7 @@
         <!--Title-->
         <scene sceneID="YJ3-N1-Nx4">
             <objects>
-                <viewController id="ja4-Ej-oOJ" sceneMemberID="viewController">
+                <viewController id="ja4-Ej-oOJ" customClass="LastViewController" customModule="ContainedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zrn-rI-bOy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,11 @@
                         <viewLayoutGuide key="safeArea" id="UJv-jd-ptO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kmZ-Il-27A">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="m67-3c-7Kq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="m67-3c-7Kq">
+                            <connections>
+                                <action selector="done:" destination="ja4-Ej-oOJ" id="e0N-HS-Sgv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXZ-Fq-hD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
