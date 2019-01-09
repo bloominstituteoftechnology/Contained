@@ -13,13 +13,13 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var skView: SKView!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var skscene: CustomScene? = nil
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        skscene = CustomScene(size: view.bounds.size)
+        skView.presentScene(skscene)
+    }
 
   
 
