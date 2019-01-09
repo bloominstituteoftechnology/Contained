@@ -1,0 +1,11 @@
+Lambda Questions:
+1.    What is controller containment and what does it offer developers?
+a.    A controller containment embeds a view controller inside another view controller. As a developer this is good for preventing massive lines of code. With view controller containment we can break this up into separate view controllers with their own logic.
+2.    What is the difference between navigation and tab controllers? Under what circumstances do you use each one?
+a.    Navigation controller is a form of a controller containment, located at the top of a view controller it automatically comes with a back button.
+i.    It’s purpose is to manage navigating hierarchial content in a way that’s easy for the user to follow.
+ii.    This design pattern is used anytime a developer wants to control the access flow to other view controllers in the application.
+iii.    One of the main differences is that UINavigationController stacks views ontop of each other. So when a user navigates through it, its popping or pushing a view controller on each view.
+b.    Tab controllers are most commonly used for actions that relate to the content of the current view controller. It can be used to navigate to other view controllers as well.
+3.    Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
+a.    iOS’s factory alarm clock. You can use the tab bar to navigate to different view controllers. Ususally you can do the same with navigation controllers but in this app it is used to either create a new object or to edit an existing object. After you are done, it’ll pop the view controller and take you back to the previous view controller.
