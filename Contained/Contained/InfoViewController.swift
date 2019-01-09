@@ -6,4 +6,8 @@ class InfoViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
 }
