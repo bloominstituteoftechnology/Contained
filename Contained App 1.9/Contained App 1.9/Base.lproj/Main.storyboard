@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="rB3-NM-bDi">
             <objects>
-                <viewController id="fVc-Qc-N40" sceneMemberID="viewController">
+                <viewController id="fVc-Qc-N40" customClass="GameViewController" customModule="Contained_App_1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnU-l4-q3N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="-594.15292353823088"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="37E-Cp-eTu">
             <objects>
-                <viewController id="gWW-Mh-M8I" sceneMemberID="viewController">
+                <viewController id="gWW-Mh-M8I" customClass="InfoViewController" customModule="Contained_App_1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Gg-jG-aTz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="Pbs-2z-iLe"/>
                     </view>
                     <navigationItem key="navigationItem" id="6NC-Vz-aOT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="j0S-GM-ppX">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="j0S-GM-ppX">
                             <connections>
                                 <segue destination="buB-Ux-uyC" kind="show" id="dOZ-xD-jmI"/>
                             </connections>
@@ -51,7 +51,7 @@
         <!--Title-->
         <scene sceneID="9MY-t2-7XS">
             <objects>
-                <viewController id="buB-Ux-uyC" sceneMemberID="viewController">
+                <viewController id="buB-Ux-uyC" customClass="InfoViewController" customModule="Contained_App_1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tnf-Ho-cYk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="hhh-Ov-sSp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ApT-Dq-bHw">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="vtK-ah-PRT">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="vtK-ah-PRT">
                             <connections>
                                 <segue destination="u3n-Va-wl3" kind="show" id="SN7-y9-gDj"/>
                             </connections>
@@ -68,19 +68,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwM-64-20i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2401" y="181"/>
+            <point key="canvasLocation" x="2401" y="172"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="BP3-DI-IyW">
             <objects>
-                <viewController id="8MC-aD-L1P" sceneMemberID="viewController">
+                <viewController id="8MC-aD-L1P" customClass="SettingsViewController" customModule="Contained_App_1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8WC-9t-KeO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Tbe-xY-fXZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="settings" id="p8t-Pj-bpd"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="p8t-Pj-bpd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6t-Tp-2rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +127,7 @@
         <!--Title-->
         <scene sceneID="c0L-4Y-BQK">
             <objects>
-                <viewController id="u3n-Va-wl3" sceneMemberID="viewController">
+                <viewController id="u3n-Va-wl3" customClass="InfoViewController" customModule="Contained_App_1_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3T-hH-g7k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,12 +135,16 @@
                         <viewLayoutGuide key="safeArea" id="zBq-aG-KCI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FN6-m4-rde">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="2Vj-gs-kfh"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2Vj-gs-kfh">
+                            <connections>
+                                <action selector="done:" destination="u3n-Va-wl3" id="kba-H3-5aP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiN-iY-Yaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="180"/>
+            <point key="canvasLocation" x="3212" y="172"/>
         </scene>
     </scenes>
     <resources>
