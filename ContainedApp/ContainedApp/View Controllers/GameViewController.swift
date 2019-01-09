@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    @IBOutlet weak var skView: SKView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

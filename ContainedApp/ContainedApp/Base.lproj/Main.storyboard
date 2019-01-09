@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="wgi-Vq-aKi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-WL-AaM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WiP-WL-AaM" firstAttribute="leading" secondItem="vBg-SL-HQu" secondAttribute="leading" id="26V-uQ-vmJ"/>
+                            <constraint firstItem="vBg-SL-HQu" firstAttribute="trailing" secondItem="WiP-WL-AaM" secondAttribute="trailing" id="WhK-XP-dgS"/>
+                            <constraint firstItem="vBg-SL-HQu" firstAttribute="bottom" secondItem="WiP-WL-AaM" secondAttribute="bottom" id="h0v-F5-ShK"/>
+                            <constraint firstItem="WiP-WL-AaM" firstAttribute="top" secondItem="wgi-Vq-aKi" secondAttribute="top" id="wXQ-lv-E4Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vBg-SL-HQu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="abE-67-Oi9"/>
+                    <connections>
+                        <outlet property="skView" destination="WiP-WL-AaM" id="SOc-FE-AIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1X9-Dd-oOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
