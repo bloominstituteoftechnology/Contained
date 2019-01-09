@@ -30,7 +30,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eka-0e-N3I">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eka-0e-N3I">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="shouldRoll:" destination="hqM-Ss-09H" eventType="valueChanged" id="hhX-S0-nKj"/>
@@ -47,7 +47,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOc-NY-YzT">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rOc-NY-YzT">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="shouldZoom:" destination="hqM-Ss-09H" eventType="valueChanged" id="wgj-TK-dfU"/>
@@ -167,10 +167,15 @@ Play!</string>
                         <viewLayoutGuide key="safeArea" id="w3Z-Mh-uSg"/>
                     </view>
                     <navigationItem key="navigationItem" id="92U-HR-Fm2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4zz-xz-aRy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="tyc-MX-e76">
+                            <connections>
+                                <segue destination="MXL-Cl-nCl" kind="unwind" unwindAction="done:" id="I5X-iu-WJ2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfB-wd-TDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MXL-Cl-nCl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2372" y="672"/>
         </scene>
@@ -181,10 +186,24 @@ Play!</string>
                     <view key="view" contentMode="scaleToFill" id="3Yq-cC-Jm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF1-NO-jit">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xmH-Eo-HoD" firstAttribute="bottom" secondItem="wF1-NO-jit" secondAttribute="bottom" id="4kE-Rg-Abh"/>
+                            <constraint firstItem="wF1-NO-jit" firstAttribute="top" secondItem="xmH-Eo-HoD" secondAttribute="top" id="QDg-71-ZeF"/>
+                            <constraint firstItem="xmH-Eo-HoD" firstAttribute="trailing" secondItem="wF1-NO-jit" secondAttribute="trailing" id="kkr-4V-vff"/>
+                            <constraint firstItem="wF1-NO-jit" firstAttribute="leading" secondItem="xmH-Eo-HoD" secondAttribute="leading" id="xXz-Fe-Qlh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xmH-Eo-HoD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="giD-EX-6Xa"/>
+                    <connections>
+                        <outlet property="skview" destination="wF1-NO-jit" id="Ylh-cZ-bhG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLq-Sk-iX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

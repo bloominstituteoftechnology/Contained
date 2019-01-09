@@ -16,13 +16,14 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-   
+    let settings = Settings()
+    
     @IBAction func shouldRoll(_ sender: UISwitch) {
+        settings.shouldRoll = sender.isOn
     }
     
-    
-    
     @IBAction func shouldZoom(_ sender: UISwitch) {
+        settings.shouldZoom = sender.isOn
     }
     
 }
