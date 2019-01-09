@@ -18,7 +18,6 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    let settings = Settings()
     
     @IBAction func shouldRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = sender.isOn
@@ -30,6 +29,7 @@ class SettingsViewController: UIViewController {
     @IBAction func shouldFade(_ sender: UISwitch) {
         Settings.shared.fadeInAndOut = sender.isOn
     }
+    
     
 }
 

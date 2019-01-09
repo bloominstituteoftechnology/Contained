@@ -9,6 +9,8 @@
 import SpriteKit
 
 class CustomScene: SKScene {
+    
+ 
     let crab = SKSpriteNode()
     
     // Add and center child, initializing animation sequence
@@ -17,12 +19,15 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+ 
     }
     
 
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+       
         
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
