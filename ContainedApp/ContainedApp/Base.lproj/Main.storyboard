@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="257" y="185"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="Jez-4X-uZD">
             <objects>
                 <viewController id="yl8-2z-g5a" sceneMemberID="viewController">
@@ -102,7 +102,7 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H7S-pt-sUp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Qzc-cu-hxT">
+                    <navigationItem key="navigationItem" id="Qzc-cu-hxT">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="RqV-Hw-eJi"/>
                     </navigationItem>
                     <connections>
@@ -113,17 +113,29 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="1234" y="985"/>
         </scene>
-        <!--Title-->
+        <!--Last View Controller-->
         <scene sceneID="YJ3-N1-Nx4">
             <objects>
                 <viewController id="ja4-Ej-oOJ" customClass="LastViewController" customModule="ContainedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zrn-rI-bOy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-2C-7hH">
+                                <rect key="frame" x="135" y="319" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ojy-2C-7hH" firstAttribute="centerX" secondItem="zrn-rI-bOy" secondAttribute="centerX" id="wc7-la-IAd"/>
+                            <constraint firstItem="Ojy-2C-7hH" firstAttribute="centerY" secondItem="zrn-rI-bOy" secondAttribute="centerY" id="zMO-ZP-p5G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UJv-jd-ptO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="kmZ-Il-27A">
+                    <navigationItem key="navigationItem" id="kmZ-Il-27A">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="m67-3c-7Kq">
                             <connections>
                                 <action selector="done:" destination="ja4-Ej-oOJ" id="e0N-HS-Sgv"/>
