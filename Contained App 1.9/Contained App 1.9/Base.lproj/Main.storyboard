@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="gnU-l4-q3N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5y-jj-DHR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cvY-hS-dn9" firstAttribute="trailing" secondItem="y5y-jj-DHR" secondAttribute="trailing" id="74r-Xz-eAP"/>
+                            <constraint firstItem="y5y-jj-DHR" firstAttribute="leading" secondItem="cvY-hS-dn9" secondAttribute="leading" id="HqM-pO-hm3"/>
+                            <constraint firstItem="y5y-jj-DHR" firstAttribute="top" secondItem="cvY-hS-dn9" secondAttribute="top" id="ZRa-xG-WC5"/>
+                            <constraint firstItem="cvY-hS-dn9" firstAttribute="bottom" secondItem="y5y-jj-DHR" secondAttribute="bottom" id="rXs-SZ-Ewf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cvY-hS-dn9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" selectedImage="game_controller" id="fIB-vd-o7a"/>
+                    <connections>
+                        <outlet property="skview" destination="y5y-jj-DHR" id="Bnc-y6-Gj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-JE-UvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
