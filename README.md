@@ -25,8 +25,12 @@ Your completed application will look like the following GIF:
 Demonstrate your understanding of today's concepts by answering the following free-form questions. Submit them as a text file along with your project.
 
 * What is controller containment and what does it offer developers?
+View controller containment is when one view controller places another view controller inside of it.
 * What is the difference between navigation and tab controllers? Under what circumstances do you use each one?
+Tab bar controller shows icons with the different controllers it goes to. There should really be no more than 5 or 6 tabs. Navigation controllers gives the controller a back button and where you can have a title.
 * Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
+Instagram.
+
 
 ## Project Setup
 
