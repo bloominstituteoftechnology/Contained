@@ -19,7 +19,7 @@ class CustomScene: SKScene {
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
-    let settings = Settings()
+
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,7 +38,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch settings.shouldZoom {
+        switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -46,8 +46,9 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if settings.shouldRoll {
+        if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
     }
 }
+

@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +18,15 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    let settings = Settings()
+//    let settings = Settings()
     
     @IBAction func shouldRoll(_ sender: UISwitch) {
-        settings.shouldRoll = sender.isOn
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     @IBAction func shouldZoom(_ sender: UISwitch) {
-        settings.shouldZoom = sender.isOn
+        Settings.shared.shouldZoom = sender.isOn
     }
     
 }
+
