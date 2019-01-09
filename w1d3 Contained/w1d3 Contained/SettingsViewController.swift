@@ -16,7 +16,14 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        sender.isOn = true
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        sender.isOn = true
+    }
+    
     /*
     // MARK: - Navigation
 
