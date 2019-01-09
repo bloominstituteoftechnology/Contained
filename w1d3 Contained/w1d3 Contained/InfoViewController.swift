@@ -13,7 +13,6 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         navigationController?.popToRootViewController(animated: true)

@@ -10,6 +10,8 @@
 import SpriteKit
 
 class CustomScene: SKScene {
+    let setting = Settings()
+    
     let crab = SKSpriteNode()
     
     // Add and center child, initializing animation sequence
@@ -37,7 +39,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch Model.shared.shouldZoom {
+        switch setting.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -45,7 +47,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if Model.shared.shouldRoll {
+        if setting.shouldRoll {
             crab.run(rollAction)
         }
     }
