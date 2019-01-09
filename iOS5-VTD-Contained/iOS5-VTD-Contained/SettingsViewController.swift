@@ -27,6 +27,9 @@ class SettingsViewController: UIViewController {
     @IBAction func shouldZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = sender.isOn
     }
+    @IBAction func shouldFade(_ sender: UISwitch) {
+        Settings.shared.fadeInAndOut = sender.isOn
+    }
     
 }
 

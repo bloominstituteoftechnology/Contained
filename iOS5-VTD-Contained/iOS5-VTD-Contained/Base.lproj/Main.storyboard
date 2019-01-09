@@ -19,19 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-77-UV2">
-                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
+                                <rect key="frame" x="115.5" y="279" width="144" height="109"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qnY-Ve-9o9">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U89-se-CnW">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-sp-v0M">
+                                                <rect key="frame" x="95" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="shouldFade:" destination="hqM-Ss-09H" eventType="valueChanged" id="AVM-cn-W5B"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-ie-Cmw">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="144" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVf-1U-dPU">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eka-0e-N3I">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="95" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="shouldRoll:" destination="hqM-Ss-09H" eventType="valueChanged" id="hhX-S0-nKj"/>
                                                 </connections>
@@ -39,16 +56,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oBC-mz-WJh">
-                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="78" width="144" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIN-my-60m">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rOc-NY-YzT">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="95" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="shouldZoom:" destination="hqM-Ss-09H" eventType="valueChanged" id="wgj-TK-dfU"/>
                                                 </connections>
