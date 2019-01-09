@@ -50,12 +50,24 @@
                     <view key="view" contentMode="scaleToFill" id="TSH-IL-Edj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueM-7w-nnp">
+                                <rect key="frame" x="121" y="304.5" width="133" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ueM-7w-nnp" firstAttribute="centerX" secondItem="TSH-IL-Edj" secondAttribute="centerX" id="BWm-bt-J1P"/>
+                            <constraint firstItem="ueM-7w-nnp" firstAttribute="centerY" secondItem="TSH-IL-Edj" secondAttribute="centerY" id="J75-3h-9en"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oeR-zv-CBc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="RkW-jH-Gud"/>
                     <navigationItem key="navigationItem" id="pDI-ez-5Et">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="GHA-Mp-plC">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="GHA-Mp-plC">
                             <connections>
                                 <segue destination="0Ke-op-TQz" kind="show" id="zsN-TQ-5de"/>
                             </connections>
@@ -67,18 +79,32 @@
             </objects>
             <point key="canvasLocation" x="-1714" y="2167"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="C8K-dy-2MW">
             <objects>
                 <viewController id="0Ke-op-TQz" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="36r-ss-UkA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDJ-ru-pcg">
+                                <rect key="frame" x="125" y="305" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crab.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oDJ-ru-pcg" firstAttribute="centerY" secondItem="36r-ss-UkA" secondAttribute="centerY" id="11v-br-K68"/>
+                            <constraint firstItem="oDJ-ru-pcg" firstAttribute="centerX" secondItem="36r-ss-UkA" secondAttribute="centerX" id="GZX-wq-qmy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="p8f-Sv-UiN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="6Qf-Xq-Ecd">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="NpY-rT-TA9">
+                    <navigationItem key="navigationItem" id="6Qf-Xq-Ecd">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="NpY-rT-TA9">
                             <connections>
                                 <segue destination="Inu-wh-Ga8" kind="show" id="IxJ-cQ-OyJ"/>
                             </connections>
@@ -89,18 +115,34 @@
             </objects>
             <point key="canvasLocation" x="-774" y="2167"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="suB-gH-CVq">
             <objects>
                 <viewController id="Inu-wh-Ga8" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Awf-qr-OXu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojt-cP-m4x">
+                                <rect key="frame" x="135" y="319" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ojt-cP-m4x" firstAttribute="centerX" secondItem="Awf-qr-OXu" secondAttribute="centerX" id="WDs-w9-D0Q"/>
+                            <constraint firstItem="Ojt-cP-m4x" firstAttribute="centerY" secondItem="Awf-qr-OXu" secondAttribute="centerY" id="fd5-Rh-EMH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yj1-At-EPg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bxW-ld-khW">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="hsn-9i-XbM"/>
+                    <navigationItem key="navigationItem" id="bxW-ld-khW">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="hsn-9i-XbM">
+                            <connections>
+                                <action selector="done:" destination="Inu-wh-Ga8" id="PFH-CA-Gzw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yid-dM-eB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,8 +175,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yku-Ph-piu" kind="relationship" relationship="viewControllers" id="rDB-XI-586"/>
                         <segue destination="oqk-ZV-fMs" kind="relationship" relationship="viewControllers" id="0pR-4t-PMU"/>
+                        <segue destination="yku-Ph-piu" kind="relationship" relationship="viewControllers" id="rDB-XI-586"/>
                         <segue destination="hdu-zY-A8N" kind="relationship" relationship="viewControllers" id="EZK-sJ-Uop"/>
                     </connections>
                 </tabBarController>
