@@ -14,13 +14,14 @@
         <scene sceneID="TGB-qC-DzN">
             <objects>
                 <viewController id="a7g-Ne-2mC" customClass="GameViewController" customModule="Crab_Game" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RHQ-vy-v1H">
+                    <skView key="view" contentMode="scaleToFill" id="QEG-Cl-egk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Phi-4i-hsK"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </skView>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="NLw-QH-RTb"/>
+                    <connections>
+                        <outlet property="skview" destination="QEG-Cl-egk" id="0U2-RS-Clh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq3-Dc-gZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +154,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-ev-4a6">
                                                 <rect key="frame" x="0.0" y="29" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="MRh-3J-6l6" eventType="valueChanged" id="alk-2a-zXw"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -170,6 +174,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qe2-5m-She">
                                                 <rect key="frame" x="0.0" y="29" width="51" height="30"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="MRh-3J-6l6" eventType="valueChanged" id="2yx-pg-bgB"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
