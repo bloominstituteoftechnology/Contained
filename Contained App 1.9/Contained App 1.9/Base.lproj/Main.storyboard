@@ -118,9 +118,8 @@ the crab</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X5G-ba-1U9">
-                                <rect key="frame" x="120" y="208" width="101.5" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X5G-ba-1U9">
+                                <rect key="frame" x="137" y="298.5" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-3e-s6e">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -158,8 +157,31 @@ the crab</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pZ4-aO-HHh">
+                                <rect key="frame" x="131.5" y="376.5" width="112" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-S7-9Kr">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gih-R8-aHm">
+                                        <rect key="frame" x="63" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleHappy:" destination="8MC-aD-L1P" eventType="valueChanged" id="9KJ-aI-Kil"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pZ4-aO-HHh" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="WSV-82-RyC"/>
+                            <constraint firstItem="pZ4-aO-HHh" firstAttribute="top" secondItem="X5G-ba-1U9" secondAttribute="bottom" constant="8" id="aDR-SP-bYO"/>
+                            <constraint firstItem="X5G-ba-1U9" firstAttribute="centerY" secondItem="8WC-9t-KeO" secondAttribute="centerY" id="bdM-CB-abz"/>
+                            <constraint firstItem="X5G-ba-1U9" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="xcK-cU-4ys"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Tbe-xY-fXZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="p8t-Pj-bpd"/>

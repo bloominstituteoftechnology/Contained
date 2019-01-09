@@ -7,8 +7,9 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
     }
     
     // Move to touch
@@ -19,6 +20,9 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+        
+        // Store crabs location
+        let location = position
         
         // Create move action
         let actionDuration = 1.0
@@ -39,5 +43,7 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        
     }
 }
