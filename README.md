@@ -41,18 +41,14 @@ Follow these steps to set up your project:
 
 ## Building your Model
 
-- Add a new Model.swift file to your project with the following contents:
+- Add a new Settings.swift file to your project with the following contents:
 
 ```
 import Foundation
 
-class Model {
-    static let shared = Model()
-    private init() {}
-    
+class Settings {
     var shouldRoll = false
-    var shouldZoom = false
-    
+    var shouldZoom = false    
 }
 ```
 
@@ -78,7 +74,7 @@ You're ready to start adding content to your interface.
 Follow these steps to create content for your information tab.
 
 * Name the first two bar button items "Next". Set the last bar button item to the system "Done" item using the attributes inspector.
-* Add an IBAction from the Done button to the InfoViewController class and have it pop back to the root view controller:
+* Add an IBAction from the Done button to the InfoViewController class and have it pop back to the root view controller (you may also use an unwind segue if you'd prefer):
 
 ```
     @IBAction func done(_ sender: Any) {
