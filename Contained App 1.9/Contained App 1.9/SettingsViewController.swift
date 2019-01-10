@@ -17,4 +17,8 @@ class SettingsViewController: UIViewController {
         
     }
     
+    @IBAction func toggleFade(_ sender: Any) {
+        Settings.shared.shouldFade = true
+        
+    }
 }
