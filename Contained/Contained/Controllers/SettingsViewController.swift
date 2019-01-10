@@ -9,7 +9,25 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
     
-
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        onOrOff(sender)
+    }
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        onOrOff(sender)
+    }
+    
+    func onOrOff(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            sender.isOn = false
+        } else {
+            sender.isOn = true
+        }
+        
+    }
+    
+    
+    
 }
