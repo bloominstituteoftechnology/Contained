@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,21 +18,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        sender.isOn = true
+        
+        Settings.shared.shouldRoll = sender.isOn
+        print("toggledRoll")
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        sender.isOn = true
+        
+        Settings.shared.shouldZoom = sender.isOn
+        print("toggledZoom")
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

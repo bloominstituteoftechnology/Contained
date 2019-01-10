@@ -39,7 +39,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch setting.shouldZoom {
+        switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -47,8 +47,9 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if setting.shouldRoll {
+        if Settings.shared.shouldRoll {
             crab.run(rollAction)
+            print(setting.shouldRoll.description)
         }
     }
 }
