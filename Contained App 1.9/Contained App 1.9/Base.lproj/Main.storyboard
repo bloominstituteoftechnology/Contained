@@ -191,14 +191,33 @@ the crab</string>
                                     </switch>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzH-tT-Zb4">
+                                <rect key="frame" x="134.5" y="220.5" width="106.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-js-fy5">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n3h-j2-Dmp">
+                                        <rect key="frame" x="57.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleSpeed:" destination="8MC-aD-L1P" eventType="valueChanged" id="1gZ-E1-ELe"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="X5G-ba-1U9" firstAttribute="top" secondItem="FKl-hA-h9l" secondAttribute="bottom" constant="8" id="AWA-Kx-4ya"/>
                             <constraint firstItem="FKl-hA-h9l" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="Ggg-My-9ZZ"/>
                             <constraint firstItem="pZ4-aO-HHh" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="WSV-82-RyC"/>
+                            <constraint firstItem="WzH-tT-Zb4" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="XR7-GC-GgF"/>
                             <constraint firstItem="pZ4-aO-HHh" firstAttribute="top" secondItem="X5G-ba-1U9" secondAttribute="bottom" constant="8" id="aDR-SP-bYO"/>
                             <constraint firstItem="X5G-ba-1U9" firstAttribute="centerY" secondItem="8WC-9t-KeO" secondAttribute="centerY" id="bdM-CB-abz"/>
+                            <constraint firstItem="FKl-hA-h9l" firstAttribute="top" secondItem="WzH-tT-Zb4" secondAttribute="bottom" constant="8" id="f8y-aI-w2z"/>
                             <constraint firstItem="X5G-ba-1U9" firstAttribute="centerX" secondItem="8WC-9t-KeO" secondAttribute="centerX" id="xcK-cU-4ys"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tbe-xY-fXZ"/>

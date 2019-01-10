@@ -33,6 +33,7 @@ class CustomScene: SKScene {
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         let fadeOutAction = SKAction.fadeOut(withDuration: 1)
         let fadeInAction = SKAction.fadeIn(withDuration: 1)
+        let newJaunt = SKAction.speed(by: CGFloat.pi * 2, duration: actionDuration)
         
         switch Settings.shared.shouldZoom {
         case false:
@@ -46,8 +47,12 @@ class CustomScene: SKScene {
             crab.run(rollAction)
         }
         
+        if Settings.shared.shouldFaster {
+            crab.run(newJaunt)
+        }
+        
         if Settings.shared.shouldFade {
-            let sequenceActionFade = SKAction.sequence([fadeInAction, fadeOutAction])
+            let sequenceActionFade = SKAction.sequence([fadeOutAction, moveAction, fadeInAction])
             crab.run(sequenceActionFade)
         }
         
@@ -57,6 +62,6 @@ class CustomScene: SKScene {
         
         if Settings.shared.shouldHappy {
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        }
     }
-}
 }

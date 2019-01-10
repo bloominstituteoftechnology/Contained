@@ -21,4 +21,9 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldFade = true
         
     }
+    
+    @IBAction func toggleSpeed(_ sender: Any) {
+        Settings.shared.shouldFaster = true
+    }
+    
 }

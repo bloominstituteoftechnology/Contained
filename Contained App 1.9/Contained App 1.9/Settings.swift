@@ -9,4 +9,5 @@ class Settings {
     var shouldZoom = false
     var shouldHappy = false
     var shouldFade = false
+    var shouldFaster = false
 }
