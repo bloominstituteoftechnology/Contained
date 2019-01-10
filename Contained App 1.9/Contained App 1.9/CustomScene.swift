@@ -9,7 +9,7 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        
+        //let crabing = "WaitingCrab"
     }
     
     // Move to touch

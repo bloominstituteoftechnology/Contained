@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleHappy(_ sender: Any) {
         Settings.shared.shouldHappy = true
-        crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+       // crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         
     }
     
