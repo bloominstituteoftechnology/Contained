@@ -10,4 +10,4 @@ Navigation controllers allow you to stack view that can be accessed with bar but
 
 **Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.**
 
-Photos - the tab bar at the bottom allows you to access albums, photos, search. The navigation allows you to access different areas in those tabbed out sections, and photos are contained in those views.
+Photos - the tab bar at the bottom allows you to access albums, photos, search. The navigation controller allows you to access different areas in those tabbed out sections, and photos are contained in those views.
