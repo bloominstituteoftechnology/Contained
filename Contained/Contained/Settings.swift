@@ -8,7 +8,9 @@
 
 import Foundation
 
+
 class Settings {
-    var shouldroll = false
+    
+    var shouldRoll = false
     var shouldZoom = false
 }
