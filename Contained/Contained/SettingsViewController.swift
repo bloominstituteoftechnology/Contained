@@ -8,6 +8,8 @@
 
 import UIKit
 
+let settings = Settings()
+
 class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,20 +17,10 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        if sender.isOn {
-            settings.shouldRoll = true
-        } else {
-            settings.shouldRoll = false
-        }
+        settings.shouldRoll = sender.isOn
     }
-    
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        if sender.isOn {
-            settings.shouldZoom = true
-        } else {
-            settings.shouldZoom = false
-        }
+        settings.shouldZoom = sender.isOn
     }
     
-    let settings = Settings()
 }
