@@ -33,7 +33,8 @@ class CustomScene: SKScene {
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         let fadeOutAction = SKAction.fadeOut(withDuration: 1)
         let fadeInAction = SKAction.fadeIn(withDuration: 1)
-        let newJaunt = SKAction.speed(by: CGFloat.pi * 1, duration: actionDuration)
+        let speedUp = SKAction.speed(by: CGFloat.pi * 1, duration: 0.5)
+       //let slow = SKAction.s
         
         switch Settings.shared.shouldZoom {
         case false:
@@ -48,7 +49,7 @@ class CustomScene: SKScene {
         }
         
         if Settings.shared.shouldFaster {
-            crab.run(newJaunt)
+            crab.run(speedUp)
         }
         
         if Settings.shared.shouldFade {
