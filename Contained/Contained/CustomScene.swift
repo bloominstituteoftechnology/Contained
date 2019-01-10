@@ -2,6 +2,8 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    var starfield: SKEmitterNode!
+    
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
@@ -10,6 +12,19 @@ class CustomScene: SKScene {
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
+    
+    override func didMove(to view: SKView) {
+        backgroundColor = UIColor.black
+        
+        starfield = SKEmitterNode(fileNamed: "Starfield")!
+        starfield.position = CGPoint(x: 1024, y: 384)
+        starfield.advanceSimulationTime(10)
+        addChild(starfield)
+        starfield.zPosition = -1
+
+    }
+    
+    
     
     // Move to touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
