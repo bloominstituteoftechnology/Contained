@@ -9,5 +9,8 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
     
+    @IBAction func toggleCrab(_ sender: UISwitch) {
+        Settings.shared.waitingCrab = sender.isOn
+    }
     
 }
