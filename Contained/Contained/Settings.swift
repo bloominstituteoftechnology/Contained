@@ -1,4 +1,5 @@
 import Foundation
+import SpriteKit
 
 class Settings {
     static let shared = Settings()
@@ -6,5 +7,7 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var shouldFade = false
     var waitingCrab = false
+    var recentPosition = CGPoint()
 }

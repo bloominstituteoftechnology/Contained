@@ -13,4 +13,8 @@ class SettingsViewController: UIViewController {
         Settings.shared.waitingCrab = sender.isOn
     }
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn
+    }
+    
 }
