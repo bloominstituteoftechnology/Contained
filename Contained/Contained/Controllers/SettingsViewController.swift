@@ -11,23 +11,11 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        onOrOff(sender)
+        Settings.shared.shouldZoom = sender.isOn
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        onOrOff(sender)
+        Settings.shared.shouldRoll = sender.isOn
     }
-    
-    func onOrOff(_ sender: UISwitch) {
-        
-        if sender.isOn {
-            sender.isOn = false
-        } else {
-            sender.isOn = true
-        }
-        
-    }
-    
-    
     
 }
