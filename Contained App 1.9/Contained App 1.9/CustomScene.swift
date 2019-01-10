@@ -9,7 +9,6 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        //let crabing = "WaitingCrab"
     }
     
     // Move to touch
@@ -22,7 +21,7 @@ class CustomScene: SKScene {
         let position = touch.location(in: self)
         
         // Store crabs location
-        let location = position
+ //       let location = position
         
         // Create move action
         let actionDuration = 1.0
@@ -34,7 +33,6 @@ class CustomScene: SKScene {
         let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
         let fadeInAction = SKAction.fadeIn(withDuration: 0.5)
         let speedUp = SKAction.speed(by: CGFloat.pi * 1, duration: 0.5)
-       //let slow = SKAction.s
         
         switch Settings.shared.shouldZoom {
         case false:

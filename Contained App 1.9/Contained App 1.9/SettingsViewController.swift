@@ -25,5 +25,4 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleSpeed(_ sender: Any) {
         Settings.shared.shouldFaster.toggle()
     }
-    
 }
