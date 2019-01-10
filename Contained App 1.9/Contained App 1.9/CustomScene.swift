@@ -50,5 +50,13 @@ class CustomScene: SKScene {
             let sequenceActionFade = SKAction.sequence([fadeInAction, fadeOutAction])
             crab.run(sequenceActionFade)
         }
+        
+        if Settings.shared.shouldHappy {
+              crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        }
+        
+        if Settings.shared.shouldHappy {
+            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
     }
+}
 }
