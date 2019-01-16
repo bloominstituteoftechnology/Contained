@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Contained
+//  Lambda Notes
 //
-//  Created by Diante Lewis-Jolley on 1/9/19.
+//  Created by Diante Lewis-Jolley on 1/10/19.
 //  Copyright © 2019 Diante Lewis-Jolley. All rights reserved.
 //
 
