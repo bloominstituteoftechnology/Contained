@@ -9,6 +9,7 @@
 import Foundation
 
 class Settings {
+    static let shared = Settings()
     var shouldRoll = false
     var shouldZoom = false
 }

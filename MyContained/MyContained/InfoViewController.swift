@@ -1,14 +1,20 @@
 //
 //  InfoViewController.swift
-//  Contained
+//  MyContained
 //
-//  Created by Diante Lewis-Jolley on 1/9/19.
+//  Created by Diante Lewis-Jolley on 1/16/19.
 //  Copyright © 2019 Diante Lewis-Jolley. All rights reserved.
 //
 
 import UIKit
 
 class InfoViewController: UIViewController {
+
+
+    @IBAction func doneButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
