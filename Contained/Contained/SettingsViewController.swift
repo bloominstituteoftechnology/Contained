@@ -19,4 +19,9 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleZoom(_ sender: UISwitch) {
         settings.shouldZoom = sender.isOn
     }
+    
+    @IBAction func toggleCrab(_ sender: UISwitch) {
+        settings.waitingCrab = sender.isOn
+    }
+    
 }
