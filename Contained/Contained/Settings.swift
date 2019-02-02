@@ -6,10 +6,11 @@
 //  Copyright © 2019 Bytes-Random L.L.C. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var waitingCrab = false
+    var lastPosition: CGPoint?
 }
