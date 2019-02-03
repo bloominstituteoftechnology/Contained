@@ -8,20 +8,20 @@
 
 import UIKit
 
-let settings = Settings()
+
 
 class SettingsViewController: UIViewController {
 
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        settings.shouldRoll = sender.isOn
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        settings.shouldZoom = sender.isOn
+        Settings.shared.shouldZoom = sender.isOn
     }
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
-        settings.waitingCrab = sender.isOn
+        Settings.shared.waitingCrab = sender.isOn
     }
     
 }

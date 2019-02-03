@@ -15,14 +15,14 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        switch settings.waitingCrab {
+        switch Settings.shared.waitingCrab {
         case false:
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         case true:
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
         
-        if let savedPosition = settings.lastPosition {
+        if let savedPosition = Settings.shared.lastPosition {
             crab.position = savedPosition
         } else {
             crab.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -39,7 +39,7 @@ class CustomScene: SKScene {
         // Retrieve position
         
         let position = touch.location(in: self)
-        settings.lastPosition = position
+        Settings.shared.lastPosition = position
         
         
         // Create move action
@@ -50,7 +50,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch settings.shouldZoom {
+        switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -58,7 +58,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if settings.shouldRoll {
+        if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
     }
