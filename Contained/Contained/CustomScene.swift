@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class CustonScene: SKScene {
+class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
     // Add and center child, initializing animation sequence
@@ -36,16 +36,16 @@ class CustonScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch Model.shared.shouldZoom {
-        case false:
-            crab.run(moveAction)
-        case true:
-            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
-        }
-        
-        if Model.shared.shouldRoll {
-            crab.run(rollAction)
-        }
+//        switch Model.shared.shouldZoom {
+//        case false:
+//            crab.run(moveAction)
+//        case true:
+//            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
+//        }
+//        
+//        if Model.shared.shouldRoll {
+//            crab.run(rollAction)
+//        }
     }
 }
 
