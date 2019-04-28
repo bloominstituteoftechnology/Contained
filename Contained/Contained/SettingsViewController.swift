@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    let settings = Settings()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,15 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        settings.shouldRoll = sender.isOn
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        settings.shouldZoom = sender.isOn
+    }
+    
+    
     /*
     // MARK: - Navigation
 
