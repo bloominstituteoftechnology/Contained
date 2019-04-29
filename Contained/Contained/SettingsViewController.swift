@@ -24,10 +24,10 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        Settings.shared.shouldRoll = !Settings.shared.shouldRoll
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom = !Settings.shared.shouldZoom
+        Settings.shared.shouldZoom = sender.isOn
     }
 }
