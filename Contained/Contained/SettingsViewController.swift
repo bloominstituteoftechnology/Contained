@@ -28,6 +28,10 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn
+    }
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = sender.isOn
     }
