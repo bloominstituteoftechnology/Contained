@@ -27,4 +27,9 @@ class Settings {
             print("shouldFade is toggled")
         }
     }
+    var shouldWaiting = false{
+        didSet{
+            print("shouldWait is toggled")
+        }
+    }
 }

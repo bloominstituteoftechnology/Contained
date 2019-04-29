@@ -29,4 +29,7 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade = sender.isOn
     }
+    @IBAction func toggleWaiting(_ sender: UISwitch) {
+        Settings.shared.shouldWaiting = sender.isOn
+    }
 }

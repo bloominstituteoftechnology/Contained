@@ -119,19 +119,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NLv-xd-s75">
-                                <rect key="frame" x="155.5" y="393.5" width="103.5" height="109"/>
+                                <rect key="frame" x="154" y="374" width="106.5" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cMz-Ji-Yhh">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5M-Eb-QWa">
-                                                <rect key="frame" x="0.0" y="0.0" width="46.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-Vf-eES">
-                                                <rect key="frame" x="54.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="57.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="yMd-xR-All" eventType="valueChanged" id="vV7-ka-bvb"/>
                                                 </connections>
@@ -142,16 +142,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-tm-u8m">
-                                        <rect key="frame" x="0.0" y="39" width="103.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="106.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-8K-Utb">
-                                                <rect key="frame" x="0.0" y="0.0" width="46.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pge-6V-5i7">
-                                                <rect key="frame" x="54.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="57.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="yMd-xR-All" eventType="valueChanged" id="2SX-Mk-tUP"/>
                                                 </connections>
@@ -162,18 +162,35 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eh-ro-YxA">
-                                        <rect key="frame" x="0.0" y="78" width="103.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="78" width="106.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih8-uh-boA">
-                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-g1-F4P">
-                                                <rect key="frame" x="54.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="57.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleFade:" destination="yMd-xR-All" eventType="valueChanged" id="Tvp-5W-xnT"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgI-cd-GJf">
+                                        <rect key="frame" x="0.0" y="117" width="106.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEq-l8-brO">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1VK-4l-k3G">
+                                                <rect key="frame" x="57.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleWaiting:" destination="yMd-xR-All" eventType="valueChanged" id="5Z0-hi-pwd"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
