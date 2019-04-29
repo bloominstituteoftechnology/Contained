@@ -22,11 +22,14 @@ class InfoViewController: UIViewController {
 			
 			switch viewControllerNumber {
 			case 1:
-				setupLabel1()
+				setupLabel("Crabs")
 			case 2:
-				setupLabel1()
+				setupLabel("Tap to move \nthe crab")
+				label.font = UIFont.boldSystemFont(ofSize: 24)
+				label.numberOfLines = 2
+				
 			case 3:
-				setupLabel1()
+				setupLabel("")
 			default:
 				print("no view")
 			}
@@ -34,14 +37,16 @@ class InfoViewController: UIViewController {
 		}
 	}
 	
-	func setupLabel1 () {
-		label.text = "Crabs"
+	func setupLabel(_ str: String) {
+		label.text = str
 		label.textAlignment = .center
 		label.font = UIFont.boldSystemFont(ofSize: 48)
 		label.sizeToFit()
 		label.center = view.center
 		view.addSubview(label)
 	}
+	
+	
 	
 	@IBAction func done(_ sender: Any) {
 		navigationController?.popToRootViewController(animated: true)
