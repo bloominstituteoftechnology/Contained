@@ -14,4 +14,8 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var shouldFade = false
+    var happyCrab = false
+    var xCoord: Int? = nil
+    var yCoord: Int? = nil
 }
