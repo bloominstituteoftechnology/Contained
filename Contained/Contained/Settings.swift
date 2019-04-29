@@ -17,8 +17,8 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var shouldFade = false
-    var mood = Mood.happy
-    var position = CGPoint(x: 0, y: 0)
+    var mood: Mood = .happy
+    var position: CGPoint? = nil
     
 }
 

@@ -18,7 +18,6 @@ class CustomScene: SKScene {
         super.sceneDidLoad()
         
         let frameMidPoint = CGPoint(x: frame.midX, y: frame.midY)
-        
         addChild(crab)
         
         // Pick a texture based on user settings
@@ -29,11 +28,11 @@ class CustomScene: SKScene {
         }
         
         // Position the crab to most recent touch point (if there is one)
-        if Settings.shared.position == CGPoint(x: 0, y: 0) {
+        if let position = Settings.shared.position {
+            crab.position = position
+        } else {
             crab.position = frameMidPoint
             Settings.shared.position = frameMidPoint
-        } else {
-            crab.position = Settings.shared.position
         }
     }
     
