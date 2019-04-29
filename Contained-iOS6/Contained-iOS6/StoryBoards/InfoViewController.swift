@@ -32,7 +32,7 @@ class InfoViewController: UIViewController {
 				setupLabel("Lets Play")
 				label.font = UIFont.boldSystemFont(ofSize: 24)
 			default:
-				print("no view")
+				print( "The number of Controler: \(viewControllerNumber)")
 			}
 
 		}
