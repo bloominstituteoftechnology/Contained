@@ -26,5 +26,8 @@ class InfoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
