@@ -12,7 +12,6 @@ class InfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +45,6 @@ class InfoViewController: UIViewController {
 		label.center = view.center
 		view.addSubview(label)
 	}
-	
-	
 	
 	@IBAction func done(_ sender: Any) {
 		navigationController?.popToRootViewController(animated: true)

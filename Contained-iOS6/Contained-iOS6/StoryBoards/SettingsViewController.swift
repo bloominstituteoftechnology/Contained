@@ -8,21 +8,21 @@
 
 import UIKit
 
-
-
 class SettingsViewController: UIViewController{
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 	
 	@IBAction func RollSwitch(_ sender: UISwitch) {
-		
-		settingsController?.setRoll()
+		if let sc = settingsController {
+			sc.setRoll()
+		}
 	}
 	
 	@IBAction func ZoomSwitch(_ sender: UISwitch) {
-		settingsController?.setZoom()
+		if let sc = settingsController {
+			sc.setZoom()
+		}
 	}
 	
 	var settingsController: SettingsController?

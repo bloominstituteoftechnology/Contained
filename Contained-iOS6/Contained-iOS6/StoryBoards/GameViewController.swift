@@ -11,7 +11,6 @@ import SpriteKit
 
 
 class GameViewController: UIViewController {
-	
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,13 +19,12 @@ class GameViewController: UIViewController {
 		super.viewDidAppear(animated)
 		skscene = CustomeScene(size: view.bounds.size)
 		skview.presentScene(skscene)
-		skscene?.settingsController = settingsController
+		guard let sk = skscene else { return }
+		sk.settingsController = settingsController
 	}
 	
 	@IBOutlet weak var skview: SKView!
-	
 	var skscene: CustomeScene? = nil
-	
 	var settingsController: SettingsController?
 }
 

@@ -9,7 +9,6 @@
 import UIKit
 
 class ContainedTabBarController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 		for childVC in children {
@@ -17,7 +16,7 @@ class ContainedTabBarController: UITabBarController {
 				vc.settingsController = settingsController
 			}
 		}
-
     }
+	
 	let settingsController = SettingsController()
 }

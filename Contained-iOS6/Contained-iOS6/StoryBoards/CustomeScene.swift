@@ -11,7 +11,6 @@ import SpriteKit
 
 class CustomeScene: SKScene , SettingsControllerProtocol{
 	var settingsController: SettingsController?
-	
 	let crab = SKSpriteNode()
 	
 	// Add and center child, initializing animation sequence
@@ -39,8 +38,8 @@ class CustomeScene: SKScene , SettingsControllerProtocol{
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
 		
-		
 		guard let seting = settingsController?.seting else { return }
+		
 		switch seting.shouldZoom {
 		case false:
 			crab.run(moveAction)
