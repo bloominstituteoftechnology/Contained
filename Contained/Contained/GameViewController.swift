@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var skView: SKView!
     var skscene: CustomScene? = nil
     
+    var settings: Settings? 
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         skscene = CustomScene(size: view.bounds.size)
