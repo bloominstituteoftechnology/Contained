@@ -21,6 +21,7 @@ class Settings {
     
 }
 
+// Define the moods
 enum Mood {
     case happy
     case waiting

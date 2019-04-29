@@ -28,7 +28,7 @@ class CustomScene: SKScene {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
         
-        // Position the crab to most recent touch point
+        // Position the crab to most recent touch point (if there is one)
         if Settings.shared.position == CGPoint(x: 0, y: 0) {
             crab.position = frameMidPoint
             Settings.shared.position = frameMidPoint

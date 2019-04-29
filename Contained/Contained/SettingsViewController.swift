@@ -16,6 +16,8 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleMood(_ sender: UISegmentedControl) {
         
+        // Set mood setting based on selectedSegmentIndex
+        // 0 == happy, 1 == waiting
         switch sender.selectedSegmentIndex {
         case 0:
             Settings.shared.mood = .happy
