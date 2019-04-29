@@ -16,10 +16,13 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleMood(_ sender: UISegmentedControl) {
         
-        if Settings.shared.mood == .happy {
-            Settings.shared.mood = .waiting
-        } else {
+        switch sender.selectedSegmentIndex {
+        case 0:
             Settings.shared.mood = .happy
+        case 1:
+            Settings.shared.mood = .waiting
+        default:
+            fatalError("Error setting mood. Default case executed.")
         }
     }
     
