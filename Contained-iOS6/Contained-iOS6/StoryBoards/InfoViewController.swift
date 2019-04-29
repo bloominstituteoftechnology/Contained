@@ -13,8 +13,17 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		setupLabel()
     }
+	
+	func setupLabel () {
+		label.text = "Crabs"
+		label.textAlignment = .center
+		label.font = UIFont.boldSystemFont(ofSize: 64)
+		label.sizeToFit()
+		label.center = view.center
+		view.addSubview(label)
+	}
 	
 	@IBAction func done(_ sender: Any) {
 		navigationController?.popToRootViewController(animated: true)
