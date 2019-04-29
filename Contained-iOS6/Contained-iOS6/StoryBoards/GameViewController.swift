@@ -14,11 +14,13 @@ class GameViewController: UIViewController, SettingsControllerProtocol{
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		print()
+		
     }
-	var settingsController: SettingsController? {
-		didSet {
-			print("set")
-		}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		print("set roll: \(settingsController?.seting.shouldRoll) set zoom:\(settingsController?.seting.shouldZoom)")
 	}
+	
+	var settingsController: SettingsController?
 }
