@@ -68,15 +68,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to move the crab!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kke-Xe-P4l">
-                                <rect key="frame" x="20" y="391" width="374" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to move the crab!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kke-Xe-P4l">
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kke-Xe-P4l" firstAttribute="centerY" secondItem="xcz-Zs-nhO" secondAttribute="centerY" id="Hpy-tv-ecr"/>
+                            <constraint firstItem="kke-Xe-P4l" firstAttribute="centerX" secondItem="xcz-Zs-nhO" secondAttribute="centerX" id="zKE-Hm-PcG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HHw-TL-Ua4"/>
                     </view>
                     <navigationItem key="navigationItem" id="raJ-aJ-Oxv">
@@ -98,14 +101,59 @@
                     <view key="view" contentMode="scaleToFill" id="Yjb-pQ-Nci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t36-Hw-cdn">
+                                <rect key="frame" x="139" y="413" width="136" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="2qG-CD-a3A" userLabel="Roll Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfU-GU-94H">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xAP-Uh-VCx">
+                                                <rect key="frame" x="87" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="h0k-fM-OVd" eventType="valueChanged" id="zb8-yr-C6w"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="IS8-Iw-VVl" userLabel="Zoom Stack View">
+                                        <rect key="frame" x="0.0" y="39" width="136" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-hp-wpa">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cra-8v-Emb">
+                                                <rect key="frame" x="87" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="h0k-fM-OVd" eventType="valueChanged" id="RUV-JP-2SA"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t36-Hw-cdn" firstAttribute="centerY" secondItem="Yjb-pQ-Nci" secondAttribute="centerY" id="1IA-4F-vmj"/>
+                            <constraint firstItem="t36-Hw-cdn" firstAttribute="centerX" secondItem="Yjb-pQ-Nci" secondAttribute="centerX" id="VHR-hr-T5y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UKa-e1-FWP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ktp-Zn-zb6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-mJ-MF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="552"/>
+            <point key="canvasLocation" x="-162.31884057971016" y="551.78571428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OVW-E7-sj6">

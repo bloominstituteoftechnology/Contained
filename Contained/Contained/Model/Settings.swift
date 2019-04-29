@@ -9,6 +9,15 @@
 import Foundation
 
 class Settings {
-    var shouldRoll = false
-    var shouldZoom = false
+    
+    static let shared = Settings()
+    private init() {}
+    
+    //Handle the settings switch toggles
+    class Settings {
+        var shouldRoll = false
+        var shouldZoom = false
+    }
+
+    
 }
