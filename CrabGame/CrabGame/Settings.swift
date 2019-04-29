@@ -12,6 +12,14 @@ class Settings {
     static let shared = Settings()
     private init() {}
     
-    var shouldRoll = false
-    var shouldZoom = false
+    var shouldRoll = false{
+        didSet{
+            print("shouldRoll is toggled")
+        }
+    }
+    var shouldZoom = false{
+        didSet{
+            print("shouldZoom is toggled")
+        }
+    }
 }

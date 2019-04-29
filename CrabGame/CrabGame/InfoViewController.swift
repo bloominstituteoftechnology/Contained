@@ -16,7 +16,7 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    //This sends the stack back to the root view controller
     @IBAction func done(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
