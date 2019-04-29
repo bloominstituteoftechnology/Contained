@@ -9,7 +9,13 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, SettingsProtocol {
+	
+	var settings: Settings? {
+		didSet {
+			skscene?.settings = settings
+		}
+	}
 
 	@IBOutlet var gameView: SKView!
 	
@@ -23,6 +29,7 @@ class GameViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		skscene = CustomScene(size: view.bounds.size)
+		skscene?.settings = settings
 		gameView.presentScene(skscene)
 	}
 }

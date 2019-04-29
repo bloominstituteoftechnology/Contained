@@ -10,11 +10,12 @@ import UIKit
 
 class Settings {
 	
-//	let shared = Settings()
-//	private init() {}
-	
-	static var shouldRoll = false
-	static var shouldZoom = false
-	static var heartAttackMode = false
-	static var lastTouch: CGPoint? = nil
+	var shouldRoll = false
+	var shouldZoom = false
+	var heartAttackMode = false
+	var lastTouch: CGPoint? = nil
+}
+
+protocol SettingsProtocol: class {
+	var settings: Settings? { get set }
 }

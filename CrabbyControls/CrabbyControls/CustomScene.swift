@@ -9,7 +9,12 @@
 import SpriteKit
 
 
-class CustomScene: SKScene {
+class CustomScene: SKScene, SettingsProtocol {
+	var settings: Settings? {
+		didSet {
+			setupScene()
+		}
+	}
 	let crab = SKSpriteNode()
 	
 	var heartAttacking = false
@@ -18,7 +23,11 @@ class CustomScene: SKScene {
 		super.sceneDidLoad()
 		addChild(crab)
 		crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
-		crab.position = Settings.lastTouch ?? CGPoint(x: frame.midX, y: frame.midY)
+		setupScene()
+	}
+	
+	func setupScene() {
+		crab.position = settings?.lastTouch ?? CGPoint(x: frame.midX, y: frame.midY)
 	}
 	
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -27,11 +36,12 @@ class CustomScene: SKScene {
 		guard !heartAttacking else { return }
 		
 		let position = touch.location(in: self)
-		Settings.lastTouch = position
+		settings?.lastTouch = position
 		let actionDuration = 1.0
 
 		
-		if Settings.heartAttackMode {
+		guard let settings = settings else { print("Settings not set up!"); return }
+		if settings.heartAttackMode {
 			heartAttacking = true
 			
 			let moveAction = SKAction.move(to: position, duration: actionDuration)
@@ -83,14 +93,14 @@ class CustomScene: SKScene {
 			
 			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 			
-			if Settings.shouldZoom {
+			if settings.shouldZoom {
 				let zoomSeq = SKAction.sequence([zoomAction, moveAction, unzoomAction, resumeWaiting])
 				crab.run(zoomSeq)
 			} else {
 				crab.run(SKAction.sequence([moveAction, resumeWaiting]))
 			}
 			
-			if Settings.shouldRoll {
+			if settings.shouldRoll {
 				crab.run(rollAction)
 			}
 		}
