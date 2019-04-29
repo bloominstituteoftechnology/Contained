@@ -48,14 +48,28 @@
         <!--Play-->
         <scene sceneID="K07-sf-YcS">
             <objects>
-                <viewController id="CX5-ma-Anq" sceneMemberID="viewController">
+                <viewController id="CX5-ma-Anq" customClass="GameViewController" customModule="CrabbyControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J75-zp-f5F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkX-O0-V9F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kkX-O0-V9F" firstAttribute="leading" secondItem="J75-zp-f5F" secondAttribute="leading" id="EiL-R9-f1f"/>
+                            <constraint firstAttribute="bottom" secondItem="kkX-O0-V9F" secondAttribute="bottom" id="Ssi-L6-uj1"/>
+                            <constraint firstItem="kkX-O0-V9F" firstAttribute="top" secondItem="J75-zp-f5F" secondAttribute="top" id="df2-NF-1NA"/>
+                            <constraint firstAttribute="trailing" secondItem="kkX-O0-V9F" secondAttribute="trailing" id="hyN-on-QKL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2vV-ip-oGO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="sCq-ZV-Ls1"/>
+                    <connections>
+                        <outlet property="gameView" destination="kkX-O0-V9F" id="IOF-Su-ex9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yu1-Tk-pRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,6 +146,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v6q-YB-ntg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="34p-WC-fum">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
