@@ -10,23 +10,31 @@ import Foundation
 import SpriteKit
 
 class CustomScene: SKScene {
-    
+
     let crab = SKSpriteNode()
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
+        let frameMidPoint = CGPoint(x: frame.midX, y: frame.midY)
+        
         addChild(crab)
         
+        // Pick a texture based on user settings
         if Settings.shared.mood == .happy {
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         } else {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
         
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        
+        // Position the crab to most recent touch point
+        if Settings.shared.position == CGPoint(x: 0, y: 0) {
+            crab.position = frameMidPoint
+            Settings.shared.position = frameMidPoint
+        } else {
+            crab.position = Settings.shared.position
+        }
     }
     
     // Move to touch
@@ -37,6 +45,7 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+        Settings.shared.position = position
         
         // Create moe action
         let actionDuration = 1.0
