@@ -18,12 +18,12 @@ class SettingsViewController: UIViewController,  SettingsControllerProtocol {
     }
 	
 	@IBAction func RollSwitch(_ sender: UISwitch) {
-		settingsControllerProtocol?.setRoll()
+		settingsController?.setRoll()
 	}
 	@IBAction func ZoomSwitch(_ sender: Any) {
-		settingsControllerProtocol?.setZoom()
+		settingsController?.setZoom()
 	}
 	
-	var settingsControllerProtocol: SettingsController?
+	var settingsController: SettingsController?
 	
 }

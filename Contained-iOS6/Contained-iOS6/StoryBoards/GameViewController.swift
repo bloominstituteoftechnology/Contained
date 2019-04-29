@@ -8,15 +8,17 @@
 
 import UIKit
 
-extension GameViewController: SettingsControllerProtocol {
-}
 
 
-class GameViewController: UIViewController{
-	var settingsControllerProtocol: SettingsController?
+class GameViewController: UIViewController, SettingsControllerProtocol{
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		print()
     }
+	var settingsController: SettingsController? {
+		didSet {
+			print("set")
+		}
+	}
 }

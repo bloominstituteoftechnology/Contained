@@ -14,7 +14,7 @@ class ContainedTabBarController: UITabBarController {
         super.viewDidLoad()
 		for childVC in children {
 			if let vc = childVC as? SettingsControllerProtocol {
-				vc.settingsControllerProtocol = settingsController
+				vc.settingsController = settingsController
 			}
 		}
 

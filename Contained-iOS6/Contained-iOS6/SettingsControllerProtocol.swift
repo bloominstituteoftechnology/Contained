@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SettingsControllerProtocol: AnyObject {
-	var settingsControllerProtocol: SettingsController? { set get }
+	var settingsController: SettingsController? { set get }
 }
