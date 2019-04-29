@@ -15,5 +15,6 @@ class Settings {
 	
 	static var shouldRoll = false
 	static var shouldZoom = false
+	static var heartAttackMode = false
 	static var lastTouch: CGPoint? = nil
 }
