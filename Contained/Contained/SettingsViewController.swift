@@ -14,6 +14,15 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func toggleMood(_ sender: UISegmentedControl) {
+        
+        if Settings.shared.mood == .happy {
+            Settings.shared.mood = .waiting
+        } else {
+            Settings.shared.mood = .happy
+        }
+    }
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = !Settings.shared.shouldRoll
     }

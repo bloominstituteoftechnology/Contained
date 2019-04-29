@@ -15,5 +15,11 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var mood = Mood.happy
     
+}
+
+enum Mood {
+    case happy
+    case waiting
 }

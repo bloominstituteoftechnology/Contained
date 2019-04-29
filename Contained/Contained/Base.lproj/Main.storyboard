@@ -19,19 +19,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uir-2l-0Ks">
-                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <rect key="frame" x="100" y="395" width="214.5" height="106"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ue3-oi-mxr">
+                                        <rect key="frame" x="0.0" y="0.0" width="214.5" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crab Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-jT-w5j">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.5" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u07-qp-ids">
+                                                <rect key="frame" x="93.5" y="0.0" width="121" height="29"/>
+                                                <segments>
+                                                    <segment title="Happy"/>
+                                                    <segment title="Waiting"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="toggleMood:" destination="FJw-oG-tCK" eventType="valueChanged" id="C5R-fN-jSB"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-3x-0av">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="36" width="214.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzr-ZL-pDz">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-4l-ug1">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="165.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="FJw-oG-tCK" eventType="valueChanged" id="Qp7-WF-gk9"/>
                                                 </connections>
@@ -39,16 +60,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-jF-ALp">
-                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="75" width="214.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a5-Za-Gsj">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vGx-aO-9VY">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="165.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="FJw-oG-tCK" eventType="valueChanged" id="RpJ-7o-Wg7"/>
                                                 </connections>
@@ -69,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4M-Fy-Wvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="774"/>
+            <point key="canvasLocation" x="-136.23188405797103" y="773.4375"/>
         </scene>
         <!--Game-->
         <scene sceneID="7td-q3-viA">
