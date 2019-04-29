@@ -27,4 +27,19 @@ class SettingsViewController: UIViewController {
     }
     */
 
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        if Settings.shared.shouldRoll {
+            Settings.shared.shouldRoll = false
+        } else {
+            Settings.shared.shouldRoll = true
+        }
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        if Settings.shared.shouldZoom {
+            Settings.shared.shouldZoom = false
+        } else {
+            Settings.shared.shouldZoom = true
+        }
+    }
 }
