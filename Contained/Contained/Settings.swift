@@ -15,5 +15,5 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
-    var lastPosition = CGPoint(x: 0, y: 0)
+    var lastPosition: CGPoint? = nil
 }
