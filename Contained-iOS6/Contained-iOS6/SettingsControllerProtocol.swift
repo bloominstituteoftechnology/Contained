@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SettingsControllerProtocol {
-	var setingsControllerProtocol: SettingsController? { set get }
+protocol SettingsControllerProtocol: AnyObject {
+	var settingsControllerProtocol: SettingsController? { set get }
 }

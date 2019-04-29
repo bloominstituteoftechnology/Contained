@@ -13,9 +13,11 @@ class ContainedTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		for childVC in children {
-			print("found one!")
+			if let vc = childVC as? SettingsControllerProtocol {
+				vc.settingsControllerProtocol = settingsController
+			}
 		}
 
     }
-	let setingsController = SettingsController()
+	let settingsController = SettingsController()
 }
