@@ -8,8 +8,11 @@
 
 import Foundation
 
+//model
 class Settings {
+    //create instance of the model itself
     static let shared = Settings()
+    //only one instance
     private init() {}
     
     var shouldRoll = false

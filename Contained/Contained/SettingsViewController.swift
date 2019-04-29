@@ -11,6 +11,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    //toggle between settings 
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = sender.isOn
     }
