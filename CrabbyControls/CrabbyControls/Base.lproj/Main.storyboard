@@ -64,14 +64,63 @@
         <!--Settings-->
         <scene sceneID="krd-eU-gtr">
             <objects>
-                <viewController id="4gG-8N-vZh" sceneMemberID="viewController">
+                <viewController id="4gG-8N-vZh" customClass="SettingsViewController" customModule="CrabbyControls" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DP2-qI-Wsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xYh-4u-dDP">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GbU-H4-P73">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C8U-id-IPf">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="rollSwitchPressed:" destination="4gG-8N-vZh" eventType="valueChanged" id="kiM-Sp-dhz"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-Qe-ycn">
+                                                <rect key="frame" x="57" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="czI-Yn-lIg">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WtX-Ll-s5S">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="zoomSwitchPressed:" destination="4gG-8N-vZh" eventType="valueChanged" id="tIE-Ba-xgY"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgw-Sn-ATZ">
+                                                <rect key="frame" x="57" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xYh-4u-dDP" firstAttribute="centerX" secondItem="DP2-qI-Wsn" secondAttribute="centerX" id="4Cc-yS-2K3"/>
+                            <constraint firstItem="xYh-4u-dDP" firstAttribute="centerY" secondItem="DP2-qI-Wsn" secondAttribute="centerY" id="E60-DN-Isy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Wf-M5-7uR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="rBM-EB-LH8"/>
+                    <connections>
+                        <outlet property="rollSwitch" destination="C8U-id-IPf" id="VoP-Ow-cnn"/>
+                        <outlet property="zoomSwitch" destination="WtX-Ll-s5S" id="aGf-Nl-cfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fb-Kc-oqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

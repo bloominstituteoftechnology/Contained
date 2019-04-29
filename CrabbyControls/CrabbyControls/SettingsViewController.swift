@@ -9,22 +9,24 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+	@IBOutlet var rollSwitch: UISwitch!
+	@IBOutlet var zoomSwitch: UISwitch!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		rollSwitch.isOn = Settings.shouldRoll
+		zoomSwitch.isOn = Settings.shouldZoom
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	@IBAction func rollSwitchPressed(_ sender: UISwitch) {
+		Settings.shouldRoll = sender.isOn
+	}
+	
+	@IBAction func zoomSwitchPressed(_ sender: UISwitch) {
+		Settings.shouldZoom = sender.isOn
+	}
+	
 }
