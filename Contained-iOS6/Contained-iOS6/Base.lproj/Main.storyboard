@@ -101,32 +101,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-R8-j34">
-                                <rect key="frame" x="78" y="308" width="99" height="31"/>
+                                <rect key="frame" x="78" y="308" width="85" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-9h-r4I">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-9h-r4I">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gnP-9Z-Yhn">
-                                        <rect key="frame" x="50" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="RollSwitch:" destination="owe-9U-nQh" eventType="valueChanged" id="P6e-m4-pfM"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zKt-oh-qnG">
-                                <rect key="frame" x="78" y="344" width="99" height="31"/>
+                                <rect key="frame" x="78" y="344" width="101.5" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-az-hBK">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-az-hBK">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nYw-4y-xIM">
-                                        <rect key="frame" x="50" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="ZoomSwitch:" destination="owe-9U-nQh" eventType="valueChanged" id="hqJ-Y2-DjN"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -140,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="-262" y="546"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Contained Tab Bar Controller-->
         <scene sceneID="xPC-Kr-eqb">
             <objects>
-                <tabBarController id="t6R-8U-xwd" sceneMemberID="viewController">
+                <tabBarController id="t6R-8U-xwd" customClass="ContainedTabBarController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="We3-PH-gqY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

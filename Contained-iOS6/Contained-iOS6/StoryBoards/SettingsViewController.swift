@@ -15,5 +15,9 @@ class SettingsViewController: UIViewController {
 		
     }
 	
-
+	@IBAction func RollSwitch(_ sender: UISwitch) {
+	}
+	@IBAction func ZoomSwitch(_ sender: Any) {
+	}
+	
 }

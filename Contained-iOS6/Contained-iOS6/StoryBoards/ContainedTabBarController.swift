@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  ContainedTabBarController.swift
 //  Contained-iOS6
 //
 //  Created by Hector Steven on 4/29/19.
@@ -8,10 +8,14 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class ContainedTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		for childVC in children {
+			print("found one!")
+		}
 
     }
+	let setingsController = SettingsController()
 }
