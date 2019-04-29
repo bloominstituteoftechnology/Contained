@@ -22,4 +22,9 @@ class Settings {
             print("shouldZoom is toggled")
         }
     }
+    var shouldFade = false{
+        didSet{
+            print("shouldFade is toggled")
+        }
+    }
 }
