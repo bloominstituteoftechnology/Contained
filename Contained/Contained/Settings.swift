@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct Settings {
+class Settings {
+    
+    static var shared = Settings()
+    private init() {}
     
     var shouldRoll = false
     var shouldZoom = false
