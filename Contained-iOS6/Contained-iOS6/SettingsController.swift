@@ -9,7 +9,6 @@
 import Foundation
 
 class SettingsController {
-	
 	func setRoll() {
 		seting.shouldRoll.toggle()
 	}
