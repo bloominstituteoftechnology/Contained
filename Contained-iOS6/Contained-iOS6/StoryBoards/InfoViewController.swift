@@ -29,7 +29,8 @@ class InfoViewController: UIViewController {
 				label.numberOfLines = 2
 				
 			case 3:
-				setupLabel("")
+				setupLabel("Lets Play")
+				label.font = UIFont.boldSystemFont(ofSize: 24)
 			default:
 				print("no view")
 			}
