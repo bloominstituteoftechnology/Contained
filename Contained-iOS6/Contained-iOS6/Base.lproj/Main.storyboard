@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="kTF-Qw-gMs">
             <objects>
-                <viewController id="lZ6-eV-Ese" sceneMemberID="viewController">
+                <viewController id="lZ6-eV-Ese" customClass="InfoViewController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hvh-SD-hqK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="2He-SY-Wcl"/>
                     </view>
                     <navigationItem key="navigationItem" id="hCA-dI-Dv9">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Dx1-Qe-eme">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Dx1-Qe-eme">
                             <connections>
                                 <segue destination="cl7-nE-EZW" kind="push" id="IDo-Cx-tLs"/>
                             </connections>
@@ -35,7 +35,7 @@
         <!--Title-->
         <scene sceneID="avM-AL-62t">
             <objects>
-                <viewController id="cl7-nE-EZW" sceneMemberID="viewController">
+                <viewController id="cl7-nE-EZW" customClass="InfoViewController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ovG-mt-h6y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="Zeo-sr-GUy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Xuj-tm-pxd">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="CKz-Sx-OjW">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="CKz-Sx-OjW">
                             <connections>
                                 <segue destination="q5Q-2q-GTP" kind="push" id="wcf-nK-7F2"/>
                             </connections>
@@ -57,14 +57,20 @@
         <!--Title-->
         <scene sceneID="k2O-QR-jbT">
             <objects>
-                <viewController id="q5Q-2q-GTP" sceneMemberID="viewController">
+                <viewController id="q5Q-2q-GTP" customClass="InfoViewController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whh-Yv-bpo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1D5-1H-7Lm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="n7I-3p-6TM"/>
+                    <navigationItem key="navigationItem" title="Title" id="n7I-3p-6TM">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ezU-pL-VuL">
+                            <connections>
+                                <action selector="done:" destination="q5Q-2q-GTP" id="s9X-3k-AnY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPw-Pu-oCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +79,7 @@
         <!--Play-->
         <scene sceneID="2Kl-sB-WNv">
             <objects>
-                <viewController id="4Lr-Tk-Olt" sceneMemberID="viewController">
+                <viewController id="4Lr-Tk-Olt" customClass="GameViewController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2HI-xA-jaQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +95,7 @@
         <!--Setings-->
         <scene sceneID="EZN-1b-HP0">
             <objects>
-                <viewController id="owe-9U-nQh" sceneMemberID="viewController">
+                <viewController id="owe-9U-nQh" customClass="SettingsViewController" customModule="Contained_iOS6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8j1-1Z-u74">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
