@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
 		super.viewDidAppear(animated)
 		skscene = CustomeScene(size: view.bounds.size)
 		skview.presentScene(skscene)
+		skscene?.settingsController = settingsController
 	}
 	
 	@IBOutlet weak var skview: SKView!
