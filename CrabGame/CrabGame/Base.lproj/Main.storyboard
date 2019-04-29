@@ -13,7 +13,7 @@
         <!--Play-->
         <scene sceneID="xeN-sN-fFi">
             <objects>
-                <viewController id="3HT-1G-zSI" sceneMemberID="viewController">
+                <viewController id="3HT-1G-zSI" customClass="GameViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HhY-RJ-eAs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,26 +26,54 @@
             </objects>
             <point key="canvasLocation" x="272" y="-413"/>
         </scene>
-        <!--Info-->
+        <!--Info View Controller-->
         <scene sceneID="w11-aH-8tP">
             <objects>
-                <viewController id="nmR-q9-CcY" sceneMemberID="viewController">
+                <viewController id="nmR-q9-CcY" customClass="InfoViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHe-WF-xhV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xdp-Ld-fGM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info" id="STR-6h-TTR"/>
+                    <navigationItem key="navigationItem" id="a8U-sD-0Fe">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="2Nb-4N-JTK">
+                            <connections>
+                                <segue destination="jnf-c6-WYw" kind="show" id="pJ3-MT-IZJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VZ-E9-gZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="282"/>
+            <point key="canvasLocation" x="1647.826086956522" y="281.91964285714283"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="BIb-vK-BAA">
+            <objects>
+                <viewController id="jnf-c6-WYw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2en-Ny-x6b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aJy-KF-JQe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Jzb-sM-Rev">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="V94-7q-PGE">
+                            <connections>
+                                <segue destination="S5Z-Zb-wb3" kind="show" id="Kx9-LH-ukQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FS-Qc-Mnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2451" y="278"/>
         </scene>
         <!--Settings-->
         <scene sceneID="WmN-2u-b5J">
             <objects>
-                <viewController id="yMd-xR-All" sceneMemberID="viewController">
+                <viewController id="yMd-xR-All" customClass="SettingsViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifQ-q5-GdJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,13 +97,54 @@
                     </tabBar>
                     <connections>
                         <segue destination="3HT-1G-zSI" kind="relationship" relationship="viewControllers" id="R79-bo-oVy"/>
-                        <segue destination="nmR-q9-CcY" kind="relationship" relationship="viewControllers" id="4OM-gR-jBN"/>
+                        <segue destination="1ZF-wd-lWQ" kind="relationship" relationship="viewControllers" id="4OM-gR-jBN"/>
                         <segue destination="yMd-xR-All" kind="relationship" relationship="viewControllers" id="ZR1-xM-FHb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maB-ky-Pg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="739" y="-1085"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="eFT-yq-EMY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ZF-wd-lWQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info" id="STR-6h-TTR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R4d-Z1-vIz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nmR-q9-CcY" kind="relationship" relationship="rootViewController" id="7Gd-3x-2Qh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QyA-U9-xxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737.68115942028987" y="281.91964285714283"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="srq-tD-m2K">
+            <objects>
+                <viewController id="S5Z-Zb-wb3" customClass="InfoViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7l-Ab-S9x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fJu-tQ-WIy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="p0Z-76-2BC">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="z1A-RN-lXW">
+                            <connections>
+                                <action selector="done:" destination="S5Z-Zb-wb3" id="wmK-lQ-U77"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wH-kb-YOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3265" y="278"/>
         </scene>
     </scenes>
     <resources>
