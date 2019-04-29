@@ -6,7 +6,7 @@
 //  Copyright © 2019 Michael Redig. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Settings {
 	
@@ -15,4 +15,5 @@ class Settings {
 	
 	static var shouldRoll = false
 	static var shouldZoom = false
+	static var lastTouch: CGPoint? = nil
 }
