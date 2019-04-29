@@ -10,26 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Play-->
         <scene sceneID="agr-m4-FAH">
             <objects>
-                <viewController id="wg4-XG-ZMC" sceneMemberID="viewController">
+                <viewController id="wg4-XG-ZMC" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRb-EK-SB1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZrF-DG-HhM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Q64-O1-kbp"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="Q64-O1-kbp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgu-8B-1z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1290" y="552"/>
         </scene>
-        <!--View Controller-->
+        <!--Info1-->
         <scene sceneID="kgH-rJ-DAy">
             <objects>
-                <viewController id="gjE-cG-Qh3" sceneMemberID="viewController">
+                <viewController title="Info1" id="gjE-cG-Qh3" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wlP-wr-Hed">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="kFn-SA-iO3"/>
                     </view>
                     <navigationItem key="navigationItem" id="DX2-Qk-Nrp">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Jmr-61-X1g">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Jmr-61-X1g">
                             <connections>
                                 <segue destination="m4V-EZ-Nxg" kind="show" id="7ph-mJ-M8w"/>
                             </connections>
@@ -48,18 +48,18 @@
             </objects>
             <point key="canvasLocation" x="-65" y="1225"/>
         </scene>
-        <!--Title-->
+        <!--Info2-->
         <scene sceneID="geZ-pf-ffv">
             <objects>
-                <viewController id="m4V-EZ-Nxg" sceneMemberID="viewController">
+                <viewController title="Info2" id="m4V-EZ-Nxg" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xcz-Zs-nhO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HHw-TL-Ua4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="raJ-aJ-Oxv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="zPi-gS-Ihk">
+                    <navigationItem key="navigationItem" id="raJ-aJ-Oxv">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="zPi-gS-Ihk">
                             <connections>
                                 <segue destination="a3e-fh-ON6" kind="show" id="3Mp-Xn-3PG"/>
                             </connections>
@@ -70,17 +70,17 @@
             </objects>
             <point key="canvasLocation" x="641" y="1223"/>
         </scene>
-        <!--Item 1-->
+        <!--Settings-->
         <scene sceneID="y0J-Af-4C6">
             <objects>
-                <viewController id="h0k-fM-OVd" sceneMemberID="viewController">
+                <viewController id="h0k-fM-OVd" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjb-pQ-Nci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UKa-e1-FWP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ktp-Zn-zb6"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ktp-Zn-zb6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-mJ-MF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="-762" y="-116"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="gUm-GF-G8g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ex2-DO-3kI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XVs-PH-aJ2"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="XVs-PH-aJ2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7uJ-nH-tZC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -124,18 +124,18 @@
             </objects>
             <point key="canvasLocation" x="-762" y="1225"/>
         </scene>
-        <!--Title-->
+        <!--Info3-->
         <scene sceneID="qdt-Kk-r81">
             <objects>
-                <viewController id="a3e-fh-ON6" sceneMemberID="viewController">
+                <viewController title="Info3" id="a3e-fh-ON6" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h0f-lj-n1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6r2-Cl-TgQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8K7-yA-niC">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="cy1-Vs-jMv"/>
+                    <navigationItem key="navigationItem" id="8K7-yA-niC">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="cy1-Vs-jMv"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVj-eZ-QN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,4 +143,9 @@
             <point key="canvasLocation" x="1317" y="1223"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
