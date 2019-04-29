@@ -10,20 +10,23 @@ import UIKit
 
 
 
-class SettingsViewController: UIViewController,  SettingsControllerProtocol {
+class SettingsViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
 	
 	@IBAction func RollSwitch(_ sender: UISwitch) {
+		
 		settingsController?.setRoll()
 	}
-	@IBAction func ZoomSwitch(_ sender: Any) {
+	
+	@IBAction func ZoomSwitch(_ sender: UISwitch) {
 		settingsController?.setZoom()
 	}
 	
 	var settingsController: SettingsController?
-	
+}
+
+extension SettingsViewController: SettingsControllerProtocol {
 }

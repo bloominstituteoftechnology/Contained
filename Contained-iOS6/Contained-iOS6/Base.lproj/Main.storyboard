@@ -83,14 +83,28 @@
                     <view key="view" contentMode="scaleToFill" id="2HI-xA-jaQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apA-Eq-KIy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="apA-Eq-KIy" firstAttribute="trailing" secondItem="UzW-hb-SUQ" secondAttribute="trailing" id="5FM-QO-ZKX"/>
+                            <constraint firstItem="apA-Eq-KIy" firstAttribute="leading" secondItem="UzW-hb-SUQ" secondAttribute="leading" id="UPK-g0-NWn"/>
+                            <constraint firstItem="UzW-hb-SUQ" firstAttribute="bottom" secondItem="apA-Eq-KIy" secondAttribute="bottom" id="wJF-K7-5DD"/>
+                            <constraint firstItem="apA-Eq-KIy" firstAttribute="top" secondItem="2HI-xA-jaQ" secondAttribute="top" id="y3D-PF-Nri"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UzW-hb-SUQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="9cA-Uf-ErF"/>
+                    <connections>
+                        <outlet property="skview" destination="apA-Eq-KIy" id="Zqe-sH-K5R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swe-ne-hZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1338" y="546"/>
+            <point key="canvasLocation" x="-1339.1304347826087" y="545.75892857142856"/>
         </scene>
         <!--Setings-->
         <scene sceneID="EZN-1b-HP0">

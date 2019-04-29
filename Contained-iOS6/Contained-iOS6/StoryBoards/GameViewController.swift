@@ -7,20 +7,27 @@
 //
 
 import UIKit
+import SpriteKit
 
 
-
-class GameViewController: UIViewController, SettingsControllerProtocol{
+class GameViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		print("set roll: \(settingsController?.seting.shouldRoll) set zoom:\(settingsController?.seting.shouldZoom)")
+		skscene = CustomeScene(size: view.bounds.size)
+		skview.presentScene(skscene)
 	}
 	
+	@IBOutlet weak var skview: SKView!
+	
+	var skscene: CustomeScene? = nil
+	
 	var settingsController: SettingsController?
+}
+
+extension GameViewController: SettingsControllerProtocol {
 }
