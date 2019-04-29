@@ -15,7 +15,7 @@ class CustomScene: SKScene {
 	override func sceneDidLoad() {
 		super.sceneDidLoad()
 		addChild(crab)
-		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
 		crab.position = Settings.lastTouch ?? CGPoint(x: frame.midX, y: frame.midY)
 	}
 	
@@ -32,11 +32,17 @@ class CustomScene: SKScene {
 		let zoomAction = SKAction.scale(by: 1.3, duration: actionDuration * 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: actionDuration * 0.1)
 		
+		let resumeWaiting = SKAction.customAction(withDuration: 0.01) { (node, value) in
+			self.crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		}
+		
+		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		
 		if Settings.shouldZoom {
-			let zoomSeq = SKAction.sequence([zoomAction, moveAction, unzoomAction])
+			let zoomSeq = SKAction.sequence([zoomAction, moveAction, unzoomAction, resumeWaiting])
 			crab.run(zoomSeq)
 		} else {
-			crab.run(moveAction)
+			crab.run(SKAction.sequence([moveAction, resumeWaiting]))
 		}
 		
 		if Settings.shouldRoll {
