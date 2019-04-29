@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		33AAA78D2277880D006A0EEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAA78C2277880D006A0EEF /* AppDelegate.swift */; };
-		33AAA78F2277880D006A0EEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAA78E2277880D006A0EEF /* ViewController.swift */; };
+		33AAA78F2277880D006A0EEF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAA78E2277880D006A0EEF /* InfoViewController.swift */; };
 		33AAA7922277880D006A0EEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AAA7902277880D006A0EEF /* Main.storyboard */; };
 		33AAA7942277880E006A0EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AAA7932277880E006A0EEF /* Assets.xcassets */; };
 		33AAA7972277880E006A0EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AAA7952277880E006A0EEF /* LaunchScreen.storyboard */; };
 		33AAA7A22277880F006A0EEF /* CrabbyControlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAA7A12277880F006A0EEF /* CrabbyControlsTests.swift */; };
+		33AAA7AE22778908006A0EEF /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AAA7AD22778908006A0EEF /* Crab.xcassets */; };
+		33AAA7B022778911006A0EEF /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAA7AF22778911006A0EEF /* SKSpriteNode+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		33AAA7892277880D006A0EEF /* CrabbyControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrabbyControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAA78C2277880D006A0EEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33AAA78E2277880D006A0EEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33AAA78E2277880D006A0EEF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		33AAA7912277880D006A0EEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33AAA7932277880E006A0EEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33AAA7962277880E006A0EEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		33AAA79D2277880F006A0EEF /* CrabbyControlsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrabbyControlsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAA7A12277880F006A0EEF /* CrabbyControlsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabbyControlsTests.swift; sourceTree = "<group>"; };
 		33AAA7A32277880F006A0EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AAA7AD22778908006A0EEF /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = SOURCE_ROOT; };
+		33AAA7AF22778911006A0EEF /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				33AAA78C2277880D006A0EEF /* AppDelegate.swift */,
-				33AAA78E2277880D006A0EEF /* ViewController.swift */,
+				33AAA78E2277880D006A0EEF /* InfoViewController.swift */,
+				33AAA7AF22778911006A0EEF /* SKSpriteNode+Utility.swift */,
 				33AAA7902277880D006A0EEF /* Main.storyboard */,
 				33AAA7932277880E006A0EEF /* Assets.xcassets */,
+				33AAA7AD22778908006A0EEF /* Crab.xcassets */,
 				33AAA7952277880E006A0EEF /* LaunchScreen.storyboard */,
 				33AAA7982277880E006A0EEF /* Info.plist */,
 			);
@@ -106,6 +112,7 @@
 				33AAA7852277880D006A0EEF /* Sources */,
 				33AAA7862277880D006A0EEF /* Frameworks */,
 				33AAA7872277880D006A0EEF /* Resources */,
+				33AAA7AC2277889F006A0EEF /* Run Script - increment build */,
 			);
 			buildRules = (
 			);
@@ -178,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33AAA7972277880E006A0EEF /* LaunchScreen.storyboard in Resources */,
+				33AAA7AE22778908006A0EEF /* Crab.xcassets in Resources */,
 				33AAA7942277880E006A0EEF /* Assets.xcassets in Resources */,
 				33AAA7922277880D006A0EEF /* Main.storyboard in Resources */,
 			);
@@ -192,12 +200,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33AAA7AC2277889F006A0EEF /* Run Script - increment build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - increment build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$((bN += 1))\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33AAA7852277880D006A0EEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AAA78F2277880D006A0EEF /* ViewController.swift in Sources */,
+				33AAA7B022778911006A0EEF /* SKSpriteNode+Utility.swift in Sources */,
+				33AAA78F2277880D006A0EEF /* InfoViewController.swift in Sources */,
 				33AAA78D2277880D006A0EEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
