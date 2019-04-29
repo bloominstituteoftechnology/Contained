@@ -9,5 +9,11 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
+    @IBAction func unwindToPlay(_ sender: UIStoryboardSegue) {
+        print("UnwindtoPlay")
+    }
 }
