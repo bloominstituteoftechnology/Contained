@@ -47,9 +47,13 @@ Follow these steps to set up your project:
 import Foundation
 
 class Settings {
+    static let shared = Settings()
+    private init() {}
+    
     var shouldRoll = false
-    var shouldZoom = false    
+    var shouldZoom = false
 }
+
 ```
 
 ## Building your Interface
@@ -102,7 +106,7 @@ Follow these steps to create content for your settings tab.
 * Make sure that the alignment and distribution for all three stack views are set to Fill.
 * Center the stack view horizontally and vertically and add two constraints.
 * Connect the switches to actions in SettingsViewController: `toggleRoll` and `toggleZoom`. Be sure to use a `UISwitch` type when connecting for the "sender". (Hand edit the functions if you get this wrong.)
-*  Have each method set the corresponding shared model property to the sender's `isOn` property.
+*  Have each method set the corresponding shared Settings property to the sender's `isOn` property.
 
 ## Build the Game Screen
 
@@ -157,7 +161,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch Model.shared.shouldZoom {
+        switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -165,7 +169,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if Model.shared.shouldRoll {
+        if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
     }
@@ -184,6 +188,6 @@ Your finished project must include all of the following requirements:
 
 After finishing your required elements, push your work further. These goals may or may not be things you learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* The Crab reverts to a center position each time the user leaves from the game tab and returns. Expand the model to store the most recent touch point and use that value in `sceneDidLoad`.
+* The Crab reverts to a center position each time the user leaves from the game tab and returns. Expand the Settings to store the most recent touch point and use that value in `sceneDidLoad`.
 * Add one or two more options, such as fade effects (a node's `alpha` property) or other features you can read about in the SpriteKit documentation.
 * Allow the user to switch between the HappyCrab and the WaitingCrab textures via the settings screen.
