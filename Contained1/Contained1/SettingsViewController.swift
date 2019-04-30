@@ -17,21 +17,10 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        sender.isOn = !sender.isOn
+        Settings.shared.shouldRoll = sender.isOn // if sender is off then shouldRoll boolean value should be false.
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        sender.isOn = !sender.isOn
+        Settings.shared.shouldZoom = sender.isOn //if sender is on then that true value will be assigned to shouldZoom's boolean value.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
