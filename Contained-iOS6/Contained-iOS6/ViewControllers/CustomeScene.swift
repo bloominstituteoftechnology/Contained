@@ -14,22 +14,11 @@ import SpriteKit
 class CustomeScene: SKScene {
 	var settingsController: SettingsController? {
 		didSet {
-			if let c = settingsController {
-				let x = c.setting.position_x
-				let y = c.setting.position_y
-				if x != CGFloat(0) &&  y != CGFloat(0) {
-					crab.position = CGPoint(x: x, y: y)
-				}
-				
-				if c.setting.happyCrab == true {
-					crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-				} else {
-					crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
-				}
-			}
-			
+			crabSetuo()
 		}
 	}
+	
+	
 	
 	let crab = SKSpriteNode()
 	
@@ -40,10 +29,7 @@ class CustomeScene: SKScene {
 		super.sceneDidLoad()
 		
 		addChild(crab)
-		
-		
 		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
 
 	}
@@ -95,4 +81,19 @@ class CustomeScene: SKScene {
 }
 
 extension CustomeScene: SettingsControllerProtocol {
+	func crabSetuo() {
+		if let c = settingsController {
+			let x = c.setting.position_x
+			let y = c.setting.position_y
+			if x != CGFloat(0) &&  y != CGFloat(0) {
+				crab.position = CGPoint(x: x, y: y)
+			}
+			
+			if c.setting.happyCrab == true {
+				crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+			} else {
+				crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+			}
+		}
+	}
 }
