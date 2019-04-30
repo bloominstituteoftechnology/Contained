@@ -12,7 +12,17 @@ import SpriteKit
 
 
 class CustomeScene: SKScene {
-	var settingsController: SettingsController?
+	var settingsController: SettingsController? {
+		didSet {
+			if let c = settingsController {
+				let x = c.setting.position_x
+				let y = c.setting.position_y
+				if x != CGFloat(0) &&  y != CGFloat(0) {
+					crab.position = CGPoint(x: x, y: y)
+				}
+			}
+		}
+	}
 	let crab = SKSpriteNode()
 	
 	
@@ -26,8 +36,16 @@ class CustomeScene: SKScene {
 		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
-		
+
+	}
 	
+	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		guard let touch = touches.first else { return }
+		let position = touch.location(in: self)
+		
+		if let sc = settingsController {
+			sc.setPosition(position.x, position.y)
+		}
 	}
 	
 	// Move to touch
@@ -47,7 +65,9 @@ class CustomeScene: SKScene {
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
 		
-		guard let seting = settingsController?.setting else { return }
+		
+		guard let sc = settingsController else { return}
+		let seting = sc.setting
 		
 		switch seting.shouldZoom {
 		case false:
@@ -61,7 +81,7 @@ class CustomeScene: SKScene {
 			crab.run(rollAction)
 		}
 	
-		
+		sc.setPosition(crab.position.x, crab.position.y)
 	}
 }
 

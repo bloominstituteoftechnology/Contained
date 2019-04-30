@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
 		skview.presentScene(skscene)
 		guard let sk = skscene else { return }
 		sk.settingsController = settingsController
+	
 	}
 	
 	@IBOutlet weak var skview: SKView!
