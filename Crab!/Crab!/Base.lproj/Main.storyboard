@@ -51,14 +51,23 @@
                     <view key="view" contentMode="scaleToFill" id="8Bx-jt-r1X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yDZ-Y3-jG7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JLi-US-ESs"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="MBB-FN-azR"/>
+                    <connections>
+                        <outlet property="skview" destination="yDZ-Y3-jG7" id="f6l-lx-pEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6c-RP-qpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1461" y="62"/>
+            <point key="canvasLocation" x="-1462.3188405797102" y="61.607142857142854"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eyy-xX-1JO">
@@ -82,6 +91,7 @@
         <!--Setting -->
         <scene sceneID="gPt-6M-OIg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYi-4a-lh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mkT-wn-Ams" customClass="SettingsViewController" customModule="Crab_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sc9-PE-1KE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -141,7 +151,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting " image="settings" id="7lV-JB-KOu"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wYi-4a-lh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371.01449275362324" y="61.607142857142854"/>
         </scene>
