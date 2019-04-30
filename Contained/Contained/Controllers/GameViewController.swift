@@ -1,3 +1,4 @@
+
 //
 //  GameViewController.swift
 //  Contained
@@ -9,11 +10,10 @@
 import UIKit
 import SpriteKit
 
-class GamesViewController: UIViewController {
+class GameViewController: UIViewController {
     
     
     @IBOutlet weak var skview: SKView!
-    
     
     var skscene: CustomScene? = nil
     

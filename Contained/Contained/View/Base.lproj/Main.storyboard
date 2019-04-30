@@ -10,36 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Play-->
-        <scene sceneID="agr-m4-FAH">
-            <objects>
-                <viewController id="wg4-XG-ZMC" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qRb-EK-SB1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eC4-1P-Z7H" userLabel="Skview">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </skView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="eC4-1P-Z7H" firstAttribute="leading" secondItem="ZrF-DG-HhM" secondAttribute="leading" id="9bS-g9-yn7"/>
-                            <constraint firstItem="ZrF-DG-HhM" firstAttribute="bottom" secondItem="eC4-1P-Z7H" secondAttribute="bottom" id="c3X-bh-cYC"/>
-                            <constraint firstItem="eC4-1P-Z7H" firstAttribute="top" secondItem="ZrF-DG-HhM" secondAttribute="top" id="kOQ-mW-WPJ"/>
-                            <constraint firstItem="ZrF-DG-HhM" firstAttribute="trailing" secondItem="eC4-1P-Z7H" secondAttribute="trailing" id="vmc-T8-gc8"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ZrF-DG-HhM"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="Q64-O1-kbp"/>
-                    <connections>
-                        <outlet property="skview" destination="eC4-1P-Z7H" id="HxO-qA-sUw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vgu-8B-1z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1290" y="552"/>
-        </scene>
         <!--Info1-->
         <scene sceneID="kgH-rJ-DAy">
             <objects>
@@ -169,6 +139,36 @@
             </objects>
             <point key="canvasLocation" x="-162.31884057971016" y="551.78571428571422"/>
         </scene>
+        <!--Play-->
+        <scene sceneID="vhh-RY-Gzu">
+            <objects>
+                <viewController id="off-0q-MqF" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WYY-g5-F3k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnC-JC-6uh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Wt-GY-iMA" firstAttribute="bottom" secondItem="AnC-JC-6uh" secondAttribute="bottom" id="0p0-TI-Mwa"/>
+                            <constraint firstItem="AnC-JC-6uh" firstAttribute="top" secondItem="7Wt-GY-iMA" secondAttribute="top" id="6Yf-dd-XMH"/>
+                            <constraint firstItem="AnC-JC-6uh" firstAttribute="leading" secondItem="7Wt-GY-iMA" secondAttribute="leading" id="Uzm-I9-gi6"/>
+                            <constraint firstItem="7Wt-GY-iMA" firstAttribute="trailing" secondItem="AnC-JC-6uh" secondAttribute="trailing" id="boI-HN-vVe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Wt-GY-iMA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="XZ4-ZG-59j"/>
+                    <connections>
+                        <outlet property="skview" destination="AnC-JC-6uh" id="Kkp-5n-nEJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfu-Ju-Ant" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1414" y="551"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OVW-E7-sj6">
             <objects>
@@ -179,7 +179,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wg4-XG-ZMC" kind="relationship" relationship="viewControllers" id="zAJ-gS-hIQ"/>
+                        <segue destination="off-0q-MqF" kind="relationship" relationship="viewControllers" id="Cyb-bv-KsA"/>
                         <segue destination="ex2-DO-3kI" kind="relationship" relationship="viewControllers" id="e4q-1k-fwC"/>
                         <segue destination="h0k-fM-OVd" kind="relationship" relationship="viewControllers" id="dl1-AY-Gf0"/>
                     </connections>
