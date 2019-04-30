@@ -59,10 +59,17 @@ class CustomeScene: SKScene {
 		let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
-		
+		let fadein = SKAction.fadeIn(withDuration: 3)
+		let fadeout = SKAction.fadeOut(withDuration: 0)
 		
 		guard let sc = settingsController else { return}
 		let seting = sc.setting
+		
+		if seting.shouldFade  {
+			let sequenceAction = SKAction.sequence([fadeout,fadein])
+			crab.run(sequenceAction)
+		}
+		
 		
 		switch seting.shouldZoom {
 		case false:

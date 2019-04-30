@@ -13,7 +13,7 @@ class Settings {
 	var shouldRoll = false
 	var shouldZoom = false
 	var happyCrab = true
-	var zoom = false
+	var shouldFade = false
 	
 	var position_x: CGFloat = 0
 	var position_y: CGFloat = 0

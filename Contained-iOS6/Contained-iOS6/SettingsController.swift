@@ -15,7 +15,7 @@ class SettingsController {
 	}
 	func fadeToggle() {
 		
-		setting.zoom.toggle()
+		setting.shouldFade.toggle()
 	}
 	
 	func setPosition(_ x: CGFloat, _ y: CGFloat) {
