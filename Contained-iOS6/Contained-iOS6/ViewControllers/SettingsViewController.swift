@@ -13,15 +13,29 @@ class SettingsViewController: UIViewController{
         super.viewDidLoad()
     }
 	
-	@IBAction func RollSwitch(_ sender: UISwitch) {
+	
+	@IBAction func happyCrabSwitch(_ sender: UISwitch) {
 		if let sc = settingsController {
-			sc.setRoll()
+			sc.happyCrabtoggle()
 		}
 	}
 	
-	@IBAction func ZoomSwitch(_ sender: UISwitch) {
+	
+	@IBAction func fadeToggle(_ sender: UISwitch) {
 		if let sc = settingsController {
-			sc.setZoom()
+			sc.zoomToggle()
+		}
+	}
+	
+	@IBAction func rollSwitch(_ sender: UISwitch) {
+		if let sc = settingsController {
+			sc.rollToggle()
+		}
+	}
+	
+	@IBAction func zoomSwitch(_ sender: UISwitch) {
+		if let sc = settingsController {
+			sc.zoomToggle()
 		}
 	}
 	

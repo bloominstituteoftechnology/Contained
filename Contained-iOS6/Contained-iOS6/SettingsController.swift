@@ -10,17 +10,24 @@ import UIKit
 
 class SettingsController {
 	
+	func happyCrabtoggle() {
+		setting.happyCrab.toggle()
+	}
+	func fadeToggle() {
+		
+		setting.zoom.toggle()
+	}
+	
 	func setPosition(_ x: CGFloat, _ y: CGFloat) {
 		setting.position_x = x
 		setting.position_y = y
-		
 	}
 	
-	func setRoll() {
+	func rollToggle() {
 		setting.shouldRoll.toggle()
 	}
 	
-	func setZoom() {
+	func zoomToggle() {
 		setting.shouldZoom.toggle()
 	}
 	

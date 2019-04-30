@@ -20,9 +20,17 @@ class CustomeScene: SKScene {
 				if x != CGFloat(0) &&  y != CGFloat(0) {
 					crab.position = CGPoint(x: x, y: y)
 				}
+				
+				if c.setting.happyCrab == true {
+					crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+				} else {
+					crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+				}
 			}
+			
 		}
 	}
+	
 	let crab = SKSpriteNode()
 	
 	
@@ -32,6 +40,7 @@ class CustomeScene: SKScene {
 		super.sceneDidLoad()
 		
 		addChild(crab)
+		
 		
 		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 
@@ -80,8 +89,8 @@ class CustomeScene: SKScene {
 		if seting.shouldRoll {
 			crab.run(rollAction)
 		}
-	
-		sc.setPosition(crab.position.x, crab.position.y)
+		
+		
 	}
 }
 
