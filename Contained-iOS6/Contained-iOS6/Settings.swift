@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Settings {
 	var shouldRoll = false
 	var shouldZoom = false
+	
+	var position_x: CGFloat = CGFloat(0)
+	var position_y: CGFloat = CGFloat(0)
 }

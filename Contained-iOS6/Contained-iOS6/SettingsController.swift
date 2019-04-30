@@ -6,16 +6,23 @@
 //  Copyright © 2019 Hector Steven. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SettingsController {
+	
+	func setPosition(_ x: CGFloat, _ y: CGFloat) {
+		setting.position_x = x
+		setting.position_y = y
+		
+	}
+	
 	func setRoll() {
-		seting.shouldRoll.toggle()
+		setting.shouldRoll.toggle()
 	}
 	
 	func setZoom() {
-		seting.shouldZoom.toggle()
+		setting.shouldZoom.toggle()
 	}
 	
-	var seting = Settings()
+	var setting = Settings()
 }

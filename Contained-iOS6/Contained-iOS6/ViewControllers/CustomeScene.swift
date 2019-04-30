@@ -15,12 +15,19 @@ class CustomeScene: SKScene {
 	var settingsController: SettingsController?
 	let crab = SKSpriteNode()
 	
+	
+	
 	// Add and center child, initializing animation sequence
 	override func sceneDidLoad() {
 		super.sceneDidLoad()
+		
 		addChild(crab)
+		
 		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		
+	
 	}
 	
 	// Move to touch
@@ -40,7 +47,7 @@ class CustomeScene: SKScene {
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
 		
-		guard let seting = settingsController?.seting else { return }
+		guard let seting = settingsController?.setting else { return }
 		
 		switch seting.shouldZoom {
 		case false:
@@ -53,6 +60,8 @@ class CustomeScene: SKScene {
 		if seting.shouldRoll {
 			crab.run(rollAction)
 		}
+	
+		
 	}
 }
 
