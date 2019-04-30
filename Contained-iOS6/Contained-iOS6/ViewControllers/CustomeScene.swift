@@ -9,7 +9,9 @@
 import UIKit
 import SpriteKit
 
-class CustomeScene: SKScene , SettingsControllerProtocol{
+
+
+class CustomeScene: SKScene {
 	var settingsController: SettingsController?
 	let crab = SKSpriteNode()
 	
@@ -52,4 +54,7 @@ class CustomeScene: SKScene , SettingsControllerProtocol{
 			crab.run(rollAction)
 		}
 	}
+}
+
+extension CustomeScene: SettingsControllerProtocol {
 }
