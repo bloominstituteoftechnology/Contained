@@ -24,4 +24,10 @@ class SettingsViewController: UIViewController {
     
     @IBAction func rollTogglePressed(_ sender: UISwitch) { Settings.shared.shouldRoll = sender.isOn
     }
+    
+    @IBAction func sadCrab(_ sender: UISwitch) {
+        Settings.shared.sadCrab = sender.isOn
+    }
+    
+    
 }
