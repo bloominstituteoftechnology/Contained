@@ -117,18 +117,32 @@ the crab</string>
         <!--Play-->
         <scene sceneID="Jxl-YD-rll">
             <objects>
-                <viewController id="fyU-Uf-Qvf" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fyU-Uf-Qvf" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="14E-0f-TgS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-Zb-Y24">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Inh-Zb-Y24" firstAttribute="bottom" secondItem="S33-ty-rH8" secondAttribute="bottom" id="2Q3-hS-1KV"/>
+                            <constraint firstItem="Inh-Zb-Y24" firstAttribute="leading" secondItem="S33-ty-rH8" secondAttribute="leading" id="MDe-NZ-39m"/>
+                            <constraint firstItem="Inh-Zb-Y24" firstAttribute="trailing" secondItem="S33-ty-rH8" secondAttribute="trailing" id="cXF-nb-Rcf"/>
+                            <constraint firstItem="Inh-Zb-Y24" firstAttribute="top" secondItem="14E-0f-TgS" secondAttribute="top" id="klV-5r-oaY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S33-ty-rH8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="B6i-Q6-d1Z"/>
+                    <connections>
+                        <outlet property="skview" destination="Inh-Zb-Y24" id="HZM-sO-odn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ih-Df-ZQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-676"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="-676.33928571428567"/>
         </scene>
         <!--Settings-->
         <scene sceneID="C0T-kW-rq2">
