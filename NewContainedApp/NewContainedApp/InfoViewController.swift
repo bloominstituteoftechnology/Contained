@@ -15,8 +15,8 @@ class InfoViewController: UIViewController {
 
     }
     
-    @IBAction func unwindToBeginning(_ sender: UIStoryboardSegue) {
-        
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }
