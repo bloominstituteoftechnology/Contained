@@ -17,14 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="WDT-hA-Kti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NY0-jB-WRa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ue8-Jz-ENZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="pLH-Iv-kMZ"/>
+                    <connections>
+                        <outlet property="skView" destination="NY0-jB-WRa" id="Lcc-Fo-37s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtT-J3-HS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1259" y="726"/>
+            <point key="canvasLocation" x="-1259.4202898550725" y="725.89285714285711"/>
         </scene>
         <!--Title-->
         <scene sceneID="CyU-1w-ENa">
@@ -177,6 +186,9 @@ Crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SL1-Ps-JdU">
                                                 <rect key="frame" x="66.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="rollTogglePressed:" destination="kbE-FC-zrF" eventType="valueChanged" id="1HG-iR-UYQ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -191,6 +203,9 @@ Crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WkI-EK-PDZ">
                                                 <rect key="frame" x="66.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="zoomTogglePressed:" destination="kbE-FC-zrF" eventType="valueChanged" id="xdG-jD-wyr"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -205,6 +220,9 @@ Crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PM0-yJ-idz">
                                                 <rect key="frame" x="66.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="screamTogglePressed:" destination="kbE-FC-zrF" eventType="valueChanged" id="khE-fR-aZS"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
