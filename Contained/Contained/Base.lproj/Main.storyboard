@@ -17,11 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="E4H-hq-fOv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzq-2I-utm">
+                                <rect key="frame" x="141" y="419" width="133" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="D2l-lu-5hb"/>
                     </view>
                     <navigationItem key="navigationItem" id="cSH-0n-r3a">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="kxM-WU-0kK">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="kxM-WU-0kK">
                             <connections>
                                 <segue destination="K6B-EC-Of0" kind="show" id="RpE-I4-ASF"/>
                             </connections>
@@ -32,18 +41,29 @@
             </objects>
             <point key="canvasLocation" x="1609" y="98"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="0gY-Dh-BEo">
             <objects>
                 <viewController id="K6B-EC-Of0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tg-0J-NSf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70j-XT-br1">
+                                <rect key="frame" x="145" y="393" width="125" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="935-t1-ZVS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="hyo-zY-eFo">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="z8Z-gv-768">
+                    <navigationItem key="navigationItem" id="hyo-zY-eFo">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="z8Z-gv-768">
                             <connections>
                                 <segue destination="U73-wT-BuY" kind="show" id="IET-LG-T9d"/>
                             </connections>
@@ -52,23 +72,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAb-ad-Tg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="100"/>
+            <point key="canvasLocation" x="2424.6376811594205" y="99.776785714285708"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="1s9-Yy-wn8">
             <objects>
                 <viewController id="U73-wT-BuY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJx-Qm-yDP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8Q-kt-44N">
+                                <rect key="frame" x="145" y="405" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nUz-QY-0mw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="KIc-vk-PZh"/>
+                    <navigationItem key="navigationItem" id="KIc-vk-PZh">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="WIv-O4-RWG">
+                            <connections>
+                                <action selector="done:" destination="6J8-3p-roc" id="Uda-7M-yWs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3h-m0-RBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6J8-3p-roc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3183" y="98"/>
+            <point key="canvasLocation" x="3182.608695652174" y="97.767857142857139"/>
         </scene>
         <!--Play-->
         <scene sceneID="Jxl-YD-rll">
