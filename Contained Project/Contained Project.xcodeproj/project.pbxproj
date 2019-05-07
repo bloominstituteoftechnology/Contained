@@ -12,6 +12,12 @@
 		B369B832228122D500B08915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B369B830228122D500B08915 /* Main.storyboard */; };
 		B369B834228122D500B08915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B369B833228122D500B08915 /* Assets.xcassets */; };
 		B369B837228122D500B08915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B369B835228122D500B08915 /* LaunchScreen.storyboard */; };
+		B369B83F228123BF00B08915 /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B369B83E228123BF00B08915 /* Crab.xcassets */; };
+		B369B8452281248100B08915 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369B8442281248100B08915 /* Settings.swift */; };
+		B369B847228127BC00B08915 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369B846228127BC00B08915 /* GameViewController.swift */; };
+		B369B849228127CD00B08915 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369B848228127CD00B08915 /* InfoViewController.swift */; };
+		B369B84B228127E200B08915 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369B84A228127E200B08915 /* SettingsViewController.swift */; };
+		B369B84E22812D3C00B08915 /* CustomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369B84D22812D3C00B08915 /* CustomScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		B369B833228122D500B08915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B369B836228122D500B08915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B369B838228122D500B08915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B369B83E228123BF00B08915 /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		B369B8442281248100B08915 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B369B846228127BC00B08915 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B369B848228127CD00B08915 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B369B84A228127E200B08915 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B369B84D22812D3C00B08915 /* CustomScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		B369B82B228122D500B08915 /* Contained Project */ = {
 			isa = PBXGroup;
 			children = (
-				B369B82C228122D500B08915 /* AppDelegate.swift */,
-				B369B82E228122D500B08915 /* ViewController.swift */,
-				B369B830228122D500B08915 /* Main.storyboard */,
-				B369B833228122D500B08915 /* Assets.xcassets */,
-				B369B835228122D500B08915 /* LaunchScreen.storyboard */,
+				B369B84C22812D0A00B08915 /* Scenes */,
+				B369B8432281246600B08915 /* Models */,
+				B369B8422281241E00B08915 /* ViewControllers */,
+				B369B840228123DE00B08915 /* StoryBoards */,
+				B369B841228123EE00B08915 /* Assets */,
 				B369B838228122D500B08915 /* Info.plist */,
+				B369B82C228122D500B08915 /* AppDelegate.swift */,
 			);
 			path = "Contained Project";
+			sourceTree = "<group>";
+		};
+		B369B840228123DE00B08915 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				B369B830228122D500B08915 /* Main.storyboard */,
+				B369B835228122D500B08915 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		B369B841228123EE00B08915 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B369B833228122D500B08915 /* Assets.xcassets */,
+				B369B83E228123BF00B08915 /* Crab.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B369B8422281241E00B08915 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B369B82E228122D500B08915 /* ViewController.swift */,
+				B369B846228127BC00B08915 /* GameViewController.swift */,
+				B369B848228127CD00B08915 /* InfoViewController.swift */,
+				B369B84A228127E200B08915 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B369B8432281246600B08915 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B369B8442281248100B08915 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B369B84C22812D0A00B08915 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B369B84D22812D3C00B08915 /* CustomScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B369B837228122D500B08915 /* LaunchScreen.storyboard in Resources */,
+				B369B83F228123BF00B08915 /* Crab.xcassets in Resources */,
 				B369B834228122D500B08915 /* Assets.xcassets in Resources */,
 				B369B832228122D500B08915 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B369B847228127BC00B08915 /* GameViewController.swift in Sources */,
+				B369B8452281248100B08915 /* Settings.swift in Sources */,
 				B369B82F228122D500B08915 /* ViewController.swift in Sources */,
 				B369B82D228122D500B08915 /* AppDelegate.swift in Sources */,
+				B369B84E22812D3C00B08915 /* CustomScene.swift in Sources */,
+				B369B849228127CD00B08915 /* InfoViewController.swift in Sources */,
+				B369B84B228127E200B08915 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
