@@ -17,24 +17,22 @@ class SettingsViewController: UIViewController {
     //Toggles for the settings menu*******
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        let rolltoggle = Settings()
         if sender.isOn {
-            rolltoggle.shouldRoll = true
-            //print("Is On")
-        } else { rolltoggle.shouldRoll = false
-            //print("Is Off")
+            Settings.shared.shouldRoll = true
+            print("Is On")
+        } else { Settings.shared.shouldRoll = false
+            print("Is Off")
         }
         
         
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        let zoomtoggle = Settings()
         if sender.isOn {
-            zoomtoggle.shouldZoom = true
-            //print("Is On")
-        } else { zoomtoggle.shouldZoom = false
-            //print("Is Off")
+            Settings.shared.shouldZoom = true
+            print("Is On")
+        } else { Settings.shared.shouldZoom = false
+            print("Is Off")
         }
     }
     //End of Toggles for the settings menu*******
