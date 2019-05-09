@@ -40,7 +40,7 @@ class CustomScene: SKScene {
     
        
        if crab.contains(position) {
-            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }  else {
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         }
