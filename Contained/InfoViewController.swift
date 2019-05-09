@@ -11,12 +11,10 @@ class InfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-}
+    }
     
-    //Brings the last ViewController of the Navigation Controller Back to the beganning
-    @IBAction func doneButtonTapped(sender: AnyObject) {
-        navigationController?.popToRootViewController(animated: true)
+    @IBAction func doneButtonTapped(_ sender: UIStoryboardSegue) {
+        
     }
     
 
