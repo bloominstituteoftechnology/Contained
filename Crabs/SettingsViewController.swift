@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +20,12 @@ class SettingsViewController: UIViewController {
     
 //Have each method set the corresponding shared Settings property to the sender's isOn property.
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        sender.isOn.toggle()
+         Settings.shared.shouldRoll = sender.isOn
     }
     
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        sender.isOn.toggle()
+        Settings.shared.shouldZoom = sender.isOn 
     }
     /*
     // MARK: - Navigation
