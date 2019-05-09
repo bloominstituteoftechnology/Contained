@@ -1,3 +1,11 @@
+//
+// CrabController.swift
+// Contained
+//
+// Created by Joshua Kaunert on 11/08/18.
+// Copyright © 2019 Joshua Kaunert. All rights reserved.
+//
+
 import SpriteKit
 
 class CustomScene: SKScene {
@@ -7,7 +15,7 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: Model.shared.whichCrab, forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: CrabController.shared.whichCrab, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
@@ -28,7 +36,7 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
-        switch Model.shared.shouldZoom {
+        switch CrabController.shared.shouldZoom {
         case false:
             crab.run(moveAction)
         case true:
@@ -36,7 +44,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if Model.shared.shouldRoll {
+        if CrabController.shared.shouldRoll {
             crab.run(rollAction)
         }
     }
