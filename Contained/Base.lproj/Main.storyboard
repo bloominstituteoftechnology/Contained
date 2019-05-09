@@ -117,14 +117,29 @@ the crab</string>
         <!--Play-->
         <scene sceneID="ykA-e2-YZf">
             <objects>
-                <viewController id="1od-zl-9Ay" sceneMemberID="viewController">
+                <viewController id="1od-zl-9Ay" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RXp-Th-s6N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dp-6R-Jxw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5dp-6R-Jxw" firstAttribute="top" secondItem="7D1-Ad-F8Z" secondAttribute="top" id="1hV-gc-uaM"/>
+                            <constraint firstItem="7D1-Ad-F8Z" firstAttribute="bottom" secondItem="5dp-6R-Jxw" secondAttribute="bottom" id="7Br-1B-hU4"/>
+                            <constraint firstItem="7D1-Ad-F8Z" firstAttribute="trailing" secondItem="5dp-6R-Jxw" secondAttribute="trailing" id="IJD-e1-mM9"/>
+                            <constraint firstItem="5dp-6R-Jxw" firstAttribute="leading" secondItem="7D1-Ad-F8Z" secondAttribute="leading" id="Iy8-Ia-Sk7"/>
+                            <constraint firstItem="5dp-6R-Jxw" firstAttribute="centerX" secondItem="RXp-Th-s6N" secondAttribute="centerX" id="cs3-aw-LyW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7D1-Ad-F8Z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="P1b-DY-l6L"/>
+                    <connections>
+                        <outlet property="skView" destination="5dp-6R-Jxw" id="KeL-Gz-Y8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hY-an-CF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
