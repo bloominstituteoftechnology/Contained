@@ -200,10 +200,24 @@ the crab </string>
                     <view key="view" contentMode="scaleToFill" id="Ll6-fe-5ZY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsR-Dt-mu6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PsR-Dt-mu6" firstAttribute="leading" secondItem="sgH-uM-EI2" secondAttribute="leading" id="BjS-xh-BA2"/>
+                            <constraint firstItem="sgH-uM-EI2" firstAttribute="bottom" secondItem="PsR-Dt-mu6" secondAttribute="bottom" id="JZa-EU-hGO"/>
+                            <constraint firstItem="PsR-Dt-mu6" firstAttribute="top" secondItem="sgH-uM-EI2" secondAttribute="top" id="SFW-vH-iIG"/>
+                            <constraint firstItem="sgH-uM-EI2" firstAttribute="trailing" secondItem="PsR-Dt-mu6" secondAttribute="trailing" id="ymJ-j5-Z41"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sgH-uM-EI2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="sek-yo-EUY"/>
+                    <connections>
+                        <outlet property="skview" destination="PsR-Dt-mu6" id="9sn-6V-ZAz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFJ-3A-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
