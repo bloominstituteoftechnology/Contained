@@ -16,7 +16,7 @@
 		ABF6723321937F920088138B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF6723121937F920088138B /* LaunchScreen.storyboard */; };
 		ABF67259219391AE0088138B /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF67258219391AE0088138B /* Crab.xcassets */; };
 		ABF6725B219391D60088138B /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF6725A219391D60088138B /* SKSpriteNode+Utility.swift */; };
-		ABF6725D2193921B0088138B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF6725C2193921B0088138B /* Model.swift */; };
+		ABF6725D2193921B0088138B /* CrabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF6725C2193921B0088138B /* CrabController.swift */; };
 		ABF67261219397370088138B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF67260219397370088138B /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +30,9 @@
 		ABF6722F21937F920088138B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF6723221937F920088138B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF6723421937F920088138B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABF67258219391AE0088138B /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../Crab.xcassets; sourceTree = "<group>"; };
-		ABF6725A219391D60088138B /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
-		ABF6725C2193921B0088138B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ABF67258219391AE0088138B /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		ABF6725A219391D60088138B /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		ABF6725C2193921B0088138B /* CrabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrabController.swift; sourceTree = "<group>"; };
 		ABF67260219397370088138B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +47,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB8C27302283F9C3005479B9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABF67260219397370088138B /* InfoViewController.swift */,
+				ABB24C732193A83B00E85E6C /* SettingsViewController.swift */,
+				ABB24C752193A85100E85E6C /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB8C27312283FA0C005479B9 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				ABB24C772193AD4D00E85E6C /* CustomScene.swift */,
+				ABF6725A219391D60088138B /* SKSpriteNode+Utility.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		AB8C27322283FA47005479B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABF6725C2193921B0088138B /* CrabController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB8C27332283FAA7005479B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ABF6722C21937F920088138B /* Main.storyboard */,
+				ABF6722F21937F920088138B /* Assets.xcassets */,
+				ABF67258219391AE0088138B /* Crab.xcassets */,
+				ABF6723121937F920088138B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ABF6721C21937F920088138B = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				ABF6722821937F920088138B /* AppDelegate.swift */,
-				ABF6722C21937F920088138B /* Main.storyboard */,
-				ABF6725C2193921B0088138B /* Model.swift */,
-				ABB24C772193AD4D00E85E6C /* CustomScene.swift */,
-				ABF6722F21937F920088138B /* Assets.xcassets */,
-				ABF67258219391AE0088138B /* Crab.xcassets */,
-				ABF6725A219391D60088138B /* SKSpriteNode+Utility.swift */,
-				ABF6723121937F920088138B /* LaunchScreen.storyboard */,
+				AB8C27322283FA47005479B9 /* Model */,
+				AB8C27312283FA0C005479B9 /* Scene */,
+				AB8C27302283F9C3005479B9 /* View Controllers */,
+				AB8C27332283FAA7005479B9 /* Resources */,
 				ABF6723421937F920088138B /* Info.plist */,
-				ABF67260219397370088138B /* InfoViewController.swift */,
-				ABB24C732193A83B00E85E6C /* SettingsViewController.swift */,
-				ABB24C752193A85100E85E6C /* GameViewController.swift */,
 			);
 			path = Contained;
 			sourceTree = "<group>";
@@ -114,6 +146,7 @@
 				TargetAttributes = {
 					ABF6722421937F920088138B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -154,7 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF6725D2193921B0088138B /* Model.swift in Sources */,
+				ABF6725D2193921B0088138B /* CrabController.swift in Sources */,
 				ABF6722921937F920088138B /* AppDelegate.swift in Sources */,
 				ABF6725B219391D60088138B /* SKSpriteNode+Utility.swift in Sources */,
 				ABB24C742193A83B00E85E6C /* SettingsViewController.swift in Sources */,
@@ -315,7 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkaunert.Contained;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -333,7 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkaunert.Contained;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
