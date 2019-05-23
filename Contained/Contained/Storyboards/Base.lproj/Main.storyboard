@@ -18,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-rk-z97">
-                                <rect key="frame" x="16" y="124" width="382" height="74"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-xk-YjR">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k6H-Jz-5p8">
-                                        <rect key="frame" x="148.5" y="0.0" width="85" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXR-1s-I2x">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neg-oQ-REE">
-                                                <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="XqX-iq-Uzm" eventType="valueChanged" id="RmA-A0-ZTL"/>
                                                 </connections>
@@ -39,7 +39,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PjT-m2-1wJ">
-                                        <rect key="frame" x="140.5" y="43" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bno-tb-6yC">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -60,9 +60,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="G14-Ph-M4N" firstAttribute="trailing" secondItem="WFb-rk-z97" secondAttribute="trailing" constant="16" id="4dI-sL-yHr"/>
-                            <constraint firstItem="WFb-rk-z97" firstAttribute="top" secondItem="G14-Ph-M4N" secondAttribute="top" constant="80" id="b2n-In-Kiz"/>
-                            <constraint firstItem="WFb-rk-z97" firstAttribute="leading" secondItem="G14-Ph-M4N" secondAttribute="leading" constant="16" id="vGK-Nk-mp9"/>
+                            <constraint firstItem="QYW-xk-YjR" firstAttribute="centerY" secondItem="7OV-Mn-2i4" secondAttribute="centerY" id="BK3-AV-lV6"/>
+                            <constraint firstItem="QYW-xk-YjR" firstAttribute="centerX" secondItem="7OV-Mn-2i4" secondAttribute="centerX" id="Iua-bL-YJK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G14-Ph-M4N"/>
                     </view>
@@ -181,14 +180,23 @@
                     <view key="view" contentMode="scaleToFill" id="KB2-A8-dby">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-fM-G1B">
+                                <rect key="frame" x="0.0" y="55" width="414" height="758"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z3p-kf-axf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Game" image="game_controller" id="YVD-Iw-XNO"/>
+                    <connections>
+                        <outlet property="skview" destination="rB4-fM-G1B" id="8CA-AL-9NQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDX-2w-szM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="688"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="687.72321428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f8J-sz-zfj">
