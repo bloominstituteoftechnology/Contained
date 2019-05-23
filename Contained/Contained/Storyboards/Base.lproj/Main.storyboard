@@ -71,6 +71,31 @@
             </objects>
             <point key="canvasLocation" x="-1020" y="689"/>
         </scene>
+        <!--Game-->
+        <scene sceneID="2xx-eR-jGs">
+            <objects>
+                <viewController id="dTy-Cu-95i" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eA-UR-eey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUk-MQ-YGC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Nxa-Ll-gXu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Game" image="game_controller" id="flS-xo-ISu"/>
+                    <connections>
+                        <outlet property="skview" destination="xUk-MQ-YGC" id="gVg-EB-n8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANy-S0-GE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.53623188405798" y="660.9375"/>
+        </scene>
         <!--Info View Controller-->
         <scene sceneID="fIk-XB-L1R">
             <objects>
@@ -173,31 +198,6 @@
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="1336.6071428571429"/>
         </scene>
-        <!--Game-->
-        <scene sceneID="s66-Z3-NCW">
-            <objects>
-                <viewController id="wqa-eG-M5k" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KB2-A8-dby">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-fM-G1B">
-                                <rect key="frame" x="0.0" y="55" width="414" height="758"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </skView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="z3p-kf-axf"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Game" image="game_controller" id="YVD-Iw-XNO"/>
-                    <connections>
-                        <outlet property="skview" destination="rB4-fM-G1B" id="8CA-AL-9NQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wDX-2w-szM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5.7971014492753632" y="687.72321428571422"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f8J-sz-zfj">
             <objects>
@@ -209,8 +209,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Yni-1n-cKe" kind="relationship" relationship="viewControllers" id="h0X-mS-HfS"/>
-                        <segue destination="wqa-eG-M5k" kind="relationship" relationship="viewControllers" id="36C-3S-Krl"/>
                         <segue destination="XqX-iq-Uzm" kind="relationship" relationship="viewControllers" id="NRF-IT-hjb"/>
+                        <segue destination="dTy-Cu-95i" kind="relationship" relationship="viewControllers" id="Zfd-lp-Mx7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1li-6R-4jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
