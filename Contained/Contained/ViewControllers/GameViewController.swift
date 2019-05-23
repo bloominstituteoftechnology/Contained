@@ -22,9 +22,9 @@ class GamesViewController: UIViewController {
         skview.presentScene(skscene)
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
 
     
