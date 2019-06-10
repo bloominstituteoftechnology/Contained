@@ -19,6 +19,7 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.loadTextures(named: CustomScene.crabState, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.alpha = CGFloat(Settings.fade)
     }
     
     
@@ -35,7 +36,6 @@ class CustomScene: SKScene {
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
-        
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)

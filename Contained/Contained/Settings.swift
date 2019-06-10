@@ -10,6 +10,8 @@ import Foundation
 
 class Settings {
     static let shared = Settings()
+    static var fade: Float = 1.0
+    
     private init () {}
     
     var shouldRoll = true

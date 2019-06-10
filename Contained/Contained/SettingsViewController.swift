@@ -9,6 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var crabFadeSettingOutlet: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,11 @@ class SettingsViewController: UIViewController {
         } else {
             CustomScene.crabState = "WaitingCrab"
         }
+    }
+    
+    @IBAction func fadedSlider(_ sender: UISlider) {
+        Settings.fade = sender.value
+        crabFadeSettingOutlet.alpha = CGFloat(sender.value)
     }
     
 
