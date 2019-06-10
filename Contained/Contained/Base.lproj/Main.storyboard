@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="rh9-PR-yVP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" sceneName="GameView" translatesAutoresizingMaskIntoConstraints="NO" id="Aon-Xu-EPt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Aon-Xu-EPt" firstAttribute="leading" secondItem="RCa-Dh-Zca" secondAttribute="leading" id="3kb-nG-Npj"/>
+                            <constraint firstItem="RCa-Dh-Zca" firstAttribute="bottom" secondItem="Aon-Xu-EPt" secondAttribute="bottom" id="fYl-Cx-NBf"/>
+                            <constraint firstItem="Aon-Xu-EPt" firstAttribute="top" secondItem="RCa-Dh-Zca" secondAttribute="top" id="p8b-rK-VkU"/>
+                            <constraint firstItem="RCa-Dh-Zca" firstAttribute="trailing" secondItem="Aon-Xu-EPt" secondAttribute="trailing" id="s4M-9h-p1D"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RCa-Dh-Zca"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="CdT-5R-fuj"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="CdT-5R-fuj"/>
+                    <connections>
+                        <outlet property="skview" destination="Aon-Xu-EPt" id="MKp-kv-zdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIR-JP-f6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +199,7 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JC0-kt-Xa4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="pp8-9l-TZy"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="pp8-9l-TZy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIH-aG-53b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,14 +227,18 @@ the crab</string>
         <!--Info-->
         <scene sceneID="Fk8-ks-rit">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rNd-Ds-QhV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info" id="YRF-oz-9Ng"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="rNd-Ds-QhV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" selectedImage="info" id="YRF-oz-9Ng"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c5l-lY-mKc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rPp-8T-GYg">
+                        <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="IFw-xx-vB6" kind="relationship" relationship="rootViewController" id="Cnl-Fw-au6"/>
                     </connections>
