@@ -16,33 +16,25 @@ class SettingsViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 	@IBAction func toggleRoll(_ sender: UISwitch) {
 		if !rollSwitch.isOn {
 			rollSwitch.isOn = true
+			Settings.shared.shouldRoll = true
 		} else if rollSwitch.isOn {
 			rollSwitch.isOn = false
-		}
-	}
-	@IBAction func toggleZoom(_ sender: UISwitch) {
-		if !zoomSwitch.isOn {
-			zoomSwitch.isOn = true
-		} else if zoomSwitch.isOn {
-			zoomSwitch.isOn = false
+			Settings.shared.shouldRoll = false
 		}
 	}
 	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	@IBAction func toggleZoom(_ sender: UISwitch) {
+		if !zoomSwitch.isOn {
+			zoomSwitch.isOn = true
+			Settings.shared.shouldZoom = true
+		} else if zoomSwitch.isOn {
+			zoomSwitch.isOn = false
+			Settings.shared.shouldZoom = false
+		}
+	}
 }

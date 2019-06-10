@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="DWV-H5-Lwv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqy-ez-DaZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xdy-M6-oGh" firstAttribute="bottom" secondItem="tqy-ez-DaZ" secondAttribute="bottom" id="5Lu-rW-uDB"/>
+                            <constraint firstItem="xdy-M6-oGh" firstAttribute="trailing" secondItem="tqy-ez-DaZ" secondAttribute="trailing" id="AH0-NI-Alh"/>
+                            <constraint firstItem="tqy-ez-DaZ" firstAttribute="leading" secondItem="xdy-M6-oGh" secondAttribute="leading" id="kEO-3g-zqA"/>
+                            <constraint firstItem="tqy-ez-DaZ" firstAttribute="top" secondItem="xdy-M6-oGh" secondAttribute="top" id="oMK-ac-qQU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xdy-M6-oGh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="5bF-M8-ato"/>
+                    <connections>
+                        <outlet property="skview" destination="tqy-ez-DaZ" id="e3M-ga-FyH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjy-eB-gal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
