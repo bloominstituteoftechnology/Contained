@@ -11,6 +11,12 @@
 		321ED9B722AEF2AE0017F09D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ED9B522AEF2AE0017F09D /* Main.storyboard */; };
 		321ED9B922AEF2AE0017F09D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321ED9B822AEF2AE0017F09D /* Assets.xcassets */; };
 		321ED9BC22AEF2AE0017F09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ED9BA22AEF2AE0017F09D /* LaunchScreen.storyboard */; };
+		321ED9C422AEF3990017F09D /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321ED9C322AEF3990017F09D /* Crab.xcassets */; };
+		321ED9C622AEF3B50017F09D /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED9C522AEF3B50017F09D /* SKSpriteNode+Utility.swift */; };
+		321ED9C822AEF3D20017F09D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED9C722AEF3D20017F09D /* Settings.swift */; };
+		321ED9CC22AEF7350017F09D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED9CB22AEF7350017F09D /* GameViewController.swift */; };
+		321ED9CF22AEF74D0017F09D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED9CE22AEF74D0017F09D /* InfoViewController.swift */; };
+		321ED9D122AEF7660017F09D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321ED9D022AEF7660017F09D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		321ED9B822AEF2AE0017F09D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		321ED9BB22AEF2AE0017F09D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		321ED9BD22AEF2AE0017F09D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321ED9C322AEF3990017F09D /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		321ED9C522AEF3B50017F09D /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		321ED9C722AEF3D20017F09D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		321ED9CB22AEF7350017F09D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		321ED9CE22AEF74D0017F09D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		321ED9D022AEF7660017F09D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +64,43 @@
 		321ED9B022AEF2AE0017F09D /* Contained */ = {
 			isa = PBXGroup;
 			children = (
+				321ED9C922AEF4230017F09D /* Model */,
+				321ED9CD22AEF73C0017F09D /* View */,
+				321ED9CA22AEF4410017F09D /* Resources */,
+			);
+			path = Contained;
+			sourceTree = "<group>";
+		};
+		321ED9C922AEF4230017F09D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				321ED9C722AEF3D20017F09D /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		321ED9CA22AEF4410017F09D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				321ED9B122AEF2AE0017F09D /* AppDelegate.swift */,
 				321ED9B522AEF2AE0017F09D /* Main.storyboard */,
 				321ED9B822AEF2AE0017F09D /* Assets.xcassets */,
+				321ED9C322AEF3990017F09D /* Crab.xcassets */,
 				321ED9BA22AEF2AE0017F09D /* LaunchScreen.storyboard */,
 				321ED9BD22AEF2AE0017F09D /* Info.plist */,
+				321ED9C522AEF3B50017F09D /* SKSpriteNode+Utility.swift */,
 			);
-			path = Contained;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		321ED9CD22AEF73C0017F09D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				321ED9CB22AEF7350017F09D /* GameViewController.swift */,
+				321ED9CE22AEF74D0017F09D /* InfoViewController.swift */,
+				321ED9D022AEF7660017F09D /* SettingsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321ED9BC22AEF2AE0017F09D /* LaunchScreen.storyboard in Resources */,
+				321ED9C422AEF3990017F09D /* Crab.xcassets in Resources */,
 				321ED9B922AEF2AE0017F09D /* Assets.xcassets in Resources */,
 				321ED9B722AEF2AE0017F09D /* Main.storyboard in Resources */,
 			);
@@ -132,7 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321ED9CC22AEF7350017F09D /* GameViewController.swift in Sources */,
+				321ED9C822AEF3D20017F09D /* Settings.swift in Sources */,
 				321ED9B222AEF2AE0017F09D /* AppDelegate.swift in Sources */,
+				321ED9C622AEF3B50017F09D /* SKSpriteNode+Utility.swift in Sources */,
+				321ED9CF22AEF74D0017F09D /* InfoViewController.swift in Sources */,
+				321ED9D122AEF7660017F09D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YM84C6XKT7;
-				INFOPLIST_FILE = Contained/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Contained/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YM84C6XKT7;
-				INFOPLIST_FILE = Contained/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Contained/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
