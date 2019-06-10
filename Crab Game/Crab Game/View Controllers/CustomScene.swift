@@ -12,12 +12,15 @@ import SpriteKit
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
+    
+    
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.position = Settings.shared.position
+
     }
     
     // Move to touch
@@ -48,5 +51,12 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        // Gathering the most recent touch point.
+        
+        crab.position = position
+        Settings.shared.position = position
+        
     }
+    
 }

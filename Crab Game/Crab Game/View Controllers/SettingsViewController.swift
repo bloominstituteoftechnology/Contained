@@ -9,11 +9,23 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    // MARK: - Properties and Outlets
+    @IBOutlet var touchLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let position = Settings.shared.position
+        let locationX = Int(position.x)
+        let locationY = Int(position.y)
+        let point = "{ \(locationX), \(locationY) }"
+        touchLabel.text = point
+        touchLabel.reloadInputViews()
     }
     
     // MARK: - IBActions
@@ -27,6 +39,5 @@ class SettingsViewController: UIViewController {
     }
     
 
-    
 
 }
