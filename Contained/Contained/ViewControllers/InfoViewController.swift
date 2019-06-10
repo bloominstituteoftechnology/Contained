@@ -10,6 +10,10 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+	@IBAction func done(_ sender: UIStoryboardSegue) {
+		navigationController?.popToRootViewController(animated: true)
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 

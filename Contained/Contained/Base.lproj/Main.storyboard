@@ -53,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="kbw-q1-dfH"/>
                     </view>
                     <navigationItem key="navigationItem" id="JG1-U8-cK4">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="8A7-du-vwf">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="8A7-du-vwf">
                             <connections>
                                 <segue destination="QYQ-QM-NGU" kind="show" id="swH-5r-Gep"/>
                             </connections>
@@ -75,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="cCa-xw-pEe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Jtt-9m-TGJ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="mEl-qT-oJQ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="mEl-qT-oJQ">
                             <connections>
                                 <segue destination="Klb-rD-eYt" kind="show" id="kYU-cm-xWn"/>
                             </connections>
@@ -97,10 +97,15 @@
                         <viewLayoutGuide key="safeArea" id="lnE-tY-6XI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rbt-Fh-HAb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="GQN-9J-CIf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="GQN-9J-CIf">
+                            <connections>
+                                <segue destination="phd-Or-aCT" kind="unwind" unwindAction="done:" id="NoQ-A5-oRk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Au-j2-WL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="phd-Or-aCT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2314" y="371"/>
         </scene>
