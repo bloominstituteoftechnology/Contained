@@ -30,7 +30,19 @@ class SettingsViewController: UIViewController {
             Settings.shared.shouldZoom = false
         }
     }
+    @IBAction func madCrabButton(_ sender: UIButton) {
+      
+        Settings.shared.crabChoice = CrabChoice.madCrab
+        print("User chose madCrab")
+        
+    }
+    @IBAction func happyCrabButton(_ sender: UIButton) {
+        Settings.shared.crabChoice = CrabChoice.happyCrab
+        print("User chose happyCrab")
+        
+    }
     
+ 
     //
     // MARK: - View Lifecycle
     //

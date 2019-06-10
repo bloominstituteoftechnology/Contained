@@ -57,11 +57,47 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Crab!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVs-iE-QLK">
+                                <rect key="frame" x="109" y="83" width="196" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="LdS-a9-SSE">
+                                <rect key="frame" x="60" y="155" width="294" height="129"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHD-MH-KAK">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="129"/>
+                                        <state key="normal" title="Mad Crab" backgroundImage="waitingcrab000">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="madCrabButton:" destination="hvk-0E-OTb" eventType="touchUpInside" id="EFI-jR-X1c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x83-pB-bbd">
+                                        <rect key="frame" x="163" y="0.0" width="131" height="129"/>
+                                        <state key="normal" title="Happy Crab" backgroundImage="happycrab000">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="happyCrabButton:" destination="hvk-0E-OTb" eventType="touchUpInside" id="4Px-a3-1MJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KVs-iE-QLK" firstAttribute="leading" secondItem="Ra6-c9-Qe7" secondAttribute="leading" constant="109" id="0py-BZ-29x"/>
+                            <constraint firstItem="LdS-a9-SSE" firstAttribute="leading" secondItem="Ra6-c9-Qe7" secondAttribute="leading" constant="60" id="CZx-AC-Q80"/>
+                            <constraint firstItem="Ra6-c9-Qe7" firstAttribute="trailing" secondItem="LdS-a9-SSE" secondAttribute="trailing" constant="60" id="Cap-Zv-FzF"/>
+                            <constraint firstItem="KVs-iE-QLK" firstAttribute="top" secondItem="Ra6-c9-Qe7" secondAttribute="top" constant="39" id="OhN-as-bbu"/>
+                            <constraint firstItem="Ra6-c9-Qe7" firstAttribute="trailing" secondItem="KVs-iE-QLK" secondAttribute="trailing" constant="109" id="OoB-pe-TbJ"/>
                             <constraint firstItem="zqZ-Uh-JFv" firstAttribute="centerX" secondItem="8FM-96-Jgf" secondAttribute="centerX" id="XNL-Gu-nZy"/>
+                            <constraint firstItem="zqZ-Uh-JFv" firstAttribute="top" secondItem="LdS-a9-SSE" secondAttribute="bottom" constant="129" id="ZOS-L4-1Ta"/>
                             <constraint firstItem="zqZ-Uh-JFv" firstAttribute="centerY" secondItem="8FM-96-Jgf" secondAttribute="centerY" id="d7c-EE-EK8"/>
+                            <constraint firstItem="LdS-a9-SSE" firstAttribute="top" secondItem="KVs-iE-QLK" secondAttribute="bottom" constant="50" id="j1C-Ah-E8j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ra6-c9-Qe7"/>
                     </view>
@@ -69,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyX-pP-5cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="595"/>
+            <point key="canvasLocation" x="-86.956521739130437" y="594.64285714285711"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="PZ6-UV-Thd">
@@ -248,7 +284,9 @@ the crab</string>
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="happycrab000" width="131" height="129"/>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
+        <image name="waitingcrab000" width="131" height="129"/>
     </resources>
 </document>

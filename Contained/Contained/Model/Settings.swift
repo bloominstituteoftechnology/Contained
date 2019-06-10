@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+enum CrabChoice {
+    case madCrab
+    case happyCrab
+}
 
 class Settings {
     static let shared = Settings()
@@ -14,4 +20,5 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var crabChoice = CrabChoice.happyCrab
 }
