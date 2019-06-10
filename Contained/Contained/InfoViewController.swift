@@ -9,6 +9,7 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +17,9 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func doneBarButtonTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
