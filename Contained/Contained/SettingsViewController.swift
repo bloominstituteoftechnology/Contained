@@ -26,5 +26,13 @@ class SettingsViewController: UIViewController {
         print(Settings.shared.shouldZoom)
     }
     
+    @IBAction func toggleHappyCrab(_ sender: UISwitch) {
+        if sender.isOn == true {
+            CustomScene.crabState = "HappyCrab"
+        } else {
+            CustomScene.crabState = "WaitingCrab"
+        }
+    }
+    
 
 }
