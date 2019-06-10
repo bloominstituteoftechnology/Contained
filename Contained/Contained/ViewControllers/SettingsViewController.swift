@@ -25,4 +25,12 @@ class SettingsViewController: UIViewController {
 	@IBAction func toggleZoom(_ sender: UISwitch) {
 		Settings.shared.shouldZoom = !Settings.shared.shouldZoom
 	}
+	@IBAction func crabSegControl(_ sender: UISegmentedControl) {
+		switch sender.selectedSegmentIndex {
+		case 0:
+			CustomScene.crabState = "HappyCrab"
+		default:
+			CustomScene.crabState = "WaitingCrab"
+		}
+	}
 }

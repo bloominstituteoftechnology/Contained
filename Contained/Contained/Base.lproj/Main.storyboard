@@ -87,11 +87,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-Fw-wEy">
+                                <rect key="frame" x="114.5" y="523" width="185" height="29"/>
+                                <segments>
+                                    <segment title="Happy Crab"/>
+                                    <segment title="Waiting Crab"/>
+                                </segments>
+                                <color key="tintColor" red="0.88473809400000003" green="1" blue="0.45247711909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="crabSegControl:" destination="50Z-ZW-egM" eventType="valueChanged" id="Dva-Qi-ZNP"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="top" secondItem="pcb-41-Tke" secondAttribute="bottom" constant="40" id="2Hv-A8-PW7"/>
                             <constraint firstItem="zjP-Mw-Fdd" firstAttribute="centerY" secondItem="6AC-6T-xL4" secondAttribute="centerY" id="3u5-bU-vcJ"/>
                             <constraint firstItem="zjP-Mw-Fdd" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="BpY-j5-42t"/>
+                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="cTK-wV-IQz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tkq-VZ-6UN"/>
                     </view>
@@ -103,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfi-Mo-lvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="-315"/>
+            <point key="canvasLocation" x="324.63768115942031" y="-315.40178571428572"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="wah-eR-Wwe">
