@@ -10,9 +10,18 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    //
+    // MARK: - Outlets and Properties
+    //
+    
     @IBOutlet weak var skview: SKView!
     
       var skscene: CustomScene? = nil
+    
+    //
+    // MARK: - View LifeCycle
+    //
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
