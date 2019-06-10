@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMH-nw-hx7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="W1T-g5-Mon">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23x-rb-cMW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ED8-CS-A2n" firstAttribute="bottom" secondItem="23x-rb-cMW" secondAttribute="bottom" id="EvO-UZ-IyE"/>
+                            <constraint firstItem="ED8-CS-A2n" firstAttribute="trailing" secondItem="23x-rb-cMW" secondAttribute="trailing" id="FR2-3a-EIx"/>
+                            <constraint firstItem="23x-rb-cMW" firstAttribute="top" secondItem="ED8-CS-A2n" secondAttribute="top" id="Kej-79-goN"/>
+                            <constraint firstItem="23x-rb-cMW" firstAttribute="leading" secondItem="ED8-CS-A2n" secondAttribute="leading" id="yXv-gT-hOP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ED8-CS-A2n"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="8wS-8l-vzO"/>
+                    <connections>
+                        <outlet property="skview" destination="23x-rb-cMW" id="IJy-1g-S6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCc-MB-kcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +63,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-6K-Mfw">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="dvO-qE-oUy" eventType="valueChanged" id="iMa-GS-82U"/>
+                                                    <action selector="toggleRoll:" destination="rY8-CG-gEF" eventType="valueChanged" id="GIi-LZ-Wc8"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -66,7 +80,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SIq-fC-BKW">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="dvO-qE-oUy" eventType="valueChanged" id="jPq-vF-T5F"/>
+                                                    <action selector="toggleZoom:" destination="rY8-CG-gEF" eventType="valueChanged" id="fcQ-lN-OHB"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -121,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="2076.8115942028985" y="757.36607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="kWy-oV-9os">
             <objects>
-                <viewController id="tM1-kZ-EOe" sceneMemberID="viewController">
+                <viewController id="tM1-kZ-EOe" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0AH-rw-t6B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,10 +171,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="2897" y="757"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="GYE-dh-JS8">
             <objects>
-                <viewController id="xq7-KA-8Wn" sceneMemberID="viewController">
+                <viewController id="xq7-KA-8Wn" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fqi-cy-nwZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,15 +194,14 @@ the crab</string>
                         <viewLayoutGuide key="safeArea" id="EtX-gt-YjP"/>
                     </view>
                     <navigationItem key="navigationItem" id="sy7-rb-QcC">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="dm5-X1-aLr">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="g40-R3-Lfc">
                             <connections>
-                                <action selector="done:" destination="PmK-pZ-L5h" id="vtN-lk-pVf"/>
+                                <action selector="done:" destination="xq7-KA-8Wn" id="oUb-bV-0PC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bD3-c2-AMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="PmK-pZ-L5h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3703" y="757"/>
         </scene>

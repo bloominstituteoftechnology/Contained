@@ -14,12 +14,4 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
-    
-    @IBAction func toggleRoll(_ sender: Any) {
-        shouldRoll.toggle()
-    }
-    
-    @IBAction func toggleZoom(_ sender: Any) {
-        shouldZoom.toggle()
-    }
 }
