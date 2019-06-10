@@ -21,6 +21,8 @@ class CustomScene: SKScene {
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
+    
+    
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
