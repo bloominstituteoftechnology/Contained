@@ -38,6 +38,9 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom.toggle()
     }
     
-
+    @IBAction func toggleMood(_ sender: UISwitch) {
+        Settings.shared.isHappy.toggle()
+    }
+    
 
 }
