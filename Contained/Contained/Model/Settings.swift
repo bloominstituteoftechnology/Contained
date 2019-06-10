@@ -6,7 +6,7 @@
 //  Copyright © 2019 jake connerly. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 import UIKit
 
 enum CrabChoice {
@@ -21,4 +21,5 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var crabChoice = CrabChoice.happyCrab
+    var crabPosition = CGPoint(x: 200, y: 500)
 }

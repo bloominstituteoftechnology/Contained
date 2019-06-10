@@ -21,7 +21,9 @@ class CustomScene: SKScene {
         }else {
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         }
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        crab.position = Settings.shared.crabPosition
+        
     }
     
     // Move to touch
@@ -33,24 +35,32 @@ class CustomScene: SKScene {
         // Retrieve position
         let position = touch.location(in: self)
         
+        //play sound on touch
+        let soundAction = SKAction.playSoundFileNamed("crab.mp3", waitForCompletion: false)
+        
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
-        
+        let moveSequence = SKAction.sequence([soundAction, moveAction])
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
+        let rollSequence = SKAction.sequence([soundAction, rollAction])
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
+        Settings.shared.crabPosition = position
+        
         switch Settings.shared.shouldZoom {
         case false:
-            crab.run(moveAction)
+            
+            crab.run(moveSequence)
         case true:
-            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
+            let sequenceAction = SKAction.sequence([zoomAction, soundAction, moveAction, unzoomAction])
             crab.run(sequenceAction)
         }
         
         if Settings.shared.shouldRoll {
-            crab.run(rollAction)
+            crab.run(rollSequence)
         }
     }
+    
 }
