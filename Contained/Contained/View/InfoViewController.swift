@@ -10,10 +10,21 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    
+    //
+    // MARK: - Actions
+    //
+    @IBAction func done(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    //
+    // MARK: - View Lifecycle
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
