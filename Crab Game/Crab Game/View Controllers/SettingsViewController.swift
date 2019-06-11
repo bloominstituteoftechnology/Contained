@@ -42,5 +42,10 @@ class SettingsViewController: UIViewController {
         Settings.shared.isHappy.toggle()
     }
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade.toggle()
+    }
+    
+    
 
 }
