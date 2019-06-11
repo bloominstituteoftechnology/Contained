@@ -18,6 +18,7 @@ class CustomScene: SKScene {
 		addChild(crab)
 		crab.loadTextures(named: CustomScene.crabState, forKey: SKSpriteNode.textureKey)
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		crab.alpha = CGFloat(Settings.shared.crabFade)
 	}
 	
 	// Move to touch

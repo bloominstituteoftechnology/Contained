@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zjP-Mw-Fdd">
-                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <rect key="frame" x="156.5" y="317" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tIg-4v-W5w">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -88,7 +88,7 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-Fw-wEy">
-                                <rect key="frame" x="114.5" y="523" width="185" height="29"/>
+                                <rect key="frame" x="114.5" y="427" width="185" height="29"/>
                                 <segments>
                                     <segment title="Happy Crab"/>
                                     <segment title="Waiting Crab"/>
@@ -98,18 +98,51 @@
                                     <action selector="crabSegControl:" destination="50Z-ZW-egM" eventType="valueChanged" id="Dva-Qi-ZNP"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l2Y-kF-iOu">
+                                <rect key="frame" x="112.5" y="636" width="189" height="31"/>
+                                <color key="tintColor" red="0.88473809400000003" green="1" blue="0.45247711909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="fadeSlider:" destination="50Z-ZW-egM" eventType="valueChanged" id="Lwk-xg-28u"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happycrab000" translatesAutoresizingMaskIntoConstraints="NO" id="IJl-kQ-rFz">
+                                <rect key="frame" x="141.5" y="487" width="131" height="129"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMQ-cm-8lp">
+                                <rect key="frame" x="160" y="678" width="94" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Qah-ua-KP1"/>
+                                </constraints>
+                                <state key="normal" title="Fade Reset">
+                                    <color key="titleColor" red="0.88473809400000003" green="1" blue="0.45247711909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fadeButtonTapped:" destination="50Z-ZW-egM" eventType="touchUpInside" id="JO3-hG-vJw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="top" secondItem="pcb-41-Tke" secondAttribute="bottom" constant="40" id="2Hv-A8-PW7"/>
-                            <constraint firstItem="zjP-Mw-Fdd" firstAttribute="centerY" secondItem="6AC-6T-xL4" secondAttribute="centerY" id="3u5-bU-vcJ"/>
+                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="3KR-3C-KrJ"/>
+                            <constraint firstItem="RMQ-cm-8lp" firstAttribute="leading" secondItem="Tkq-VZ-6UN" secondAttribute="leading" constant="160" id="74c-BC-dfo"/>
+                            <constraint firstItem="RMQ-cm-8lp" firstAttribute="top" secondItem="l2Y-kF-iOu" secondAttribute="bottom" constant="12" id="BhD-PH-hmB"/>
                             <constraint firstItem="zjP-Mw-Fdd" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="BpY-j5-42t"/>
-                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="cTK-wV-IQz"/>
+                            <constraint firstItem="IJl-kQ-rFz" firstAttribute="top" secondItem="zfy-Fw-wEy" secondAttribute="bottom" constant="32" id="S7a-WQ-5Yp"/>
+                            <constraint firstItem="l2Y-kF-iOu" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="ZjT-fv-1at"/>
+                            <constraint firstItem="l2Y-kF-iOu" firstAttribute="width" secondItem="zfy-Fw-wEy" secondAttribute="width" id="bUZ-8x-lnL"/>
+                            <constraint firstItem="l2Y-kF-iOu" firstAttribute="top" secondItem="IJl-kQ-rFz" secondAttribute="bottom" constant="20" id="ddW-Tz-8A1"/>
+                            <constraint firstItem="IJl-kQ-rFz" firstAttribute="centerX" secondItem="6AC-6T-xL4" secondAttribute="centerX" id="h6k-eF-MzB"/>
+                            <constraint firstItem="zjP-Mw-Fdd" firstAttribute="top" secondItem="Tkq-VZ-6UN" secondAttribute="top" constant="273" id="nEW-KW-3pu"/>
+                            <constraint firstItem="Tkq-VZ-6UN" firstAttribute="trailing" secondItem="RMQ-cm-8lp" secondAttribute="trailing" constant="160" id="qQm-3o-I3D"/>
+                            <constraint firstItem="zfy-Fw-wEy" firstAttribute="top" secondItem="zjP-Mw-Fdd" secondAttribute="bottom" constant="40" id="xVD-0q-iii"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tkq-VZ-6UN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="90t-Tb-Wbg"/>
                     <connections>
+                        <outlet property="crabImage" destination="IJl-kQ-rFz" id="wun-mj-GUw"/>
+                        <outlet property="fadeButton" destination="RMQ-cm-8lp" id="QUS-tL-OuQ"/>
+                        <outlet property="fadeSlider" destination="l2Y-kF-iOu" id="DAc-XF-7Rn"/>
                         <outlet property="rollSwitch" destination="Rn6-Fu-XE8" id="b81-QI-Zrh"/>
                         <outlet property="zoomSwitch" destination="3bg-XV-VET" id="pnm-4i-DiV"/>
                     </connections>
@@ -271,6 +304,7 @@ the crab</string>
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="happycrab000" width="131" height="129"/>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
