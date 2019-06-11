@@ -14,4 +14,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+    }
+    
 }

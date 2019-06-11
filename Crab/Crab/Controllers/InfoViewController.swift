@@ -13,5 +13,9 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func doneButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }
