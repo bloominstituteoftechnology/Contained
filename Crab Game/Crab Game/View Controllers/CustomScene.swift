@@ -24,7 +24,8 @@ class CustomScene: SKScene {
         } else if Settings.shared.isHappy == false {
              crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.position = Settings.shared.position
+//        CGPoint(x: frame.midX, y: frame.midY)
     }
     
     // Move to touch
@@ -64,7 +65,7 @@ class CustomScene: SKScene {
         
         // Gathering the most recent touch point.
         
-        crab.position = position
+        
         Settings.shared.position = position
         
     }

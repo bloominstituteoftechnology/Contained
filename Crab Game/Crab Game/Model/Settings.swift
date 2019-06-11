@@ -17,6 +17,6 @@ class Settings {
     var shouldZoom = false
     var isHappy = true
     var shouldFade = false
-    var position = CGPoint(x: 0.0, y: 0.0)
+    var position = CGPoint(x: 200, y: 500)
     
 }

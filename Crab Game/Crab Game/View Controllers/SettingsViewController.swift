@@ -38,9 +38,13 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom.toggle()
     }
     
-    @IBAction func toggleMood(_ sender: UISwitch) {
-        Settings.shared.isHappy.toggle()
+    @IBAction func waitingCrabTapped(_ sender: Any) {
+        Settings.shared.isHappy = false
     }
+    @IBAction func happyCrabTapped(_ sender: Any) {
+        Settings.shared.isHappy = true
+    }
+    
     
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade.toggle()
