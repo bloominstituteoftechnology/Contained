@@ -16,7 +16,6 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     
@@ -27,3 +26,4 @@ class GameViewController: UIViewController {
     }
 
 }
+

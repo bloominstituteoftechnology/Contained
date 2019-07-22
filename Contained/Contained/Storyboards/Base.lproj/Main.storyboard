@@ -21,11 +21,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-zZ-XF8">
                                 <rect key="frame" x="141" y="419" width="132.5" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Guw-zZ-XF8" firstAttribute="centerX" secondItem="ayG-0H-XyJ" secondAttribute="centerX" id="5z9-U6-cUK"/>
                             <constraint firstItem="Guw-zZ-XF8" firstAttribute="centerY" secondItem="ayG-0H-XyJ" secondAttribute="centerY" id="qr4-mJ-Asn"/>
@@ -34,6 +34,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ppZ-H0-tvb">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kx9-Og-KJ2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Ieb-zs-xWJ" kind="show" id="OMM-50-GvC"/>
                             </connections>
@@ -121,10 +122,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-1u-hs7">
+                                <rect key="frame" x="114" y="59" width="186.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="StQ-JW-X3h" firstAttribute="centerY" secondItem="AV8-1M-Rtc" secondAttribute="centerY" id="bVw-JB-obf"/>
+                            <constraint firstItem="Fu1-1u-hs7" firstAttribute="top" secondItem="H5C-eW-E9c" secondAttribute="top" constant="15" id="d9d-Cm-RNp"/>
+                            <constraint firstItem="Fu1-1u-hs7" firstAttribute="centerX" secondItem="AV8-1M-Rtc" secondAttribute="centerX" id="ofq-r2-bjs"/>
                             <constraint firstItem="StQ-JW-X3h" firstAttribute="centerX" secondItem="AV8-1M-Rtc" secondAttribute="centerX" id="twM-9p-2I2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H5C-eW-E9c"/>
@@ -148,6 +157,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.49690271229999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Z3k-dI-jSJ" kind="relationship" relationship="viewControllers" id="TDO-ou-sB3"/>
@@ -165,9 +176,16 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bbn-aP-JeW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" selectedImage="info" id="CCA-AE-Mxi"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Xc-K8-GD3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="1Xc-K8-GD3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -191,11 +209,11 @@
                                 <string key="text">Tap to move
 the crab</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ySF-RV-W6I" firstAttribute="centerX" secondItem="w3H-HH-TVP" secondAttribute="centerX" id="1HE-QW-SGI"/>
                             <constraint firstItem="ySF-RV-W6I" firstAttribute="centerY" secondItem="w3H-HH-TVP" secondAttribute="centerY" id="oGC-og-FWV"/>
@@ -204,6 +222,7 @@ the crab</string>
                     </view>
                     <navigationItem key="navigationItem" id="wDa-an-ptg">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="L26-lw-bs9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Rxe-HS-RXT" kind="show" id="hGQ-MJ-342"/>
                             </connections>
@@ -225,11 +244,11 @@ the crab</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmj-bu-8Z5">
                                 <rect key="frame" x="151" y="433.5" width="112" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dmj-bu-8Z5" firstAttribute="centerX" secondItem="H0x-Mb-y4s" secondAttribute="centerX" id="7vT-GZ-XQr"/>
                             <constraint firstItem="dmj-bu-8Z5" firstAttribute="centerY" secondItem="H0x-Mb-y4s" secondAttribute="centerY" id="oGM-n6-6x5"/>
