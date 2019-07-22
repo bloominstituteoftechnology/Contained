@@ -21,8 +21,15 @@ class CustomScene: SKScene {
 		background.position = CGPoint(x: frame.midX, y: frame.midY)
 		addChild(background)
 		addChild(crab)
-		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-		crab.position = CGPoint(x: frame.midX, y: frame.midY) 
+//		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		switch Settings.shared.crabIsHappy {
+		case true:
+			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		case false:
+			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		}
+		crab.alpha = CGFloat(Settings.shared.alpha)
 	}
 
 	// Move to touch
@@ -41,6 +48,13 @@ class CustomScene: SKScene {
 		let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
+
+		switch Settings.shared.crabIsHappy {
+		case true:
+			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		case false:
+			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		}
 
 		switch Settings.shared.shouldZoom {
 		case false:

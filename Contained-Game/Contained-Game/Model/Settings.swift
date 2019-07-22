@@ -7,17 +7,19 @@
 //
 
 import Foundation
+import SpriteKit
 
 
 class Settings {
 
 	static let shared = Settings()
 
+
 	private init() {}
 
 	var shouldRoll = false
 	var shouldZoom = false
 	var alpha: Float = 1
-	var crabState: 
+	var crabIsHappy = true
 
 }
