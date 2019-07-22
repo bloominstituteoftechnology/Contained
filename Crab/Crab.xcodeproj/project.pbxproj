@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F532BDFC22E654460041A716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BDFB22E654460041A716 /* AppDelegate.swift */; };
-		F532BDFE22E654460041A716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BDFD22E654460041A716 /* ViewController.swift */; };
 		F532BE0122E654460041A716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F532BDFF22E654460041A716 /* Main.storyboard */; };
 		F532BE0322E654480041A716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F532BE0222E654480041A716 /* Assets.xcassets */; };
 		F532BE0622E654480041A716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F532BE0422E654480041A716 /* LaunchScreen.storyboard */; };
+		F532BE0E22E654BF0041A716 /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BE0D22E654BF0041A716 /* SKSpriteNode+Utility.swift */; };
+		F532BE2222E6559C0041A716 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BE2122E6559C0041A716 /* Setting.swift */; };
+		F532BE2422E656D60041A716 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BE2322E656D60041A716 /* GameViewController.swift */; };
+		F532BE2622E656DF0041A716 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BE2522E656DF0041A716 /* InfoViewController.swift */; };
+		F532BE2822E656E50041A716 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532BE2722E656E50041A716 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F532BDF822E654460041A716 /* Crab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F532BDFB22E654460041A716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F532BDFD22E654460041A716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F532BE0022E654460041A716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F532BE0222E654480041A716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F532BE0522E654480041A716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F532BE0722E654480041A716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F532BE0D22E654BF0041A716 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		F532BE2122E6559C0041A716 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		F532BE2322E656D60041A716 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F532BE2522E656DF0041A716 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F532BE2722E656E50041A716 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		F532BDFA22E654460041A716 /* Crab */ = {
 			isa = PBXGroup;
 			children = (
-				F532BDFB22E654460041A716 /* AppDelegate.swift */,
-				F532BDFD22E654460041A716 /* ViewController.swift */,
+				F532BE0D22E654BF0041A716 /* SKSpriteNode+Utility.swift */,
+				F532BE2122E6559C0041A716 /* Setting.swift */,
 				F532BDFF22E654460041A716 /* Main.storyboard */,
+				F532BE2922E656EB0041A716 /* ViewControllers */,
 				F532BE0222E654480041A716 /* Assets.xcassets */,
 				F532BE0422E654480041A716 /* LaunchScreen.storyboard */,
+				F532BDFB22E654460041A716 /* AppDelegate.swift */,
 				F532BE0722E654480041A716 /* Info.plist */,
 			);
 			path = Crab;
+			sourceTree = "<group>";
+		};
+		F532BE2922E656EB0041A716 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F532BE2322E656D60041A716 /* GameViewController.swift */,
+				F532BE2722E656E50041A716 /* SettingsViewController.swift */,
+				F532BE2522E656DF0041A716 /* InfoViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F532BDFE22E654460041A716 /* ViewController.swift in Sources */,
+				F532BE2422E656D60041A716 /* GameViewController.swift in Sources */,
 				F532BDFC22E654460041A716 /* AppDelegate.swift in Sources */,
+				F532BE0E22E654BF0041A716 /* SKSpriteNode+Utility.swift in Sources */,
+				F532BE2222E6559C0041A716 /* Setting.swift in Sources */,
+				F532BE2622E656DF0041A716 /* InfoViewController.swift in Sources */,
+				F532BE2822E656E50041A716 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
