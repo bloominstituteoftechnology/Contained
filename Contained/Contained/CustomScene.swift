@@ -21,7 +21,8 @@ class CustomScene: SKScene {
     }
     
     //Move to touch
-    public override func touchesBegan(_ touches: Set<UITouch>, event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         
         //Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
