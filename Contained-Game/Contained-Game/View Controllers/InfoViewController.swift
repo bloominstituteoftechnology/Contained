@@ -19,8 +19,7 @@ class InfoViewController: UIViewController {
 
 
 	@IBAction func done(_ sender: UIBarButtonItem) {
-		self.tabBarController?.selectedIndex = 0
-//		navigationController?.popToRootViewController(animated: true)
+		self.navigationController?.popToRootViewController(animated: true)
 	}
 
 }

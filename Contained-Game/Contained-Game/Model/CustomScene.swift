@@ -22,8 +22,7 @@ class CustomScene: SKScene {
 		addChild(background)
 		addChild(crab)
 		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-		crab.position = CGPoint(x: frame.midX, y: frame.midY)
-		self.backgroundColor = SKColor.clear
+		crab.position = CGPoint(x: frame.midX, y: frame.midY) 
 	}
 
 	// Move to touch

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SettingsViewController: UIViewController {
 
+	var customeScene = CustomScene()
 	@IBOutlet weak var imageView: UIImageView!
 
 	override func viewDidLoad() {
@@ -30,8 +32,10 @@ class SettingsViewController: UIViewController {
 		switch sender.selectedSegmentIndex {
 		case 0:
 			imageView.image = UIImage(named: "happycrab000")
+			customeScene.crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 		case 1:
 			imageView.image = UIImage(named: "waitingcrab000")
+			customeScene.crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
 		default:
 			()
 		}
@@ -39,6 +43,7 @@ class SettingsViewController: UIViewController {
 
 	@IBAction func alphaSliderInput(_ sender: UISlider) {
 		imageView.alpha = CGFloat(sender.value)
+		customeScene.crab.alpha = CGFloat(sender.value)
 	}
 
 }

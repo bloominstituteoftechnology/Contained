@@ -17,4 +17,7 @@ class Settings {
 
 	var shouldRoll = false
 	var shouldZoom = false
+	var alpha: Float = 1
+	var crabState: 
+
 }
