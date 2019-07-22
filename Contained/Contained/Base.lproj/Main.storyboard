@@ -102,11 +102,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c7H-EL-tMf">
-                                <rect key="frame" x="136" y="381.5" width="142.5" height="133"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c7H-EL-tMf">
+                                <rect key="frame" x="41.5" y="255.5" width="331" height="385"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a crab:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-JA-QaK">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RnR-Vf-oLo">
+                                        <rect key="frame" x="24.5" y="51.5" width="282" height="129"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rig-7c-8ap">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="129"/>
+                                                <color key="backgroundColor" red="0.83462357519999997" green="0.53927737470000003" blue="0.34297195079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="happycrab000"/>
+                                                <connections>
+                                                    <action selector="happyCrabAction:" destination="EWA-nd-bKJ" eventType="touchUpInside" id="EOX-ky-Kix"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOZ-Aa-UU5">
+                                                <rect key="frame" x="151" y="0.0" width="131" height="129"/>
+                                                <state key="normal" image="waitingcrab000"/>
+                                                <connections>
+                                                    <action selector="waitingCrabAction:" destination="EWA-nd-bKJ" eventType="touchUpInside" id="Czy-87-UKh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select actions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHn-RV-jBM">
+                                        <rect key="frame" x="0.0" y="200.5" width="331" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-IA-EzS">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="31"/>
+                                        <rect key="frame" x="94.5" y="252" width="142.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HP-K5-wnr">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -123,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="aU8-2e-xuD">
-                                        <rect key="frame" x="0.0" y="51" width="142.5" height="31"/>
+                                        <rect key="frame" x="94.5" y="303" width="142.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSF-yy-hb8">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -140,7 +172,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="aAg-He-vuh">
-                                        <rect key="frame" x="0.0" y="102" width="142.5" height="31"/>
+                                        <rect key="frame" x="94.5" y="354" width="142.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrw-Uu-9tg">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -157,20 +189,33 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="aU8-2e-xuD" firstAttribute="leading" secondItem="aMg-IA-EzS" secondAttribute="leading" id="6br-dI-0VC"/>
+                                    <constraint firstItem="aAg-He-vuh" firstAttribute="trailing" secondItem="aMg-IA-EzS" secondAttribute="trailing" id="8TR-WP-exZ"/>
+                                    <constraint firstItem="QHn-RV-jBM" firstAttribute="width" secondItem="c7H-EL-tMf" secondAttribute="width" id="RYY-Si-Fke"/>
+                                    <constraint firstItem="aU8-2e-xuD" firstAttribute="trailing" secondItem="aMg-IA-EzS" secondAttribute="trailing" id="mMP-Qu-Ral"/>
+                                    <constraint firstItem="aAg-He-vuh" firstAttribute="leading" secondItem="aMg-IA-EzS" secondAttribute="leading" id="nEE-cD-MSS"/>
+                                    <constraint firstItem="RLY-JA-QaK" firstAttribute="width" secondItem="c7H-EL-tMf" secondAttribute="width" id="rzI-me-kws"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c7H-EL-tMf" firstAttribute="centerX" secondItem="1L8-Ap-orG" secondAttribute="centerX" id="DHP-u2-8Al"/>
                             <constraint firstItem="c7H-EL-tMf" firstAttribute="centerY" secondItem="1L8-Ap-orG" secondAttribute="centerY" id="jVv-C7-soK"/>
+                            <constraint firstItem="c7H-EL-tMf" firstAttribute="width" secondItem="aYE-wA-bhN" secondAttribute="width" multiplier="0.8" id="wS9-vf-w9X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aYE-wA-bhN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="pJJ-6R-98f"/>
+                    <connections>
+                        <outlet property="happyBtn" destination="Rig-7c-8ap" id="BMX-oV-Pe8"/>
+                        <outlet property="waitingBtn" destination="aOZ-Aa-UU5" id="AWm-xC-3sw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOl-lx-Vpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="923"/>
+            <point key="canvasLocation" x="1321.7391304347827" y="922.76785714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e9a-U3-9Zw">
@@ -265,7 +310,9 @@
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="happycrab000" width="131" height="129"/>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
+        <image name="waitingcrab000" width="131" height="129"/>
     </resources>
 </document>

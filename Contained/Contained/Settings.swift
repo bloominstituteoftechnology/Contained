@@ -6,11 +6,12 @@
 //  Copyright © 2019 Jefffrey Santana. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Settings {
 	static let shared = Settings()
 	
+	var crabImage = "HappyCrab"
 	var isRolling = false
 	var isZooming = false
 	var nodeSpeed = 1.0

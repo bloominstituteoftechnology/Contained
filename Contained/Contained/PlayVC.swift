@@ -18,13 +18,13 @@ class PlayVC: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		skScene = CustomScene(size: view.bounds.size)
-		skView.presentScene(skScene)
-		
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		
+		skScene = CustomScene(size: view.bounds.size)
+		skView.presentScene(skScene)
 	}
 
 }
