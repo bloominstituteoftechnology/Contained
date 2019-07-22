@@ -10,21 +10,35 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var imageView: UIImageView!
+
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+	@IBAction func toggleRoll(_ sender: UISwitch) {
+		Settings.shared.shouldRoll = sender.isOn
+	}
 
-    /*
-    // MARK: - Navigation
+	@IBAction func toggleZoom(_ sender: UISwitch) {
+		Settings.shared.shouldZoom = sender.isOn
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	@IBAction func segControlCrabState(_ sender: UISegmentedControl) {
+		switch sender.selectedSegmentIndex {
+		case 0:
+			imageView.image = UIImage(named: "happycrab000")
+		case 1:
+			imageView.image = UIImage(named: "waitingcrab000")
+		default:
+			()
+		}
+	}
+
+	@IBAction func alphaSliderInput(_ sender: UISlider) {
+		imageView.alpha = CGFloat(sender.value)
+	}
 
 }
