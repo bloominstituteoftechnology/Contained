@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZH-DF-AN3">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,14 +13,28 @@
         <!--Play-->
         <scene sceneID="mTF-tz-XBo">
             <objects>
-                <viewController id="T00-Lc-2zo" sceneMemberID="viewController">
+                <viewController id="T00-Lc-2zo" customClass="GameViewController" customModule="Crab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gzx-o3-viT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTt-7q-vGL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wqy-oU-ub2" firstAttribute="trailing" secondItem="mTt-7q-vGL" secondAttribute="trailing" id="6WT-0O-b9K"/>
+                            <constraint firstItem="mTt-7q-vGL" firstAttribute="leading" secondItem="wqy-oU-ub2" secondAttribute="leading" id="UsU-dY-6SX"/>
+                            <constraint firstItem="mTt-7q-vGL" firstAttribute="top" secondItem="wqy-oU-ub2" secondAttribute="top" id="oKp-wO-U8m"/>
+                            <constraint firstItem="wqy-oU-ub2" firstAttribute="bottom" secondItem="mTt-7q-vGL" secondAttribute="bottom" id="spQ-j4-OgD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wqy-oU-ub2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="FEd-mx-zgO"/>
+                    <connections>
+                        <outlet property="skview" destination="mTt-7q-vGL" id="4WW-gL-lhb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSv-ef-4Vh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +43,7 @@
         <!--Info-->
         <scene sceneID="dnV-Qr-epG">
             <objects>
-                <navigationController id="Ahl-M1-xcd" sceneMemberID="viewController">
+                <navigationController id="Ahl-M1-xcd" customClass="In" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="h65-2o-iVP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wJ4-AB-CgS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -43,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1083" y="-188"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="F6h-iP-ef6">
             <objects>
-                <viewController id="5WI-8Y-lyF" sceneMemberID="viewController">
+                <viewController id="5WI-8Y-lyF" customClass="InfoViewController" customModule="Crab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uuw-oh-Awf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +165,7 @@ the crab</string>
         <!--Settings-->
         <scene sceneID="vhh-A0-FuL">
             <objects>
-                <viewController id="2Yb-kK-vNv" sceneMemberID="viewController">
+                <viewController id="2Yb-kK-vNv" customClass="SettingsViewController" customModule="Crab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yl1-cR-In9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
