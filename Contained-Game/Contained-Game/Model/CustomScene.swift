@@ -21,7 +21,6 @@ class CustomScene: SKScene {
 		background.position = CGPoint(x: frame.midX, y: frame.midY)
 		addChild(background)
 		addChild(crab)
-//		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
 		checkCrabState()
 		crab.alpha = CGFloat(Settings.shared.alpha)

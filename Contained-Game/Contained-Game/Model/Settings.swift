@@ -14,12 +14,10 @@ class Settings {
 
 	static let shared = Settings()
 
-
 	private init() {}
 
 	var shouldRoll = false
 	var shouldZoom = false
-	var alpha: Float = 1
 	var crabIsHappy = true
-
+	var alpha: Float = 1
 }

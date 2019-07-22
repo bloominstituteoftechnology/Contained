@@ -13,12 +13,6 @@ class SettingsViewController: UIViewController {
 
 	var customScene = CustomScene()
 	@IBOutlet weak var imageView: UIImageView!
-
-	override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 	@IBAction func toggleRoll(_ sender: UISwitch) {
 		Settings.shared.shouldRoll = sender.isOn
