@@ -23,13 +23,17 @@ class CustomScene: SKScene {
 		addChild(crab)
 //		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		checkCrabState()
+		crab.alpha = CGFloat(Settings.shared.alpha)
+	}
+
+	func checkCrabState() {
 		switch Settings.shared.crabIsHappy {
 		case true:
 			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
 		case false:
 			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
 		}
-		crab.alpha = CGFloat(Settings.shared.alpha)
 	}
 
 	// Move to touch
@@ -55,6 +59,8 @@ class CustomScene: SKScene {
 		case false:
 			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
 		}
+
+
 
 		switch Settings.shared.shouldZoom {
 		case false:
