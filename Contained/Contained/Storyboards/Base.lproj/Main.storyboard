@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Wtg-cF-UaC">
             <objects>
-                <viewController id="PoE-3B-Liz" sceneMemberID="viewController">
+                <viewController id="PoE-3B-Liz" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ayG-0H-XyJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-zZ-XF8">
+                                <rect key="frame" x="141" y="419" width="132.5" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Guw-zZ-XF8" firstAttribute="centerX" secondItem="ayG-0H-XyJ" secondAttribute="centerX" id="5z9-U6-cUK"/>
+                            <constraint firstItem="Guw-zZ-XF8" firstAttribute="centerY" secondItem="ayG-0H-XyJ" secondAttribute="centerY" id="qr4-mJ-Asn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R4p-CA-ckE"/>
                     </view>
                     <navigationItem key="navigationItem" id="ppZ-H0-tvb">
@@ -42,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M6W-6B-UKh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="lnV-lJ-32l"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="lnV-lJ-32l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uth-nT-TBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,7 +70,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="H5C-eW-E9c"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="zHh-Dx-B1l"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="zHh-Dx-B1l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfU-RL-fWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,6 +82,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BD9-qN-Npt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ujR-b1-RE3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -83,11 +96,11 @@
             </objects>
             <point key="canvasLocation" x="1354" y="-735"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="Dzj-ba-8wS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bbn-aP-JeW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="info" id="CCA-AE-Mxi"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" selectedImage="info" id="CCA-AE-Mxi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Xc-K8-GD3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -102,17 +115,31 @@
             </objects>
             <point key="canvasLocation" x="1354" y="684"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="QXb-of-aei">
             <objects>
-                <viewController id="Ieb-zs-xWJ" sceneMemberID="viewController">
+                <viewController id="Ieb-zs-xWJ" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w3H-HH-TVP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySF-RV-W6I">
+                                <rect key="frame" x="141.5" y="419.5" width="131" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ySF-RV-W6I" firstAttribute="centerX" secondItem="w3H-HH-TVP" secondAttribute="centerX" id="1HE-QW-SGI"/>
+                            <constraint firstItem="ySF-RV-W6I" firstAttribute="centerY" secondItem="w3H-HH-TVP" secondAttribute="centerY" id="oGC-og-FWV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZWM-sV-AO6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="wDa-an-ptg">
+                    <navigationItem key="navigationItem" id="wDa-an-ptg">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="L26-lw-bs9">
                             <connections>
                                 <segue destination="Rxe-HS-RXT" kind="show" id="hGQ-MJ-342"/>
@@ -124,18 +151,34 @@
             </objects>
             <point key="canvasLocation" x="2978" y="684"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="9co-80-T7k">
             <objects>
-                <viewController id="Rxe-HS-RXT" sceneMemberID="viewController">
+                <viewController id="Rxe-HS-RXT" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H0x-Mb-y4s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmj-bu-8Z5">
+                                <rect key="frame" x="151" y="433.5" width="112" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dmj-bu-8Z5" firstAttribute="centerX" secondItem="H0x-Mb-y4s" secondAttribute="centerX" id="7vT-GZ-XQr"/>
+                            <constraint firstItem="dmj-bu-8Z5" firstAttribute="centerY" secondItem="H0x-Mb-y4s" secondAttribute="centerY" id="oGM-n6-6x5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bPF-Rc-gHY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="9VF-RU-Fa0">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="b1y-PP-4v5"/>
+                    <navigationItem key="navigationItem" id="9VF-RU-Fa0">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="b1y-PP-4v5">
+                            <connections>
+                                <action selector="done:" destination="Rxe-HS-RXT" id="RaT-N1-vpa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3V-vm-UWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
