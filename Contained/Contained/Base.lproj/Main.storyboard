@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="t85-Wn-BG3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" id="Zyn-OZ-ANW"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller.png" id="Zyn-OZ-ANW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpi-r8-XRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,11 +52,42 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Jpb-z5-sLO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oQh-4f-uWl"/>
+                    <navigationItem key="navigationItem" id="oQh-4f-uWl">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" id="ZTD-hZ-Hpl">
+                                <connections>
+                                    <segue destination="Ez0-3F-aFT" kind="show" id="yOz-cH-VxZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="9MY-Pf-u4P">
+                                <connections>
+                                    <segue destination="alg-qI-iW1" kind="show" id="prn-mw-SU8"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSL-Be-Fav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2176.8115942028985" y="-624.77678571428567"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="SUb-At-JEC">
+            <objects>
+                <viewController id="alg-qI-iW1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9yv-Sd-pQD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="doC-Sm-ORo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="ec0-AT-daK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="TwQ-Hc-xUr"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yox-bU-k1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="-952"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Cy3-bD-lmn">
@@ -96,8 +127,27 @@
             </objects>
             <point key="canvasLocation" x="1266.6666666666667" y="-624.77678571428567"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="LJ3-wx-DvW">
+            <objects>
+                <viewController id="Ez0-3F-aFT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mIq-T3-SL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Jb5-zI-PM6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="foF-3w-0na">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="EW3-US-Jn8"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w03-hI-7FY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="-297"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="game_controller.png" width="30" height="30"/>
         <image name="info.png" width="30" height="30"/>
         <image name="settings.png" width="30" height="30"/>
     </resources>
