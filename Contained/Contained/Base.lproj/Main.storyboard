@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="tQP-18-rXj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snI-Ye-NNi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="snI-Ye-NNi" firstAttribute="leading" secondItem="t85-Wn-BG3" secondAttribute="leading" id="ejw-bd-Aoj"/>
+                            <constraint firstItem="snI-Ye-NNi" firstAttribute="top" secondItem="t85-Wn-BG3" secondAttribute="top" id="exE-qp-B9P"/>
+                            <constraint firstItem="t85-Wn-BG3" firstAttribute="trailing" secondItem="snI-Ye-NNi" secondAttribute="trailing" id="hyv-lo-DsY"/>
+                            <constraint firstItem="t85-Wn-BG3" firstAttribute="bottom" secondItem="snI-Ye-NNi" secondAttribute="bottom" id="uOl-5J-6pT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t85-Wn-BG3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller.png" id="Zyn-OZ-ANW"/>
+                    <connections>
+                        <outlet property="sKView" destination="snI-Ye-NNi" id="gzf-Fr-CK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpi-r8-XRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
