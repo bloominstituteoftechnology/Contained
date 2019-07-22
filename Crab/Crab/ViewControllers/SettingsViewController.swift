@@ -17,8 +17,10 @@ class SettingsViewController: UIViewController {
 	}
 	
 	@IBAction func toggleZoom(_ sender: UISwitch) {
+		if sender.isOn {
 		Settings.shared.shouldZoom = true
 	}
+}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
