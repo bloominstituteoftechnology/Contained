@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Instructions-->
+        <!--Quick Start Guide-->
         <scene sceneID="PHy-Q9-6b2">
             <objects>
                 <viewController id="77a-4b-JRE" customClass="InfoViewController" customModule="Contained_Game" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fcF-Sa-WuO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Instructions" id="N2L-xa-6zB">
+                    <navigationItem key="navigationItem" title="Quick Start Guide" id="N2L-xa-6zB">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="PYU-G1-BQt">
                             <connections>
                                 <segue destination="cWi-Kb-0XJ" kind="show" id="Yko-jE-Bvc"/>
@@ -80,10 +80,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="1938" y="144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Crab Tab Bar Controller-->
         <scene sceneID="Peh-m2-neQ">
             <objects>
-                <tabBarController id="hM7-kb-lE9" sceneMemberID="viewController">
+                <tabBarController id="hM7-kb-lE9" customClass="CrabTabBarController" customModule="Contained_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BVQ-dz-mNf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -109,10 +109,25 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="rTr-2C-VKt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbl-PF-erg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="faN-Qy-vEE" firstAttribute="trailing" secondItem="cbl-PF-erg" secondAttribute="trailing" id="LjU-ry-DKL"/>
+                            <constraint firstItem="cbl-PF-erg" firstAttribute="top" secondItem="rTr-2C-VKt" secondAttribute="top" id="nTB-R6-4ew"/>
+                            <constraint firstItem="faN-Qy-vEE" firstAttribute="bottom" secondItem="cbl-PF-erg" secondAttribute="bottom" id="nfj-Ba-7fu"/>
+                            <constraint firstItem="cbl-PF-erg" firstAttribute="leading" secondItem="faN-Qy-vEE" secondAttribute="leading" id="phU-4E-QzM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="faN-Qy-vEE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="ciQ-Ea-vZa"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="skview" destination="cbl-PF-erg" id="WyU-br-QS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuN-IM-mua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,7 +268,7 @@ the crab</string>
                 <navigationController title="Info" automaticallyAdjustsScrollViewInsets="NO" id="Rua-1Z-twf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="8DG-z3-biv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="CQH-dv-sjP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CQH-dv-sjP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.062078013629999998" green="0.8149038462" blue="0.7907237801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
