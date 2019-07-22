@@ -13,7 +13,7 @@
         <!--Play-->
         <scene sceneID="bWH-Ja-wqk">
             <objects>
-                <viewController id="god-bA-mPv" sceneMemberID="viewController">
+                <viewController id="god-bA-mPv" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3J-Yc-gVJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
         <!--Settings-->
         <scene sceneID="pC9-PK-AaZ">
             <objects>
-                <viewController id="s1v-fu-Pn0" sceneMemberID="viewController">
+                <viewController id="s1v-fu-Pn0" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afY-Ur-FAf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,11 @@
                         <viewLayoutGuide key="safeArea" id="Gji-eb-EvS"/>
                     </view>
                     <navigationItem key="navigationItem" id="qaS-Cd-Rt0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="3Aq-7C-4QZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="3Aq-7C-4QZ">
+                            <connections>
+                                <segue destination="fAJ-UC-jth" kind="show" id="7RU-zl-4sz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXB-Vi-LHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +86,7 @@
         <!--Info-->
         <scene sceneID="sbo-y4-aaF">
             <objects>
-                <navigationController title="Info" automaticallyAdjustsScrollViewInsets="NO" id="bxN-7Y-83a" sceneMemberID="viewController">
+                <navigationController title="Info" automaticallyAdjustsScrollViewInsets="NO" id="bxN-7Y-83a" customClass="infoviewcontroller" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" id="Y3R-ee-aju"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2ps-JS-huJ">
@@ -120,16 +124,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xuj-RK-ddU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Oct-bk-jaM"/>
+                    <navigationItem key="navigationItem" id="Oct-bk-jaM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="jET-gb-B4e"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA0-bJ-QSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1559" y="1859"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="AR0-Dt-zVe">
             <objects>
-                <viewController id="fAJ-UC-jth" sceneMemberID="viewController">
+                <viewController title="Item" id="fAJ-UC-jth" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LC0-Gi-aVw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +154,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8jL-TT-kdU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LBY-C0-ljm"/>
+                    <navigationItem key="navigationItem" title="Title" id="LBY-C0-ljm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="ntM-jA-xPd">
+                            <connections>
+                                <segue destination="Lyx-An-HBE" kind="show" id="BP7-EH-qYh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eV-kc-qk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
