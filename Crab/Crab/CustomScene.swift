@@ -7,11 +7,10 @@
 //
 
 import Foundation
-
-
 import SpriteKit
 
 class CustomScene: SKScene {
+	
 	let crab = SKSpriteNode()
 	
 	// Add and center child, initializing animation sequence

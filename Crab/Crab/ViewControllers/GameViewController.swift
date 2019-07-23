@@ -21,6 +21,12 @@ class GameViewController: UIViewController {
 		skview.presentScene(skscene)
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		skscene = CustomScene(size: view.bounds.size)
+		
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
