@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SettingsViewController: UIViewController {
 
