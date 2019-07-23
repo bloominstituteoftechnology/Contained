@@ -14,9 +14,5 @@ class InfoViewController: UIViewController {
     @IBAction func doneButtonBackToRoot(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
-    
-//    @IBAction func doneButtonPressedtoRoot(_ sender: UIStoryboardSegue) {
-//
-//    }
 
 }
