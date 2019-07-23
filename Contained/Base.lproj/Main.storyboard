@@ -71,17 +71,31 @@
             </objects>
             <point key="canvasLocation" x="945" y="-358"/>
         </scene>
-        <!--Item 2-->
+        <!--Game-->
         <scene sceneID="TQT-9f-MKu">
             <objects>
-                <viewController id="vxq-ID-JFJ" sceneMemberID="viewController">
+                <viewController id="vxq-ID-JFJ" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ydw-qZ-6dn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPy-gI-7MK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OPy-gI-7MK" firstAttribute="top" secondItem="0Bh-Uq-xru" secondAttribute="top" id="7J9-qB-lW8"/>
+                            <constraint firstItem="0Bh-Uq-xru" firstAttribute="bottom" secondItem="OPy-gI-7MK" secondAttribute="bottom" id="Kzt-b3-gJD"/>
+                            <constraint firstItem="OPy-gI-7MK" firstAttribute="leading" secondItem="0Bh-Uq-xru" secondAttribute="leading" id="iic-Vu-tq2"/>
+                            <constraint firstItem="0Bh-Uq-xru" firstAttribute="trailing" secondItem="OPy-gI-7MK" secondAttribute="trailing" id="j6s-ff-xsH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Bh-Uq-xru"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="game_controller" id="FG0-aw-ivt" userLabel="Play"/>
+                    <tabBarItem key="tabBarItem" title="Game" selectedImage="game_controller" id="FG0-aw-ivt" userLabel="Play"/>
+                    <connections>
+                        <outlet property="skview" destination="OPy-gI-7MK" id="oxO-5i-H8q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rn-8Q-aeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
