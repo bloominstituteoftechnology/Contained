@@ -13,6 +13,9 @@
 		2912F15F22F91C3A0014E675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2912F15D22F91C3A0014E675 /* LaunchScreen.storyboard */; };
 		2961F6E222F91D6800F9FCFB /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961F6E122F91D6800F9FCFB /* SKSpriteNode+Utility.swift */; };
 		2961F6E422F91E3E00F9FCFB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961F6E322F91E3E00F9FCFB /* Settings.swift */; };
+		2961F6E922F9225A00F9FCFB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961F6E822F9225A00F9FCFB /* GameViewController.swift */; };
+		2961F6EB22F9226200F9FCFB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961F6EA22F9226200F9FCFB /* InfoViewController.swift */; };
+		2961F6ED22F9226A00F9FCFB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961F6EC22F9226A00F9FCFB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2912F16022F91C3A0014E675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2961F6E122F91D6800F9FCFB /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
 		2961F6E322F91E3E00F9FCFB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2961F6E822F9225A00F9FCFB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2961F6EA22F9226200F9FCFB /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2961F6EC22F9226A00F9FCFB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		2912F15322F91C3A0014E675 /* Contained */ = {
 			isa = PBXGroup;
 			children = (
+				2961F6E722F9223B00F9FCFB /* models */,
+				2961F6E622F9223500F9FCFB /* views */,
+				2961F6E522F9222F00F9FCFB /* controllers */,
 				2912F15422F91C3A0014E675 /* AppDelegate.swift */,
 				2961F6E122F91D6800F9FCFB /* SKSpriteNode+Utility.swift */,
 				2912F15822F91C3A0014E675 /* Main.storyboard */,
-				2961F6E322F91E3E00F9FCFB /* Settings.swift */,
 				2912F15D22F91C3A0014E675 /* LaunchScreen.storyboard */,
 				2912F15B22F91C3A0014E675 /* Assets.xcassets */,
 				2912F16022F91C3A0014E675 /* Info.plist */,
 			);
 			path = Contained;
+			sourceTree = "<group>";
+		};
+		2961F6E522F9222F00F9FCFB /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2961F6EA22F9226200F9FCFB /* InfoViewController.swift */,
+				2961F6E822F9225A00F9FCFB /* GameViewController.swift */,
+				2961F6EC22F9226A00F9FCFB /* SettingsViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		2961F6E622F9223500F9FCFB /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		2961F6E722F9223B00F9FCFB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2961F6E322F91E3E00F9FCFB /* Settings.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2961F6E922F9225A00F9FCFB /* GameViewController.swift in Sources */,
 				2961F6E422F91E3E00F9FCFB /* Settings.swift in Sources */,
 				2912F15522F91C3A0014E675 /* AppDelegate.swift in Sources */,
 				2961F6E222F91D6800F9FCFB /* SKSpriteNode+Utility.swift in Sources */,
+				2961F6EB22F9226200F9FCFB /* InfoViewController.swift in Sources */,
+				2961F6ED22F9226A00F9FCFB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
