@@ -13,6 +13,10 @@
 		27132AAE22FB72CB00712DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27132AAC22FB72CB00712DA0 /* LaunchScreen.storyboard */; };
 		27132AB622FB735600712DA0 /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27132AB522FB735600712DA0 /* Crab.xcassets */; };
 		27132AB822FB738000712DA0 /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27132AB722FB738000712DA0 /* SKSpriteNode+Utility.swift */; };
+		27132ABA22FB74A500712DA0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27132AB922FB74A500712DA0 /* Settings.swift */; };
+		27132ABC22FB866F00712DA0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27132ABB22FB866F00712DA0 /* GameViewController.swift */; };
+		27132ABE22FB868900712DA0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27132ABD22FB868900712DA0 /* InfoViewController.swift */; };
+		27132AC022FB869A00712DA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27132ABF22FB869A00712DA0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,12 @@
 		27132AAA22FB72CB00712DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27132AAD22FB72CB00712DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27132AAF22FB72CB00712DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27132AB522FB735600712DA0 /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../Crab.xcassets; sourceTree = "<group>"; };
-		27132AB722FB738000712DA0 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		27132AB522FB735600712DA0 /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		27132AB722FB738000712DA0 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		27132AB922FB74A500712DA0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		27132ABB22FB866F00712DA0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		27132ABD22FB868900712DA0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		27132ABF22FB869A00712DA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,34 @@
 		27132AA222FB72CA00712DA0 /* Crabs */ = {
 			isa = PBXGroup;
 			children = (
+				27132AC322FB86C900712DA0 /* Supporting Files */,
+				27132AC222FB86B300712DA0 /* Model */,
+				27132AC122FB86A500712DA0 /* VC */,
+			);
+			path = Crabs;
+			sourceTree = "<group>";
+		};
+		27132AC122FB86A500712DA0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				27132ABB22FB866F00712DA0 /* GameViewController.swift */,
+				27132ABD22FB868900712DA0 /* InfoViewController.swift */,
+				27132ABF22FB869A00712DA0 /* SettingsViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		27132AC222FB86B300712DA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27132AB922FB74A500712DA0 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27132AC322FB86C900712DA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				27132AA322FB72CA00712DA0 /* AppDelegate.swift */,
 				27132AA722FB72CA00712DA0 /* Main.storyboard */,
 				27132AAA22FB72CB00712DA0 /* Assets.xcassets */,
@@ -64,7 +100,7 @@
 				27132AAF22FB72CB00712DA0 /* Info.plist */,
 				27132AB722FB738000712DA0 /* SKSpriteNode+Utility.swift */,
 			);
-			path = Crabs;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27132ABC22FB866F00712DA0 /* GameViewController.swift in Sources */,
+				27132ABA22FB74A500712DA0 /* Settings.swift in Sources */,
 				27132AA422FB72CA00712DA0 /* AppDelegate.swift in Sources */,
 				27132AB822FB738000712DA0 /* SKSpriteNode+Utility.swift in Sources */,
+				27132ABE22FB868900712DA0 /* InfoViewController.swift in Sources */,
+				27132AC022FB869A00712DA0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HL3XLM68NV;
-				INFOPLIST_FILE = Crabs/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Crabs/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HL3XLM68NV;
-				INFOPLIST_FILE = Crabs/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Crabs/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
