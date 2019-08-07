@@ -110,10 +110,24 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="fnt-aV-eUx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-Pb-ftg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6s2-pi-ETe" firstAttribute="trailing" secondItem="sJb-Pb-ftg" secondAttribute="trailing" id="4NK-a6-uVX"/>
+                            <constraint firstItem="sJb-Pb-ftg" firstAttribute="top" secondItem="6s2-pi-ETe" secondAttribute="top" id="9EU-Gx-aTG"/>
+                            <constraint firstItem="6s2-pi-ETe" firstAttribute="bottom" secondItem="sJb-Pb-ftg" secondAttribute="bottom" id="EjP-85-kJU"/>
+                            <constraint firstItem="sJb-Pb-ftg" firstAttribute="leading" secondItem="6s2-pi-ETe" secondAttribute="leading" id="US2-Pe-tUe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6s2-pi-ETe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="au8-P7-dra"/>
+                    <connections>
+                        <outlet property="skView" destination="sJb-Pb-ftg" id="X2O-dm-YNo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHF-ll-VPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +155,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KFg-zF-WQR">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="gmP-PA-2nv" eventType="valueChanged" id="mPh-FS-f18"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -155,6 +172,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OTx-vh-7oo">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="gmP-PA-2nv" eventType="valueChanged" id="Abl-07-Ks2"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
