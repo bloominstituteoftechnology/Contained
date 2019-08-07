@@ -19,19 +19,31 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        if switchZoom.isOn  {
-            Settings.shared.shouldZoom = true
-        } else {
-            Settings.shared.shouldZoom = false
-        }
+    // option 1 - using if let
+//        if switchZoom.isOn  {
+//            Settings.shared.shouldZoom = true
+//        } else {
+//            Settings.shared.shouldZoom = false
+//        }
+        
+    // option 2 - using ternary operator
+        switchZoom.isOn ? (Settings.shared.shouldZoom = true) : (Settings.shared.shouldZoom = false)
+        
+    // option 3 - simple toggle but it's a confusing logic
+//        Settings.shared.shouldZoom.toggle()
+
+        
+
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        if switchRoll.isOn {
-            Settings.shared.shouldRoll = true
-        } else {
-            Settings.shared.shouldRoll = false
-        }
+        Settings.shared.shouldRoll.toggle()
+
+//        if switchRoll.isOn {
+//            Settings.shared.shouldRoll = true
+//        } else {
+//            Settings.shared.shouldRoll = false
+//        }
     }
 
     
