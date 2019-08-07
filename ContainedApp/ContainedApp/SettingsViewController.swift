@@ -9,8 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    @IBOutlet weak var switchRoll: UISwitch!
     @IBOutlet weak var switchZoom: UISwitch!
+    @IBOutlet weak var switchRoll: UISwitch!
+    @IBOutlet weak var switchFade: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,9 @@ class SettingsViewController: UIViewController {
 //        }
     }
 
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade.toggle()
+    }
     
 
 }

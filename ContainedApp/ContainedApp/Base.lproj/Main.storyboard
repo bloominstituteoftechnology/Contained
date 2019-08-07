@@ -106,7 +106,7 @@ the crab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-yL-rD0">
-                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <rect key="frame" x="156.5" y="393.5" width="101.5" height="109"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-OB-5LZ">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -142,6 +142,23 @@ the crab</string>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Ml-Sd-dmL">
+                                        <rect key="frame" x="0.0" y="78" width="101.5" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BSq-hB-utc">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleFade:" destination="U2j-ij-sGv" eventType="valueChanged" id="ROP-Cs-0Vg"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpW-Ib-SJP">
+                                                <rect key="frame" x="57" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -154,8 +171,9 @@ the crab</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="sUN-Fm-uvb"/>
                     <connections>
-                        <outlet property="switchRoll" destination="1fH-ZT-h5N" id="IAi-zh-2HP"/>
-                        <outlet property="switchZoom" destination="S5h-3t-pL6" id="71s-cn-ExD"/>
+                        <outlet property="switchFade" destination="BSq-hB-utc" id="0N9-fo-XZg"/>
+                        <outlet property="switchRoll" destination="1fH-ZT-h5N" id="JBP-If-d1n"/>
+                        <outlet property="switchZoom" destination="S5h-3t-pL6" id="HQh-nd-tID"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJt-Vy-kwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
