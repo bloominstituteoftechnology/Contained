@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-EQ-lN0">
-                                <rect key="frame" x="141" y="421" width="133" height="58"/>
+                                <rect key="frame" x="140.5" y="421.5" width="133" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,10 +121,24 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="hnQ-7Q-9C1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-q5-qDK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZY4-q5-qDK" firstAttribute="leading" secondItem="eKz-zz-tJ5" secondAttribute="leading" id="Bo9-do-e2d"/>
+                            <constraint firstItem="eKz-zz-tJ5" firstAttribute="bottom" secondItem="ZY4-q5-qDK" secondAttribute="bottom" id="S5B-db-I8a"/>
+                            <constraint firstItem="eKz-zz-tJ5" firstAttribute="trailing" secondItem="ZY4-q5-qDK" secondAttribute="trailing" id="aS9-we-Z9c"/>
+                            <constraint firstItem="ZY4-q5-qDK" firstAttribute="top" secondItem="eKz-zz-tJ5" secondAttribute="top" id="j47-IO-52o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eKz-zz-tJ5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" id="dX8-s7-3vH"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="dX8-s7-3vH"/>
+                    <connections>
+                        <outlet property="skview" destination="ZY4-q5-qDK" id="jaZ-uj-gT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLo-ZA-2Uz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +199,7 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4dD-jO-3hl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="vWa-Cf-5EM"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="vWa-Cf-5EM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40s-Kz-Gaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,6 +211,7 @@ the crab</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0nO-SK-Whn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CED-DF-eqg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -214,7 +229,7 @@ the crab</string>
         <scene sceneID="O5U-NW-Tcu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="56m-2Z-uXR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" id="8W5-4p-0xa"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="8W5-4p-0xa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D0D-b0-f0R">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -230,4 +245,9 @@ the crab</string>
             <point key="canvasLocation" x="1018.840579710145" y="356.91964285714283"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
