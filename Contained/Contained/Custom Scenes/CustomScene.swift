@@ -20,18 +20,18 @@ class CustomScene: SKScene {
         } else {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.position = Settings.shared.point
     }
     
     // Move to Touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Fetch a touch or leave
+        // Fetch a touch or wait
+//        guard touches.isEmpty, var position = CGPoint(x: frame.midX, y: frame.midY) else { return }
         guard !touches.isEmpty, let touch = touches.first else { return }
         
         // Retrieve position
-        let position = touch.location(in: self)
-//        Settings.shared.point.x = Double(position.x)
-//        Settings.shared.point.x = Double(position.y)
+        position = touch.location(in: self)
+        Settings.shared.point = position
 
         
         // Create move action

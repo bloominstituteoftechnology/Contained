@@ -20,10 +20,10 @@ class Settings {
     
     var isHappy = false
 
-    struct Point {
-        var x: Double
-        var y: Double
-    }
+//    struct Point {
+//        var x: Double
+//        var y: Double
+//    }
     
-    var point = Point(x: 0.0, y: 0.0)
+    var point: CGPoint = CGPoint(x: 180.0, y: 360.0)
 }
