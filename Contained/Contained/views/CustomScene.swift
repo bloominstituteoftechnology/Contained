@@ -38,6 +38,9 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
+        let fadeAction = SKAction.fadeAlpha(to: 0.5, duration: 0.3)
+        let unfadeAction = SKAction.fadeAlpha(to: 1.0, duration: 0.1)
+        
         switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
@@ -46,8 +49,20 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
+        switch Settings.shared.shouldFade {
+        case false:
+            crab.run(moveAction)
+        case true:
+            let sequenceAction = SKAction.sequence([fadeAction, moveAction, unfadeAction])
+            crab.run(sequenceAction)
+        }
+        
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
+        }
+        
+        if Settings.shared.shouldStorePosition {
+            crab.position = touch.location(in: self)
         }
     }
     
