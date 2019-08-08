@@ -121,10 +121,24 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="rz0-Np-R3G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIQ-Eu-qRc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vIQ-Eu-qRc" firstAttribute="leading" secondItem="nWD-t4-pRi" secondAttribute="leading" id="2EO-ua-jFB"/>
+                            <constraint firstItem="nWD-t4-pRi" firstAttribute="trailing" secondItem="vIQ-Eu-qRc" secondAttribute="trailing" id="E1p-yD-29v"/>
+                            <constraint firstItem="vIQ-Eu-qRc" firstAttribute="top" secondItem="nWD-t4-pRi" secondAttribute="top" id="Kyf-61-acF"/>
+                            <constraint firstItem="nWD-t4-pRi" firstAttribute="bottom" secondItem="vIQ-Eu-qRc" secondAttribute="bottom" id="nXZ-RR-lAl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nWD-t4-pRi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="Ej3-kp-cYu"/>
+                    <connections>
+                        <outlet property="skview" destination="vIQ-Eu-qRc" id="ZZS-MO-p1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSa-u7-x0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
