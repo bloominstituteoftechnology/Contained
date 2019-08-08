@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="653.62318840579712" y="529.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="2fw-oY-fb7">
             <objects>
-                <viewController id="LNG-0h-cNc" sceneMemberID="viewController">
+                <viewController id="LNG-0h-cNc" customClass="InfoViewController" customModule="ContainedProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5p-fo-Rbv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="529.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="WHn-TW-1yx">
             <objects>
-                <viewController id="seS-Za-DWT" sceneMemberID="viewController">
+                <viewController id="seS-Za-DWT" customClass="InfoViewController" customModule="ContainedProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="26E-Dj-JHm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,13 +109,12 @@ Play</string>
                     <navigationItem key="navigationItem" id="VCZ-QB-uut">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="gxO-Zt-2im">
                             <connections>
-                                <action selector="donePressed:" destination="pyX-bt-cfJ" id="BjU-Z3-2eD"/>
+                                <action selector="donePressed:" destination="seS-Za-DWT" id="yo0-9l-Lm2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="au2-hr-FZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pyX-bt-cfJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2042" y="530"/>
         </scene>
@@ -141,14 +140,28 @@ Play</string>
         <!--Play-->
         <scene sceneID="ojA-4V-2Ir">
             <objects>
-                <viewController title="Play" id="UKK-3d-9Xt" customClass="GameViewController" customModule="ContainedProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Play" id="UKK-3d-9Xt" customClass="GamesViewController" customModule="ContainedProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f0n-qn-s4r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-6B-WpT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bIY-ky-fiY" firstAttribute="trailing" secondItem="hnw-6B-WpT" secondAttribute="trailing" id="EBx-Wn-6wa"/>
+                            <constraint firstItem="hnw-6B-WpT" firstAttribute="leading" secondItem="bIY-ky-fiY" secondAttribute="leading" id="UEV-gY-Pkr"/>
+                            <constraint firstItem="bIY-ky-fiY" firstAttribute="bottom" secondItem="hnw-6B-WpT" secondAttribute="bottom" id="XDQ-RI-8GW"/>
+                            <constraint firstItem="hnw-6B-WpT" firstAttribute="top" secondItem="bIY-ky-fiY" secondAttribute="top" id="xjz-g4-UIE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bIY-ky-fiY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="WpR-0s-Exi"/>
+                    <connections>
+                        <outlet property="skview" destination="hnw-6B-WpT" id="MvL-vs-yE1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIn-HG-Tay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
