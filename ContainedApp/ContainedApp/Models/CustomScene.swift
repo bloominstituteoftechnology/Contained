@@ -15,8 +15,18 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        switchCharacter()
+    }
+    
+    // Chhanging characters
+    private func switchCharacter() {
+        switch Settings.shared.character {
+        case .happyCrab:
+            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        case .waitingCrab:
+            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        }
     }
     
     // Move to touch
@@ -55,7 +65,5 @@ class CustomScene: SKScene {
             let sequenceFadeAction = SKAction.sequence([fadeInAction, moveAction, fadeOutAction])
             crab.run(sequenceFadeAction)
         }
-        
-        
     }
 }

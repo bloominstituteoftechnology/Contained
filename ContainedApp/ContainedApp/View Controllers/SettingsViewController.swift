@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var switchZoom: UISwitch!
     @IBOutlet weak var switchRoll: UISwitch!
     @IBOutlet weak var switchFade: UISwitch!
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var characterImage: UIImageView!
+    
+    let crab = SKSpriteNode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        characterImage.image = UIImage(named: "happycrab000")
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
@@ -51,5 +55,18 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldFade.toggle()
     }
     
-
+    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        
+        switch segment.selectedSegmentIndex {
+        case 0:
+            Settings.shared.character = .happyCrab
+            characterImage.image = UIImage(named: "happycrab000")
+        case 1:
+            Settings.shared.character = .waitingCrab
+            characterImage.image = UIImage(named: "waitingcrab000")
+        default:
+            Settings.shared.character = .happyCrab
+            characterImage.image = UIImage(named: "happycrab000")
+        }
+    }
 }
