@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var moodLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,4 +32,16 @@ class SettingsViewController: UIViewController {
             Settings.shared.shouldZoom = false
         }
     }
+    
+    @IBAction func toggleMood(_ sender: UISwitch) {
+        if sender.isOn {
+            moodLabel.text = "Happy"
+            Settings.shared.changeMood = true
+            
+        } else {
+            moodLabel.text = "Waiting"
+            Settings.shared.changeMood = false
+        }
+    }
+    
 }
