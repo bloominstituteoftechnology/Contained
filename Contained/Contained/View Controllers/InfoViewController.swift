@@ -12,7 +12,7 @@ class InfoViewController: UIViewController {
     
     
 
-    @IBOutlet weak var crabesLabel: UILabel!
+    @IBOutlet weak var crabsLabel: UILabel!
     
     @IBOutlet weak var moveLabel: UILabel!
     
@@ -20,6 +20,7 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         moveLabel?.text = "Tap to move\r the crab"
         letsPlayLabel?.text = "Let's Play!"

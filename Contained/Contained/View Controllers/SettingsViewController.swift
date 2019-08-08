@@ -10,9 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var positionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,5 +27,12 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
         
     }
+    
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn
+    }
+    
+    
+    
     
 }
