@@ -12,15 +12,22 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-       Settings.shared.shouldRoll = true
+        if sender.isOn {
+            Settings.shared.shouldRoll = true
+        } else {
+            Settings.shared.shouldRoll = false
+        }
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom = true
+        if sender.isOn {
+            Settings.shared.shouldZoom = true
+        } else {
+            Settings.shared.shouldZoom = false
+        }
     }
     
 
