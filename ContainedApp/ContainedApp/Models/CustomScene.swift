@@ -15,8 +15,18 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        switchCharacter()
+    }
+    
+    // Chhanging characters
+    private func switchCharacter() {
+        switch Settings.shared.character {
+        case .happyCrab:
+            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        case .waitingCrab:
+            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        }
     }
     
     // Move to touch
@@ -36,6 +46,9 @@ class CustomScene: SKScene {
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.3)
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
+        
         switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
@@ -46,6 +59,11 @@ class CustomScene: SKScene {
         
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
+        }
+        
+        if Settings.shared.shouldFade {
+            let sequenceFadeAction = SKAction.sequence([fadeInAction, moveAction, fadeOutAction])
+            crab.run(sequenceFadeAction)
         }
     }
 }
