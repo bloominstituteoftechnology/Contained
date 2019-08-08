@@ -10,14 +10,12 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
-    
-    
+  
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
         updateCrab()
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,11 +64,6 @@ class CustomScene: SKScene {
         } else {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
-        
-        
     }
-    
-    
-
     
 }
