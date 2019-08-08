@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		929F20D922FBAD47005F9092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20D822FBAD47005F9092 /* AppDelegate.swift */; };
-		929F20DB22FBAD47005F9092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20DA22FBAD47005F9092 /* ViewController.swift */; };
 		929F20DE22FBAD47005F9092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F20DC22FBAD47005F9092 /* Main.storyboard */; };
 		929F20E022FBAD48005F9092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929F20DF22FBAD48005F9092 /* Assets.xcassets */; };
 		929F20E322FBAD48005F9092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929F20E122FBAD48005F9092 /* LaunchScreen.storyboard */; };
+		929F20EB22FBAE2D005F9092 /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20EA22FBAE2D005F9092 /* SKSpriteNode+Utility.swift */; };
+		929F20ED22FBAE3F005F9092 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20EC22FBAE3F005F9092 /* Settings.swift */; };
+		929F20F022FBB0A7005F9092 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20EF22FBB0A7005F9092 /* GameViewController.swift */; };
+		929F20F222FBB0C0005F9092 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20F122FBB0C0005F9092 /* InfoViewController.swift */; };
+		929F20F422FBB11C005F9092 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F20F322FBB11C005F9092 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		929F20D522FBAD47005F9092 /* Contained.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contained.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929F20D822FBAD47005F9092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		929F20DA22FBAD47005F9092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		929F20DD22FBAD47005F9092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		929F20DF22FBAD48005F9092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929F20E222FBAD48005F9092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		929F20E422FBAD48005F9092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929F20EA22FBAE2D005F9092 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		929F20EC22FBAE3F005F9092 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		929F20EF22FBB0A7005F9092 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		929F20F122FBB0C0005F9092 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		929F20F322FBB11C005F9092 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		929F20D722FBAD47005F9092 /* Contained */ = {
 			isa = PBXGroup;
 			children = (
+				929F20EE22FBB08E005F9092 /* View Controllers */,
 				929F20D822FBAD47005F9092 /* AppDelegate.swift */,
-				929F20DA22FBAD47005F9092 /* ViewController.swift */,
 				929F20DC22FBAD47005F9092 /* Main.storyboard */,
 				929F20DF22FBAD48005F9092 /* Assets.xcassets */,
 				929F20E122FBAD48005F9092 /* LaunchScreen.storyboard */,
 				929F20E422FBAD48005F9092 /* Info.plist */,
+				929F20EA22FBAE2D005F9092 /* SKSpriteNode+Utility.swift */,
+				929F20EC22FBAE3F005F9092 /* Settings.swift */,
 			);
 			path = Contained;
+			sourceTree = "<group>";
+		};
+		929F20EE22FBB08E005F9092 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				929F20EF22FBB0A7005F9092 /* GameViewController.swift */,
+				929F20F122FBB0C0005F9092 /* InfoViewController.swift */,
+				929F20F322FBB11C005F9092 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929F20DB22FBAD47005F9092 /* ViewController.swift in Sources */,
+				929F20F022FBB0A7005F9092 /* GameViewController.swift in Sources */,
+				929F20ED22FBAE3F005F9092 /* Settings.swift in Sources */,
 				929F20D922FBAD47005F9092 /* AppDelegate.swift in Sources */,
+				929F20EB22FBAE2D005F9092 /* SKSpriteNode+Utility.swift in Sources */,
+				929F20F222FBB0C0005F9092 /* InfoViewController.swift in Sources */,
+				929F20F422FBB11C005F9092 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
