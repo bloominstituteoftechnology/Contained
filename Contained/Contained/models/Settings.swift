@@ -16,4 +16,5 @@ class Settings {
     var shouldZoom = false
     var shouldStorePosition = false
     var shouldFade = false
+    var showWaitingCrab = false
 }

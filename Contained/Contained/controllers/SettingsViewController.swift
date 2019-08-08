@@ -28,6 +28,9 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldFade = sender.isOn
     }
     
+    @IBAction func toggleSadCrab(_ sender: UISwitch) {
+        Settings.shared.showWaitingCrab = sender.isOn
+    }
     
     @IBAction func toggleSavePosition(_ sender: UISwitch) {
         Settings.shared.shouldStorePosition = sender.isOn
