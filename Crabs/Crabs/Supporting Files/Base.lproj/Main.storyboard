@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oY2-67-YJ9">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,9 +15,20 @@
             <objects>
                 <viewController id="yNh-tr-CCJ" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2I2-Ls-3dZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-8a-8RB">
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9cA-8a-8RB" firstAttribute="leading" secondItem="ddc-tT-1Vj" secondAttribute="leading" id="CAB-WS-Qxl"/>
+                            <constraint firstItem="ddc-tT-1Vj" firstAttribute="bottom" secondItem="9cA-8a-8RB" secondAttribute="bottom" id="Fo1-af-nY1"/>
+                            <constraint firstItem="9cA-8a-8RB" firstAttribute="top" secondItem="ddc-tT-1Vj" secondAttribute="top" id="lzC-Rc-he1"/>
+                            <constraint firstItem="ddc-tT-1Vj" firstAttribute="trailing" secondItem="9cA-8a-8RB" secondAttribute="trailing" id="vmT-RU-pNr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ddc-tT-1Vj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="0n7-8h-ioe"/>
@@ -31,11 +42,11 @@
             <objects>
                 <viewController id="bzL-SD-PeK" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U5z-dm-EdN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdj-Hj-AnY">
-                                <rect key="frame" x="154" y="425" width="106" height="46"/>
+                                <rect key="frame" x="154" y="345" width="106" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,14 +76,13 @@
             <objects>
                 <viewController id="JxJ-fi-OlW" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3UF-gj-2Ko">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-1b-saO">
-                                <rect key="frame" x="125" y="419" width="164" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-1b-saO">
+                                <rect key="frame" x="93" y="309" width="229" height="118"/>
                                 <string key="text">Tap to 
-move the crab 
-</string>
+move the crab</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,10 +90,10 @@ move the crab
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lNl-1b-saO" firstAttribute="leading" secondItem="Kfm-Nw-EZJ" secondAttribute="leading" constant="125" id="XCP-wA-pPG"/>
-                            <constraint firstItem="lNl-1b-saO" firstAttribute="top" secondItem="Kfm-Nw-EZJ" secondAttribute="top" constant="331" id="caZ-IV-RJl"/>
-                            <constraint firstItem="lNl-1b-saO" firstAttribute="centerY" secondItem="3UF-gj-2Ko" secondAttribute="centerY" id="gga-Fk-Tcf"/>
-                            <constraint firstItem="lNl-1b-saO" firstAttribute="centerX" secondItem="3UF-gj-2Ko" secondAttribute="centerX" id="hfW-AE-Obp"/>
+                            <constraint firstItem="lNl-1b-saO" firstAttribute="top" secondItem="Kfm-Nw-EZJ" secondAttribute="top" constant="245" id="9OO-Fg-GeQ"/>
+                            <constraint firstItem="lNl-1b-saO" firstAttribute="centerX" secondItem="3UF-gj-2Ko" secondAttribute="centerX" id="DxL-yj-AgT"/>
+                            <constraint firstItem="lNl-1b-saO" firstAttribute="centerY" secondItem="3UF-gj-2Ko" secondAttribute="centerY" id="hJn-OB-u5b"/>
+                            <constraint firstItem="lNl-1b-saO" firstAttribute="leading" secondItem="Kfm-Nw-EZJ" secondAttribute="leading" constant="93" id="tGy-1E-gkD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kfm-Nw-EZJ"/>
                     </view>
@@ -104,11 +114,11 @@ move the crab
             <objects>
                 <viewController id="txe-Ta-Eg9" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o0E-SS-Kxs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16V-Rc-vmf">
-                                <rect key="frame" x="136" y="430" width="143" height="36"/>
+                                <rect key="frame" x="131" y="350" width="153" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,9 +126,9 @@ move the crab
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="16V-Rc-vmf" firstAttribute="leading" secondItem="1xs-c3-GhF" secondAttribute="leading" constant="136" id="2zF-pr-sbb"/>
-                            <constraint firstItem="16V-Rc-vmf" firstAttribute="centerY" secondItem="o0E-SS-Kxs" secondAttribute="centerY" id="7eW-D9-ON4"/>
-                            <constraint firstItem="16V-Rc-vmf" firstAttribute="centerX" secondItem="o0E-SS-Kxs" secondAttribute="centerX" id="aOe-MR-qDj"/>
+                            <constraint firstItem="16V-Rc-vmf" firstAttribute="leading" secondItem="1xs-c3-GhF" secondAttribute="leading" constant="131" id="FdZ-yQ-ItW"/>
+                            <constraint firstItem="16V-Rc-vmf" firstAttribute="centerX" secondItem="o0E-SS-Kxs" secondAttribute="centerX" id="dXY-29-HqM"/>
+                            <constraint firstItem="16V-Rc-vmf" firstAttribute="centerY" secondItem="o0E-SS-Kxs" secondAttribute="centerY" id="s2B-JM-wj4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xs-c3-GhF"/>
                     </view>
@@ -132,16 +142,61 @@ move the crab
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3Q-fj-AJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3462" y="490"/>
+            <point key="canvasLocation" x="3460.8695652173915" y="489.50892857142856"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wRP-Ov-tEi">
             <objects>
                 <viewController id="pJI-jE-lbu" customClass="SettingsViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bfm-uW-2Vc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PPn-xZ-C3h">
+                                <rect key="frame" x="157" y="393" width="101.33333333333331" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GLd-jM-stq">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaD-7s-nbU">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="giD-L2-tTk">
+                                                <rect key="frame" x="52.333333333333343" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="pJI-jE-lbu" eventType="valueChanged" id="Edd-gf-7GB"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cwk-JS-Cc5">
+                                        <rect key="frame" x="0.0" y="39" width="101.33333333333333" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-0D-GWG">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-Nr-dOX">
+                                                <rect key="frame" x="52.333333333333343" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="pJI-jE-lbu" eventType="valueChanged" id="gRA-Fq-DAS"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PPn-xZ-C3h" firstAttribute="leading" secondItem="Ldc-OJ-k2Z" secondAttribute="leading" constant="157" id="cGI-Qk-KN0"/>
+                            <constraint firstItem="PPn-xZ-C3h" firstAttribute="top" secondItem="Ldc-OJ-k2Z" secondAttribute="top" constant="373" id="x0c-cZ-gUE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ldc-OJ-k2Z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="NVs-tu-MWo"/>
@@ -177,7 +232,7 @@ move the crab
                     <tabBarItem key="tabBarItem" title="info" image="info" selectedImage="info" id="ZE9-p9-bpO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ZP-eR-v03">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
