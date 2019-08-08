@@ -55,7 +55,12 @@ class CustomScene: SKScene {
         
         let position = touch.location(in: self)
         let actionDuration = 1.0
+        let ghostAction = SKAction.fadeIn(withDuration: 5)
         SKAction.move(to: position, duration: actionDuration)
+        
+        if Settings.shared.shouldFadeIn {
+            crab.run(ghostAction)
+        }
     }
     
     func updateCrab() {
