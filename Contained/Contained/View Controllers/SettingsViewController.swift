@@ -44,4 +44,13 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleFadeIn(_ sender: UISwitch) {
+        if sender.isOn {
+            Settings.shared.shouldFadeIn = true
+        } else {
+            Settings.shared.shouldFadeIn = false
+        }
+    }
+    
+    
 }

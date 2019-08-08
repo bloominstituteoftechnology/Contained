@@ -31,7 +31,7 @@ class CustomScene: SKScene {
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unZoomAction = SKAction.scale(to: 1.0, duration: 0.1)
-        
+        let ghostAction = SKAction.fadeOut(withDuration: 10)
         
         
         switch Settings.shared.shouldZoom {
@@ -44,6 +44,10 @@ class CustomScene: SKScene {
         
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
+        }
+        
+        if Settings.shared.shouldFadeIn {
+            crab.run(ghostAction)
         }
     }
     
@@ -62,7 +66,11 @@ class CustomScene: SKScene {
         } else {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
+        
+        
     }
+    
+    
 
     
 }

@@ -15,4 +15,5 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var changeMood = false
+    var shouldFadeIn = false
 }
