@@ -20,6 +20,10 @@ class Settings {
     
     var isHappy = false
 
-    //var posX, posY: Double
-    //var restorePoint = CGPoint(posX, posY)
+    struct Point {
+        var x: Double
+        var y: Double
+    }
+    
+    var point = Point(x: 0.0, y: 0.0)
 }

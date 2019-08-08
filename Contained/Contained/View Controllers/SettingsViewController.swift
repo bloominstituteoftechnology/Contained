@@ -34,7 +34,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleHappy(_ sender: UISwitch) {
         
-        if !happySwitch.isOn {
+        if happySwitch.isOn {
             Settings.shared.isHappy = true
         } else {
             Settings.shared.isHappy = false
