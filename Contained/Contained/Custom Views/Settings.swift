@@ -16,5 +16,5 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var shouldFade = false
-    var crabPosition: CGPoint?
+    var crabHappy = false
 }

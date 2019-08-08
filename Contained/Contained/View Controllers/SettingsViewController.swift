@@ -32,6 +32,9 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldFade = sender.isOn
     }
     
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        Settings.shared.crabHappy = sender.isOn
+    }
     
     
     

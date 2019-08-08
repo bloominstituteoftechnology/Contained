@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+var currentCrabType = "HappyCrab"
+
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
@@ -15,7 +17,7 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: currentCrabType, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
@@ -36,6 +38,14 @@ class CustomScene: SKScene {
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         let fadeInAction = SKAction.fadeIn(withDuration: 0.2)
         let fadeOutAction = SKAction.fadeOut(withDuration: 0.2)
+        let newAction = SKAction.applyAngularImpulse(1.4, duration: 0.3)
+        
+        switch Settings.shared.crabHappy {
+        case false:
+            currentCrabType = "WaitingCrab"
+        case true:
+            currentCrabType = "HappyCrab"
+        }
         
         switch Settings.shared.shouldZoom {
         case false:
@@ -49,7 +59,7 @@ class CustomScene: SKScene {
         case false:
             crab.run(moveAction)
         case true:
-            let sequenceAction = SKAction.sequence([fadeOutAction, moveAction, fadeInAction])
+            let sequenceAction = SKAction.sequence([fadeOutAction, newAction, moveAction, fadeInAction])
             crab.run(sequenceAction)
         }
         
