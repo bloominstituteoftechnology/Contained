@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var rollSwitch: UISwitch!
     @IBOutlet weak var zoomSwitch: UISwitch!
+    @IBOutlet weak var fadeSwitch: UISwitch!
     
     
     override func viewDidLoad() {
@@ -24,5 +25,9 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = zoomSwitch.isOn
+    }
+    
+    @IBAction func toggleFade(_ sender: Any) {
+        Settings.shared.shouldFade = fadeSwitch.isOn
     }
 }

@@ -119,7 +119,7 @@ the crab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iDi-K8-eEa">
-                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <rect key="frame" x="156.5" y="393.5" width="101.5" height="109"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-lv-PE3">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -155,6 +155,23 @@ the crab</string>
                                             </switch>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ufi-eg-aow">
+                                        <rect key="frame" x="0.0" y="78" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-uv-QGy">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="viB-ub-J3v">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleFade:" destination="U8j-l5-yzb" eventType="valueChanged" id="D3x-rg-KXy"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -167,6 +184,7 @@ the crab</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="8EQ-4E-tbN"/>
                     <connections>
+                        <outlet property="fadeSwitch" destination="viB-ub-J3v" id="TYK-ha-Ebo"/>
                         <outlet property="rollSwitch" destination="Bk3-wh-Had" id="wkM-TB-snc"/>
                         <outlet property="zoomSwitch" destination="tyg-4C-yF1" id="I6e-2t-tfw"/>
                     </connections>
