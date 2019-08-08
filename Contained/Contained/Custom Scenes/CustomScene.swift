@@ -26,12 +26,13 @@ class CustomScene: SKScene {
     // Move to Touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Fetch a touch or wait
-//        guard touches.isEmpty, var position = CGPoint(x: frame.midX, y: frame.midY) else { return }
+        
         guard !touches.isEmpty, let touch = touches.first else { return }
         
         // Retrieve position
-        position = touch.location(in: self)
-        Settings.shared.point = position
+        let position = touch.location(in: self)
+        var lastPosition = position
+        Settings.shared.point = lastPosition
 
         
         // Create move action

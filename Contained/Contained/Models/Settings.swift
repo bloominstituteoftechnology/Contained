@@ -25,5 +25,5 @@ class Settings {
 //        var y: Double
 //    }
     
-    var point: CGPoint = CGPoint(x: 180.0, y: 360.0)
+    var point: CGPoint = CGPoint(x: 0.0, y: 0.0)
 }
