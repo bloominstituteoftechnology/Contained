@@ -10,13 +10,18 @@ import Foundation
 import SpriteKit
 
 class CustomScene: SKScene {
+    
     let crab = SKSpriteNode()
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        if Settings.shared.crabTexture == true {
+            self.crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        } else if Settings.shared.crabTexture == false {
+            self.crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        }
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
@@ -50,3 +55,4 @@ class CustomScene: SKScene {
         }
     }
 }
+
