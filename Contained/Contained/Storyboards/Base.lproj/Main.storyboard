@@ -10,18 +10,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Ryj-iW-gdb">
             <objects>
-                <viewController id="nsd-XL-8vK" sceneMemberID="viewController">
+                <viewController id="nsd-XL-8vK" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e16-e1-N6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw7-s6-aXS">
+                                <rect key="frame" x="141" y="419.5" width="132.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lw7-s6-aXS" firstAttribute="centerY" secondItem="e16-e1-N6r" secondAttribute="centerY" id="506-so-mre"/>
+                            <constraint firstItem="Lw7-s6-aXS" firstAttribute="centerX" secondItem="e16-e1-N6r" secondAttribute="centerX" id="Xff-kr-Qn7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="448-FO-Bby"/>
                     </view>
                     <navigationItem key="navigationItem" id="0MY-9O-ff3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wHk-dC-kNu">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="wHk-dC-kNu">
                             <connections>
                                 <segue destination="zHK-OX-yxG" kind="show" id="jtg-18-GDx"/>
                             </connections>
@@ -32,18 +44,32 @@
             </objects>
             <point key="canvasLocation" x="1916" y="1168"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="mJv-rC-1PR">
             <objects>
-                <viewController id="zHK-OX-yxG" sceneMemberID="viewController">
+                <viewController id="zHK-OX-yxG" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lKQ-Yl-rIg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-zY-GBK">
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zdU-zY-GBK" firstAttribute="centerY" secondItem="lKQ-Yl-rIg" secondAttribute="centerY" id="abT-AL-mky"/>
+                            <constraint firstItem="zdU-zY-GBK" firstAttribute="centerX" secondItem="lKQ-Yl-rIg" secondAttribute="centerX" id="px4-2i-VMA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bf8-8L-SKP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="2hF-R0-Rut">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="vXj-Gj-IVa">
+                    <navigationItem key="navigationItem" id="2hF-R0-Rut">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="vXj-Gj-IVa">
                             <connections>
                                 <segue destination="nik-Ej-50c" kind="show" id="5D8-ma-ImU"/>
                             </connections>
@@ -57,7 +83,7 @@
         <!--Play-->
         <scene sceneID="IC1-yw-jDb">
             <objects>
-                <viewController id="h54-Lb-FRF" sceneMemberID="viewController">
+                <viewController id="h54-Lb-FRF" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FM3-Ge-7xh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +99,7 @@
         <!--Settings-->
         <scene sceneID="h76-lj-zTp">
             <objects>
-                <viewController id="U8j-l5-yzb" sceneMemberID="viewController">
+                <viewController id="U8j-l5-yzb" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mh-hG-55v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,18 +112,34 @@
             </objects>
             <point key="canvasLocation" x="1603" y="461"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="Ney-TY-g90">
             <objects>
-                <viewController id="nik-Ej-50c" sceneMemberID="viewController">
+                <viewController id="nik-Ej-50c" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PV8-vK-CJ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epl-BC-z7a">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="epl-BC-z7a" firstAttribute="centerY" secondItem="PV8-vK-CJ8" secondAttribute="centerY" id="5Lz-Dt-oHQ"/>
+                            <constraint firstItem="epl-BC-z7a" firstAttribute="centerX" secondItem="PV8-vK-CJ8" secondAttribute="centerX" id="sBl-I0-Ey1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vcn-PN-dba"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="0Lh-p8-mmG">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Bs7-Tt-z4R"/>
+                    <navigationItem key="navigationItem" id="0Lh-p8-mmG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Bs7-Tt-z4R">
+                            <connections>
+                                <action selector="done:" destination="nik-Ej-50c" id="ERB-hq-jbq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMd-sG-ycs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,6 +152,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="szB-z8-Txl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dkb-67-Wdd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
