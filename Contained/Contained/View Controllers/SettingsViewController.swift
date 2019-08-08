@@ -29,6 +29,4 @@ class SettingsViewController: UIViewController {
             Settings.shared.shouldZoom = false
         }
     }
-    
-
 }

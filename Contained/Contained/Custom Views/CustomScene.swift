@@ -42,6 +42,15 @@ class CustomScene: SKScene {
             crab.run(rollAction)
         }
     }
+    
+    // MARK: Stretch Goal 1 - Crab Reverts to Center
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard !touches.isEmpty, let touch = touches.first else { return }
+        
+        let position = touch.location(in: self)
+        let actionDuration = 1.0
+        SKAction.move(to: position, duration: actionDuration)
+    }
 
     
 }
