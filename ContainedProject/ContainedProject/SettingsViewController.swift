@@ -27,4 +27,16 @@ class SettingsViewController: UIViewController {
     }
     */
 
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+
+        UserDefaults.standard.set(sender.isOn, forKey: "toggleRoll")
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        
+        UserDefaults.standard.set(sender.isOn, forKey: "toggleZoom")
+      
+    }
+    
 }
