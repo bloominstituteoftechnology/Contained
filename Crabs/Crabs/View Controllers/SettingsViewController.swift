@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var sgmtCrabType: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,5 +35,8 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = sender.isOn
+    }
+    @IBAction func changeCrabType(_ sender: UISegmentedControl) {
+        Settings.shared.crabType = Settings.CrabType.allCases[sender.selectedSegmentIndex]
     }
 }
