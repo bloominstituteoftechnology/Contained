@@ -15,3 +15,8 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
 }
+
+enum crabFace: String {
+    case happy = "HappyCrab"
+    case waiting = "WaitingCrab"
+}

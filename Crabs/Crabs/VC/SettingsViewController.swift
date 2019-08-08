@@ -23,3 +23,6 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
 }
+
+
+
