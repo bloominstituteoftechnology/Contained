@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -14,4 +15,5 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var lastPosition: CGPoint?
 }

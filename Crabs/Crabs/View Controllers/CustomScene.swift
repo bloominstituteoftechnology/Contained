@@ -16,7 +16,11 @@ class CustomScene: SKScene {
         super.sceneDidLoad()
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        if let position = Settings.shared.lastPosition {
+            crab.position = position
+        } else {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        }
     }
     
     // Move to touch
@@ -47,5 +51,7 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        Settings.shared.lastPosition = position
     }
 }
