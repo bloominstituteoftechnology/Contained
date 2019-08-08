@@ -27,4 +27,7 @@ class InfoViewController: UIViewController {
     }
     */
 
+    @IBAction func doneTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
