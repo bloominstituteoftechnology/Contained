@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -16,4 +17,9 @@ class Settings {
     var shouldZoom = false
     
     var shouldFade = false
+    
+    var isHappy = false
+
+    //var posX, posY: Double
+    //var restorePoint = CGPoint(posX, posY)
 }

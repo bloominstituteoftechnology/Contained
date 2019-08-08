@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var rollSwitch: UISwitch!
     @IBOutlet weak var zoomSwitch: UISwitch!
     @IBOutlet weak var fadeSwitch: UISwitch!
+    @IBOutlet weak var happySwitch: UISwitch!
     
     
     override func viewDidLoad() {
@@ -29,5 +30,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleFade(_ sender: Any) {
         Settings.shared.shouldFade = fadeSwitch.isOn
+    }
+    
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        
+        if !happySwitch.isOn {
+            Settings.shared.isHappy = true
+        } else {
+            Settings.shared.isHappy = false
+        }
     }
 }

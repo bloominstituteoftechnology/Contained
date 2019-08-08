@@ -174,17 +174,45 @@ the crab</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqM-Jp-nv5">
+                                <rect key="frame" x="80" y="510.5" width="254.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frO-Xa-QNM">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X60-5E-9Wb">
+                                        <rect key="frame" x="99" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleFade:" destination="U8j-l5-yzb" eventType="valueChanged" id="lOC-pc-zyp"/>
+                                            <action selector="toggleHappy:" destination="U8j-l5-yzb" eventType="valueChanged" id="3dw-2Q-NPu"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting Crab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-k5-6zU">
+                                        <rect key="frame" x="156" y="0.0" width="98.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iDi-K8-eEa" firstAttribute="centerX" secondItem="6Mh-hG-55v" secondAttribute="centerX" id="33P-Dj-fgZ"/>
+                            <constraint firstItem="yz7-4p-AgR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aqM-Jp-nv5" secondAttribute="bottom" constant="20" id="FAd-tG-dL4"/>
                             <constraint firstItem="iDi-K8-eEa" firstAttribute="centerY" secondItem="6Mh-hG-55v" secondAttribute="centerY" id="RPq-mO-sKC"/>
+                            <constraint firstItem="aqM-Jp-nv5" firstAttribute="centerX" secondItem="6Mh-hG-55v" secondAttribute="centerX" id="bJQ-vD-Z3Y"/>
+                            <constraint firstItem="aqM-Jp-nv5" firstAttribute="firstBaseline" secondItem="iDi-K8-eEa" secondAttribute="baseline" constant="24" id="e61-tu-q8w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yz7-4p-AgR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="8EQ-4E-tbN"/>
                     <connections>
                         <outlet property="fadeSwitch" destination="viB-ub-J3v" id="TYK-ha-Ebo"/>
+                        <outlet property="happySwitch" destination="X60-5E-9Wb" id="gcU-4X-HH5"/>
                         <outlet property="rollSwitch" destination="Bk3-wh-Had" id="wkM-TB-snc"/>
                         <outlet property="zoomSwitch" destination="tyg-4C-yF1" id="I6e-2t-tfw"/>
                     </connections>
