@@ -146,10 +146,24 @@
                     <view key="view" contentMode="scaleToFill" id="Lct-1Z-70u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-QR-M9j">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dIg-QR-M9j" firstAttribute="leading" secondItem="2qJ-fX-yFa" secondAttribute="leading" id="53r-g0-Zsc"/>
+                            <constraint firstItem="dIg-QR-M9j" firstAttribute="top" secondItem="2qJ-fX-yFa" secondAttribute="top" id="jQE-nL-GZC"/>
+                            <constraint firstItem="2qJ-fX-yFa" firstAttribute="bottom" secondItem="dIg-QR-M9j" secondAttribute="bottom" id="rsn-4v-7nR"/>
+                            <constraint firstItem="2qJ-fX-yFa" firstAttribute="trailing" secondItem="dIg-QR-M9j" secondAttribute="trailing" id="x56-xU-oIa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2qJ-fX-yFa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="Play" selectedImage="Play" id="XyH-fi-pY6"/>
+                    <connections>
+                        <outlet property="skview" destination="dIg-QR-M9j" id="Ap9-o9-srz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3s-Ct-IeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +175,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JWz-of-d75" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdL-fx-u7M">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -216,10 +231,15 @@
                         <viewLayoutGuide key="safeArea" id="mab-to-H92"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vtj-4b-8Hp">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="fyH-3e-i6j"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="fyH-3e-i6j">
+                            <connections>
+                                <segue destination="qWQ-wa-2nd" kind="unwind" unwindAction="unwindToInfoViewControllerFor:towards:" id="G0Q-z0-DIN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nh7-xE-DbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qWQ-wa-2nd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2590" y="645"/>
         </scene>
