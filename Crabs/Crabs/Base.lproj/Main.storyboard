@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="o3U-j6-lCz">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kJ5-th-UTe">
                             <connections>
-                                <segue destination="cCY-97-z7z" kind="show" id="Zb3-Qa-oNX"/>
+                                <segue destination="cCY-97-z7z" kind="show" id="zLM-hH-r7F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="813" y="1638"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Title-->
         <scene sceneID="l4o-Pw-nhg">
             <objects>
-                <viewController id="cCY-97-z7z" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cCY-97-z7z" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2Z-Xw-oRv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +68,10 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y2D-Ju-fz7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZAQ-Pq-QJc">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="3yr-Ph-OMJ">
+                    <navigationItem key="navigationItem" title="Title" id="8V2-Op-Lbl">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="rer-rL-iZX">
                             <connections>
-                                <segue destination="Rcj-Ij-LWT" kind="show" id="reu-MY-4UQ"/>
+                                <segue destination="Rcj-Ij-LWT" kind="show" id="We8-TJ-q3f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -80,10 +80,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="1444" y="1634"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Title-->
         <scene sceneID="DEF-Af-uaQ">
             <objects>
-                <viewController id="Rcj-Ij-LWT" customClass="SettingsViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rcj-Ij-LWT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRY-JT-5dL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,10 +102,10 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ag7-Fh-QtF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b4W-dJ-WL6">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="UQx-aY-6go">
+                    <navigationItem key="navigationItem" title="Title" id="of8-v0-L6I">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="3kO-6S-4dK">
                             <connections>
-                                <segue destination="8cS-0B-Vfe" kind="unwind" unwindAction="unwindToInfo:" id="v72-lh-g2j"/>
+                                <segue destination="8cS-0B-Vfe" kind="unwind" unwindAction="unwindToRed:" id="Uh2-WG-Rov"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,22 +123,22 @@ the crab</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-EE-OAr">
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqg-w6-81a">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8SK-EE-OAr" firstAttribute="leading" secondItem="8de-Cm-ZjQ" secondAttribute="leading" id="Vba-AW-Tw3"/>
-                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="bottom" secondItem="8SK-EE-OAr" secondAttribute="bottom" id="fKx-tg-hu3"/>
-                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="trailing" secondItem="8SK-EE-OAr" secondAttribute="trailing" id="jzx-CG-k1b"/>
-                            <constraint firstItem="8SK-EE-OAr" firstAttribute="top" secondItem="8de-Cm-ZjQ" secondAttribute="top" id="pL5-ZS-QXn"/>
+                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="bottom" secondItem="dqg-w6-81a" secondAttribute="bottom" id="MSY-x5-pDk"/>
+                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="trailing" secondItem="dqg-w6-81a" secondAttribute="trailing" id="OPw-ON-5Ry"/>
+                            <constraint firstItem="dqg-w6-81a" firstAttribute="top" secondItem="8de-Cm-ZjQ" secondAttribute="top" id="ihp-bq-vTX"/>
+                            <constraint firstItem="dqg-w6-81a" firstAttribute="leading" secondItem="8de-Cm-ZjQ" secondAttribute="leading" id="nta-6Y-s9R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8de-Cm-ZjQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Fvt-lT-VNn" userLabel="Play"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="Fvt-lT-VNn" userLabel="Play"/>
                     <connections>
-                        <outlet property="skView" destination="8SK-EE-OAr" id="4Eu-X1-Im3"/>
+                        <outlet property="skview" destination="dqg-w6-81a" id="tNX-t6-oPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXU-j2-I56" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,7 +200,7 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2jB-Rk-5NN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="kfs-FZ-S7Y"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="kfs-FZ-S7Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVE-n7-end" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,11 +225,11 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="43.526785714285715"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="GB7-xU-JVo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JHi-Xx-kcW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tCv-uX-WAj"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="tCv-uX-WAj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P7s-73-phy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -245,4 +245,9 @@ the crab</string>
             <point key="canvasLocation" x="12" y="1638"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
