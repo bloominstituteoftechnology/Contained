@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-Qb-iwZ">
-                                <rect key="frame" x="140" y="354" width="101.5" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-Qb-iwZ">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-ZG-VFz">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -60,14 +59,13 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HQF-Qb-iwZ" firstAttribute="centerX" secondItem="5Ix-cV-DxU" secondAttribute="centerX" id="Vll-ie-hHB"/>
+                            <constraint firstItem="HQF-Qb-iwZ" firstAttribute="centerY" secondItem="5Ix-cV-DxU" secondAttribute="centerY" id="sgD-PD-h1M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vYZ-an-El5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="OaV-eO-VKZ"/>
-                    <connections>
-                        <outlet property="rollSwitch" destination="wS3-6Z-HNq" id="99b-la-5af"/>
-                        <outlet property="toggleRoll" destination="wS3-6Z-HNq" id="U3B-ah-Haf"/>
-                        <outlet property="toggleZoom" destination="UL3-9w-S7N" id="GqV-CM-PeW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCD-0k-3JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,14 +108,28 @@
         <!--Play-->
         <scene sceneID="I9V-5K-ggL">
             <objects>
-                <viewController id="7vz-yU-If7" customClass="GameViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7vz-yU-If7" customClass="GamesViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aRb-hu-TEP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hol-KD-Xiy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hol-KD-Xiy" firstAttribute="leading" secondItem="HJH-7E-QVc" secondAttribute="leading" id="Mvf-IA-i3O"/>
+                            <constraint firstItem="HJH-7E-QVc" firstAttribute="trailing" secondItem="hol-KD-Xiy" secondAttribute="trailing" id="fBt-Pb-tRE"/>
+                            <constraint firstItem="hol-KD-Xiy" firstAttribute="top" secondItem="HJH-7E-QVc" secondAttribute="top" id="mXW-Pj-jAl"/>
+                            <constraint firstItem="HJH-7E-QVc" firstAttribute="bottom" secondItem="hol-KD-Xiy" secondAttribute="bottom" id="nQw-Zu-o8N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HJH-7E-QVc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="3MV-XC-lCV"/>
+                    <connections>
+                        <outlet property="skview" destination="hol-KD-Xiy" id="Rnr-vZ-N8T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhl-Mc-1qJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
