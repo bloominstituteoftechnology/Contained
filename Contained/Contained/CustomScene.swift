@@ -6,7 +6,7 @@
 //  Copyright © 2019 Lamdba School. All rights reserved.
 //
 
-import Foundation
+
 
 import SpriteKit
 
@@ -17,7 +17,12 @@ class CustomScene: SKScene {
 	override func sceneDidLoad() {
 		super.sceneDidLoad()
 		addChild(crab)
-		crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		if Settings.shared.shouldBeHappy {
+			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		} else {
+			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		}
+
 		crab.position = CGPoint(x: frame.midX, y: frame.midY)
 	}
 

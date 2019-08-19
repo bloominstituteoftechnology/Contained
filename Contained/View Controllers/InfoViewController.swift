@@ -10,20 +10,7 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-
-    }
-
 	@IBAction func doneButtonPressed(_ sender: Any) {
 		navigationController?.popToRootViewController(animated: true)
 	}
-
-
-
-    // MARK: - Navigation
-
-
-
 }
