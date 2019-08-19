@@ -18,18 +18,13 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(label)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 48)
-        label.center = view.center
+    
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-            label.text = "Crabs"
+   
             
         
     }
