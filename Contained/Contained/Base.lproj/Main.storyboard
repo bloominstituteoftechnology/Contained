@@ -142,10 +142,24 @@
                     <view key="view" contentMode="scaleToFill" id="vaL-UA-Gij">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeB-Rx-SlP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TeB-Rx-SlP" firstAttribute="leading" secondItem="a6Z-HL-PvV" secondAttribute="leading" id="1Vr-aO-zht"/>
+                            <constraint firstItem="a6Z-HL-PvV" firstAttribute="bottom" secondItem="TeB-Rx-SlP" secondAttribute="bottom" id="2ob-cD-cIl"/>
+                            <constraint firstItem="a6Z-HL-PvV" firstAttribute="trailing" secondItem="TeB-Rx-SlP" secondAttribute="trailing" id="M22-JY-Ie1"/>
+                            <constraint firstItem="TeB-Rx-SlP" firstAttribute="top" secondItem="a6Z-HL-PvV" secondAttribute="top" id="dmb-7e-HCF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a6Z-HL-PvV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="LNO-MO-mEJ"/>
+                    <connections>
+                        <outlet property="skyview" destination="TeB-Rx-SlP" id="Mkw-mN-J7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfo-Bg-Il4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
