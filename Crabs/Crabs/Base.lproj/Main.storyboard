@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="5da-zw-CN7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBD-O0-xCW">
+                                <rect key="frame" x="141" y="419" width="132.5" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yBD-O0-xCW" firstAttribute="centerY" secondItem="5da-zw-CN7" secondAttribute="centerY" id="Ghm-3a-CVh"/>
+                            <constraint firstItem="yBD-O0-xCW" firstAttribute="centerX" secondItem="5da-zw-CN7" secondAttribute="centerX" id="siQ-x5-m3Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kIA-gs-dFH"/>
                     </view>
                     <navigationItem key="navigationItem" id="o3U-j6-lCz">
@@ -32,17 +44,31 @@
             </objects>
             <point key="canvasLocation" x="813" y="1638"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="l4o-Pw-nhg">
             <objects>
-                <viewController title="View Controller" id="cCY-97-z7z" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cCY-97-z7z" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2Z-Xw-oRv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6j-Lh-SNf">
+                                <rect key="frame" x="142" y="419.5" width="130" height="57.5"/>
+                                <string key="text">Tap to move 
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k6j-Lh-SNf" firstAttribute="centerY" secondItem="W2Z-Xw-oRv" secondAttribute="centerY" id="KTs-5v-Ve6"/>
+                            <constraint firstItem="k6j-Lh-SNf" firstAttribute="centerX" secondItem="W2Z-Xw-oRv" secondAttribute="centerX" id="uTP-tM-H2Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y2D-Ju-fz7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ZAQ-Pq-QJc">
+                    <navigationItem key="navigationItem" id="ZAQ-Pq-QJc">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="3yr-Ph-OMJ">
                             <connections>
                                 <segue destination="Rcj-Ij-LWT" kind="show" id="reu-MY-4UQ"/>
@@ -54,17 +80,29 @@
             </objects>
             <point key="canvasLocation" x="1444" y="1634"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="DEF-Af-uaQ">
             <objects>
-                <viewController title="View Controller" id="Rcj-Ij-LWT" customClass="SettingsViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rcj-Ij-LWT" customClass="SettingsViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRY-JT-5dL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-hi-7U7">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v3n-hi-7U7" firstAttribute="centerY" secondItem="LRY-JT-5dL" secondAttribute="centerY" id="Uqx-rB-bz7"/>
+                            <constraint firstItem="v3n-hi-7U7" firstAttribute="centerX" secondItem="LRY-JT-5dL" secondAttribute="centerX" id="klw-V3-CYV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ag7-Fh-QtF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="b4W-dJ-WL6">
+                    <navigationItem key="navigationItem" id="b4W-dJ-WL6">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="UQx-aY-6go">
                             <connections>
                                 <segue destination="8cS-0B-Vfe" kind="unwind" unwindAction="unwindToInfo:" id="v72-lh-g2j"/>
@@ -80,7 +118,7 @@
         <!--Play-->
         <scene sceneID="b0G-Ri-biI">
             <objects>
-                <viewController title="Play" id="nWF-zc-JLj" customClass="Play" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Play" id="nWF-zc-JLj" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LqC-q7-TcA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +134,7 @@
         <!--Settings-->
         <scene sceneID="exF-cv-YxB">
             <objects>
-                <viewController title="Settings" id="Why-NY-kie" customClass="Settings" sceneMemberID="viewController">
+                <viewController title="Settings" id="Why-NY-kie" customClass="SettingsViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QpA-DL-Vsg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
