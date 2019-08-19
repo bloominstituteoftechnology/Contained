@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="f2X-ne-yPs">
             <objects>
-                <viewController title="View Controller" id="1TH-Wi-cWf" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="View Controller" id="1TH-Wi-cWf" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5da-zw-CN7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="kIA-gs-dFH"/>
                     </view>
                     <navigationItem key="navigationItem" id="o3U-j6-lCz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="kJ5-th-UTe">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="kJ5-th-UTe">
                             <connections>
                                 <segue destination="cCY-97-z7z" kind="show" id="Zb3-Qa-oNX"/>
                             </connections>
@@ -35,7 +35,7 @@
         <!--View Controller-->
         <scene sceneID="l4o-Pw-nhg">
             <objects>
-                <viewController title="View Controller" id="cCY-97-z7z" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="View Controller" id="cCY-97-z7z" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2Z-Xw-oRv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="y2D-Ju-fz7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="ZAQ-Pq-QJc">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="3yr-Ph-OMJ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="3yr-Ph-OMJ">
                             <connections>
                                 <segue destination="Rcj-Ij-LWT" kind="show" id="reu-MY-4UQ"/>
                             </connections>
@@ -65,10 +65,15 @@
                         <viewLayoutGuide key="safeArea" id="Ag7-Fh-QtF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="b4W-dJ-WL6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="UQx-aY-6go"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="UQx-aY-6go">
+                            <connections>
+                                <segue destination="8cS-0B-Vfe" kind="unwind" unwindAction="unwindToInfo:" id="v72-lh-g2j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-03-bie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8cS-0B-Vfe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2101" y="1634"/>
         </scene>
