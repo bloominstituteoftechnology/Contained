@@ -17,13 +17,20 @@ class CustomScene: SKScene {
 	override func sceneDidLoad() {
 		super.sceneDidLoad()
 		addChild(crab)
-		if Settings.shared.shouldBeHappy {
-			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		if let positionLastTouch = Settings.shared.lastPointTouched {
+			crab.position = positionLastTouch
 		} else {
-			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+			crab.position = CGPoint(x: frame.midX, y: frame.midY)
 		}
+		//		if Settings.shared.shouldBeHappy {
+		//			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		//		} else {
+		//			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		//		}
 
-		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		//		crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		
 	}
 
 	// Move to touch
@@ -34,14 +41,16 @@ class CustomScene: SKScene {
 
 		// Retrieve position
 		let position = touch.location(in: self)
+		Settings.shared.lastPointTouched = position
 
 		// Create move action
 		let actionDuration = 1.0
 		let moveAction = SKAction.move(to: position, duration: actionDuration)
-
 		let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
 		let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
+
+
 
 		switch Settings.shared.shouldZoom {
 		case false:

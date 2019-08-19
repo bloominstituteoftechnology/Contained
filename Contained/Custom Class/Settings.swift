@@ -16,5 +16,6 @@ class Settings {
 	var shouldRoll = false
 	var shouldZoom = false
 	var shouldBeHappy = false
-	var lastPointTouched: CGPoint?
+	var startInCenter = false
+	var lastPointTouched: CGPoint? = nil
 }
