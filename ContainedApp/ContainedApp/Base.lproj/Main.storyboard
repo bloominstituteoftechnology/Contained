@@ -17,14 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="omc-PQ-8Qw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1j-dg-8YD">
+                                <rect key="frame" x="-25" y="0.0" width="439" height="910"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m6u-ax-oZG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="wzu-68-yTb"/>
+                    <connections>
+                        <outlet property="skview" destination="G1j-dg-8YD" id="7ND-1W-omg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lim-Zu-qHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="94"/>
+            <point key="canvasLocation" x="-410.14492753623193" y="93.75"/>
         </scene>
         <!--Settings-->
         <scene sceneID="dqa-MC-bjl">
@@ -33,7 +42,52 @@
                     <view key="view" contentMode="scaleToFill" id="gRt-z2-Wg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l8i-mO-B7O">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-OH-SuU">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpV-kR-1i8">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Sj-NS-QHj">
+                                                <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="HjU-Ov-47S" eventType="valueChanged" id="3MW-QT-7vx"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DVp-Ww-5p2">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of1-h8-kpd">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZXW-bt-kiQ">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleSwitch:" destination="HjU-Ov-47S" eventType="valueChanged" id="AdI-M8-L7D"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l8i-mO-B7O" firstAttribute="centerY" secondItem="gRt-z2-Wg2" secondAttribute="centerY" id="BdE-9n-fH1"/>
+                            <constraint firstItem="l8i-mO-B7O" firstAttribute="centerX" secondItem="gRt-z2-Wg2" secondAttribute="centerX" id="Ozn-z1-zfg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MCD-0O-OlT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="fdf-nz-nj8"/>
