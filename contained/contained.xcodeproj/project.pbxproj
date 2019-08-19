@@ -13,6 +13,10 @@
 		DDEF95FC230B27750029AE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDEF95FB230B27750029AE4C /* Assets.xcassets */; };
 		DDEF95FF230B27750029AE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEF95FD230B27750029AE4C /* LaunchScreen.storyboard */; };
 		DDEF9607230B285F0029AE4C /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF9606230B285F0029AE4C /* SKSpriteNode+Utility.swift */; };
+		DDEF960C230B29420029AE4C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF960B230B29420029AE4C /* Settings.swift */; };
+		DDEF960E230B2B590029AE4C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEF960D230B2B590029AE4C /* Settings.storyboard */; };
+		DDEF9610230B2B8A0029AE4C /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEF960F230B2B8A0029AE4C /* Play.storyboard */; };
+		DDEF9612230B2BA60029AE4C /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEF9611230B2BA60029AE4C /* Info.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +27,11 @@
 		DDEF95FB230B27750029AE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDEF95FE230B27750029AE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDEF9600230B27750029AE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDEF9606230B285F0029AE4C /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		DDEF9606230B285F0029AE4C /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		DDEF960B230B29420029AE4C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DDEF960D230B2B590029AE4C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		DDEF960F230B2B8A0029AE4C /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		DDEF9611230B2BA60029AE4C /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				DDEF95F4230B27750029AE4C /* AppDelegate.swift */,
-				DDEF95F6230B27750029AE4C /* ViewController.swift */,
-				DDEF9606230B285F0029AE4C /* SKSpriteNode+Utility.swift */,
-				DDEF95F8230B27750029AE4C /* Main.storyboard */,
+				DDEF960A230B28EF0029AE4C /* storyBoards */,
+				DDEF9609230B28D60029AE4C /* View Controller */,
+				DDEF9608230B28CB0029AE4C /* Model  */,
 				DDEF95FB230B27750029AE4C /* Assets.xcassets */,
-				DDEF95FD230B27750029AE4C /* LaunchScreen.storyboard */,
 				DDEF9600230B27750029AE4C /* Info.plist */,
 			);
 			path = contained;
+			sourceTree = "<group>";
+		};
+		DDEF9608230B28CB0029AE4C /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				DDEF9606230B285F0029AE4C /* SKSpriteNode+Utility.swift */,
+				DDEF960B230B29420029AE4C /* Settings.swift */,
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
+		DDEF9609230B28D60029AE4C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDEF95F6230B27750029AE4C /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		DDEF960A230B28EF0029AE4C /* storyBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DDEF95FD230B27750029AE4C /* LaunchScreen.storyboard */,
+				DDEF95F8230B27750029AE4C /* Main.storyboard */,
+				DDEF960D230B2B590029AE4C /* Settings.storyboard */,
+				DDEF9611230B2BA60029AE4C /* Info.storyboard */,
+				DDEF960F230B2B8A0029AE4C /* Play.storyboard */,
+			);
+			path = storyBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +161,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDEF9612230B2BA60029AE4C /* Info.storyboard in Resources */,
 				DDEF95FF230B27750029AE4C /* LaunchScreen.storyboard in Resources */,
 				DDEF95FC230B27750029AE4C /* Assets.xcassets in Resources */,
 				DDEF95FA230B27750029AE4C /* Main.storyboard in Resources */,
+				DDEF960E230B2B590029AE4C /* Settings.storyboard in Resources */,
+				DDEF9610230B2B8A0029AE4C /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +179,7 @@
 			files = (
 				DDEF9607230B285F0029AE4C /* SKSpriteNode+Utility.swift in Sources */,
 				DDEF95F7230B27750029AE4C /* ViewController.swift in Sources */,
+				DDEF960C230B29420029AE4C /* Settings.swift in Sources */,
 				DDEF95F5230B27750029AE4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
