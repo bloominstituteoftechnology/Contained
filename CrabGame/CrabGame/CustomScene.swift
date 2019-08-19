@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import UIKit
 import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    
+    static let sharedCrabCS = CustomScene()
     
     var timer = Timer()
     var totalSecond = 10
@@ -21,18 +24,24 @@ class CustomScene: SKScene {
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        startTimer()
+        
     }
+    
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        
+        if !timer.isValid {
+            startTimer()
+        }
         if totalSecond > 0 {
             self.totalSecond = 10
         } else {
             startTimer()
         }
+        
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
         
@@ -58,6 +67,10 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+    }
+    
+    func returnToMid() {
+        crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
     func startTimer() {
