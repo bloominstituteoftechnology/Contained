@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = !Settings.shared.shouldZoom
     }
     
+    
     /*
     // MARK: - Navigation
 

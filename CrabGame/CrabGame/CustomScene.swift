@@ -12,17 +12,27 @@ import SpriteKit
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
+    var timer = Timer()
+    var totalSecond = 10
+    
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        startTimer()
     }
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        if totalSecond > 0 {
+            self.totalSecond = 10
+        } else {
+            startTimer()
+        }
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
         
@@ -48,5 +58,31 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+    }
+    
+    func startTimer() {
+        totalSecond = 10
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        
+        print(timeFormatted(totalSecond))
+        
+        if totalSecond != 0 {
+            totalSecond -= 1
+        } else {
+            endTimer()
+        }
+    }
+    
+    func endTimer() {
+        crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        timer.invalidate()
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        return String(format: "0:%02d", seconds)
     }
 }
