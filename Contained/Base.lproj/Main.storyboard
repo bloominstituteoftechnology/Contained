@@ -118,14 +118,28 @@ the crab</string>
         <scene sceneID="I8N-Th-GR8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N78-ug-cdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Zi2-Cx-kkX" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zi2-Cx-kkX" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MFs-0B-Pca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-jU-1lW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R0k-jU-1lW" firstAttribute="leading" secondItem="JRe-nv-LXi" secondAttribute="leading" id="0MD-yM-Lrr"/>
+                            <constraint firstItem="JRe-nv-LXi" firstAttribute="bottom" secondItem="R0k-jU-1lW" secondAttribute="bottom" id="7Ub-K3-Ij8"/>
+                            <constraint firstItem="JRe-nv-LXi" firstAttribute="trailing" secondItem="R0k-jU-1lW" secondAttribute="trailing" id="tbJ-Q4-NgV"/>
+                            <constraint firstItem="R0k-jU-1lW" firstAttribute="top" secondItem="JRe-nv-LXi" secondAttribute="top" id="ydu-Gs-pdE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JRe-nv-LXi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="SDB-nO-k5K"/>
+                    <connections>
+                        <outlet property="skview" destination="R0k-jU-1lW" id="PfV-fb-yVs"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="146" y="938"/>
@@ -152,6 +166,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fvk-re-hP7">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="I28-Qr-Ksc" eventType="valueChanged" id="Ak2-rm-hKO"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -166,6 +183,9 @@ the crab</string>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1t8-8W-6R1">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="I28-Qr-Ksc" eventType="valueChanged" id="jbZ-uC-U9Q"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
