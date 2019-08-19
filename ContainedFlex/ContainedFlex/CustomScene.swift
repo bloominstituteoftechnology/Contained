@@ -16,7 +16,7 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HabbyCrab", forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
     
@@ -26,12 +26,11 @@ class CustomScene: SKScene {
         let position = touch.location(in: self)
         
         let actionDuration = 1.0
-        
         let moveAction = SKAction.move(to: position, duration: actionDuration)
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
-        let unZoomAction = SKAction.scale(by: 1.0, duration: 0.1)
+        let unZoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
         switch Settings.shared.shouldZoom {
         case false:
