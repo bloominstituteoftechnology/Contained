@@ -17,21 +17,24 @@ class CustomScene: SKScene {
 	override func sceneDidLoad() {
 		super.sceneDidLoad()
 		addChild(crab)
-		crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
-		if let positionLastTouch = Settings.shared.lastPointTouched {
-			crab.position = positionLastTouch
-		} else {
-			crab.position = CGPoint(x: frame.midX, y: frame.midY)
-		}
-		//		if Settings.shared.shouldBeHappy {
-		//			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-		//		} else {
-		//			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
-		//		}
 
-		//		crab.position = CGPoint(x: frame.midX, y: frame.midY)
-		
+		if Settings.shared.shouldBeHappy {
+			crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+		} else {
+			crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+		}
+
+		if Settings.shared.startInCenter {
+			crab.position = CGPoint(x: frame.midX, y: frame.midY)
+		} else {
+			if let positionLastTouch = Settings.shared.lastPointTouched {
+				crab.position = positionLastTouch
+			}
+		}
+
+		let fadeEffect = alpha.
 	}
+
 
 	// Move to touch
 	public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,7 +54,7 @@ class CustomScene: SKScene {
 		let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
 
 
-
+		
 		switch Settings.shared.shouldZoom {
 		case false:
 			crab.run(moveAction)

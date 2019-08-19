@@ -46,6 +46,11 @@ class SettingsViewController: UIViewController {
 		}
 	}
 
+	@IBAction func toggleStartInCenter(_ sender: UISwitch) {
+		Settings.shared.startInCenter = sender.isOn
+	}
+
+
 
 
 }
