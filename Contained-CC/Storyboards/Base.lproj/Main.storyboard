@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="CvP-5e-6Xd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-Sq-JS7">
+                                <rect key="frame" x="140.5" y="419" width="133" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mfK-Sq-JS7" firstAttribute="centerX" secondItem="CvP-5e-6Xd" secondAttribute="centerX" id="1zf-EI-PoX"/>
+                            <constraint firstItem="mfK-Sq-JS7" firstAttribute="centerY" secondItem="CvP-5e-6Xd" secondAttribute="centerY" id="Wwy-9A-If0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3gs-bn-Px8"/>
                     </view>
                     <navigationItem key="navigationItem" id="vyA-fx-KTu">
@@ -39,10 +51,24 @@
                     <view key="view" contentMode="scaleToFill" id="jQO-et-Uch">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvB-VZ-imb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t09-NU-vZA" firstAttribute="bottom" secondItem="hvB-VZ-imb" secondAttribute="bottom" id="Dn5-cT-rkr"/>
+                            <constraint firstItem="t09-NU-vZA" firstAttribute="trailing" secondItem="hvB-VZ-imb" secondAttribute="trailing" id="Np8-eO-p7I"/>
+                            <constraint firstItem="hvB-VZ-imb" firstAttribute="leading" secondItem="t09-NU-vZA" secondAttribute="leading" id="dY9-wS-etV"/>
+                            <constraint firstItem="hvB-VZ-imb" firstAttribute="top" secondItem="t09-NU-vZA" secondAttribute="top" id="tde-fo-6dx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t09-NU-vZA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="U06-dr-4Hn"/>
+                    <connections>
+                        <outlet property="skview" destination="hvB-VZ-imb" id="iXd-Da-Oyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0r-fv-LTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,9 +130,6 @@
                         <viewLayoutGuide key="safeArea" id="p6A-TI-Gm0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="t5d-Ft-GLd"/>
-                    <connections>
-                        <outlet property="toggleRoll" destination="MXx-xr-sdu" id="D3O-7F-eyz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIM-l2-xkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,8 +145,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="UCV-O3-G6H" kind="relationship" relationship="viewControllers" id="mCi-A0-dFD"/>
                         <segue destination="qVm-bx-cMt" kind="relationship" relationship="viewControllers" id="sah-Om-NBC"/>
+                        <segue destination="UCV-O3-G6H" kind="relationship" relationship="viewControllers" id="mCi-A0-dFD"/>
                         <segue destination="1lp-sX-mJq" kind="relationship" relationship="viewControllers" id="eAb-Ox-Hrb"/>
                     </connections>
                 </tabBarController>
@@ -159,10 +182,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-ht-94x">
-                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
+                                <rect key="frame" x="141.5" y="419.5" width="131" height="57.5"/>
                                 <string key="text">Tap to move
 the crab</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -195,8 +218,8 @@ the crab</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY8-88-Bgw">
-                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="151.5" y="433.5" width="111.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -209,9 +232,9 @@ the crab</string>
                         <viewLayoutGuide key="safeArea" id="BcO-RW-j14"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fda-ZC-8HD">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="D8H-9g-qbe">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="xbi-6T-QX1">
                             <connections>
-                                <action selector="dsc:" destination="6UJ-Wg-voL" id="aNp-4Q-1dQ"/>
+                                <segue destination="6UJ-Wg-voL" kind="unwind" unwindAction="unwindToCrabs:" id="r96-aq-dYV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
