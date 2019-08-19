@@ -112,10 +112,24 @@
                     <view key="view" contentMode="scaleToFill" id="nvc-ir-j4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBw-Bk-QrO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YBw-Bk-QrO" firstAttribute="leading" secondItem="kaX-2X-TRj" secondAttribute="leading" id="LSL-eT-8Do"/>
+                            <constraint firstItem="YBw-Bk-QrO" firstAttribute="top" secondItem="kaX-2X-TRj" secondAttribute="top" id="Pxb-4q-Ipd"/>
+                            <constraint firstItem="kaX-2X-TRj" firstAttribute="trailing" secondItem="YBw-Bk-QrO" secondAttribute="trailing" id="fHY-ft-1El"/>
+                            <constraint firstItem="kaX-2X-TRj" firstAttribute="bottom" secondItem="YBw-Bk-QrO" secondAttribute="bottom" id="gIX-RM-dZ2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kaX-2X-TRj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="eqP-mU-pyt"/>
+                    <connections>
+                        <outlet property="skview" destination="YBw-Bk-QrO" id="Mqh-lK-W2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwB-xI-ZwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
