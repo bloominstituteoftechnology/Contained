@@ -1,5 +1,5 @@
 //
-//  PlayViewController.swift
+//  GameViewController.swift
 //  Contained
 //
 //  Created by Joshua Sharp on 8/19/19.
@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class PlayViewController: UIViewController {
+class GameViewController: UIViewController {
     @IBOutlet weak var skview: SKView!
     
     var skscene: CustomScene? = nil

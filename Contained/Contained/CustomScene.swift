@@ -6,7 +6,6 @@
 //  Copyright © 2019 Joshua Sharp. All rights reserved.
 //
 
-import Foundation
 import SpriteKit
 
 class CustomScene: SKScene {
