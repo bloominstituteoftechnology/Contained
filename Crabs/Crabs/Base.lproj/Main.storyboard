@@ -122,10 +122,24 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="LqC-q7-TcA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-EE-OAr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8SK-EE-OAr" firstAttribute="leading" secondItem="8de-Cm-ZjQ" secondAttribute="leading" id="Vba-AW-Tw3"/>
+                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="bottom" secondItem="8SK-EE-OAr" secondAttribute="bottom" id="fKx-tg-hu3"/>
+                            <constraint firstItem="8de-Cm-ZjQ" firstAttribute="trailing" secondItem="8SK-EE-OAr" secondAttribute="trailing" id="jzx-CG-k1b"/>
+                            <constraint firstItem="8SK-EE-OAr" firstAttribute="top" secondItem="8de-Cm-ZjQ" secondAttribute="top" id="pL5-ZS-QXn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8de-Cm-ZjQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Fvt-lT-VNn" userLabel="Play"/>
+                    <connections>
+                        <outlet property="skView" destination="8SK-EE-OAr" id="4Eu-X1-Im3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXU-j2-I56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
