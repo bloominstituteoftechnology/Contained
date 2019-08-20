@@ -12,29 +12,24 @@ import SpriteKit
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
+    var background = SKSpriteNode(imageNamed: "Sand")
     static let sharedCrabCS = CustomScene()
     
     var timer = Timer()
-    var totalSecond = 10
+    var totalSecond = 0
     
-    // Add and center child, initializing animation sequence
-    override func sceneDidLoad() {
-        super.sceneDidLoad()
+    override func didMove(to view: SKView) {
+        background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+        addChild(background)
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        
     }
-    
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        
-        if !timer.isValid {
-            startTimer()
-        }
         if totalSecond > 0 {
             self.totalSecond = 10
         } else {

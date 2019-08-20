@@ -13,6 +13,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CustomScene.sharedCrabCS.returnToMid()
+        CustomScene.sharedCrabCS.timer.invalidate()
         // Do any additional setup after loading the view.
     }
     
