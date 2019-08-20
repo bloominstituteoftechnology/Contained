@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTd-eF-Try"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" id="bAE-Bo-T1r"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller.png" id="bAE-Bo-T1r"/>
                     <connections>
                         <outlet property="skview" destination="Ob7-Yo-y9B" id="p0V-uG-6Ea"/>
                     </connections>
@@ -48,9 +48,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-w1-T39">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-w1-T39">
                                 <rect key="frame" x="147" y="438" width="101.5" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-LN-sOO">
                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -66,9 +65,8 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-uf-3C9">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-uf-3C9">
                                 <rect key="frame" x="147" y="360" width="85" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iZ-Rc-X2x">
                                         <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
@@ -86,9 +84,12 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bhM-w1-T39" firstAttribute="centerY" secondItem="bLA-uf-3C9" secondAttribute="centerY" id="dmh-Uk-Jm1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lfm-qv-Uqb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="QdA-l2-fVa"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" id="QdA-l2-fVa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhx-zW-UQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,7 +221,7 @@ the crab</string>
         <scene sceneID="Sje-nf-cas">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xz0-K1-6LX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" id="RtA-XW-FUz"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.png" id="RtA-XW-FUz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="uI9-bX-aoE">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -236,4 +237,9 @@ the crab</string>
             <point key="canvasLocation" x="1374" y="1032"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller.png" width="30" height="30"/>
+        <image name="info.png" width="30" height="30"/>
+        <image name="settings.png" width="30" height="30"/>
+    </resources>
 </document>
