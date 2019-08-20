@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 import SpriteKit
 
 class CustomScene: SKScene {

@@ -18,6 +18,7 @@ class GamesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         skscene = CustomScene(size: view.bounds.size)
+        skscene?.backgroundColor = UIColor(displayP3Red: 1, green: 1, blue: 0, alpha: 0.85)
         skview.presentScene(skscene)
     }
 }
