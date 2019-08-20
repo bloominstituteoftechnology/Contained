@@ -17,10 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="lHa-XX-xz1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ob7-Yo-y9B">
+                                <rect key="frame" x="0.0" y="278" width="414" height="128"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ob7-Yo-y9B" firstAttribute="leading" secondItem="oTd-eF-Try" secondAttribute="leading" id="MuC-sA-FvT"/>
+                            <constraint firstItem="oTd-eF-Try" firstAttribute="trailing" secondItem="Ob7-Yo-y9B" secondAttribute="trailing" id="UAO-D9-bS8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oTd-eF-Try"/>
+                        <connections>
+                            <outlet property="skview" destination="Ob7-Yo-y9B" id="fSM-c8-uq7"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" id="bAE-Bo-T1r"/>
+                    <connections>
+                        <outlet property="skview" destination="Ob7-Yo-y9B" id="p0V-uG-6Ea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZC-rj-jHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,6 +48,44 @@
                     <view key="view" contentMode="scaleToFill" id="s5x-mj-baP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-w1-T39">
+                                <rect key="frame" x="147" y="438" width="101.5" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-LN-sOO">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ry8-yR-Rfx">
+                                        <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleZoom:" destination="eRe-Ic-IFN" eventType="valueChanged" id="y7Y-CN-itc"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-uf-3C9">
+                                <rect key="frame" x="147" y="360" width="85" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iZ-Rc-X2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJM-n9-oZf">
+                                        <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleRool:" destination="eRe-Ic-IFN" eventType="valueChanged" id="bud-AK-gtM"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lfm-qv-Uqb"/>
                     </view>
@@ -76,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="2235" y="1032"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="KfD-Hv-rgI">
             <objects>
                 <viewController id="20e-83-28h" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,8 +137,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to move the crab" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L80-a0-rxk">
-                                <rect key="frame" x="99.5" y="433.5" width="215" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L80-a0-rxk">
+                                <rect key="frame" x="142" y="419.5" width="130" height="57.5"/>
+                                <string key="text">Tap to move 
+the crab</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +153,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MQG-er-NQY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5vb-Mk-gTM">
+                    <navigationItem key="navigationItem" id="5vb-Mk-gTM">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="31C-2P-i0e">
                             <connections>
                                 <segue destination="nMX-gc-VMf" kind="show" id="LJc-pw-z79"/>
@@ -110,17 +165,29 @@
             </objects>
             <point key="canvasLocation" x="3329" y="1032"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="o5G-Eg-yxM">
             <objects>
                 <viewController id="nMX-gc-VMf" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7V8-KH-4OA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIj-oQ-vjc">
+                                <rect key="frame" x="154" y="433.5" width="106" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iIj-oQ-vjc" firstAttribute="centerX" secondItem="7V8-KH-4OA" secondAttribute="centerX" id="Dx0-ga-7lG"/>
+                            <constraint firstItem="iIj-oQ-vjc" firstAttribute="centerY" secondItem="7V8-KH-4OA" secondAttribute="centerY" id="oor-df-ukT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="36t-Qs-Cv5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zQk-vI-acA">
+                    <navigationItem key="navigationItem" id="zQk-vI-acA">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" id="7I6-hi-qQh"/>
                             <barButtonItem title="Unwind" id="xg8-0a-oEP"/>
@@ -167,7 +234,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0g-EZ-Lp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="999"/>
+            <point key="canvasLocation" x="1283" y="1032"/>
         </scene>
     </scenes>
 </document>
