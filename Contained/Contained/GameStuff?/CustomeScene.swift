@@ -38,7 +38,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if Settings.shared.shouldRoll {
+        if Settings.shared.shouldRoll == true {
             crab.run(rollAction)
         }
     }
