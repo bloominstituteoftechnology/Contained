@@ -10,18 +10,19 @@ import UIKit
 
 class settingsViewController: UIViewController {
 
+    var settings: Settings?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func rollSwitch(_ sender: UISwitch) {
-        
+        settings?.shouldRoll.toggle()
     }
     
-    @IBAction func xoomSwitch(_ sender: UISwitch) {
+    @IBAction func zoomSwitch(_ sender: UISwitch) {
+        settings?.shouldZoom.toggle()
     }
     
 }
