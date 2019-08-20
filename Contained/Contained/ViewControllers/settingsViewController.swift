@@ -11,18 +11,25 @@ import UIKit
 class settingsViewController: UIViewController {
 
     var settings: Settings?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
 
     @IBAction func rollSwitch(_ sender: UISwitch) {
-        settings?.shouldRoll.toggle()
+        if sender.isOn {
+            settings?.shouldRoll = true
+        } else {
+            settings?.shouldRoll = false
+        }
     }
     
     @IBAction func zoomSwitch(_ sender: UISwitch) {
-        settings?.shouldZoom.toggle()
-    }
-    
+        if sender.isOn {
+            settings?.shouldZoom = true
+        } else {
+            settings?.shouldZoom = false
+        }
+}
 }
