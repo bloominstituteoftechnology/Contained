@@ -14,8 +14,4 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    @IBAction func done(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
 }
