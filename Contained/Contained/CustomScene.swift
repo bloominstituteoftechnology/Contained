@@ -15,7 +15,18 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        
+        let animation: String
+        switch Settings.shared.animationIndex {
+        case 0:
+            animation = "HappyCrab"
+        case 1:
+            animation = "WaitingCrab"
+        default:
+            animation = "HappyCrab"
+        }
+        crab.loadTextures(named: animation, forKey: SKSpriteNode.textureKey)
+        
         if let position = Settings.shared.position {
             crab.position = position
         } else {

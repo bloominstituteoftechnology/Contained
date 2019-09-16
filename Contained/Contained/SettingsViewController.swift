@@ -27,4 +27,8 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade = sender.isOn
     }
+    
+    @IBAction func chooseAnimation(_ sender: UISegmentedControl) {
+        Settings.shared.animationIndex = sender.selectedSegmentIndex
+    }
 }

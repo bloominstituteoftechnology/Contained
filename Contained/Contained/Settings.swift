@@ -17,4 +17,5 @@ class Settings {
     var shouldZoom = false
     var shouldFade = false
     var position: CGPoint? = nil
+    var animationIndex: Int = 0
 }
