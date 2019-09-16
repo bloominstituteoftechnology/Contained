@@ -16,24 +16,17 @@ class SettingsViewController: UIViewController {
 
     }
     
-    // TODO - : Have each method set the corresponding shared Settings property to the sender's isOn property.
-    
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        //sender.isOn
-        
-        //Settings(toggleRoll(true))
-        
-        
+
+         Settings.shared.shouldRoll = sender.isOn
     }
     
     
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        //sender.isOn
-        
-        //Settings(toggleZoom(true))
+   
+        Settings.shared.shouldZoom = sender.isOn
+
     }
-    
-    
 }

@@ -1,0 +1,46 @@
+Demonstrate your understanding of today's concepts by answering the following 
+free-form questions. Submit them as a text file along with your project.
+
+
+
+1. What is controller containment and what does it offer developers?
+
+        Is the practice of connecting multiple ViewControllers in a way that one 
+        lays on top of the other, creating a stack. In that scenario, the bottom 
+        View Controller is said to " contain " the rest of the View Controllers on
+        top of it. Like for example, the Navigation View Controller.
+
+
+2. What is the difference between navigation and tab controllers? 
+Under what circumstances do you use each one?
+
+        The Navigation Controller creates a stack of view Controllers that are 
+        connected in a specific order. This means that every next ViewController 
+        you create on top of this stack, will have a back button with a segue to 
+        the previous View Controller (With the exception of the Navigation 
+        Controller itself).
+
+        Tab Controller on the other hand, comes with a tool bar at the button, 
+        ready to hold multiple buttons that each has a segue to a different VC. 
+        These View Controllers are not actually related. Each can be enbeded in 
+        it's own Navigation Controller. As a side note, it's best practice to 
+        have between 2 to no more than 5 buttons in the tool bar.
+
+        When you need View Controllers to be in a specific order, and each have a 
+        back button to the previous one, it's best to use a Navigation Controller.
+        But if you need to have multiple View Controllers as options in one 
+        screen, and then each of those have it's own stack (order) to follow, it 
+        should be better to use a Tab Controller.
+
+
+3. Name at least one Apple-supplied iOS application that uses each container 
+class and explain how they're used in each app.
+
+        Instagram uses a Tab Controller as soon as you open the App. You can see 
+        the tool bar at the bottom, which has a button for " Home ", " Search ",
+        " Add New Picture ", " Likes " and " Profile ".
+
+        FifthThird uses Navigation Controller, you can see the diference since the
+        screens go in a certain order, plus each has a back button.
+
+

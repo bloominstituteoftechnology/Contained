@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="935" y="-1337"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="2RJ-xA-ipo">
             <objects>
-                <viewController id="rHp-pK-qQT" sceneMemberID="viewController">
+                <viewController id="rHp-pK-qQT" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FDQ-lN-YQ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,10 +209,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="104.46428571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="xc7-xd-1vx">
             <objects>
-                <viewController id="5jb-jg-LvX" sceneMemberID="viewController">
+                <viewController id="5jb-jg-LvX" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="272-q8-MAK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,11 @@ the crab</string>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Qdc-9B-a0j">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Oln-Zh-x60"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Oln-Zh-x60">
+                            <connections>
+                                <action selector="done:" destination="5jb-jg-LvX" id="TmF-uk-Mn1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
