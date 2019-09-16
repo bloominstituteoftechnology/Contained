@@ -58,4 +58,12 @@ class SettingsViewController: UIViewController {
             happyCrab.setOn(false, animated: true)
         }
     }
+    
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        if sender.isOn {
+            Settings.shared.shouldFade = true
+        } else {
+            Settings.shared.shouldFade = false
+        }
+    }
 }

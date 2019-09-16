@@ -15,6 +15,7 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var shouldFade = false
     var useHappyCrab = true
     
     var recentTouchPoint: CGPoint? = nil
