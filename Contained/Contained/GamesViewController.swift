@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  GamesViewController.swift
 //  Contained
 //
 //  Created by Dennis on 9/16/19.
@@ -7,25 +7,17 @@
 //
 
 import UIKit
+
 import SpriteKit
 
 
-
-class GameViewController: UIViewController {
-   
-    @IBOutlet weak var spriteView: SKView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-
-}
-
-
 class GamesViewController: UIViewController {
+   
+    
     @IBOutlet weak var skview: SKView!
+    
+    
+    
     
     var skscene: CustomScene? = nil
     
@@ -35,3 +27,6 @@ class GamesViewController: UIViewController {
         skview.presentScene(skscene)
     }
 }
+
+
+

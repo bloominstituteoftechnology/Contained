@@ -11,34 +11,34 @@
     </dependencies>
     <scenes>
         <!--Play-->
-        <scene sceneID="3j5-ho-drf">
+        <scene sceneID="iQ1-uc-p9q">
             <objects>
-                <viewController id="cxX-J1-Jmy" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C0t-1Z-arP">
+                <viewController id="neV-Mn-asw" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKf-kz-h3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4n-Li-ufN">
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-Tl-DeJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="q4n-Li-ufN" firstAttribute="top" secondItem="KNS-Xs-mi6" secondAttribute="top" id="LZr-vs-9D3"/>
-                            <constraint firstItem="q4n-Li-ufN" firstAttribute="leading" secondItem="KNS-Xs-mi6" secondAttribute="leading" id="Xwd-BG-WD8"/>
-                            <constraint firstItem="KNS-Xs-mi6" firstAttribute="bottom" secondItem="q4n-Li-ufN" secondAttribute="bottom" id="aLi-tG-vHp"/>
-                            <constraint firstItem="KNS-Xs-mi6" firstAttribute="trailing" secondItem="q4n-Li-ufN" secondAttribute="trailing" id="vNC-8l-08M"/>
+                            <constraint firstItem="9W0-dM-uy6" firstAttribute="trailing" secondItem="HiF-Tl-DeJ" secondAttribute="trailing" id="9cQ-62-yjW"/>
+                            <constraint firstItem="HiF-Tl-DeJ" firstAttribute="top" secondItem="9W0-dM-uy6" secondAttribute="top" id="Wtz-n1-Zaa"/>
+                            <constraint firstItem="9W0-dM-uy6" firstAttribute="bottom" secondItem="HiF-Tl-DeJ" secondAttribute="bottom" id="nbb-ds-9fs"/>
+                            <constraint firstItem="HiF-Tl-DeJ" firstAttribute="leading" secondItem="9W0-dM-uy6" secondAttribute="leading" id="z4b-Wf-jyD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KNS-Xs-mi6"/>
+                        <viewLayoutGuide key="safeArea" id="9W0-dM-uy6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="ztR-FI-MPd"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="nPa-Z6-9FP"/>
                     <connections>
-                        <outlet property="spriteView" destination="q4n-Li-ufN" id="Vtk-FM-Az7"/>
+                        <outlet property="skview" destination="HiF-Tl-DeJ" id="zrA-cR-aX5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Glq-L8-3NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jrI-ZU-A1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.13043478260872" y="304.6875"/>
+            <point key="canvasLocation" x="-428" y="284"/>
         </scene>
         <!--Settings-->
         <scene sceneID="q4W-hB-9jL">
@@ -63,7 +63,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-pb-yh8">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRolll:" destination="ecb-K5-HoO" eventType="valueChanged" id="Qmw-vO-fTV"/>
+                                                    <action selector="toggleRoll:" destination="ecb-K5-HoO" eventType="valueChanged" id="dNZ-Xh-XfF"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -189,7 +189,19 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="xpy-wg-Pz4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets Play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9v-Pc-sdR">
+                                <rect key="frame" x="137.5" y="319" width="100.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h9v-Pc-sdR" firstAttribute="centerY" secondItem="xpy-wg-Pz4" secondAttribute="centerY" id="OjL-iO-Eo2"/>
+                            <constraint firstItem="h9v-Pc-sdR" firstAttribute="centerX" secondItem="xpy-wg-Pz4" secondAttribute="centerX" id="Xd3-VO-Dyy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mnG-8t-rI3"/>
                     </view>
                     <navigationItem key="navigationItem" id="j98-UE-Q3Y">
@@ -229,11 +241,12 @@ the crab</string>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="32w-ZT-Yt0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Blb-OV-dy8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cxX-J1-Jmy" kind="relationship" relationship="viewControllers" id="oeQ-n0-qNq"/>
+                        <segue destination="neV-Mn-asw" kind="relationship" relationship="viewControllers" id="4er-gI-lt0"/>
                         <segue destination="OdA-NK-zGH" kind="relationship" relationship="viewControllers" id="1df-Ui-bH3"/>
                         <segue destination="ecb-K5-HoO" kind="relationship" relationship="viewControllers" id="jLp-LM-R3y"/>
                     </connections>
