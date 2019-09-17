@@ -40,10 +40,10 @@ class SettingsViewController: UIViewController {
     @IBAction func crabSwitch(_ sender: UISwitch) {
         if sender.isOn {
             crabLabel.text = "Waiting Crab"
-            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+            Settings.shared.crabName = true
         } else {
             crabLabel.text = "Happy Crab"
-            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+            Settings.shared.crabName = false
         }
     }
     
