@@ -10,9 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     @IBAction func roll(_ sender: UISwitch) {
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     @IBAction func zoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
     }
     
     override func viewDidLoad() {

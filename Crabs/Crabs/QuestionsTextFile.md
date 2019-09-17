@@ -11,6 +11,8 @@ What is the difference between navigation and tab controllers? Under what circum
     
     A tab controller is a container view controller that manages a radio-style selection interface, where the selection determines which child view controller to display.
     The tab bar interface displays tabs at the bottom of the window for selecting between the different modes and for displaying the views for that mode.
+    Use the tab bar controller to switch between "sets" of view controllers (basically if you have 3 or 4 view controllers that are comparable, you could organize them into a group so that you can get to them via a single button in the tab bar controller)
+   
 
 Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
 

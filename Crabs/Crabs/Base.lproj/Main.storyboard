@@ -11,14 +11,28 @@
         <!--Play-->
         <scene sceneID="5vA-um-e92">
             <objects>
-                <viewController title="Play" id="Wgf-bQ-fOc" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Play" id="Wgf-bQ-fOc" customClass="GamesViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJw-EM-N8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5y-LF-3bI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n5y-LF-3bI" firstAttribute="top" secondItem="7qF-zE-67V" secondAttribute="top" id="VSM-U5-hsh"/>
+                            <constraint firstItem="7qF-zE-67V" firstAttribute="bottom" secondItem="n5y-LF-3bI" secondAttribute="bottom" id="lwb-iG-xKT"/>
+                            <constraint firstItem="n5y-LF-3bI" firstAttribute="leading" secondItem="7qF-zE-67V" secondAttribute="leading" id="z22-0j-0NZ"/>
+                            <constraint firstItem="7qF-zE-67V" firstAttribute="trailing" secondItem="n5y-LF-3bI" secondAttribute="trailing" id="zRL-nE-G7c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7qF-zE-67V"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="6UR-X1-kTW"/>
+                    <connections>
+                        <outlet property="skview" destination="n5y-LF-3bI" id="GDg-86-BEy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlW-0q-Mka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,11 +43,11 @@
             <objects>
                 <viewController title="Info" id="0AP-lo-7xs" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LbD-in-mqV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPQ-c1-yTF">
-                                <rect key="frame" x="140.5" y="392" width="133" height="58"/>
+                                <rect key="frame" x="140.5" y="419" width="133" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,11 +77,11 @@
             <objects>
                 <viewController id="iIO-so-LZb" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbF-C9-hvM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uim-A3-sVg">
-                                <rect key="frame" x="144.5" y="392.5" width="125" height="57.5"/>
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
                                 <string key="text">Tap to move
  the crab.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -99,11 +113,11 @@
             <objects>
                 <viewController id="aTD-ne-9K4" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9WP-91-UvE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-od-bTW">
-                                <rect key="frame" x="181.5" y="392.5" width="51" height="57.5"/>
+                                <rect key="frame" x="181.5" y="419.5" width="51" height="57.5"/>
                                 <string key="text">Let's
 Play!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -121,7 +135,7 @@ Play!</string>
                     <navigationItem key="navigationItem" title="Title" id="vA6-No-pEV">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="uak-Xm-4te">
                             <connections>
-                                <segue destination="suW-Jc-0sd" kind="show" id="bVv-oj-EdM"/>
+                                <action selector="done:" destination="aTD-ne-9K4" id="nrX-Eh-U7B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -218,7 +232,7 @@ Play!</string>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ttp-1X-nFM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oIG-Rb-TYw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -236,7 +250,4 @@ Play!</string>
         <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="bVv-oj-EdM"/>
-    </inferredMetricsTieBreakers>
 </document>
