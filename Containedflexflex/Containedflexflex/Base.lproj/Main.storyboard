@@ -80,7 +80,7 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="2481" y="922"/>
         </scene>
-        <!--Item-->
+        <!--Game View Controller-->
         <scene sceneID="uyN-HM-Hd0">
             <objects>
                 <viewController id="4qh-fa-85O" customClass="GameViewController" customModule="Containedflexflex" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@ the crab</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EIC-bD-b44"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="game_controller" id="LER-3D-R1g"/>
+                    <tabBarItem key="tabBarItem" title="" image="game_controller" selectedImage="game_controller" id="LER-3D-R1g"/>
                     <connections>
                         <outlet property="skview" destination="lTt-tW-yIb" id="HFX-wH-Nhk"/>
                     </connections>
@@ -110,7 +110,7 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="-83" y="84"/>
         </scene>
-        <!--Item-->
+        <!--Settings View Controller-->
         <scene sceneID="MuO-zi-dla">
             <objects>
                 <viewController id="9VT-JM-bzC" customClass="SettingsViewController" customModule="Containedflexflex" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,39 +118,62 @@ the crab</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qvn-4N-0BU">
-                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tnm-qG-4tm">
+                                <rect key="frame" x="156.5" y="413" width="150" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-3L-ajN">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qvn-4N-0BU">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HID-Kw-ppN">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wWj-UO-LJY">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="rollToggle:" destination="9VT-JM-bzC" eventType="valueChanged" id="gCc-Zn-202"/>
-                                                </connections>
-                                            </switch>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qbl-3L-ajN">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HID-Kw-ppN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wWj-UO-LJY">
+                                                        <rect key="frame" x="101" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="rollToggle:" destination="9VT-JM-bzC" eventType="valueChanged" id="gCc-Zn-202"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sfs-Hl-V6E">
+                                                <rect key="frame" x="0.0" y="39" width="150" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KB-KC-GJZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-ks-akJ">
+                                                        <rect key="frame" x="101" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="zoomToggle:" destination="9VT-JM-bzC" eventType="valueChanged" id="icX-Li-Ovi"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sfs-Hl-V6E">
-                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="95R-g0-azb">
+                                        <rect key="frame" x="0.0" y="78" width="150" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KB-KC-GJZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HappyCrab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfG-mx-LFX">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-ks-akJ">
-                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="neA-Hp-0nL">
+                                                <rect key="frame" x="101" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="zoomToggle:" destination="9VT-JM-bzC" eventType="valueChanged" id="icX-Li-Ovi"/>
+                                                    <action selector="crabSwitch:" destination="9VT-JM-bzC" eventType="valueChanged" id="jg4-74-thf"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -159,13 +182,12 @@ the crab</string>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qvn-4N-0BU" firstAttribute="centerX" secondItem="BlN-ok-G2G" secondAttribute="centerX" id="Ehc-8W-qhp"/>
-                            <constraint firstItem="qvn-4N-0BU" firstAttribute="centerY" secondItem="BlN-ok-G2G" secondAttribute="centerY" id="oF4-sA-DSZ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eFy-cy-OSP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="settings" id="wZG-Cy-qsD"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings" id="wZG-Cy-qsD"/>
+                    <connections>
+                        <outlet property="crabLabel" destination="hfG-mx-LFX" id="jJm-Ua-Jd7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HcA-e3-CSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,11 +212,11 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="723" y="-757"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="G15-WW-vgI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ot-tJ-jff" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="info" id="Mtd-wi-Q0r"/>
+                    <tabBarItem key="tabBarItem" title="" image="info" selectedImage="info" id="Mtd-wi-Q0r"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dZR-LC-XJd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -209,10 +231,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="610" y="915"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="1od-o7-n0b">
             <objects>
-                <viewController id="DX9-Mf-xzx" sceneMemberID="viewController">
+                <viewController id="DX9-Mf-xzx" customClass="InfoViewController" customModule="Containedflexflex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K3o-xC-jp7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +254,11 @@ the crab</string>
                         <viewLayoutGuide key="safeArea" id="9Qw-59-AfS"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mhm-zn-Te3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UuA-Xc-Xho"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UuA-Xc-Xho">
+                            <connections>
+                                <action selector="done:" destination="DX9-Mf-xzx" id="vt6-4g-gEZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8K-eP-cpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
