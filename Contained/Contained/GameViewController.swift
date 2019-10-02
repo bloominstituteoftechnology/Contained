@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SpriteKit
 
 class GameViewController: UIViewController {
-
+    @IBOutlet weak var skview: SKView!
+    
  
 
 }
