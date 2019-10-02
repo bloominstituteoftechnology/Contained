@@ -11,10 +11,10 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        _ = sender.isOn
+        Settings.shared.shouldRoll = sender.isOn
     }
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        _ = sender.isOn
+        Settings.shared.shouldZoom = sender.isOn
     }
     
 }
