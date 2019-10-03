@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="1518.840579710145" y="-617.41071428571422"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="anY-VF-gGp">
             <objects>
                 <viewController id="XMo-3J-qe4" customClass="InfoViewController" customModule="Contained_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,8 +49,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to move the crab" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAU-n6-Gnd">
-                                <rect key="frame" x="99.5" y="433.5" width="215" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAU-n6-Gnd">
+                                <rect key="frame" x="142" y="419.5" width="130" height="57.5"/>
+                                <string key="text">Tap to move 
+the crab</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HsC-0X-ag2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8DW-0v-tVO">
+                    <navigationItem key="navigationItem" id="8DW-0v-tVO">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="2qL-Se-uFh">
                             <connections>
                                 <segue destination="rJo-mr-VPR" kind="show" id="s16-4n-zRQ"/>
@@ -75,17 +77,29 @@
             </objects>
             <point key="canvasLocation" x="2264" y="-617"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="BF8-Yd-chq">
             <objects>
                 <viewController id="rJo-mr-VPR" customClass="InfoViewController" customModule="Contained_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EGS-9P-8wL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRa-vP-1Zs">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vRa-vP-1Zs" firstAttribute="centerY" secondItem="EGS-9P-8wL" secondAttribute="centerY" id="OA5-RY-SFj"/>
+                            <constraint firstItem="vRa-vP-1Zs" firstAttribute="centerX" secondItem="EGS-9P-8wL" secondAttribute="centerX" id="PVw-sE-CDy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pwa-S0-geG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bAQ-fs-p5c">
+                    <navigationItem key="navigationItem" id="bAQ-fs-p5c">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" id="H5l-O0-rkz"/>
                             <barButtonItem systemItem="done" id="XQj-ml-PQz">
@@ -123,7 +137,52 @@
                     <view key="view" contentMode="scaleToFill" id="j87-uZ-f4q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q0H-mo-0P6">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ggj-m4-G27">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrG-YD-ZSQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-cO-Wac">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="GNe-Fv-Iof" eventType="valueChanged" id="VFG-7x-mYF"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="omQ-px-3UG">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sI-HF-eMN">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cgL-EA-vsX">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="GNe-Fv-Iof" eventType="valueChanged" id="00T-oB-vYr"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q0H-mo-0P6" firstAttribute="centerY" secondItem="j87-uZ-f4q" secondAttribute="centerY" id="II3-Ok-R0B"/>
+                            <constraint firstItem="Q0H-mo-0P6" firstAttribute="centerX" secondItem="j87-uZ-f4q" secondAttribute="centerX" id="RwU-nk-Ik3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IaX-FY-Cmc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="KsX-yQ-dVg"/>
