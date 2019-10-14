@@ -2,12 +2,11 @@
 //  CustomScene.swift
 //  Contained
 //
-//  Created by Dennis on 9/16/19.
-//  Copyright © 2019 LambdaSchool. All rights reserved.
+//  Created by Dennis Rudolph on 10/14/19.
+//  Copyright © 2019 Lambda School. All rights reserved.
 //
 
 import Foundation
-
 import SpriteKit
 
 class CustomScene: SKScene {
@@ -46,7 +45,7 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
-        if Settings.shared.shouldroll {
+        if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
     }
