@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="Uoa-gE-lmT">
+            <objects>
+                <viewController id="X1G-ax-0SQ" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbf-CO-84j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AfE-vr-84F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XlD-SI-Tc1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="DMj-qv-FgX">
+                            <connections>
+                                <segue destination="MgT-56-dXo" kind="show" id="aEe-ao-wkV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehO-F7-GpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="891"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="sao-r0-Brp">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="hxc-0R-sUg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle" catalog="system" id="KA9-wt-CNt"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pco-xx-QUV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X1G-ax-0SQ" kind="relationship" relationship="rootViewController" id="BWq-zp-0rY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMZ-pI-kPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="891"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="HiF-xV-sQL">
+            <objects>
+                <viewController id="MgT-56-dXo" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBw-nS-NGK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nVb-b2-3Vl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZuE-um-z6e">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="mJj-ga-XIO">
+                            <connections>
+                                <segue destination="mQY-Sg-099" kind="show" id="nPy-ZU-MOv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3l-hF-ak0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2604" y="891"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="RqE-gH-KJF">
+            <objects>
+                <viewController id="mQY-Sg-099" customClass="InfoViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iC1-9i-977">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IRs-P1-cPA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iaa-7F-9S1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="aPB-5y-SOU"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51t-UD-ogY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3349" y="891"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
