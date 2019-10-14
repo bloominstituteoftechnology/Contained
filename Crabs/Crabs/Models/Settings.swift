@@ -10,11 +10,13 @@ import UIKit
 
 class Settings {
     static let shared = Settings()
-    private init() {}
     
     var shouldRoll = false
     var shouldZoom = false
     var happyCrab = true
+    var shouldSquish = false
     
     var lastTouchPoint: CGPoint?
+    
+    private init() {}
 }

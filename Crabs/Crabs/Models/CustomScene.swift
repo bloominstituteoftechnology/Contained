@@ -13,6 +13,7 @@ class CustomScene: SKScene {
     
     // crab options
     let walkSpeed = 450.0
+    let squishDurations = (0.15, 0.05)
     let spinDuration = 0.6
     let zoomDuration = 0.4
     let zoomScale = 1.5
@@ -45,16 +46,28 @@ class CustomScene: SKScene {
         
         let moveAction = SKAction.move(to: newPosition, duration: walkDuration)
         
+        var actionSequence: [SKAction] = []
+        
+        if Settings.shared.shouldSquish {
+            let jumpActions = [
+                SKAction.scaleY(to: 0.5, duration: squishDurations.0),
+                SKAction.scaleY(to: 1, duration: squishDurations.1)
+            ]
+            actionSequence.append(contentsOf: jumpActions)
+        }
+        
         if Settings.shared.shouldZoom { // I find this easier to read
             // zoom calculations not run unless setting is activated
             let zoomAction = SKAction.scale(to: CGFloat(zoomScale), duration: zoomDuration * 0.75)
             let unzoomAction = SKAction.scale(to: 1.0, duration: zoomDuration * 0.25)
             
-            let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
-            crab.run(sequenceAction)
+            actionSequence.append(contentsOf: [zoomAction, moveAction, unzoomAction])
         } else {
-            crab.run(moveAction)
+            actionSequence.append(moveAction)
         }
+        
+        let sequenceAction = SKAction.sequence(actionSequence)
+        crab.run(sequenceAction)
         
         if Settings.shared.shouldRoll {
             let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: spinDuration)

@@ -21,4 +21,8 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleHappy(_ sender: UISwitch) {
         Settings.shared.happyCrab = sender.isOn
     }
+    
+    @IBAction func toggleSquish(_ sender: UISwitch) {
+        Settings.shared.shouldSquish = sender.isOn
+    }
 }
