@@ -14,11 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="6ll-6h-zQg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dai-Dq-Jkx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dai-Dq-Jkx" firstAttribute="leading" secondItem="gM4-hB-S1T" secondAttribute="leading" id="92i-xK-GBt"/>
+                            <constraint firstItem="gM4-hB-S1T" firstAttribute="trailing" secondItem="Dai-Dq-Jkx" secondAttribute="trailing" id="Xja-pR-tw4"/>
+                            <constraint firstItem="Dai-Dq-Jkx" firstAttribute="top" secondItem="gM4-hB-S1T" secondAttribute="top" id="elR-k0-pcG"/>
+                            <constraint firstItem="gM4-hB-S1T" firstAttribute="bottom" secondItem="Dai-Dq-Jkx" secondAttribute="bottom" id="z0w-yN-Ssg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gM4-hB-S1T"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="vbH-SS-NaE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="skView" destination="Dai-Dq-Jkx" id="KTr-jG-BV6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGN-rH-rRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
