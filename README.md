@@ -1,16 +1,14 @@
-# Module Challenge: View Controller Containment - Contained
+# Module Challenge: Tabbed Navigation and Multiple Storyboards
 
 This challenge allows you to practice the concepts and techniques learned in today's guided lesson and apply them in a concrete project. Your lesson explored view controller containment using Navigation and Tab Bar controllers. You will demonstrate proficiency by creating an application that showcases the same features you learned in class.
 
 ## Instructions
 
-**Read these instructions carefully. Understand exactly what is expected _before_ starting this Challenge.**
-
-This is an individual assessment but you are permitted to consult with and support other members of your cohort. You are encouraged to follow the twenty-minute rule and seek support from your PM and Instructor in your cohort help channel on Slack. 
+This is an individual assessment but you are permitted to consult with and support other members of your cohort. You are encouraged to follow the twenty-minute rule and seek support from your TL and Instructor in your cohort help channel on Slack. 
 
 ## Commits
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your project manager.
+Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead.
 
 ## Description
 
@@ -20,24 +18,17 @@ Your completed application will look like the following GIF:
 
 ![](Images/demo.gif)
 
-## Questions
-
-Demonstrate your understanding of today's concepts by answering the following free-form questions. Submit them as a text file along with your project.
-
-* What is controller containment and what does it offer developers?
-* What is the difference between navigation and tab controllers? Under what circumstances do you use each one?
-* Name at least one Apple-supplied iOS application that uses each container class and explain how they're used in each app.
-
 ## Project Setup
 
 Follow these steps to set up your project:
 
-- Create a new Single View application. Clean up the boilerplate in the application delegate.
+- Create a new Single View application.
 - Set the project to be portrait only (or landscape only; either works).
-- Delete the ViewController.swift class and delete the ViewController instance from your Main.storyboard
+- Delete the ViewController.swift file and delete the ViewController instance from your Main.storyboard.
 - Add the tab bar icons in the Art folder to your main asset catalog.
 - Add the Crab asset catalog to your project.
 - Add the SKSpriteNode+Utility.swift file to your project.
+- Create a second storyboard file named `Info.storyboard`.
 
 ## Building your Model
 
@@ -60,16 +51,24 @@ class Settings {
 
 Follow these steps in IB to lay out your interface
 
-* Add three view controllers and embed all three into a tab bar controller. Ensure the tab bar controller is the storyboard entry point.
-* Set up your tabs: Info, Play, and Settings along with the appropriate icons for each.
-* Select your Info view controller in IB and embed it into a navigation controller.
+### In `Main.storyboard`:
+* Add two view controllers and embed them into a tab bar controller. Ensure the tab bar controller is the storyboard entry point.
+* Create a storyboard reference and connect it to the tab bar controller as the third tab (ctrl-drag from the tab bar controller to the reference and choose "view controllers" in the relationship segue section). Choose the Info storyboard and a reference ID of `InfoNavigation` in the attributes inspector for the reference.
+* Set up your tabs: Info, Play, and Settings along with the appropriate icons for each (Info will need to be added to the root view of the `Info` storyboard).
+
+### In `Info.storyboard`:
+* Select your Info view controller in IB and embed it into a navigation controller. Give the navigation controller scene a storyboard ID of `InfoNavigation` in the identity inspector.
 * Add two more view controllers to IB. Add Navigation Items to each one, and then add bar button items to the top right of the info view controller.
 * Connect the info view controller to the first of the two new controllers. Add a bar button to the top right. Connect that to the final view controller. Add a final bar button to the top right.
-* Create three classes in three new files: GameViewController, InfoViewController, and SettingsViewController. Each descends from UIViewController but is otherwise empty. Assign these classes to your view controllers using the IB identity inspector.
 
-Your interface should now look like this:
+### File Tasks:
+* Create three classes in three new files: GameViewController, InfoViewController, and SettingsViewController. Each inherits from UIViewController but is otherwise empty. Assign these classes to your view controllers using the IB identity inspector.
 
-![](Images/layout.png)
+Your `Main.storyboard` interface should now look like this:
+![](Images/main-layout.png)
+
+Your `Info.storyboard` interface should now look like this:
+![](Images/info-layout.png)
 
 You're ready to start adding content to your interface.
 
