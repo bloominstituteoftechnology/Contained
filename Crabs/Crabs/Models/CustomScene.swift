@@ -12,11 +12,14 @@ class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
     // crab options
-    let walkSpeed = 450.0
-    let squishDurations = (0.15, 0.05)
+    let walkSpeed: CGFloat = 450.0
+    let squishScale: CGFloat = 0.5
+    let squishDurations = (0.25, 0.05)
     let spinDuration = 0.6
     let zoomDuration = 0.4
-    let zoomScale = 1.5
+    let zoomScale: CGFloat = 1.5
+    let ghostAlpha: CGFloat = 0.2
+    let ghostDurations = (0.3, 0.3)
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -37,23 +40,39 @@ class CustomScene: SKScene {
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard !touches.isEmpty, let touch = touches.first else { return }
+        guard !touches.isEmpty, let touchPoint = touches.first else { return }
         
+        let newPosition = touchPoint.location(in: self)
+        
+        runCrab(to: newPosition)
+        
+        Settings.shared.lastTouchPoint = newPosition
+    }
+    
+    private func runCrab(to newPosition: CGPoint) {
         let oldPosition = crab.position
-        let newPosition = touch.location(in: self)
         let walkDistance = oldPosition.distance(to: newPosition)
-        let walkDuration = Double(walkDistance) / walkSpeed
-        
+        let walkDuration = Double(walkDistance / walkSpeed)
         let moveAction = SKAction.move(to: newPosition, duration: walkDuration)
         
-        var actionSequence: [SKAction] = []
+        var actions: [SKAction] = []
+        
+        // begin constructing action sequence
+        var ghostReappearance: SKAction? = nil
+        if Settings.shared.isGhost {
+            let ghostDisappearance = SKAction.fadeAlpha(to: ghostAlpha, duration: ghostDurations.0)
+            ghostReappearance = SKAction.fadeAlpha(to: 1.0, duration: ghostDurations.1)
+            
+            actions.append(ghostDisappearance)
+        }
         
         if Settings.shared.shouldSquish {
-            let jumpActions = [
-                SKAction.scaleY(to: 0.5, duration: squishDurations.0),
+            let squishSequence = SKAction.sequence([
+                SKAction.scaleY(to: CGFloat(squishScale), duration: squishDurations.0),
                 SKAction.scaleY(to: 1, duration: squishDurations.1)
-            ]
-            actionSequence.append(contentsOf: jumpActions)
+            ])
+            
+            crab.run(squishSequence)
         }
         
         if Settings.shared.shouldZoom { // I find this easier to read
@@ -61,19 +80,21 @@ class CustomScene: SKScene {
             let zoomAction = SKAction.scale(to: CGFloat(zoomScale), duration: zoomDuration * 0.75)
             let unzoomAction = SKAction.scale(to: 1.0, duration: zoomDuration * 0.25)
             
-            actionSequence.append(contentsOf: [zoomAction, moveAction, unzoomAction])
+            actions.append(contentsOf: [zoomAction, moveAction, unzoomAction])
         } else {
-            actionSequence.append(moveAction)
+            actions.append(moveAction)
         }
-        
-        let sequenceAction = SKAction.sequence(actionSequence)
-        crab.run(sequenceAction)
         
         if Settings.shared.shouldRoll {
             let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: spinDuration)
             crab.run(rollAction)
         }
         
-        Settings.shared.lastTouchPoint = newPosition
+        if let reappear = ghostReappearance { actions.append(reappear) }
+        
+        // run sequence
+        let sequenceAction = SKAction.sequence(actions)
+        crab.run(sequenceAction)
     }
+    
 }

@@ -18,11 +18,15 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
     
-    @IBAction func toggleHappy(_ sender: UISwitch) {
-        Settings.shared.happyCrab = sender.isOn
-    }
-    
     @IBAction func toggleSquish(_ sender: UISwitch) {
         Settings.shared.shouldSquish = sender.isOn
+    }
+    
+    @IBAction func toggleGhost(_ sender: UISwitch) {
+        Settings.shared.isGhost = sender.isOn
+    }
+    
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        Settings.shared.happyCrab = sender.isOn
     }
 }
