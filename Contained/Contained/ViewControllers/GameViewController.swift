@@ -10,8 +10,6 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
-    //let skview =
     
     @IBOutlet weak var skview: SKView!
     
@@ -19,6 +17,11 @@ class GameViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // First time in the scene 
+        if (skscene == nil) {
+            Settings.shared.pointX = Double(view.bounds.midX)
+            Settings.shared.pointY = Double(view.bounds.midY)
+        }
         skscene = CustomScene(size: view.bounds.size)
         skview.presentScene(skscene)
     }
@@ -28,16 +31,4 @@ class GameViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

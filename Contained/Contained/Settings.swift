@@ -14,6 +14,6 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
-    //var pointX = 0.0
-    //var pointY = 0.0
+    var pointX = 0.0
+    var pointY = 0.0
 }
