@@ -11,10 +11,22 @@ import SpriteKit
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
     
+    // crab options
+    let walkSpeed = 450.0
+    let spinDuration = 0.6
+    let zoomDuration = 0.4
+    let zoomScale = 1.5
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        let crabTexture: String
+        if Settings.shared.happyCrab {
+            crabTexture = "HappyCrab"
+        } else {
+            crabTexture = "WaitingCrab"
+        }
+        crab.loadTextures(named: crabTexture, forKey: SKSpriteNode.textureKey)
         
         if let lastTouchPoint = Settings.shared.lastTouchPoint {
             crab.position = lastTouchPoint
@@ -26,27 +38,29 @@ class CustomScene: SKScene {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard !touches.isEmpty, let touch = touches.first else { return }
         
-        let position = touch.location(in: self)
+        let oldPosition = crab.position
+        let newPosition = touch.location(in: self)
+        let walkDistance = oldPosition.distance(to: newPosition)
+        let walkDuration = Double(walkDistance) / walkSpeed
         
-        let actionDuration = 1.0
-        let moveAction = SKAction.move(to: position, duration: actionDuration)
+        let moveAction = SKAction.move(to: newPosition, duration: walkDuration)
         
-        let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
-        let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
-        let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
-        
-        switch Settings.shared.shouldZoom {
-        case false:
-            crab.run(moveAction)
-        case true:
+        if Settings.shared.shouldZoom { // I find this easier to read
+            // zoom calculations not run unless setting is activated
+            let zoomAction = SKAction.scale(to: CGFloat(zoomScale), duration: zoomDuration * 0.75)
+            let unzoomAction = SKAction.scale(to: 1.0, duration: zoomDuration * 0.25)
+            
             let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
             crab.run(sequenceAction)
+        } else {
+            crab.run(moveAction)
         }
         
         if Settings.shared.shouldRoll {
+            let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: spinDuration)
             crab.run(rollAction)
         }
         
-        Settings.shared.lastTouchPoint = position
+        Settings.shared.lastTouchPoint = newPosition
     }
 }
