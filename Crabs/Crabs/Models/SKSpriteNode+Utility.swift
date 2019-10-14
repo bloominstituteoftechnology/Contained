@@ -35,7 +35,7 @@ extension CGPoint {
     }
     
     static func magnitude(_ point: CGPoint) -> CGFloat {
-        return sqrt(pow(point.x, 2) + pow(point.y, 2))
+        return sqrt((point.x * point.x) + (point.y * point.y)) // a^2 + b^2 = c^2
     }
     
     func distance(to otherPoint: CGPoint) -> CGFloat {
