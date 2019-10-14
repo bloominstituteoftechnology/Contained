@@ -28,3 +28,19 @@ extension SKSpriteNode {
         self.run(foreverAction, withKey: key)
     }
 }
+
+extension CGPoint {
+    var magnitude: CGFloat {
+        return CGPoint.magnitude(self)
+    }
+    
+    static func magnitude(_ point: CGPoint) -> CGFloat {
+        return sqrt(pow(point.x, 2) + pow(point.y, 2))
+    }
+    
+    func distance(to otherPoint: CGPoint) -> CGFloat {
+        let xFactor = self.x - otherPoint.x
+        let yFactor = self.y - otherPoint.y
+        return CGPoint.magnitude(CGPoint(x: xFactor, y: yFactor))
+    }
+}
