@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKM-RV-LdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.91304347826087" y="146.65178571428569"/>
+            <point key="canvasLocation" x="355" y="147"/>
         </scene>
         <!--InfoNavigation-->
         <scene sceneID="3bo-Dh-zNW">
@@ -40,14 +40,59 @@
                     <view key="view" contentMode="scaleToFill" id="66v-5V-6km">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OTa-Vn-D3a">
+                                <rect key="frame" x="154" y="413" width="106" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ijY-zQ-Tn3">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARO-Sm-unV">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JQH-tH-OnW">
+                                                <rect key="frame" x="57" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="lUC-Qf-9Y1" eventType="valueChanged" id="mFc-7w-gWZ"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wzr-gD-wD5">
+                                        <rect key="frame" x="0.0" y="39" width="106" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Q-qo-KSv">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWb-0E-bRZ">
+                                                <rect key="frame" x="57" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="lUC-Qf-9Y1" eventType="valueChanged" id="vMM-ZU-XDv"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OTa-Vn-D3a" firstAttribute="centerX" secondItem="66v-5V-6km" secondAttribute="centerX" id="4dU-zp-HWs"/>
+                            <constraint firstItem="OTa-Vn-D3a" firstAttribute="centerY" secondItem="66v-5V-6km" secondAttribute="centerY" id="DXa-RU-V32"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oQO-RC-bOn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="0YB-aY-qpG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV4-VI-T1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946" y="147"/>
+            <point key="canvasLocation" x="1786" y="147"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ruj-nv-lQx">
