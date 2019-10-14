@@ -14,10 +14,24 @@
                     <view key="view" contentMode="scaleToFill" id="OOg-GU-yUh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIp-Ut-tPk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9zp-X6-7sl" firstAttribute="bottom" secondItem="CIp-Ut-tPk" secondAttribute="bottom" id="Bhb-39-K9y"/>
+                            <constraint firstItem="CIp-Ut-tPk" firstAttribute="leading" secondItem="9zp-X6-7sl" secondAttribute="leading" id="ia5-BA-V3G"/>
+                            <constraint firstItem="CIp-Ut-tPk" firstAttribute="top" secondItem="9zp-X6-7sl" secondAttribute="top" id="joI-2E-qI1"/>
+                            <constraint firstItem="9zp-X6-7sl" firstAttribute="trailing" secondItem="CIp-Ut-tPk" secondAttribute="trailing" id="y2R-SN-Wwa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9zp-X6-7sl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" id="qsF-dF-9lA"/>
+                    <connections>
+                        <outlet property="skview" destination="CIp-Ut-tPk" id="m6z-eK-qhy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKM-RV-LdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
