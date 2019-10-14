@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // First time in the scene 
+        // First time in the scene set the position to middle of screen
         if (skscene == nil) {
             Settings.shared.pointX = Double(view.bounds.midX)
             Settings.shared.pointY = Double(view.bounds.midY)
