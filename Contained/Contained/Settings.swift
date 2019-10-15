@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -15,5 +15,23 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    
+    
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        shouldRoll = !(shouldRoll)
+
+    }
+    
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        
+        shouldZoom = !(shouldZoom)
+    }
+    
+    
+    
+    
+    
 }
  
