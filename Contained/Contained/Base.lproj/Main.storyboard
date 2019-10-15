@@ -30,6 +30,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="buM-Aq-iDl">
                                                 <rect key="frame" x="0.0" y="67.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="toggleRoll:" destination="6N7-mx-Jse" eventType="valueChanged" id="0K3-U5-GXM"/>
+                                                    <action selector="toggleRoll:" destination="WMI-fe-hPx" eventType="valueChanged" id="0se-7m-hPc"/>
                                                     <action selector="toggleRoll:" destination="aYz-UE-RS0" eventType="valueChanged" id="Kss-rB-raA"/>
                                                 </connections>
                                             </switch>
@@ -47,6 +49,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iDy-x2-ujB">
                                                 <rect key="frame" x="0.0" y="67.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="toggleZoom:" destination="6N7-mx-Jse" eventType="valueChanged" id="CSM-EX-6OL"/>
+                                                    <action selector="toggleZoom:" destination="WMI-fe-hPx" eventType="valueChanged" id="D11-t9-ZbX"/>
                                                     <action selector="toggleZoom:" destination="aYz-UE-RS0" eventType="valueChanged" id="TjL-fp-Xq3"/>
                                                 </connections>
                                             </switch>
@@ -57,8 +61,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TaH-1P-ohf" firstAttribute="centerX" secondItem="aYz-UE-RS0" secondAttribute="centerX" id="HYy-MT-TLj"/>
-                            <constraint firstItem="TaH-1P-ohf" firstAttribute="centerY" secondItem="aYz-UE-RS0" secondAttribute="centerY" id="hIR-aO-J6V"/>
+                            <constraint firstItem="TaH-1P-ohf" firstAttribute="centerX" secondItem="aYz-UE-RS0" secondAttribute="centerX" id="N8e-o3-SLd"/>
+                            <constraint firstItem="TaH-1P-ohf" firstAttribute="centerY" secondItem="aYz-UE-RS0" secondAttribute="centerY" id="mzc-UX-GX0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="46M-Mv-6Qj"/>
                     </view>
@@ -66,11 +70,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMI-fe-hPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="979.6875"/>
+            <point key="canvasLocation" x="1190" y="1021"/>
         </scene>
         <!--Info-->
         <scene sceneID="kw3-7q-om8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDW-fS-D1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Info" id="rnG-2H-qXK" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HFT-eJ-uPq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -98,13 +103,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UDW-fS-D1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="1763"/>
+            <point key="canvasLocation" x="170" y="1799"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mhO-jO-JmR">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQM-sh-BmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="yqn-ry-dGC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="soW-kf-o5y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -134,9 +139,8 @@ the Crab.</string>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nQM-sh-BmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2158" y="1779"/>
+            <point key="canvasLocation" x="261" y="2585"/>
         </scene>
         <!--Play-->
         <scene sceneID="jhy-w1-ejn">
@@ -145,10 +149,24 @@ the Crab.</string>
                     <view key="view" contentMode="scaleToFill" id="4mZ-4R-6or">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-J3-KbM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t3O-2q-x2W" firstAttribute="bottom" secondItem="f7P-J3-KbM" secondAttribute="bottom" id="HCb-iC-ND8"/>
+                            <constraint firstItem="f7P-J3-KbM" firstAttribute="leading" secondItem="t3O-2q-x2W" secondAttribute="leading" id="a7Q-Ry-85X"/>
+                            <constraint firstItem="f7P-J3-KbM" firstAttribute="top" secondItem="t3O-2q-x2W" secondAttribute="top" id="pPW-lV-Ih4"/>
+                            <constraint firstItem="t3O-2q-x2W" firstAttribute="trailing" secondItem="f7P-J3-KbM" secondAttribute="trailing" id="wfY-B0-NIp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t3O-2q-x2W"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="FPA-Gb-9bw"/>
+                    <connections>
+                        <outlet property="skview" destination="f7P-J3-KbM" id="ihj-td-6sI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePx-aU-NVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,17 +191,10 @@ the Crab.</string>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="233.03571428571428"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="OKQ-bv-oZJ">
-            <objects>
-                <viewControllerPlaceholder id="p7l-eN-ZX5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vbI-hL-Xa2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="562" y="880"/>
-        </scene>
         <!--Info-->
         <scene sceneID="Nab-pi-Lcs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rz-lD-fou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yzv-mU-gf4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="qwv-Hc-asM"/>
                     <toolbarItems/>
@@ -196,14 +207,14 @@ the Crab.</string>
                         <segue destination="rnG-2H-qXK" kind="relationship" relationship="rootViewController" id="M0V-qx-rF2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Rz-lD-fou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="1021"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="qdu-ZS-FId">
             <objects>
-                <viewController id="XYF-oK-GWw" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wf6-nt-mql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="XYF-oK-GWw" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ldV-XZ-mK4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,15 +236,13 @@ the Crab.</string>
                     <navigationItem key="navigationItem" id="Yfa-L4-2Co">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="z7r-nM-mtQ">
                             <connections>
-                                <action selector="rewindToInfo:" destination="zmZ-nc-Dks" id="hiT-EX-okn"/>
+                                <action selector="done:" destination="XYF-oK-GWw" id="btZ-eH-iNO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wf6-nt-mql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="zmZ-nc-Dks" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="1779"/>
+            <point key="canvasLocation" x="261" y="3379"/>
         </scene>
     </scenes>
     <resources>
