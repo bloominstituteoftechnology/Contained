@@ -116,15 +116,41 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pUX-jl-sVu">
+                                <rect key="frame" x="111.5" y="204" width="191" height="61.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPn-20-7Fb">
+                                        <rect key="frame" x="67" y="0.0" width="57" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-nc-RJq">
+                                        <rect key="frame" x="0.0" y="30.5" width="191" height="32"/>
+                                        <segments>
+                                            <segment title="HappyCrab"/>
+                                            <segment title="WaitingCrab"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="toggleTexture:" destination="m6g-dA-HcB" eventType="valueChanged" id="AdN-Rk-Obf"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="qJq-Yd-bPA" firstAttribute="centerX" secondItem="vzw-PK-X0M" secondAttribute="centerX" id="BSZ-qf-tLC"/>
+                            <constraint firstItem="pUX-jl-sVu" firstAttribute="centerX" secondItem="vzw-PK-X0M" secondAttribute="centerX" id="gYb-Ki-wl8"/>
                             <constraint firstItem="qJq-Yd-bPA" firstAttribute="centerY" secondItem="vzw-PK-X0M" secondAttribute="centerY" id="v5y-WB-8kK"/>
+                            <constraint firstItem="pUX-jl-sVu" firstAttribute="top" secondItem="Y1U-5m-mHg" secondAttribute="top" constant="160" id="yVx-LZ-UgM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y1U-5m-mHg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="kU2-C1-3n5"/>
+                    <connections>
+                        <outlet property="textureSegmentedControl" destination="0fU-nc-RJq" id="Wni-Fj-CIt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqD-pa-WHw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

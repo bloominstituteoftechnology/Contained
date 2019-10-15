@@ -11,7 +11,8 @@ import Foundation
 class Settings {
     static let shared = Settings()
     private init() {}
-    
+        
+    var textureName: String = "HappyCrab"
     var shouldRoll = false
     var shouldZoom = false
     var shouldFade = false

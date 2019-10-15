@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var textureSegmentedControl: UISegmentedControl!
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = sender.isOn
     }
@@ -21,9 +23,16 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade = sender.isOn
     }
+
+    @IBAction func toggleTexture(_ sender: Any) {
+        if textureSegmentedControl.selectedSegmentIndex == 0 {
+            Settings.shared.textureName = "HappyCrab"
+        } else if textureSegmentedControl.selectedSegmentIndex == 1 {
+            Settings.shared.textureName = "WaitingCrab"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }

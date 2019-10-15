@@ -15,7 +15,7 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        crab.loadTextures(named: Settings.shared.textureName, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: Settings.shared.pointX, y: Settings.shared.pointY)
         //crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
