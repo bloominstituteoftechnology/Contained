@@ -16,7 +16,10 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func donePressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
