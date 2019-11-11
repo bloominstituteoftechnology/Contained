@@ -17,4 +17,8 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = sender.isOn ? true : false
     }
+    
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        Settings.shared.happy = sender.isOn ? true : false
+    }
 }
