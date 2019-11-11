@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info-->
+        <scene sceneID="5yV-V0-3Jw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rd-m7-4jo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="InfoNavigation" id="O51-d9-UnP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info.png" id="vyg-pM-bel"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gP3-p5-IUR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eKZ-tH-cFY" kind="relationship" relationship="rootViewController" id="A6S-6V-meg"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-501" y="137"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="oKS-zW-xoC">
+            <objects>
+                <viewController id="eKZ-tH-cFY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1r-zL-PqR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uF6-l9-IxY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="CQm-Gl-PCL">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="8nN-Tw-7eY">
+                            <connections>
+                                <segue destination="nhc-Lx-8iS" kind="show" id="rw1-a0-Pz2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc9-Nf-IFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="137"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="HtQ-Pr-WUh">
+            <objects>
+                <viewController id="nhc-Lx-8iS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YKE-fd-tt4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yGP-Hi-oYM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="yIU-v1-4tw">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Xdd-3E-UWo"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkR-tE-EFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.png" width="30" height="30"/>
+    </resources>
+</document>

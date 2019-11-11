@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info-->
+        <scene sceneID="5yV-V0-3Jw">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" id="O51-d9-UnP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="vyg-pM-bel"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gP3-p5-IUR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eKZ-tH-cFY" kind="relationship" relationship="rootViewController" id="A6S-6V-meg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rd-m7-4jo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501" y="137"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="oKS-zW-xoC">
+            <objects>
+                <viewController id="eKZ-tH-cFY" customClass="InfoViewController" customModule="Crab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1r-zL-PqR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uF6-l9-IxY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CQm-Gl-PCL">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="8nN-Tw-7eY">
+                            <connections>
+                                <segue destination="nhc-Lx-8iS" kind="show" id="rw1-a0-Pz2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc9-Nf-IFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HtQ-Pr-WUh">
+            <objects>
+                <viewController id="nhc-Lx-8iS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YKE-fd-tt4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yGP-Hi-oYM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yIU-v1-4tw">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Xdd-3E-UWo">
+                            <connections>
+                                <segue destination="CRo-xz-OAD" kind="show" id="Gr1-9S-9JY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkR-tE-EFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cEV-BC-RtE">
+            <objects>
+                <viewController id="CRo-xz-OAD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Roj-e2-jV3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HVc-pz-5wI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WuS-76-oHT">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="hV5-n7-XJq"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4BM-AS-A5W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
+</document>
