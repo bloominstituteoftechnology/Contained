@@ -81,7 +81,7 @@ Follow these steps to create content for your information tab.
 
 ```
     @IBAction func done(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+         navigationController?.popToRootViewController(animated: true)
     }
 ```
 * Add a label to your first Info view controller. Set its font to System Bold 48. Center align the text in the label. Edit the text to Crabs.
