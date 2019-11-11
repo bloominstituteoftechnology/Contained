@@ -24,14 +24,28 @@
                     <view key="view" contentMode="scaleToFill" id="8wn-do-llJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-ed-MBF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rQb-ed-MBF" firstAttribute="top" secondItem="8wn-do-llJ" secondAttribute="top" id="OJf-hB-l8G"/>
+                            <constraint firstAttribute="bottom" secondItem="rQb-ed-MBF" secondAttribute="bottom" id="Our-1X-bjp"/>
+                            <constraint firstItem="rQb-ed-MBF" firstAttribute="leading" secondItem="urN-a1-5FE" secondAttribute="leading" id="Qwj-hP-3vR"/>
+                            <constraint firstItem="rQb-ed-MBF" firstAttribute="trailing" secondItem="urN-a1-5FE" secondAttribute="trailing" id="q9X-of-cFS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="urN-a1-5FE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="2W2-eu-nUG"/>
+                    <connections>
+                        <outlet property="skview" destination="rQb-ed-MBF" id="b1s-R4-dt2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYh-om-dBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1430" y="699"/>
+            <point key="canvasLocation" x="-1430.4347826086957" y="698.4375"/>
         </scene>
         <!--Settings-->
         <scene sceneID="NQs-pt-JDS">
@@ -40,7 +54,52 @@
                     <view key="view" contentMode="scaleToFill" id="DN7-zT-9nc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IrQ-ZF-FkB">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uFA-Me-ATa">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbu-zS-u6d">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PoF-iN-0bH">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="OEc-DW-pSJ" eventType="valueChanged" id="Apc-eG-1by"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HaP-v4-YaN">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrA-vZ-jcA">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-Y2-BXB">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="OEc-DW-pSJ" eventType="valueChanged" id="EzP-DO-n7d"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IrQ-ZF-FkB" firstAttribute="centerX" secondItem="DN7-zT-9nc" secondAttribute="centerX" id="6XI-Rl-U76"/>
+                            <constraint firstItem="IrQ-ZF-FkB" firstAttribute="centerY" secondItem="DN7-zT-9nc" secondAttribute="centerY" id="tgm-vF-meg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="euw-jD-1Mf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="A0A-Ym-kJj"/>
