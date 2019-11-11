@@ -9,5 +9,7 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    
+    @IBAction func unwind(_ sender: UIStoryboardSegue) {
+        
+    }
 }
