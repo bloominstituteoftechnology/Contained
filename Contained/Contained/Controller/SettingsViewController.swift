@@ -21,4 +21,8 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleHappy(_ sender: UISwitch) {
         Settings.shared.happy = sender.isOn ? true : false
     }
+    
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn ? true : false
+    }
 }

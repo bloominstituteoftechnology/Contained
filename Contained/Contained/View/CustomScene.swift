@@ -20,7 +20,7 @@ class CustomScene: SKScene {
         case false:
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.position = Settings.shared.location
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,7 +29,8 @@ class CustomScene: SKScene {
         
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
-        
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.1)
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.3)
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
@@ -42,8 +43,15 @@ class CustomScene: SKScene {
             crab.run(sequenceAction)
         }
         
+        if Settings.shared.shouldFade {
+            let fadeSequence = SKAction.sequence([fadeOutAction, moveAction, fadeInAction])
+            crab.run(fadeSequence)
+        }
+        
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        Settings.shared.location = position
     }
 }

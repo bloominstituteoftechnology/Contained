@@ -6,7 +6,7 @@
 //  Copyright © 2019 Chad Rutherford. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -15,4 +15,6 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var happy = false
+    var shouldFade = false
+    var location = CGPoint()
 }
