@@ -10,7 +10,7 @@
         <!--Play-->
         <scene sceneID="fnl-hZ-NzP">
             <objects>
-                <viewController id="qNO-Ip-wN3" sceneMemberID="viewController">
+                <viewController id="qNO-Ip-wN3" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SO8-tM-jws">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,26 +28,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="onV-7b-oMJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="eYi-O9-tfL"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="eYi-O9-tfL"/>
+                    <connections>
+                        <outlet property="skview" destination="O47-s4-QHh" id="YBm-57-BAd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvB-JM-M1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-733" y="812"/>
         </scene>
         <!--InfoNavigation-->
-        <scene sceneID="5jS-5Q-En9">
+        <scene sceneID="hId-oH-zji">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="A7S-NG-2gr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dFL-mN-kD4"/>
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="fY5-GZ-bmO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dxc-S8-VCj"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PaW-ze-bvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jL-Op-BsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="737"/>
+            <point key="canvasLocation" x="-4" y="636"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Qdp-F2-knb">
             <objects>
-                <viewController id="ZmS-IT-VmH" sceneMemberID="viewController">
+                <viewController id="ZmS-IT-VmH" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYu-r6-66V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +97,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqt-Ft-ivj">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="happyCrabToggled:" destination="ZmS-IT-VmH" eventType="valueChanged" id="5CG-IC-bSk"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -107,7 +113,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kgY-QE-h9R"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="4L4-dG-f5X"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="4L4-dG-f5X"/>
+                    <connections>
+                        <outlet property="toggleRoll" destination="6Ce-ZQ-15Q" id="Deb-V0-eMy"/>
+                        <outlet property="toggleZoom" destination="loI-Jz-uZG" id="2y3-oI-fCc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCU-bR-SJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +136,7 @@
                     <connections>
                         <segue destination="qNO-Ip-wN3" kind="relationship" relationship="viewControllers" id="AL6-WJ-oOd"/>
                         <segue destination="ZmS-IT-VmH" kind="relationship" relationship="viewControllers" id="uEU-zq-Ofd"/>
-                        <segue destination="A7S-NG-2gr" kind="relationship" relationship="viewControllers" id="Vme-ds-cZx"/>
+                        <segue destination="fY5-GZ-bmO" kind="relationship" relationship="viewControllers" id="Me3-zs-OBC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEh-qr-e3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
