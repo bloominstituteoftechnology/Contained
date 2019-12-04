@@ -14,10 +14,24 @@
                     <view key="view" contentMode="scaleToFill" id="r4j-xz-9eW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wG-Yf-lCM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1wG-Yf-lCM" firstAttribute="leading" secondItem="bIx-vh-7Wz" secondAttribute="leading" id="CCe-wP-IEG"/>
+                            <constraint firstItem="bIx-vh-7Wz" firstAttribute="trailing" secondItem="1wG-Yf-lCM" secondAttribute="trailing" id="G9W-cn-DK1"/>
+                            <constraint firstItem="bIx-vh-7Wz" firstAttribute="bottom" secondItem="1wG-Yf-lCM" secondAttribute="bottom" id="JDE-BF-Rhu"/>
+                            <constraint firstItem="1wG-Yf-lCM" firstAttribute="top" secondItem="bIx-vh-7Wz" secondAttribute="top" id="YiI-Gi-vzj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bIx-vh-7Wz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="gQe-dz-73l"/>
+                    <connections>
+                        <outlet property="skview" destination="1wG-Yf-lCM" id="aMR-2A-nju"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55f-1Q-ruR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
