@@ -21,7 +21,12 @@ class CustomScene: SKScene {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
         
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        if let position = Settings.shared.position {
+            crab.position = position
+        } else {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        }
+        
     }
     
     // Move to touch
@@ -32,6 +37,7 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+        Settings.shared.position = position
         
         // Create move action
         let actionDuration = 1.0
