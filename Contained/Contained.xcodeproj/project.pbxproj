@@ -14,6 +14,7 @@
 		4225B08023986FF500898D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4225B07E23986FF500898D56 /* LaunchScreen.storyboard */; };
 		4225B0882398703700898D56 /* Crab.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4225B0872398703700898D56 /* Crab.xcassets */; };
 		4225B08A2398704000898D56 /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225B0892398704000898D56 /* SKSpriteNode+Utility.swift */; };
+		4225B08F239870D700898D56 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225B08E239870D700898D56 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		4225B07F23986FF500898D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4225B08123986FF500898D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4225B0872398703700898D56 /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../Crab.xcassets; sourceTree = "<group>"; };
-		4225B0892398704000898D56 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		4225B0892398704000898D56 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		4225B08E239870D700898D56 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		4225B07223986FF300898D56 /* Contained */ = {
 			isa = PBXGroup;
 			children = (
-				4225B07323986FF300898D56 /* AppDelegate.swift */,
-				4225B07523986FF300898D56 /* SceneDelegate.swift */,
-				4225B07923986FF300898D56 /* Main.storyboard */,
-				4225B07E23986FF500898D56 /* LaunchScreen.storyboard */,
-				4225B08123986FF500898D56 /* Info.plist */,
+				4225B08B2398707300898D56 /* Model */,
+				4225B08C2398708200898D56 /* Views */,
+				4225B08D239870A900898D56 /* Controllers */,
 				4225B0872398703700898D56 /* Crab.xcassets */,
 				4225B07C23986FF500898D56 /* Assets.xcassets */,
-				4225B0892398704000898D56 /* SKSpriteNode+Utility.swift */,
+				4225B07323986FF300898D56 /* AppDelegate.swift */,
+				4225B07523986FF300898D56 /* SceneDelegate.swift */,
+				4225B08123986FF500898D56 /* Info.plist */,
 			);
 			path = Contained;
+			sourceTree = "<group>";
+		};
+		4225B08B2398707300898D56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4225B0892398704000898D56 /* SKSpriteNode+Utility.swift */,
+				4225B08E239870D700898D56 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4225B08C2398708200898D56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4225B07923986FF300898D56 /* Main.storyboard */,
+				4225B07E23986FF500898D56 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4225B08D239870A900898D56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +171,7 @@
 			files = (
 				4225B08A2398704000898D56 /* SKSpriteNode+Utility.swift in Sources */,
 				4225B07423986FF300898D56 /* AppDelegate.swift in Sources */,
+				4225B08F239870D700898D56 /* Settings.swift in Sources */,
 				4225B07623986FF300898D56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
