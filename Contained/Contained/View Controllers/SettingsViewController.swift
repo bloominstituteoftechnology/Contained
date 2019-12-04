@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,13 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-
+// IB Actio
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        var isOn: Bool
+    }
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        var isOn: Bool
+    }
+    
 }
