@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="c3o-Rx-ftz">
+            <objects>
+                <viewController id="p5X-vi-f3F" customClass="InfoViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pQj-pi-AE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2VG-pd-q2m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1uX-Um-0G4">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="bsV-e2-SOO">
+                            <connections>
+                                <segue destination="jnC-ig-cfY" kind="show" id="eTL-NZ-Fcr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiA-C6-EAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="73.660714285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gIy-mR-hfV">
+            <objects>
+                <viewController id="jnC-ig-cfY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2r7-Vy-bI3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AWm-mq-tF4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6fE-e3-SGW">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="0Cf-uz-gKv">
+                            <connections>
+                                <segue destination="X1T-sz-NXZ" kind="show" id="Frp-dS-VIX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xj-7J-9mS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="71"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zba-0Y-Sqa">
+            <objects>
+                <viewController id="X1T-sz-NXZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z40-Sl-XKN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NdK-xF-3Vk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qNK-tV-J8i">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="HSW-bk-dlb"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNn-rn-YrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="grF-qi-CYA">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="CTt-oE-IQv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LVp-94-MbA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p5X-vi-f3F" kind="relationship" relationship="rootViewController" id="WYP-Xj-kX5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kej-j3-VnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>
