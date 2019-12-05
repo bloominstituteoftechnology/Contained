@@ -21,11 +21,11 @@ class SettingsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        rollIsOn = sender.isOn
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        zoomIsOn = sender.isOn
+        Settings.shared.shouldZoom = sender.isOn
     }
     
 
