@@ -31,8 +31,14 @@ class CustomScene: SKScene {
         Settings.shared.mostRecentTouchPoint = position
         
         // Create move action
-        let actionDuration = 1.0
-        let moveAction = SKAction.move(to: position, duration: actionDuration)
+        let actionDuration = Settings.shared.actionDuration
+        
+        // Scale the move duration based on the distance to be moved
+        // This will keep the move speed constant regardless of the distance moved
+        let distanceToMove = Double(sqrt(pow(position.x - crab.position.x,2) + pow(position.y - crab.position.y,2)))
+        let moveDuration = actionDuration * distanceToMove * 0.002
+        
+        let moveAction = SKAction.move(to: position, duration: moveDuration)
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)

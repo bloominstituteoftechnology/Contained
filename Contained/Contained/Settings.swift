@@ -14,5 +14,6 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var actionDuration = 1.2
     var mostRecentTouchPoint: CGPoint?
 }

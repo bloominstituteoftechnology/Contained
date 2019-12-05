@@ -10,9 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var rollIsOn: Bool = false
-    var zoomIsOn: Bool = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +25,11 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
     
-
+    @IBAction func speedSliderChanged(_ sender: UISlider) {
+        let sliderValue = Double(sender.value)
+        Settings.shared.actionDuration = 0.2 + (2 * (1 - sliderValue))
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -94,11 +94,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="33x-D9-k2E">
+                                <rect key="frame" x="40" y="521.66666666666663" width="295" height="70.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crab Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpM-eU-9DM">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="tortoise" catalog="system" maximumValueImage="hare" translatesAutoresizingMaskIntoConstraints="NO" id="ywI-Ea-f1I">
+                                        <rect key="frame" x="-2" y="40.333333333333371" width="299" height="31"/>
+                                        <connections>
+                                            <action selector="speedSliderChanged:" destination="Yq3-da-m6J" eventType="valueChanged" id="Q7S-TG-dNP"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="qXq-so-PUA" firstAttribute="centerX" secondItem="9iH-Si-6zJ" secondAttribute="centerX" id="7AA-jP-Icu"/>
+                            <constraint firstItem="33x-D9-k2E" firstAttribute="top" secondItem="qXq-so-PUA" secondAttribute="bottom" constant="100" id="AaC-le-uz8"/>
+                            <constraint firstItem="33x-D9-k2E" firstAttribute="leading" secondItem="9iH-Si-6zJ" secondAttribute="leading" constant="40" id="Wwp-HS-Y5m"/>
                             <constraint firstItem="qXq-so-PUA" firstAttribute="centerY" secondItem="9iH-Si-6zJ" secondAttribute="centerY" id="oLe-Mc-B3P"/>
+                            <constraint firstItem="9iH-Si-6zJ" firstAttribute="trailing" secondItem="33x-D9-k2E" secondAttribute="trailing" constant="40" id="rdc-vJ-isn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9iH-Si-6zJ"/>
                     </view>
@@ -106,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzE-ay-beV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="160"/>
+            <point key="canvasLocation" x="752.79999999999995" y="159.60591133004928"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N2r-zF-AMc">
@@ -130,6 +150,8 @@
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="hare" catalog="system" width="64" height="46"/>
         <image name="settings" width="30" height="30"/>
+        <image name="tortoise" catalog="system" width="64" height="34"/>
     </resources>
 </document>
