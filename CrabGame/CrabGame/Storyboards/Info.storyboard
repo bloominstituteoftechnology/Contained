@@ -15,10 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns2-wJ-JfH">
-                                <rect key="frame" x="74.5" y="390.5" width="265" height="115"/>
-                                <string key="text">Tap to move
-the crab</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n1-Kt-TLc">
+                                <rect key="frame" x="140.5" y="419" width="133" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,8 +24,8 @@ the crab</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ns2-wJ-JfH" firstAttribute="centerY" secondItem="pQj-pi-AE8" secondAttribute="centerY" id="PkR-DI-QJs"/>
-                            <constraint firstItem="ns2-wJ-JfH" firstAttribute="centerX" secondItem="pQj-pi-AE8" secondAttribute="centerX" id="Vfc-Xo-4w6"/>
+                            <constraint firstItem="0n1-Kt-TLc" firstAttribute="centerY" secondItem="pQj-pi-AE8" secondAttribute="centerY" id="3oA-8r-022"/>
+                            <constraint firstItem="0n1-Kt-TLc" firstAttribute="centerX" secondItem="pQj-pi-AE8" secondAttribute="centerX" id="9NY-br-rN2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2VG-pd-q2m"/>
                     </view>
@@ -43,25 +41,27 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="73.660714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="gIy-mR-hfV">
             <objects>
-                <viewController id="jnC-ig-cfY" sceneMemberID="viewController">
+                <viewController id="jnC-ig-cfY" customClass="InfoViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2r7-Vy-bI3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAD-hA-yzN">
-                                <rect key="frame" x="94" y="419.5" width="226" height="57.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns2-wJ-JfH">
+                                <rect key="frame" x="140" y="439" width="134.5" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pAD-hA-yzN" firstAttribute="centerX" secondItem="2r7-Vy-bI3" secondAttribute="centerX" id="3MH-9E-gHb"/>
-                            <constraint firstItem="pAD-hA-yzN" firstAttribute="centerY" secondItem="2r7-Vy-bI3" secondAttribute="centerY" id="B9n-dQ-vvm"/>
+                            <constraint firstItem="ns2-wJ-JfH" firstAttribute="centerY" secondItem="2r7-Vy-bI3" secondAttribute="centerY" constant="19.5" id="KuJ-qP-MQ6"/>
+                            <constraint firstItem="ns2-wJ-JfH" firstAttribute="centerX" secondItem="2r7-Vy-bI3" secondAttribute="centerX" id="sTY-hY-6k2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AWm-mq-tF4"/>
                     </view>
@@ -84,7 +84,19 @@ the crab</string>
                     <view key="view" contentMode="scaleToFill" id="Z40-Sl-XKN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAD-hA-yzN">
+                                <rect key="frame" x="164.5" y="453.5" width="115" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pAD-hA-yzN" firstAttribute="centerX" secondItem="Z40-Sl-XKN" secondAttribute="centerX" constant="15" id="Rft-GQ-otx"/>
+                            <constraint firstItem="pAD-hA-yzN" firstAttribute="centerY" secondItem="Z40-Sl-XKN" secondAttribute="centerY" constant="19.75" id="kb5-oE-gav"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NdK-xF-3Vk"/>
                     </view>
                     <navigationItem key="navigationItem" id="qNK-tV-J8i">

@@ -9,8 +9,7 @@
 import UIKit
 import SpriteKit
 
-class GamesViewController: UIViewController {
-   // @IBOutlet weak var skview: SKView!
+class GameViewController: UIViewController {
     
   
     @IBOutlet weak var skview: SKView!
