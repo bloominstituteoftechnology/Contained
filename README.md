@@ -72,7 +72,7 @@ Your `Info.storyboard` interface should now look like this:
 
 You're ready to start adding content to your interface.
 
-## Build the Info Sequence
+## \
 
 Follow these steps to create content for your information tab.
 
