@@ -20,4 +20,7 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleCrab(_ sender: UISwitch) {
         Settings.shared.changeCrab = !Settings.shared.changeCrab
     }
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = !Settings.shared.shouldFade
+    }
 }

@@ -16,13 +16,10 @@ class CustomScene: SKScene {
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        
         switch Settings.shared.changeCrab {
         case false:
-            print("\(Settings.shared.changeCrab) for waitingCrab")
             whichCrab = "WaitingCrab"
         default:
-            print("\(Settings.shared.changeCrab) for happyCrab")
             whichCrab = "HappyCrab"
         }
         
@@ -30,6 +27,12 @@ class CustomScene: SKScene {
         
         crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        switch Settings.shared.shouldFade {
+        case false:
+            crab.alpha = 1
+        default:
+            crab.alpha = 0.5
+        }
         
     }
     
@@ -47,7 +50,7 @@ class CustomScene: SKScene {
         guard !touches.isEmpty, let touch = touches.first else { return }
         // Retrieve position
         let position = touch.location(in: self)
-        
+       // Settings.shared.lastPosition = position
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
