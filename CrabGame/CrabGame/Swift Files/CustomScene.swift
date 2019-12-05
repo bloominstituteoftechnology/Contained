@@ -9,14 +9,28 @@ import Foundation
 import SpriteKit
 import AudioToolbox
 
+var whichCrab = "WaitingCrab"
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
+        
+        switch Settings.shared.changeCrab {
+        case false:
+            print("\(Settings.shared.changeCrab) for waitingCrab")
+            whichCrab = "WaitingCrab"
+        default:
+            print("\(Settings.shared.changeCrab) for happyCrab")
+            whichCrab = "HappyCrab"
+        }
+        
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        
+        crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
     }
     
     // Move to touch
