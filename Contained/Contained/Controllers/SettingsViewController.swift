@@ -26,5 +26,14 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    // MARK - IBAction
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        // Sets the shared Settings property to the sender's isOn property
+        Settings.shared.shouldRoll = sender.isOn
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
+    }
 }
