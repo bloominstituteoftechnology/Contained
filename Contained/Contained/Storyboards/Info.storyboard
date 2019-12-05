@@ -7,34 +7,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="SM9-Ts-cUc">
             <objects>
-                <viewController id="RWw-HX-hig" sceneMemberID="viewController">
+                <viewController id="RWw-HX-hig" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mEF-kA-q95">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-Eb-gcM">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rht-Eb-gcM" firstAttribute="centerX" secondItem="mEF-kA-q95" secondAttribute="centerX" id="J6g-qf-9Gt"/>
+                            <constraint firstItem="Rht-Eb-gcM" firstAttribute="centerY" secondItem="mEF-kA-q95" secondAttribute="centerY" id="R7m-3w-DLD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6V1-ro-NGV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="cb0-SQ-vQW"/>
+                    <navigationItem key="navigationItem" id="cb0-SQ-vQW">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yue-Mr-1VQ">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="RWw-HX-hig" id="DRn-S3-eAO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92m-xn-xql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1422" y="-289"/>
         </scene>
-        <!--Title-->
+        <!--Info View Controller-->
         <scene sceneID="3t3-6g-yQS">
             <objects>
-                <viewController id="3H7-II-DxR" sceneMemberID="viewController">
+                <viewController id="3H7-II-DxR" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4Z-dt-nZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMh-9U-e0c">
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lMh-9U-e0c" firstAttribute="centerX" secondItem="E4Z-dt-nZf" secondAttribute="centerX" id="urQ-fV-dBt"/>
+                            <constraint firstItem="lMh-9U-e0c" firstAttribute="centerY" secondItem="E4Z-dt-nZf" secondAttribute="centerY" id="yyc-do-LZL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TJg-ca-rpV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="QuU-OE-pki">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="crl-BE-bVS">
+                    <navigationItem key="navigationItem" id="QuU-OE-pki">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="crl-BE-bVS">
                             <connections>
                                 <segue destination="RWw-HX-hig" kind="show" id="Wcs-4O-Vf4"/>
                             </connections>
@@ -48,15 +80,27 @@
         <!--Title-->
         <scene sceneID="YgW-1R-1NK">
             <objects>
-                <viewController id="IsD-g9-tld" sceneMemberID="viewController">
+                <viewController id="IsD-g9-tld" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3U-d5-WIf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBU-Oe-AoB">
+                                <rect key="frame" x="140.5" y="419" width="133" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aBU-Oe-AoB" firstAttribute="centerX" secondItem="G3U-d5-WIf" secondAttribute="centerX" id="AjL-WB-xXU"/>
+                            <constraint firstItem="aBU-Oe-AoB" firstAttribute="centerY" secondItem="G3U-d5-WIf" secondAttribute="centerY" id="cKQ-2X-PNB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pNh-dm-Pb9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8ne-6S-sK0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="O2U-ZC-D2c">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="O2U-ZC-D2c">
                             <connections>
                                 <segue destination="3H7-II-DxR" kind="show" id="LRQ-kF-JbG"/>
                             </connections>
