@@ -7,10 +7,10 @@
 //
 import Foundation
 import SpriteKit
+import AudioToolbox
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
-    
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -20,11 +20,17 @@ class CustomScene: SKScene {
     }
     
     // Move to touch
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {        if Settings.shared.shouldZoom && Settings.shared.shouldRoll {
+        playSound(filename: "Male_Exclamation_1", ext: ".wav")
+    } else if Settings.shared.shouldRoll {
+        playSound(filename: "oh-no1", ext: ".wav")
+    } else  if Settings.shared.shouldZoom {
+        playSound(filename: "oh yeah", ext: ".wav")
+    } else {
+        playSound(filename: "gravelwalk", ext: ".wav")
+        }
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
-        
         // Retrieve position
         let position = touch.location(in: self)
         
@@ -48,4 +54,13 @@ class CustomScene: SKScene {
             crab.run(rollAction)
         }
     }
+    
+    func playSound(filename: String, ext: String) {
+        if let soundURL = Bundle.main.url(forResource: filename, withExtension: ext) {
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound)
+            AudioServicesPlaySystemSound(mySound);
+        }
+    }
+    
 }
