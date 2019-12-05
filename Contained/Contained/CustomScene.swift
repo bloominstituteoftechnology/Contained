@@ -16,13 +16,13 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        let crabName = Settings.shared.isHappy ? "HappyCrab" : "WaitingCrab"
+        crab.loadTextures(named: crabName, forKey: SKSpriteNode.textureKey)
         crab.position = Settings.shared.mostRecentTouchPoint ?? CGPoint(x: frame.midX, y: frame.midY)
     }
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
         
@@ -37,7 +37,6 @@ class CustomScene: SKScene {
         // This will keep the move speed constant regardless of the distance moved
         let distanceToMove = Double(sqrt(pow(position.x - crab.position.x,2) + pow(position.y - crab.position.y,2)))
         let moveDuration = actionDuration * distanceToMove * 0.002
-        
         let moveAction = SKAction.move(to: position, duration: moveDuration)
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)

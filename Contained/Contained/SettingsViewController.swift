@@ -25,6 +25,10 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
     
+    @IBAction func toggleHappyCrab(_ sender: UISwitch) {
+        Settings.shared.isHappy = sender.isOn
+    }
+    
     @IBAction func speedSliderChanged(_ sender: UISlider) {
         let sliderValue = Double(sender.value)
         Settings.shared.actionDuration = 0.2 + (2 * (1 - sliderValue))
