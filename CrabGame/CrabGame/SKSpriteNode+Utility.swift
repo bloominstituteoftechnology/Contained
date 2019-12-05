@@ -30,15 +30,3 @@ extension SKSpriteNode {
         self.run(foreverAction, withKey: key)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
