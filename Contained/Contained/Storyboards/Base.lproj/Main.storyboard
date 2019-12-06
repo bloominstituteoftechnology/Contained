@@ -14,10 +14,24 @@
                     <view key="view" contentMode="scaleToFill" id="xL6-Gc-FTK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xyo-2a-nYc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xyo-2a-nYc" firstAttribute="top" secondItem="h5N-aB-dUo" secondAttribute="top" id="TXJ-wA-whl"/>
+                            <constraint firstItem="h5N-aB-dUo" firstAttribute="bottom" secondItem="Xyo-2a-nYc" secondAttribute="bottom" id="YUC-uc-hFD"/>
+                            <constraint firstItem="Xyo-2a-nYc" firstAttribute="leading" secondItem="h5N-aB-dUo" secondAttribute="leading" id="aTl-xN-4ZF"/>
+                            <constraint firstItem="h5N-aB-dUo" firstAttribute="trailing" secondItem="Xyo-2a-nYc" secondAttribute="trailing" id="dua-cg-qZ4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h5N-aB-dUo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="cgF-RT-Dzv"/>
+                    <connections>
+                        <outlet property="skview" destination="Xyo-2a-nYc" id="68g-nm-dTk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOi-Dd-06a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,6 +114,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pa7-g3-Pfa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kDl-db-PA6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
