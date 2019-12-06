@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = !Settings.shared.shouldZoom
     }
     @IBAction func toggleCrab(_ sender: UISwitch) {
-        Settings.shared.changeCrab = !Settings.shared.changeCrab
+        Settings.shared.shouldChangeCrab = !Settings.shared.shouldChangeCrab
     }
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade = !Settings.shared.shouldFade

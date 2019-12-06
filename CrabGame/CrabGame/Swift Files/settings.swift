@@ -15,6 +15,7 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
-    var changeCrab = false
+    var shouldChangeCrab = false
     var shouldFade = false
+   // var lastPosition: CGPoint = 
 }

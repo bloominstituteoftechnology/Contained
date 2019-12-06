@@ -16,7 +16,7 @@ class CustomScene: SKScene {
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        switch Settings.shared.changeCrab {
+        switch Settings.shared.shouldChangeCrab {
         case false:
             whichCrab = "WaitingCrab"
         default:
@@ -24,15 +24,15 @@ class CustomScene: SKScene {
         }
         
         addChild(crab)
-        
-        crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
         switch Settings.shared.shouldFade {
         case false:
             crab.alpha = 1
         default:
             crab.alpha = 0.5
         }
+        crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
+        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
         
     }
     

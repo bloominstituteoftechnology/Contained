@@ -55,13 +55,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-c4-FS7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crabSettingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SF5-0J-0FZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                            <stackView contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-c4-FS7">
                                 <rect key="frame" x="129" y="381.5" width="156.5" height="133"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V5x-m6-62B">
                                         <rect key="frame" x="0.0" y="0.0" width="156.5" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-wK-qGa">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwR-wK-qGa">
                                                 <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -69,6 +72,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2jj-NP-zqm">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <color key="thumbTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="3xa-TM-Tmj" eventType="valueChanged" id="UaM-0U-TaR"/>
                                                 </connections>
@@ -78,7 +82,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mvz-Zx-c7l">
                                         <rect key="frame" x="0.0" y="34" width="156.5" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNb-pQ-SN1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNb-pQ-SN1">
                                                 <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -86,6 +90,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-7c-E2U">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <color key="thumbTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="3xa-TM-Tmj" eventType="valueChanged" id="BaF-Rv-o3e"/>
                                                 </connections>
@@ -103,6 +108,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wX9-3Y-dvW">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <color key="thumbTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="toggleCrab:" destination="3xa-TM-Tmj" eventType="valueChanged" id="qdC-8G-Kd0"/>
                                                 </connections>
@@ -120,8 +126,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-Yt-i9k">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <color key="thumbTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="toggleFade:" destination="3xa-TM-Tmj" eventType="valueChanged" id="ImU-ub-NIH"/>
+                                                    <action selector="toggleFade:" destination="3xa-TM-Tmj" eventType="valueChanged" id="lhn-eF-uyQ"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -132,7 +139,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fkx-c4-FS7" firstAttribute="centerY" secondItem="ypG-0W-Fjm" secondAttribute="centerY" id="ZRh-0Q-mwT"/>
+                            <constraint firstItem="87w-fP-mP6" firstAttribute="bottom" secondItem="SF5-0J-0FZ" secondAttribute="bottom" id="eMI-vV-tLV"/>
                             <constraint firstItem="fkx-c4-FS7" firstAttribute="centerX" secondItem="ypG-0W-Fjm" secondAttribute="centerX" id="gmh-1l-sNx"/>
+                            <constraint firstItem="SF5-0J-0FZ" firstAttribute="top" secondItem="87w-fP-mP6" secondAttribute="top" id="qYg-Ii-PBE"/>
+                            <constraint firstItem="SF5-0J-0FZ" firstAttribute="leading" secondItem="87w-fP-mP6" secondAttribute="leading" id="s02-pu-cMV"/>
+                            <constraint firstItem="87w-fP-mP6" firstAttribute="trailing" secondItem="SF5-0J-0FZ" secondAttribute="trailing" id="wTG-nL-XYj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="87w-fP-mP6"/>
                     </view>
@@ -140,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWI-lW-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-758" y="988"/>
+            <point key="canvasLocation" x="-759.4202898550725" y="987.72321428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Rl1-hO-qlh">
@@ -164,6 +175,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="crabSettingBackground" width="950" height="1520"/>
         <image name="game_controller" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
