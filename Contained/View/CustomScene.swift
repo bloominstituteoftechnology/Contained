@@ -39,16 +39,27 @@ class CustomScene: SKScene {
         
         switch Settings.shared.shouldZoom {
         case false:
-            crab.run(moveAction)
+            crab.run(moveAction) {
+                self.setPosition()
+            }
         case true:
             let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
-            crab.run(sequenceAction)
+            crab.run(sequenceAction) {
+                self.setPosition()
+            }
         }
         
         if Settings.shared.shouldRoll {
-            crab.run(rollAction)
+            crab.run(rollAction) {
+                self.setPosition()
+            }
         }
-        Settings.shared.lastPosition = crab.position
         
     }
+    
+    //MARK: Helper Methods
+    func setPosition() {
+        Settings.shared.lastPosition = crab.position
+    }
+    
 }
