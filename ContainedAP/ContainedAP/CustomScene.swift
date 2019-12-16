@@ -11,12 +11,27 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    var actionDuration = 1.0
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
     
+        if Settings.shared.ghostCrab {
+            crab.alpha = 0.25
+        }
+        else {
+            crab.alpha = 1.0
+        }
+        
+        if Settings.shared.turboCrab {
+            actionDuration = 0.1
+        }
+        else {
+            actionDuration = 1.0
+        }
+        
         if Settings.shared.happyCrab {
             crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
         }
@@ -38,7 +53,7 @@ class CustomScene: SKScene {
         let position = touch.location(in: self)
         
         // Create move action
-        let actionDuration = 1.0
+        //let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)

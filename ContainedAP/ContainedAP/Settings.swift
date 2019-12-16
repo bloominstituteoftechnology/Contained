@@ -15,4 +15,6 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var happyCrab = false // stretch
+    var turboCrab = false // stretch
+    var ghostCrab = false // stretch
 }
