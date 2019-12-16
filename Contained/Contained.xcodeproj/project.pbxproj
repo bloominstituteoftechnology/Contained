@@ -16,6 +16,9 @@
 		2C62671B23A82FF200CDD2EE /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62671A23A82FF200CDD2EE /* SKSpriteNode+Utility.swift */; };
 		2C62671D23A8309200CDD2EE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62671C23A8309200CDD2EE /* Settings.swift */; };
 		2C62671F23A8310500CDD2EE /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C62671E23A8310500CDD2EE /* Info.storyboard */; };
+		2C62672123A8345800CDD2EE /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62672023A8345800CDD2EE /* GamesViewController.swift */; };
+		2C62672623A834F100CDD2EE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62672523A834F100CDD2EE /* InfoViewController.swift */; };
+		2C62672823A834FA00CDD2EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C62672723A834FA00CDD2EE /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		2C62671A23A82FF200CDD2EE /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
 		2C62671C23A8309200CDD2EE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2C62671E23A8310500CDD2EE /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		2C62672023A8345800CDD2EE /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		2C62672523A834F100CDD2EE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2C62672723A834FA00CDD2EE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +68,53 @@
 		2C62670323A82F3100CDD2EE /* Contained */ = {
 			isa = PBXGroup;
 			children = (
-				2C62670423A82F3100CDD2EE /* AppDelegate.swift */,
-				2C62670623A82F3100CDD2EE /* SceneDelegate.swift */,
-				2C62670A23A82F3100CDD2EE /* Main.storyboard */,
-				2C62671E23A8310500CDD2EE /* Info.storyboard */,
+				2C62672323A834B800CDD2EE /* Models */,
+				2C62672223A8346400CDD2EE /* Views */,
+				2C62672423A834E200CDD2EE /* Controllers */,
+				2C62672923A8350E00CDD2EE /* Resources */,
 				2C62671A23A82FF200CDD2EE /* SKSpriteNode+Utility.swift */,
-				2C62671C23A8309200CDD2EE /* Settings.swift */,
 				2C62670D23A82F3200CDD2EE /* Assets.xcassets */,
 				2C62671823A82FD000CDD2EE /* Crab.xcassets */,
-				2C62670F23A82F3200CDD2EE /* LaunchScreen.storyboard */,
 				2C62671223A82F3200CDD2EE /* Info.plist */,
 			);
 			path = Contained;
+			sourceTree = "<group>";
+		};
+		2C62672223A8346400CDD2EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C62670A23A82F3100CDD2EE /* Main.storyboard */,
+				2C62671E23A8310500CDD2EE /* Info.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C62672323A834B800CDD2EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C62671C23A8309200CDD2EE /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C62672423A834E200CDD2EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C62672023A8345800CDD2EE /* GamesViewController.swift */,
+				2C62672523A834F100CDD2EE /* InfoViewController.swift */,
+				2C62672723A834FA00CDD2EE /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2C62672923A8350E00CDD2EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C62670423A82F3100CDD2EE /* AppDelegate.swift */,
+				2C62670623A82F3100CDD2EE /* SceneDelegate.swift */,
+				2C62670F23A82F3200CDD2EE /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +192,11 @@
 			files = (
 				2C62671B23A82FF200CDD2EE /* SKSpriteNode+Utility.swift in Sources */,
 				2C62670523A82F3100CDD2EE /* AppDelegate.swift in Sources */,
+				2C62672823A834FA00CDD2EE /* SettingsViewController.swift in Sources */,
 				2C62671D23A8309200CDD2EE /* Settings.swift in Sources */,
 				2C62670723A82F3100CDD2EE /* SceneDelegate.swift in Sources */,
+				2C62672623A834F100CDD2EE /* InfoViewController.swift in Sources */,
+				2C62672123A8345800CDD2EE /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
