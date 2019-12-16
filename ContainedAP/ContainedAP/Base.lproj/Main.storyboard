@@ -23,11 +23,56 @@
         <!--Settings-->
         <scene sceneID="wJc-Qj-AI9">
             <objects>
-                <viewController id="b0p-sz-YIT" sceneMemberID="viewController">
+                <viewController id="b0p-sz-YIT" customClass="SettingsViewController" customModule="ContainedAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xqj-Um-eze">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HRg-mq-EP5">
+                                <rect key="frame" x="134" y="413" width="146" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-Hu-ajS">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-v7-kU8">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s45-JC-j7K">
+                                                <rect key="frame" x="97" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="b0p-sz-YIT" eventType="valueChanged" id="Lbm-y0-5dU"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Uqe-Lf-xei">
+                                        <rect key="frame" x="0.0" y="39" width="146" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taD-K1-I7e">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="REd-Ea-Hqn">
+                                                <rect key="frame" x="97" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="b0p-sz-YIT" eventType="valueChanged" id="jd3-Aw-rIo"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HRg-mq-EP5" firstAttribute="centerY" secondItem="xqj-Um-eze" secondAttribute="centerY" id="6RZ-0a-emc"/>
+                            <constraint firstItem="HRg-mq-EP5" firstAttribute="centerX" secondItem="xqj-Um-eze" secondAttribute="centerX" id="oWy-BW-cnl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LTX-vk-izU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Ns8-bZ-TuE"/>
@@ -43,7 +88,7 @@
                     <view key="view" contentMode="scaleToFill" id="hkl-Q4-N1U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.084313036839999994" blue="0.14275613540000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6W6-F3-Yf7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="d3d-Qq-BAX"/>
