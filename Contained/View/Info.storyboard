@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p8n-tB-FUY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XQx-CQ-wgV">
+            <objects>
+                <viewController id="6S0-mS-yrC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eAd-uW-1fL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Pdd-ha-qUB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6jS-vt-tGY">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="3gQ-cZ-fO9">
+                            <connections>
+                                <segue destination="1W1-BV-JfH" kind="show" id="y3p-fD-4qS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyN-AU-h7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="134.59821428571428"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="HT3-1j-6cG">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="p8n-tB-FUY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="62b-2b-2jk"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PIi-Up-am8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6S0-mS-yrC" kind="relationship" relationship="rootViewController" id="HIH-5c-8uo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5b-fp-F5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="134.59821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y5w-ZC-tom">
+            <objects>
+                <viewController id="1W1-BV-JfH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0IB-c3-q9D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1B4-eh-eWH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VT2-Ql-t2H">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="77i-xE-cpU">
+                            <connections>
+                                <segue destination="rPf-Fn-uod" kind="show" id="YJ9-Zj-yan"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMD-FL-gCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="roQ-rb-TRU">
+            <objects>
+                <viewController id="rPf-Fn-uod" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W7e-Xk-7Bv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="OLk-0z-7kJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kCk-oO-gdT">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="IcA-zf-UWp"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X0-bP-I7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
