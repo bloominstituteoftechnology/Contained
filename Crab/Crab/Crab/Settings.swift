@@ -2,7 +2,7 @@
 //  Settings.swift
 //  Crab
 //
-//  Created by Ufuk Türközü on 11.11.19.
+//  Created by Ufuk Türközü on 16.12.19.
 //  Copyright © 2019 Ufuk Türközü. All rights reserved.
 //
 

@@ -1,35 +1,27 @@
 //
-//  GameViewController.swift
+//  InfoViewController.swift
 //  Crab
 //
-//  Created by Ufuk Türközü on 11.11.19.
+//  Created by Ufuk Türközü on 16.12.19.
 //  Copyright © 2019 Ufuk Türközü. All rights reserved.
 //
 
 import UIKit
-import SpriteKit
 
-class GameViewController: UIViewController {
+class InfoViewController: UIViewController {
 
-    @IBOutlet weak var playground: SKView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-class GamesViewController: UIViewController {
-    @IBOutlet weak var skview: SKView!
-        
-    var skscene: CustomScene? = nil
-        
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        skscene = CustomScene(size: view.bounds.size)
-        skview.presentScene(skscene)
-        }
+    
+    @IBAction func done(_ sender: Any) {
+         navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func unwindToRed(_ sender: UIStoryboardSegue) {
+    }
 
     /*
     // MARK: - Navigation

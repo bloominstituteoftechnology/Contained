@@ -1,32 +1,29 @@
 //
-//  InfoViewController.swift
+//  SettingsViewController.swift
 //  Crab
 //
-//  Created by Ufuk Türközü on 11.11.19.
+//  Created by Ufuk Türközü on 16.12.19.
 //  Copyright © 2019 Ufuk Türközü. All rights reserved.
 //
 
 import UIKit
 
-class InfoViewController: UIViewController {
-    
-//    let label = UILabel()
+class SettingsViewController: UIViewController {
 
-    @IBAction func done(_ sender: Any) {
-    navigationController?.popToRootViewController(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    /*    view.addSubview(label)
-        label.textColor = .black
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 48)
-        label.center = view.center
-    */
+
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        Settings.shared.shouldRoll = sender.isOn
+    }
+       
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
+    }
+       
     
 
     /*
