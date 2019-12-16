@@ -16,6 +16,11 @@ class InfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func unwindToRoot(_ unwindSegue: UIStoryboardSegue) {
+        _ = unwindSegue.source
+ 
+    }
+    
 
     /*
     // MARK: - Navigation
