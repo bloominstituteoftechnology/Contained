@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Settings {
     static let shared = Settings()
@@ -17,4 +18,5 @@ class Settings {
     var happyCrab = false // stretch
     var turboCrab = false // stretch
     var ghostCrab = false // stretch
+    var lastPosition: CGPoint = CGPoint(x: 0.0, y: 0.0)
 }
