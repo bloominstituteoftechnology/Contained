@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit //access to CGFloat (could also convert elsewhere)
 
 class Settings {
     static let shared = Settings()
@@ -14,4 +15,6 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var fade:CGFloat = 1
+    var lastPosition = CGPoint(x: 0, y: 0)
 }
