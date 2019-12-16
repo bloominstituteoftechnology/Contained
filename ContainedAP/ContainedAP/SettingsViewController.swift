@@ -24,6 +24,11 @@ class SettingsViewController: UIViewController {
         
     }
     
+    // stretch
+    @IBAction func toggleHappyCrab(_ sender: UISwitch) {
+        Settings.shared.happyCrab.toggle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
