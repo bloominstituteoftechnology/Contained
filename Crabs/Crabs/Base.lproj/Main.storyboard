@@ -29,6 +29,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HBV-Os-K4Y">
                                                 <rect key="frame" x="57" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="Zoy-sc-6j8" eventType="valueChanged" id="7xm-mw-1ZA"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -43,6 +46,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cOb-KZ-pM6">
                                                 <rect key="frame" x="57" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="Zoy-sc-6j8" eventType="valueChanged" id="cOa-Mf-47P"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -56,11 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JI5-3u-iUG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="gyX-MN-i36"/>
-                    <connections>
-                        <outlet property="toggleRoll" destination="HBV-Os-K4Y" id="azT-Ju-wgG"/>
-                        <outlet property="toggleZoom" destination="cOb-KZ-pM6" id="NwI-jL-6IC"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="gyX-MN-i36"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLR-E6-0xT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +89,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x4U-qz-NIn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="I1d-wy-x7a"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="I1d-wy-x7a"/>
                     <navigationItem key="navigationItem" id="otM-4m-cwl"/>
                     <connections>
                         <outlet property="skview" destination="IRb-re-gUr" id="nzA-Ua-uIc"/>
@@ -113,6 +115,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3WL-0R-bVt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OoQ-nV-hRY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
