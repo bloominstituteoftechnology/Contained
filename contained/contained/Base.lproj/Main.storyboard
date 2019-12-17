@@ -10,7 +10,7 @@
         <!--Play-->
         <scene sceneID="UUu-6M-dfe">
             <objects>
-                <viewController id="178-ax-PZm" sceneMemberID="viewController">
+                <viewController id="178-ax-PZm" customClass="GameViewController" customModule="contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4SP-ve-8Pt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byC-WH-CTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034.7826086956522" y="27.455357142857142"/>
+            <point key="canvasLocation" x="-396" y="1148"/>
         </scene>
         <!--InfoNavigation-->
         <scene sceneID="JTv-jb-zpY">
@@ -31,23 +31,69 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFr-O3-Z9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="837"/>
+            <point key="canvasLocation" x="125" y="857"/>
         </scene>
         <!--Setting-->
         <scene sceneID="tuk-qg-PUt">
             <objects>
-                <viewController id="izo-PG-tbu" sceneMemberID="viewController">
+                <viewController id="izo-PG-tbu" customClass="SettingsViewController" customModule="contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ie-yi-MPy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-lQ-pD7">
+                                <rect key="frame" x="156.5" y="94" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qce-W4-pqO" userLabel="RollStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Row" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-hX-UUx">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-lU-idl">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRow:" destination="izo-PG-tbu" eventType="valueChanged" id="7gj-UK-Y0d"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FHa-GF-4vJ" userLabel="ZoomStack">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3f-ta-txr">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-WX-FJ7">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="izo-PG-tbu" eventType="valueChanged" id="MKU-ZY-z25"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tzi-9F-rkj" secondAttribute="leading" constant="8" id="1ud-7a-VAn"/>
+                            <constraint firstItem="tzi-9F-rkj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pYk-lQ-pD7" secondAttribute="trailing" constant="8" id="nam-OI-lVd"/>
+                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="top" secondItem="tzi-9F-rkj" secondAttribute="top" constant="50" id="ncs-M5-Y3x"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tzi-9F-rkj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="settings" id="Zog-bV-ygv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1r-Rf-Iua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034.7826086956522" y="672.99107142857144"/>
+            <point key="canvasLocation" x="658" y="1148"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y0r-iB-dIL">
@@ -55,6 +101,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fl2-Xa-W5u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRU-mG-csr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
