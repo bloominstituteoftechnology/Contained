@@ -2,8 +2,8 @@
 //  SettingsViewController.swift
 //  Contained
 //
-//  Created by Lambda_School_Loaner_220 on 11/11/19.
-//  Copyright © 2019 James. All rights reserved.
+//  Created by Lambda_School_loaner_226 on 12/16/19.
+//  Copyright © 2019 JamesMcDougall. All rights reserved.
 //
 
 import UIKit
@@ -16,17 +16,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func toggleRoll(_ sender: UISwitch)
-    {
-        
-    }
-    
-    @IBAction func toggleZoom(_ sender: UISwitch)
-    {
-        
-    }
-    
-    
+
     /*
     // MARK: - Navigation
 
@@ -36,5 +26,13 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func toggleRoll(_ sender: UISwitch)
+    {
+        
+    }
+    @IBAction func toggleZoom(_ sender: UISwitch)
+    {
+        
+    }
+    
 }

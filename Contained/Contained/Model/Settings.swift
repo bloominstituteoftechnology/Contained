@@ -2,9 +2,11 @@
 //  Settings.swift
 //  Contained
 //
-//  Created by Lambda_School_Loaner_220 on 11/11/19.
-//  Copyright © 2019 James. All rights reserved.
+//  Created by Lambda_School_loaner_226 on 12/16/19.
+//  Copyright © 2019 JamesMcDougall. All rights reserved.
 //
+
+import UIKit
 
 import Foundation
 
