@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="1019" y="92"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="sLU-5u-iin">
             <objects>
-                <viewController id="E4Z-Qw-jn7" sceneMemberID="viewController">
+                <viewController id="E4Z-Qw-jn7" customClass="InfoViewController" customModule="contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JYf-FQ-HXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,11 @@
                         <viewLayoutGuide key="safeArea" id="SPp-Cp-AcP"/>
                     </view>
                     <navigationItem key="navigationItem" id="6jZ-bm-jAM">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="W1y-fj-nch"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="W1y-fj-nch">
+                            <connections>
+                                <action selector="done:" destination="E4Z-Qw-jn7" id="aIi-OX-CSc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oev-s0-Kcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  InfoViewController.swift
 //  contained
 //
 //  Created by Aaron Cleveland on 12/16/19.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class InfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func done(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     
 
     /*

@@ -1,5 +1,5 @@
 //
-//  InfoViewController.swift
+//  GameViewController.swift
 //  contained
 //
 //  Created by Aaron Cleveland on 12/16/19.
@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import SpriteKit
 
-class InfoViewController: UIViewController {
+class GameViewController: UIViewController {
 
+    @IBOutlet weak var skview: SKView!
+    
+    var skscene: CustomScene? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        skscene = CustomScene(size: view.bounds.size)
+        skview.presentScene(skscene)
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func done(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
     }
     
 

@@ -14,14 +14,28 @@
                     <view key="view" contentMode="scaleToFill" id="4SP-ve-8Pt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-M9-A6p">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ch0-M9-A6p" firstAttribute="top" secondItem="cba-PJ-tBD" secondAttribute="top" id="F1b-I2-wUj"/>
+                            <constraint firstItem="Ch0-M9-A6p" firstAttribute="bottom" secondItem="cba-PJ-tBD" secondAttribute="bottom" id="a4P-K0-JF7"/>
+                            <constraint firstItem="Ch0-M9-A6p" firstAttribute="trailing" secondItem="cba-PJ-tBD" secondAttribute="trailing" id="cOS-D9-gyC"/>
+                            <constraint firstItem="Ch0-M9-A6p" firstAttribute="leading" secondItem="cba-PJ-tBD" secondAttribute="leading" id="seL-yW-mg1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cba-PJ-tBD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="eLj-5Q-GfT"/>
+                    <connections>
+                        <outlet property="skview" destination="Ch0-M9-A6p" id="gqn-hm-aQP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byC-WH-CTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396" y="1148"/>
+            <point key="canvasLocation" x="-397.10144927536237" y="1147.7678571428571"/>
         </scene>
         <!--InfoNavigation-->
         <scene sceneID="JTv-jb-zpY">
@@ -41,8 +55,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-lQ-pD7">
-                                <rect key="frame" x="156.5" y="94" width="101.5" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-lQ-pD7">
+                                <rect key="frame" x="157" y="413" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qce-W4-pqO" userLabel="RollStack">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
@@ -53,7 +67,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-lU-idl">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-lU-idl">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRow:" destination="izo-PG-tbu" eventType="valueChanged" id="7gj-UK-Y0d"/>
@@ -70,7 +84,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-WX-FJ7">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JtU-WX-FJ7">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="izo-PG-tbu" eventType="valueChanged" id="MKU-ZY-z25"/>
@@ -83,9 +97,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tzi-9F-rkj" secondAttribute="leading" constant="8" id="1ud-7a-VAn"/>
-                            <constraint firstItem="tzi-9F-rkj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pYk-lQ-pD7" secondAttribute="trailing" constant="8" id="nam-OI-lVd"/>
-                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="top" secondItem="tzi-9F-rkj" secondAttribute="top" constant="50" id="ncs-M5-Y3x"/>
+                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="leading" secondItem="tzi-9F-rkj" secondAttribute="leading" constant="157" id="AL8-eL-2sO"/>
+                            <constraint firstItem="tzi-9F-rkj" firstAttribute="trailing" secondItem="pYk-lQ-pD7" secondAttribute="trailing" constant="155.5" id="BMw-95-Q77"/>
+                            <constraint firstItem="pYk-lQ-pD7" firstAttribute="top" secondItem="tzi-9F-rkj" secondAttribute="top" constant="369" id="uSa-jE-fLh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tzi-9F-rkj"/>
                     </view>
