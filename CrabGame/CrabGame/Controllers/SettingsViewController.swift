@@ -30,10 +30,12 @@ class SettingsViewController: UIViewController {
     
 
     @IBAction func toggleRoll(_ sender: UISwitch) {
+        userDefault.set(sender.isOn, forKey: "Roll")
         rollSwitch.setOn(sender.isOn, animated: true)
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
+        userDefault.set(sender.isOn, forKey: "Zoom")
         zoomSwitch.setOn(sender.isOn, animated: true)
     }
     

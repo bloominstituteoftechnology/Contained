@@ -16,18 +16,48 @@ class CustomScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
          addChild(crab)
-          let value = userDefault.bool(forKey: "CrabSetting")
+        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+      //Stretch 2 & 3
+        setUpZoomSetting()
+        setUpCrabSetting()
+        setUpRollSetting()
             
-             crab.position = CGPoint(x: frame.midX, y: frame.midY)
             
-            // Stretch 3
-            if value == true {
-                  crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-            } else {
-                 crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
-            }
+            
+         
     }
     
+    private func setUpZoomSetting() {
+          let zoomValue = userDefault.bool(forKey: "Zoom")
+        if zoomValue == true {
+            let cameraNode = SKCameraNode()
+                   cameraNode.position = CGPoint(x: (scene?.size.width ?? 2) / 2, y: (scene?.size.height ?? 2) / 2 )
+                   scene?.addChild(cameraNode)
+                   scene?.camera = cameraNode
+                   
+                   let zoom = SKAction.scale(to: 0.25, duration: 1)
+                   cameraNode.run(zoom)
+        }
+    }
+    
+    private  func setUpCrabSetting() {
+        let value = userDefault.bool(forKey: "CrabSetting")
+        if value == true {
+            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        } else {
+            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        }
+    }
+    
+    private func setUpRollSetting() {
+        let rollValue = userDefault.bool(forKey: "Roll")
+        if rollValue == true {
+            let rotateAction = SKAction.rotate(byAngle: 1, duration: 0.5)
+            let repeatAction = SKAction.repeatForever(rotateAction)
+            crab.run(repeatAction)
+        }
+    }
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
