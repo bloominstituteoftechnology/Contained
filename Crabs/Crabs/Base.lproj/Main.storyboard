@@ -29,6 +29,9 @@
                         <viewLayoutGuide key="safeArea" id="6u5-yQ-za4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" landscapeImage="pl" id="YRW-gR-jiR"/>
+                    <connections>
+                        <outlet property="skview" destination="QPO-Z8-7l5" id="FGz-sm-xUh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxf-dd-7Vg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +40,7 @@
         <!--InfoNavigation-->
         <scene sceneID="g0g-ka-ZeQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info.storyboard" referencedIdentifier="InfoNavigation" id="Ype-dQ-ZjK" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Info.storyboard" storyboardName="Info" referencedIdentifier="InfoNavigation" id="Ype-dQ-ZjK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="EQt-od-Qab"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVt-BN-TAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -53,38 +56,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-ZC-OWW">
-                                <rect key="frame" x="157.5" y="413" width="99" height="70"/>
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UQj-nF-RKf">
-                                        <rect key="frame" x="0.0" y="0.0" width="99" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-xT-mwF">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOx-xT-mwF">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Z-88-FdO">
-                                                <rect key="frame" x="50" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="XbU-cw-qFZ" eventType="valueChanged" id="G9l-6e-mKg"/>
+                                                    <action selector="toggleRoll:" destination="XbU-cw-qFZ" eventType="valueChanged" id="1uE-Nl-VFK"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-EF-d3c">
-                                        <rect key="frame" x="0.0" y="39" width="99" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJy-9v-rgZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJy-9v-rgZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U53-yZ-GLz">
-                                                <rect key="frame" x="50" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="XbU-cw-qFZ" eventType="valueChanged" id="E0D-KU-OhD"/>
+                                                    <action selector="toggleZoom:" destination="XbU-cw-qFZ" eventType="valueChanged" id="1jk-zb-CyL"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -100,6 +103,10 @@
                         <viewLayoutGuide key="safeArea" id="RCK-g1-8j0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Sxj-u6-PVO"/>
+                    <connections>
+                        <outlet property="rollSwitch" destination="Y4Z-88-FdO" id="fOr-uh-FnZ"/>
+                        <outlet property="zoomSwitch" destination="U53-yZ-GLz" id="TJR-He-suf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsr-gi-Td9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
