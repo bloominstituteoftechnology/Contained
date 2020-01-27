@@ -10,7 +10,7 @@
         <!--Info View Controller-->
         <scene sceneID="O4x-t3-22A">
             <objects>
-                <viewController id="zJ6-y0-TkI" userLabel="Info View Controller" sceneMemberID="viewController">
+                <viewController id="zJ6-y0-TkI" userLabel="Info View Controller" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZMT-dh-imv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,10 +78,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="1080" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="tGg-ka-7Mz">
             <objects>
-                <viewController id="OQR-Tk-41y" sceneMemberID="viewController">
+                <viewController id="OQR-Tk-41y" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJr-OY-kfv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,13 +103,12 @@ the crab</string>
                     <navigationItem key="navigationItem" id="6gV-II-tBF">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="l7i-sE-cC5">
                             <connections>
-                                <action selector="popToRootController:" destination="Ydz-4A-auR" id="Li3-gI-oYk"/>
+                                <action selector="unwindToInfo:" destination="OQR-Tk-41y" id="8wK-fH-r3M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1e-pT-TpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Ydz-4A-auR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1949" y="153"/>
         </scene>

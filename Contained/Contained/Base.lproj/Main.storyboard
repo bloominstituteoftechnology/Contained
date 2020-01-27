@@ -10,7 +10,7 @@
         <!--Play-->
         <scene sceneID="1rS-hU-RZ4">
             <objects>
-                <viewController id="rNa-Hx-HH3" sceneMemberID="viewController">
+                <viewController id="rNa-Hx-HH3" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bPn-q4-NaB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                         <viewLayoutGuide key="safeArea" id="fp6-Lu-eNP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="iyb-2o-kql"/>
+                    <connections>
+                        <outlet property="skview" destination="ehd-rk-lJn" id="W2d-lJ-WlX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZL-KE-q6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +40,7 @@
         <!--Settings-->
         <scene sceneID="TtU-qK-nyU">
             <objects>
-                <viewController id="ez3-GT-vGt" sceneMemberID="viewController">
+                <viewController id="ez3-GT-vGt" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ws8-Xg-zaU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +61,7 @@
                                                 <rect key="frame" x="36" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="ZxN-qK-5Vk" eventType="valueChanged" id="tIi-EZ-3Mg"/>
+                                                    <action selector="toggleRoll:" destination="ez3-GT-vGt" eventType="valueChanged" id="uRq-J8-qTT"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -75,6 +79,7 @@
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="ZxN-qK-5Vk" eventType="valueChanged" id="GUw-Lx-Lh1"/>
+                                                    <action selector="toggleZoom:" destination="ez3-GT-vGt" eventType="valueChanged" id="kpJ-NM-3xO"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -100,7 +105,7 @@
         <scene sceneID="jOf-ch-IWv">
             <objects>
                 <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="1xN-AW-6q8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="seo-G8-hFo"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="info" id="seo-G8-hFo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYc-VO-DgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +117,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xmd-eE-7XR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L3Q-6r-fG3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -128,6 +134,7 @@
     </scenes>
     <resources>
         <image name="game_controller" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
 </document>
