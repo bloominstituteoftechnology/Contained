@@ -10,13 +10,22 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
-    
+      var userDefault = UserDefaults.standard
+  
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        addChild(crab)
-        crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+         addChild(crab)
+          let value = userDefault.bool(forKey: "CrabSetting")
+            
+             crab.position = CGPoint(x: frame.midX, y: frame.midY)
+            
+            // Stretch 3
+            if value == true {
+                  crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+            } else {
+                 crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+            }
     }
     
     // Move to touch

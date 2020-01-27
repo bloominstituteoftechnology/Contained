@@ -9,6 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+     var userDefault = UserDefaults()
+    
     @IBOutlet weak var rollLabel: UILabel!
     @IBOutlet weak var zoomLabel: UILabel!
     @IBOutlet weak var happyCrabLabel: UILabel!
@@ -35,7 +38,9 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
+        userDefault.set(sender.isOn, forKey: "CrabSetting")
         happyCrabSwitch.setOn(sender.isOn, animated: true)
+        
     }
     
     
