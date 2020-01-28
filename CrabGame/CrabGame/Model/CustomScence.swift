@@ -12,7 +12,7 @@ class CustomScene: SKScene  {
     let crab = SKSpriteNode()
    
       var userDefault = UserDefaults.standard
-  //?? CGPoint(x: frame.midX, y: frame.midY)
+ 
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -21,10 +21,7 @@ class CustomScene: SKScene  {
         //Stretch 1
         let newPosition =  userDefault.array(forKey: "Position") as? [CGFloat]
         crab.position =  CGPoint(x: ((newPosition?[0] ?? frame.midX)), y: ((newPosition?[1] ?? frame.midY)))
-       
-        
-     
-        userDefault.value(forKey: "New")
+   
       //Stretch 2 & 3
         setUpZoomSetting()
         setUpCrabSetting()
