@@ -11,13 +11,11 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var toggleRollOutlet: UISwitch!
-    @IBAction func toggleRoll(_ send: UISwitch) {
-        toggleRollOutlet.isOn = send.isOn
-        
-      }
-   
     @IBOutlet weak var toggleZoomOutlet: UISwitch!
-    @IBAction func toggleZoom(_ send: UISwitch) {
+    @IBAction func toggleRollTapped(_ send: UISwitch) {
+        toggleZoomOutlet.isOn = send.isOn
+      }
+    @IBAction func toggleZoomTapped(_ send: UISwitch) {
         toggleZoomOutlet.isOn = send.isOn
   }
 }
