@@ -8,24 +8,28 @@
 
 import SpriteKit
 
-class CustomScene: SKScene {
+class CustomScene: SKScene  {
     let crab = SKSpriteNode()
+   
       var userDefault = UserDefaults.standard
-  
+  //?? CGPoint(x: frame.midX, y: frame.midY)
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
          addChild(crab)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
         
+        //Stretch 1
+        let newPosition =  userDefault.array(forKey: "Position") as? [CGFloat]
+        crab.position =  CGPoint(x: ((newPosition?[0] ?? frame.midX)), y: ((newPosition?[1] ?? frame.midY)))
+       
+        
+     
+        userDefault.value(forKey: "New")
       //Stretch 2 & 3
         setUpZoomSetting()
         setUpCrabSetting()
         setUpRollSetting()
-            
-            
-            
-         
+        
     }
     
     private func setUpZoomSetting() {
@@ -66,6 +70,12 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+      
+        let x = Int(position.x)
+        let y = Int(position.y)
+        let postitionArray = [position.x,position.y]
+        userDefault.set(postitionArray as [CGFloat], forKey: "Position")
+        
         
         // Create move action
         let actionDuration = 1.0
