@@ -40,12 +40,12 @@
         <!--InfoNavigation-->
         <scene sceneID="8em-Wl-eSP">
             <objects>
-                <viewControllerPlaceholder storyboardName="info" referencedIdentifier="InfoNavigation" id="sDx-wQ-f7b" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="sDx-wQ-f7b" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="7Ym-yG-smH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAH-eV-JOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4138" y="212"/>
+            <point key="canvasLocation" x="-4138" y="58"/>
         </scene>
         <!--Settings-->
         <scene sceneID="H9Q-I6-Sue">
@@ -67,7 +67,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-wy-oBW">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-wy-oBW">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleRoll:" destination="HIv-xH-tbE" eventType="valueChanged" id="rwp-sd-cZM"/>
@@ -84,7 +84,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-Je-AgB">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-Je-AgB">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleZoom:" destination="HIv-xH-tbE" eventType="valueChanged" id="4OK-5V-WPE"/>
@@ -103,6 +103,10 @@
                         <viewLayoutGuide key="safeArea" id="Wuj-2S-U6w"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="gyJ-Zj-LjD"/>
+                    <connections>
+                        <outlet property="toggleRollOutlet" destination="Nfy-wy-oBW" id="DdQ-a8-3aO"/>
+                        <outlet property="toggleZoomOutlet" destination="Vna-Je-AgB" id="aQx-pl-3BH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKj-Nu-9rK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,9 +123,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nhF-MS-rHS" kind="relationship" relationship="viewControllers" id="FGl-dA-R7h"/>
+                        <segue destination="nhF-MS-rHS" kind="relationship" relationship="viewControllers" id="2TS-4m-mBq"/>
                         <segue destination="HIv-xH-tbE" kind="relationship" relationship="viewControllers" id="YwR-Ib-Dhx"/>
-                        <segue destination="sDx-wQ-f7b" kind="relationship" relationship="viewControllers" id="2bX-At-0ty"/>
+                        <segue destination="sDx-wQ-f7b" kind="relationship" relationship="viewControllers" id="VeF-Nv-91c"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVQ-3b-eg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

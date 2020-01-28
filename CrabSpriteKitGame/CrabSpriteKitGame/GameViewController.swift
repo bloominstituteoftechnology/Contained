@@ -10,11 +10,6 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
- @IBOutlet weak var skview: UIView!
-
-}
-
-class GamesViewController: UIViewController {
     @IBOutlet weak var skview: SKView!
     
     var skscene: CustomScene? = nil
@@ -24,6 +19,10 @@ class GamesViewController: UIViewController {
         skscene = CustomScene(size: view.bounds.size)
         skview.presentScene(skscene)
     }
+    
+    @IBAction func unwindToInfo(_ send: UIStoryboardSegue) {
+           
+       }
 }
 
 
