@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rollSwitch.isOn = userDefault.bool(forKey: "Rool")
+        rollSwitch.isOn = userDefault.bool(forKey: "Roll")
         zoomSwitch.isOn = userDefault.bool(forKey: "Zoom")
         happyCrabSwitch.isOn = userDefault.bool(forKey: "CrabSetting")
        
