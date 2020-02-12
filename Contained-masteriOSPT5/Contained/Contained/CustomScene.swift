@@ -25,8 +25,7 @@ class CustomScene: SKScene {
         case false:
             whichCrab = "WaitingCrab"
         default:
-            whichCrab = "HappyCrab"
-        }
+            whichCrab = "HappyCrab"        }
         
         addChild(crab)
         switch Settings.shared.shouldFade {
@@ -42,7 +41,9 @@ class CustomScene: SKScene {
             crab.position = Settings.shared.lastPosition
         }
     }
-    
+    override func didMove(to view: SKView) {
+        backgroundColor = SKColor.cyan
+    }
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 // Determine which sound file to play depending on the setting selected
