@@ -40,6 +40,8 @@ class SettingsViewController: UIViewController {
             closeZoomLabel.isHidden = false
             closeZoomSwitchLabel.isHidden = false
         } else {
+            closeZoomSwitchLabel.isOn = false
+            closeZoomLabel.text = "Two"
             closeZoomLabel.isHidden = true
             closeZoomSwitchLabel.isHidden = true
         }
@@ -53,7 +55,7 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldFade = !Settings.shared.shouldFade
     }
     
-    @IBAction func rollSpeedPressed(_ sender: Any) {
+    @IBAction func rollSpeedPressed(_ sender: UISwitch) {
         if Settings.shared.rollFast {
         slowFastRollLabel.text = "Fast"
         } else {
@@ -61,7 +63,7 @@ class SettingsViewController: UIViewController {
         }
         Settings.shared.rollFast = !Settings.shared.rollFast
     }
-    @IBAction func toggleCloseZoomePressed(_ sender: Any) {
+    @IBAction func toggleCloseZoomePressed(_ sender: UISwitch) {
         if Settings.shared.zoomClose {
             closeZoomLabel.text = "Two"
         } else {
