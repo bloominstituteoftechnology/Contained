@@ -1,33 +1,31 @@
 //
-//  GameViewController.swift
+//  SettingsViewController.swift
 //  CrabGame
 //
 //  Created by Waseem Idelbi on 12/4/19.
 //  Copyright © 2019 Waseem Idelbi. All rights reserved.
 //
 
-import SpriteKit
 import UIKit
 
-class GameViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    var skscene: CustomScene? = nil
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        skscene = CustomScene(size: view.bounds.size)
-        skview.presentScene(skscene)
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        Settings.shared.shouldRoll = sender.isOn
     }
     
-    @IBOutlet var skview: SKView!
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
+    }
     
-    
+    @IBAction func toggleHappiness(_ sender: UISwitch) {
+        
+    }
     /*
     // MARK: - Navigation
 
