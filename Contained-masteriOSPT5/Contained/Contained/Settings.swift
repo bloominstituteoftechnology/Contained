@@ -19,4 +19,5 @@ class Settings {
     var shouldFade = false
     var lastPosition: CGPoint = CGPoint(x: 0.0, y: 0.0)
     var rollFast = false
+    var zoomClose = false
 }
