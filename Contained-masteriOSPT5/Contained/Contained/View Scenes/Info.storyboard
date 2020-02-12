@@ -83,14 +83,9 @@
                         <barButtonItem title="Item" id="VGx-n7-BL6"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="97c-ex-YEh">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="ESe-bI-vWK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LBx-5d-GNX">
-                                <rect key="frame" x="348" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="WHj-Bk-xt8">
                             <connections>
-                                <segue destination="d97-Lk-xuw" kind="show" id="Ttx-0T-hdP"/>
+                                <segue destination="d97-Lk-xuw" kind="show" id="4j3-fQ-TFp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="2339.130434782609" y="152.67857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="a4p-bA-sYi">
             <objects>
-                <viewController id="d97-Lk-xuw" sceneMemberID="viewController">
+                <viewController id="d97-Lk-xuw" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HXs-Lq-Rj6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,14 +136,13 @@
                     <navigationItem key="navigationItem" id="0KG-pX-uFd">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="aDG-0i-kaE">
                             <connections>
-                                <action selector="doneButtonPressed:" destination="C0m-qT-UPF" id="dj9-g8-qhF"/>
+                                <action selector="doneButtonPressed:" destination="d97-Lk-xuw" id="hD9-98-0v1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iye-Y7-VdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="C0m-qT-UPF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3042.0289855072465" y="152.67857142857142"/>
         </scene>
