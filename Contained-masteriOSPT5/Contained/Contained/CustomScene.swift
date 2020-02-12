@@ -1,21 +1,21 @@
 //
 //  CustomScene.swift
-//  CrabGame
+//  Contained
 //
-//  Created by David Williams on 12/4/19.
-//  Copyright © 2019 david williams. All rights reserved.
+//  Created by David Williams on 2/12/20.
+//  Copyright © 2020 david williams. All rights reserved.
 //
+
 import Foundation
 import SpriteKit
 import AudioToolbox
 
 var whichCrab = ""
 var gameStart: Bool = false
-
 class CustomScene: SKScene {
+    
     let crab = SKSpriteNode()
-    
-    
+        
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -34,26 +34,16 @@ class CustomScene: SKScene {
             crab.alpha = 0.5
         }
         crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
-        if gameStart {
-            crab.position = Settings.shared.lastPosition
+        if !gameStart {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
         } else {
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+            crab.position = Settings.shared.lastPosition
         }
-       // crab.position = CGPoint(x: frame.midX, y: frame.midY)
     }
-    
-//    #warning("working with background")
-//    var background = SKSpriteNode(imageNamed: "crabsbackground")
-//
-//    override func didMove(to view: SKView) {
-//        background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
-//        background.alpha = 0.5
-//        addChild(background)
-//    }
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Determine which sound file to play depending on the setting selected
+// Determine which sound file to play depending on the setting selected
         if Settings.shared.shouldZoom && Settings.shared.shouldRoll {
             playSound(filename: "Male_Exclamation_1", ext: ".wav")
         } else if Settings.shared.shouldRoll {
@@ -67,8 +57,9 @@ class CustomScene: SKScene {
         guard !touches.isEmpty, let touch = touches.first else { return }
         // Retrieve position
         let position = touch.location(in: self)
+        // Set last touch position for return to game screen
         gameStart = !gameStart
-         Settings.shared.lastPosition = position
+        Settings.shared.lastPosition = position
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
@@ -99,3 +90,4 @@ class CustomScene: SKScene {
     }
     
 }
+

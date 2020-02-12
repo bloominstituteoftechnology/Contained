@@ -1,9 +1,9 @@
 //
-//  settings.swift
-//  CrabGame
+//  File.swift
+//  Contained
 //
-//  Created by David Williams on 12/3/19.
-//  Copyright © 2019 david williams. All rights reserved.
+//  Created by David Williams on 2/11/20.
+//  Copyright © 2020 david williams. All rights reserved.
 //
 
 import Foundation
@@ -18,5 +18,4 @@ class Settings {
     var shouldChangeCrab = false
     var shouldFade = false
     var lastPosition: CGPoint = CGPoint(x: 0.0, y: 0.0)
-
 }
