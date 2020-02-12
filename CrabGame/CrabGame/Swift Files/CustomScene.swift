@@ -9,9 +9,10 @@ import Foundation
 import SpriteKit
 import AudioToolbox
 
-var whichCrab = "WaitingCrab"
+var whichCrab = ""
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
@@ -32,8 +33,15 @@ class CustomScene: SKScene {
         }
         crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
         crab.position = CGPoint(x: frame.midX, y: frame.midY)
-        
-        
+    }
+    
+    #warning("working with background")
+    var background = SKSpriteNode(imageNamed: "crabsbackground")
+
+    override func didMove(to view: SKView) {
+        background.position = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+        background.alpha = 0.5
+        addChild(background)
     }
     
     // Move to touch
