@@ -12,6 +12,7 @@ import AudioToolbox
 
 var whichCrab = ""
 var gameStart: Bool = false
+var rollAmount = 0
 class CustomScene: SKScene {
     
     let crab = SKSpriteNode()
@@ -63,8 +64,12 @@ class CustomScene: SKScene {
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
-        
-        let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
+        if Settings.shared.rollFast {
+         rollAmount = 4
+        } else {
+            rollAmount = 2
+        }
+        let rollAction = SKAction.rotate(byAngle: CGFloat.pi * CGFloat(rollAmount), duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
