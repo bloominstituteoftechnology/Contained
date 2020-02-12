@@ -17,18 +17,22 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         slowFastRollLabel.isHidden = true
+        slowFastRollLabel.text = "Fast"
         fastRollSwitchLabel.isHidden = true
         closeZoomLabel.isHidden = true
+        closeZoomLabel.text = "2X"
         closeZoomSwitchLabel.isHidden = true
     }
     
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-         Settings.shared.shouldRoll = !Settings.shared.shouldRoll
+        Settings.shared.shouldRoll = !Settings.shared.shouldRoll
         if Settings.shared.shouldRoll && slowFastRollLabel.isHidden {
-        slowFastRollLabel.isHidden = false
-        fastRollSwitchLabel.isHidden = false
+            slowFastRollLabel.isHidden = false
+            slowFastRollLabel.text = "Fast"
+            fastRollSwitchLabel.isHidden = false
         } else {
+            fastRollSwitchLabel.isOn = false
             slowFastRollLabel.isHidden = true
             fastRollSwitchLabel.isHidden = true
         }
@@ -38,10 +42,10 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = !Settings.shared.shouldZoom
         if Settings.shared.shouldZoom && closeZoomSwitchLabel.isHidden {
             closeZoomLabel.isHidden = false
+            closeZoomLabel.text = "2X"
             closeZoomSwitchLabel.isHidden = false
         } else {
             closeZoomSwitchLabel.isOn = false
-            closeZoomLabel.text = "Two"
             closeZoomLabel.isHidden = true
             closeZoomSwitchLabel.isHidden = true
         }
@@ -65,9 +69,9 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func toggleCloseZoomePressed(_ sender: UISwitch) {
         if Settings.shared.zoomClose {
-            closeZoomLabel.text = "Two"
+            closeZoomLabel.text = "2X"
         } else {
-            closeZoomLabel.text = "One"
+            closeZoomLabel.text = "1X"
         }
         Settings.shared.zoomClose = !Settings.shared.zoomClose
     }

@@ -60,7 +60,7 @@ class CustomScene: SKScene {
         // Retrieve position
         let position = touch.location(in: self)
         // Set last touch position for return to game screen
-        gameStart = !gameStart
+        gameStart = true
         Settings.shared.lastPosition = position
         // Create move action
         let actionDuration = 1.0
