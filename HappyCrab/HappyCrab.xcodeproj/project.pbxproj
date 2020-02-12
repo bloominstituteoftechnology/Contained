@@ -16,6 +16,9 @@
 		4409C9B023F3B636006101DC /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409C9AF23F3B636006101DC /* SKSpriteNode+Utility.swift */; };
 		4409C9B223F3B655006101DC /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4409C9B123F3B655006101DC /* Info.storyboard */; };
 		4409C9B423F3B683006101DC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409C9B323F3B683006101DC /* Settings.swift */; };
+		4409C9BC23F3BE2E006101DC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409C9BB23F3BE2E006101DC /* GameViewController.swift */; };
+		4409C9BE23F3BE42006101DC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409C9BD23F3BE42006101DC /* InfoViewController.swift */; };
+		4409C9C023F3BE4F006101DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4409C9BF23F3BE4F006101DC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +29,13 @@
 		4409C9A223F3B536006101DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4409C9A523F3B536006101DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4409C9A723F3B536006101DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4409C9AD23F3B622006101DC /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../Crab.xcassets; sourceTree = "<group>"; };
-		4409C9AF23F3B636006101DC /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		4409C9AD23F3B622006101DC /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		4409C9AF23F3B636006101DC /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
 		4409C9B123F3B655006101DC /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		4409C9B323F3B683006101DC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4409C9BB23F3BE2E006101DC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		4409C9BD23F3BE42006101DC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		4409C9BF23F3BE4F006101DC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +68,53 @@
 		4409C99823F3B535006101DC /* HappyCrab */ = {
 			isa = PBXGroup;
 			children = (
-				4409C99923F3B535006101DC /* AppDelegate.swift */,
-				4409C99B23F3B535006101DC /* SceneDelegate.swift */,
-				4409C99F23F3B535006101DC /* Main.storyboard */,
-				4409C9A223F3B536006101DC /* Assets.xcassets */,
-				4409C9B123F3B655006101DC /* Info.storyboard */,
-				4409C9B323F3B683006101DC /* Settings.swift */,
-				4409C9A423F3B536006101DC /* LaunchScreen.storyboard */,
+				4409C9C423F3BEDF006101DC /* Storyboards */,
+				4409C9C323F3BED1006101DC /* Models */,
+				4409C9C223F3BEC6006101DC /* Recources */,
+				4409C9C123F3BEB4006101DC /* View Controllers */,
 				4409C9A723F3B536006101DC /* Info.plist */,
-				4409C9AD23F3B622006101DC /* Crab.xcassets */,
-				4409C9AF23F3B636006101DC /* SKSpriteNode+Utility.swift */,
 			);
 			path = HappyCrab;
+			sourceTree = "<group>";
+		};
+		4409C9C123F3BEB4006101DC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4409C9BD23F3BE42006101DC /* InfoViewController.swift */,
+				4409C9BF23F3BE4F006101DC /* SettingsViewController.swift */,
+				4409C9BB23F3BE2E006101DC /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4409C9C223F3BEC6006101DC /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				4409C9AD23F3B622006101DC /* Crab.xcassets */,
+				4409C9A223F3B536006101DC /* Assets.xcassets */,
+				4409C99923F3B535006101DC /* AppDelegate.swift */,
+				4409C9B323F3B683006101DC /* Settings.swift */,
+				4409C9AF23F3B636006101DC /* SKSpriteNode+Utility.swift */,
+				4409C99B23F3B535006101DC /* SceneDelegate.swift */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		4409C9C323F3BED1006101DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4409C9C423F3BEDF006101DC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4409C9B123F3B655006101DC /* Info.storyboard */,
+				4409C9A423F3B536006101DC /* LaunchScreen.storyboard */,
+				4409C99F23F3B535006101DC /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4409C9BC23F3BE2E006101DC /* GameViewController.swift in Sources */,
 				4409C9B023F3B636006101DC /* SKSpriteNode+Utility.swift in Sources */,
+				4409C9C023F3BE4F006101DC /* SettingsViewController.swift in Sources */,
 				4409C99A23F3B535006101DC /* AppDelegate.swift in Sources */,
 				4409C9B423F3B683006101DC /* Settings.swift in Sources */,
+				4409C9BE23F3BE42006101DC /* InfoViewController.swift in Sources */,
 				4409C99C23F3B535006101DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
