@@ -1,11 +1,3 @@
-//
-//  CustomScene.swift
-//  Contained
-//
-//  Created by Chris Price on 12/5/19.
-//  Copyright © 2019 Chris Price. All rights reserved.
-//
-
 import SpriteKit
 
 class CustomScene: SKScene {
