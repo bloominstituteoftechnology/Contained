@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="iuc-4b-Nyp">
             <objects>
                 <viewController id="qRQ-hr-c6Z" sceneMemberID="viewController">
@@ -17,13 +17,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="d4a-dw-tOE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pxm-hR-6wI"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="pxm-hR-6wI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zf-xS-f2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="45.535714285714285"/>
+            <point key="canvasLocation" x="493" y="1130"/>
         </scene>
-        <!--Item-->
+        <!--InfoNavigation-->
+        <scene sceneID="rAA-Xs-Pa4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="OMV-8k-6oO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1Id-vW-qed"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ii5-hc-2J2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-312" y="1004"/>
+        </scene>
+        <!--Play-->
         <scene sceneID="o1U-EB-fzR">
             <objects>
                 <viewController id="JXI-gJ-BdQ" sceneMemberID="viewController">
@@ -33,11 +43,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PQl-EJ-jwv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4SV-vx-YPg"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="4SV-vx-YPg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9U-DF-8yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597.10144927536237" y="723.88392857142856"/>
+            <point key="canvasLocation" x="-1151" y="1130"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e2m-FG-Ryv">
@@ -45,12 +55,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="94a-h8-5aj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mN3-Tl-RGg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qRQ-hr-c6Z" kind="relationship" relationship="viewControllers" id="3PV-mu-GLF"/>
+                        <segue destination="OMV-8k-6oO" kind="relationship" relationship="viewControllers" id="KYm-Gs-GSB"/>
                         <segue destination="JXI-gJ-BdQ" kind="relationship" relationship="viewControllers" id="Z1J-om-TNJ"/>
+                        <segue destination="qRQ-hr-c6Z" kind="relationship" relationship="viewControllers" id="3PV-mu-GLF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uby-UI-NTx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -58,4 +70,8 @@
             <point key="canvasLocation" x="-313.04347826086956" y="384.375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
