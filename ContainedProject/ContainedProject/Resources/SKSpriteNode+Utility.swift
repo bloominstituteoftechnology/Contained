@@ -26,5 +26,6 @@ extension SKSpriteNode {
         let action = SKAction.animate(with: textures, timePerFrame: 0.03333)
         let foreverAction = SKAction.repeatForever(action)
         self.run(foreverAction, withKey: key)
+        
     }
 }
