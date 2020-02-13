@@ -28,7 +28,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="m63-F5-Ah3"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="m63-F5-Ah3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="skview" destination="E8c-8l-fud" id="RPu-Zp-S0b"/>
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="866"/>
+            <point key="canvasLocation" x="-425" y="866"/>
         </scene>
         <!--InfoNavigation-->
         <scene sceneID="h3g-Tx-D3i">
@@ -65,8 +65,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="63Y-By-ovn">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="8KQ-sk-rVR" eventType="valueChanged" id="Hvy-a5-MM6"/>
-                                                    <action selector="toggleRoll:" destination="X2I-Eg-sqv" eventType="valueChanged" id="QsC-D3-lRZ"/>
+                                                    <action selector="toggleRoll:" destination="X2I-Eg-sqv" eventType="valueChanged" id="Axc-Cl-hlG"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYB-cX-728">
@@ -83,8 +82,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RGN-zi-oBg">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="X2I-Eg-sqv" eventType="valueChanged" id="Ftv-2O-tSZ"/>
-                                                    <action selector="toggleZoom:" destination="8KQ-sk-rVR" eventType="valueChanged" id="tNO-6v-rhl"/>
+                                                    <action selector="toggleZoom:" destination="X2I-Eg-sqv" eventType="valueChanged" id="oLz-S6-osP"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDR-Cx-Clr">
@@ -105,11 +103,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xm3-lI-sda"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="UGN-Le-tBJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="UGN-Le-tBJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00B-tt-4rF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="866"/>
+            <point key="canvasLocation" x="568" y="860"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8ID-96-8AU">
@@ -117,12 +115,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UZP-vn-R3g" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MwC-od-F9g">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="szh-s0-1Pg"/>
                         <segue destination="RO1-G9-o7h" kind="relationship" relationship="viewControllers" id="dnc-jv-KTH"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="szh-s0-1Pg"/>
                         <segue destination="X2I-Eg-sqv" kind="relationship" relationship="viewControllers" id="aig-6F-eN5"/>
                     </connections>
                 </tabBarController>
