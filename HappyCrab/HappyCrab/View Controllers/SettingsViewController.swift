@@ -22,6 +22,10 @@ class SettingsViewController: UIViewController {
     }
     
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
