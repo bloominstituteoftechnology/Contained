@@ -22,4 +22,6 @@ class Settings {
     var rollFast = false
     var zoomClose = false
     var changeBackground = 0
+    var alpha: CGFloat = CGFloat(0.0)
+    var gameStart: Bool = false
 }

@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SpriteKit
+
+var crabImage = "waitingcrab000"
+var appSliderThumbImage = ""
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var slowFastRollLabel: UILabel!
     @IBOutlet weak var fastRollSwitchLabel: UISwitch!
     @IBOutlet weak var closeZoomLabel: UILabel!
     @IBOutlet weak var closeZoomSwitchLabel: UISwitch!
+    @IBOutlet weak var imageBox: UIImageView!
+    @IBOutlet weak var appSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +28,8 @@ class SettingsViewController: UIViewController {
         closeZoomLabel.isHidden = true
         closeZoomLabel.text = "2X"
         closeZoomSwitchLabel.isHidden = true
+        appSlider.isHidden = true
+        appSlider.setThumbImage(UIImage(named: "sliderThumb2"), for: .normal)
     }
     
     
@@ -53,12 +61,30 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
         Settings.shared.shouldChangeCrab = sender.isOn
+        updateViews()
+    }
+    
+    func updateViews() {
+        if Settings.shared.shouldChangeCrab {
+            imageBox.image = UIImage(named: "happycrab000")
+        } else {
+            imageBox.image = UIImage(named: "waitingcrab000")
+        }
+        appSlider.setThumbImage(UIImage(named: "\(appSliderThumbImage)"), for: .normal)
+        
     }
     
     @IBAction func toggleFade(_ sender: UISwitch) {
         Settings.shared.shouldFade = sender.isOn
+        if Settings.shared.shouldFade {
+            Settings.shared.gameStart = true
+            appSlider.isHidden = false
+        imageBox.image = UIImage(named: crabImage)
+        } else {
+            imageBox.image = UIImage(named: "")
+            appSlider.isHidden = true
+        }
     }
-    
     @IBAction func rollSpeedPressed(_ sender: UISwitch) {
         if Settings.shared.rollFast {
         slowFastRollLabel.text = "Fast"
@@ -67,6 +93,7 @@ class SettingsViewController: UIViewController {
         }
         Settings.shared.rollFast = sender.isOn
     }
+    
     @IBAction func toggleCloseZoomePressed(_ sender: UISwitch) {
         if Settings.shared.zoomClose {
             closeZoomLabel.text = "2X"
@@ -75,9 +102,31 @@ class SettingsViewController: UIViewController {
         }
         Settings.shared.zoomClose = sender.isOn
     }
+    
     @IBAction func changeColorPressed(_ sender: UIButton) {
         Settings.shared.changeBackground = sender.tag
+        switch sender.tag {
+        case 0:
+            appSliderThumbImage = "sliderThumbDarkGrey"
+        case 1:
+            appSliderThumbImage = "sliderThumbGreen"
+        case 2:
+            appSliderThumbImage = "sliderThumbRed"
+        case 3:
+            appSliderThumbImage = "sliderThumbOrange"
+        case 4:
+            appSliderThumbImage = "sliderThumbBlue"
+        default:
+            break
+        }
+        updateViews()
         sender.alpha = 0.75
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { sender.alpha = 1.0 })
     }
+    
+    @IBAction func sliderAction(_ sender: Any) {
+        imageBox.alpha = CGFloat(appSlider.value)
+        Settings.shared.alpha = CGFloat(appSlider.value)    }
 }
+
+

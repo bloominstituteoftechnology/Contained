@@ -30,12 +30,18 @@ class CustomScene: SKScene {
         }
         addChild(background)
         addChild(crab)
-        switch Settings.shared.shouldFade {
-        case false:
-            crab.alpha = 1
-        default:
-            crab.alpha = 0.5
+         crab.alpha = 1
+        if !Settings.shared.gameStart {
+        crab.alpha = 1
+        } else {
+            crab.alpha = Settings.shared.alpha
         }
+//        switch Settings.shared.shouldFade {
+//        case false:
+//            crab.alpha = 1
+//        default:
+//            crab.alpha = 0.5
+//        }
         crab.loadTextures(named: whichCrab, forKey: SKSpriteNode.textureKey)
         if !gameStart {
             crab.position = CGPoint(x: frame.midX, y: frame.midY)

@@ -186,20 +186,39 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xkr-Pb-fAg">
+                                <rect key="frame" x="158" y="600" width="98" height="147"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uha-Rj-D5A">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="109"/>
+                                    </imageView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NjQ-VT-xuO">
+                                        <rect key="frame" x="-2" y="117" width="102" height="31"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="GHG-Yd-GKY" eventType="valueChanged" id="XmL-vb-xVN"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rsc-mq-1Xq" firstAttribute="top" secondItem="4sD-YS-0lV" secondAttribute="top" id="4VH-P0-cns"/>
+                            <constraint firstItem="Xkr-Pb-fAg" firstAttribute="top" secondItem="veL-dP-7Mc" secondAttribute="bottom" constant="3.5" id="6te-kY-bwT"/>
+                            <constraint firstItem="Xkr-Pb-fAg" firstAttribute="centerX" secondItem="cph-WP-rrl" secondAttribute="centerX" id="7av-qN-hhK"/>
                             <constraint firstItem="4sD-YS-0lV" firstAttribute="bottom" secondItem="rsc-mq-1Xq" secondAttribute="bottom" id="NR3-Q1-tvK"/>
                             <constraint firstItem="ujX-jy-Qfs" firstAttribute="leading" secondItem="9bh-9N-lfv" secondAttribute="trailing" constant="17" id="QfF-ie-f72"/>
                             <constraint firstItem="4sD-YS-0lV" firstAttribute="trailing" secondItem="rsc-mq-1Xq" secondAttribute="trailing" id="Sjj-uz-PAQ"/>
                             <constraint firstItem="4sD-YS-0lV" firstAttribute="bottom" secondItem="2CO-Ua-WfA" secondAttribute="bottom" constant="367" id="TD8-Fi-Rol"/>
                             <constraint firstItem="9bh-9N-lfv" firstAttribute="centerY" secondItem="cph-WP-rrl" secondAttribute="centerY" id="WnS-of-c3r"/>
+                            <constraint firstItem="4sD-YS-0lV" firstAttribute="bottom" secondItem="Xkr-Pb-fAg" secondAttribute="bottom" constant="66" id="dKy-gn-osL"/>
                             <constraint firstItem="2CO-Ua-WfA" firstAttribute="top" secondItem="ujX-jy-Qfs" secondAttribute="bottom" id="deU-Xu-AyV"/>
                             <constraint firstItem="veL-dP-7Mc" firstAttribute="top" secondItem="9bh-9N-lfv" secondAttribute="bottom" constant="25" id="fQA-Xn-36t"/>
                             <constraint firstItem="veL-dP-7Mc" firstAttribute="centerX" secondItem="cph-WP-rrl" secondAttribute="centerX" id="jxq-DL-GjT"/>
                             <constraint firstItem="ujX-jy-Qfs" firstAttribute="top" secondItem="4sD-YS-0lV" secondAttribute="top" constant="340" id="kYH-Ne-mWV"/>
+                            <constraint firstItem="4sD-YS-0lV" firstAttribute="bottom" secondItem="Xkr-Pb-fAg" secondAttribute="bottom" constant="66" id="kf2-hf-syn"/>
                             <constraint firstItem="2CO-Ua-WfA" firstAttribute="leading" secondItem="9bh-9N-lfv" secondAttribute="trailing" constant="17" id="tVx-tQ-Ogq"/>
+                            <constraint firstItem="Xkr-Pb-fAg" firstAttribute="leading" secondItem="4sD-YS-0lV" secondAttribute="leading" constant="158" id="umQ-wS-Yfr"/>
                             <constraint firstItem="rsc-mq-1Xq" firstAttribute="leading" secondItem="4sD-YS-0lV" secondAttribute="leading" id="vEP-L2-cdD"/>
                             <constraint firstItem="9bh-9N-lfv" firstAttribute="centerX" secondItem="cph-WP-rrl" secondAttribute="centerX" id="w4o-lL-Ply"/>
                         </constraints>
@@ -207,15 +226,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="u6m-t4-8Vh"/>
                     <connections>
+                        <outlet property="appSlider" destination="NjQ-VT-xuO" id="ocC-lv-AMZ"/>
                         <outlet property="closeZoomLabel" destination="FfU-12-WGA" id="MTQ-jp-x5Y"/>
                         <outlet property="closeZoomSwitchLabel" destination="OxP-m0-uzs" id="3mC-MV-sJ1"/>
                         <outlet property="fastRollSwitchLabel" destination="WCr-h1-Tg4" id="vzv-oA-ATf"/>
+                        <outlet property="imageBox" destination="uha-Rj-D5A" id="DYy-nb-WzP"/>
                         <outlet property="slowFastRollLabel" destination="wo5-eG-UNH" id="tWv-uL-CxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2k1-GS-oJ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="-608"/>
+            <point key="canvasLocation" x="2366.666666666667" y="-608.03571428571422"/>
         </scene>
         <!--Play-->
         <scene sceneID="tvJ-iv-N4o">
