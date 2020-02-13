@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleHappiness(_ sender: UISwitch) {
-        
+        Settings.shared.happyCrab = sender.isOn
     }
     /*
     // MARK: - Navigation
