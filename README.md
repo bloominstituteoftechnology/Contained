@@ -123,6 +123,7 @@ class GamesViewController: UIViewController {
         super.viewDidAppear(animated)
         skscene = CustomScene(size: view.bounds.size)
         skview.presentScene(skscene)
+        
     }
 }
 ```
