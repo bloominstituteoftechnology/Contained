@@ -26,7 +26,7 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        Settings.shared.shouldRoll = !Settings.shared.shouldRoll
+        Settings.shared.shouldRoll = sender.isOn
         if Settings.shared.shouldRoll && slowFastRollLabel.isHidden {
             slowFastRollLabel.isHidden = false
             slowFastRollLabel.text = "Fast"
@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom = !Settings.shared.shouldZoom
+        Settings.shared.shouldZoom = sender.isOn
         if Settings.shared.shouldZoom && closeZoomSwitchLabel.isHidden {
             closeZoomLabel.isHidden = false
             closeZoomLabel.text = "2X"
@@ -52,11 +52,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
-        Settings.shared.shouldChangeCrab = !Settings.shared.shouldChangeCrab
+        Settings.shared.shouldChangeCrab = sender.isOn
     }
     
     @IBAction func toggleFade(_ sender: UISwitch) {
-        Settings.shared.shouldFade = !Settings.shared.shouldFade
+        Settings.shared.shouldFade = sender.isOn
     }
     
     @IBAction func rollSpeedPressed(_ sender: UISwitch) {
@@ -65,7 +65,7 @@ class SettingsViewController: UIViewController {
         } else {
             slowFastRollLabel.text = "Slow"
         }
-        Settings.shared.rollFast = !Settings.shared.rollFast
+        Settings.shared.rollFast = sender.isOn
     }
     @IBAction func toggleCloseZoomePressed(_ sender: UISwitch) {
         if Settings.shared.zoomClose {
@@ -73,7 +73,7 @@ class SettingsViewController: UIViewController {
         } else {
             closeZoomLabel.text = "1X"
         }
-        Settings.shared.zoomClose = !Settings.shared.zoomClose
+        Settings.shared.zoomClose = sender.isOn
     }
     @IBAction func changeColorPressed(_ sender: UIButton) {
         Settings.shared.changeBackground = sender.tag
