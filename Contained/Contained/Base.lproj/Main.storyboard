@@ -14,19 +14,33 @@
                     <view key="view" contentMode="scaleToFill" id="9lC-nK-Z4H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39y-NW-jFR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2a1-Tc-C61" firstAttribute="trailing" secondItem="39y-NW-jFR" secondAttribute="trailing" id="NG8-KZ-vdJ"/>
+                            <constraint firstItem="39y-NW-jFR" firstAttribute="leading" secondItem="2a1-Tc-C61" secondAttribute="leading" id="TTr-UR-Moa"/>
+                            <constraint firstItem="2a1-Tc-C61" firstAttribute="bottom" secondItem="39y-NW-jFR" secondAttribute="bottom" id="Wdo-9P-vhp"/>
+                            <constraint firstItem="39y-NW-jFR" firstAttribute="top" secondItem="2a1-Tc-C61" secondAttribute="top" id="yUX-oQ-c2P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2a1-Tc-C61"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="mho-XJ-upj"/>
+                    <connections>
+                        <outlet property="skview" destination="39y-NW-jFR" id="nmD-ZR-zwX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVJ-WM-wmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="-370"/>
+            <point key="canvasLocation" x="395.6521739130435" y="-370.3125"/>
         </scene>
         <!--InfoNavigation-->
         <scene sceneID="y1F-7m-C04">
             <objects>
-                <viewControllerPlaceholder referencedIdentifier="InfoNavigation" id="64t-i2-3r1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="64t-i2-3r1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zQ5-5A-naa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjb-H3-R6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
