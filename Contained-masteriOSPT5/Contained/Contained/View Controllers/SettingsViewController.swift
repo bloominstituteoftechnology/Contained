@@ -77,6 +77,7 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func changeColorPressed(_ sender: UIButton) {
         Settings.shared.changeBackground = sender.tag
-       // sender.alpha = 0.75
+        sender.alpha = 0.75
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { sender.alpha = 1.0 })
     }
 }
