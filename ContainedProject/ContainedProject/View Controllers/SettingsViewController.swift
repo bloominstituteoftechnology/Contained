@@ -33,5 +33,14 @@ class SettingsViewController: UIViewController {
         Settings.shared.fastMode = sender.isOn
     }
     
+    @IBAction func toggleHappyCrab(_ sender: UISwitch) {
+        Settings.shared.happyCrab = sender.isOn
+        if sender.isOn {
+            crabLabel.text = "Angry Crab"
+        } else {
+            crabLabel.text = "Happy Crab"
+        }
+    }
+    @IBOutlet weak var crabLabel: UILabel!
     
 }

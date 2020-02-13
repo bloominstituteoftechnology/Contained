@@ -16,6 +16,7 @@ class Settings {
     var shouldZoom = false
     var fastMode = false
     var fade = false
+    var happyCrab = false
     
 }
 

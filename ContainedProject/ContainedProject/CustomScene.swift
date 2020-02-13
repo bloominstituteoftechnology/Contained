@@ -60,5 +60,11 @@ class CustomScene: SKScene {
         if Settings.shared.fastMode {
             self.speed = 2.5
         }
+        
+        if Settings.shared.happyCrab {
+            crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
+        } else {
+            crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        }
     }
 }
