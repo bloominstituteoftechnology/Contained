@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1800" y="173"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="9zy-E6-Kve">
             <objects>
-                <viewController id="Xd4-Ef-6Qp" sceneMemberID="viewController">
+                <viewController id="Xd4-Ef-6Qp" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q2A-VH-wQP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,11 @@
                         <viewLayoutGuide key="safeArea" id="rH9-vp-APa"/>
                     </view>
                     <navigationItem key="navigationItem" id="VeE-mV-1vO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZkJ-tn-EUs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZkJ-tn-EUs">
+                            <connections>
+                                <action selector="done:" destination="Xd4-Ef-6Qp" id="J9r-Dz-1jE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTn-gG-h9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
