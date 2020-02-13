@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="Ola-jh-vNI">
             <objects>
-                <viewController id="T74-TG-Hpr" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T74-TG-Hpr" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBj-JX-VD6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,10 +78,10 @@ the crab
             </objects>
             <point key="canvasLocation" x="1516" y="75"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="0vU-Lu-A4p">
             <objects>
-                <viewController id="ubw-D4-lTd" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ubw-D4-lTd" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LhZ-ig-2Im">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,22 +105,23 @@ the crab
                         <barButtonItem key="leftBarButtonItem" title="Back" id="9Ty-yY-eQ3"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="JGJ-F8-XTz">
                             <connections>
-                                <segue destination="32U-By-yCB" kind="unwind" unwindAction="unwindDone:" id="F0t-VE-K5C"/>
+                                <action selector="doneButtonTapped:" destination="ubw-D4-lTd" id="dTs-MA-CMN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cau-AZ-2l8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="32U-By-yCB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2349" y="75"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Info-->
         <scene sceneID="TAJ-DF-SnV">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="gdz-lA-N1F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="4JE-VC-NAv"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="lf1-rg-eCD">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -135,4 +136,7 @@ the crab
             <point key="canvasLocation" x="-23.188405797101453" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
 </document>

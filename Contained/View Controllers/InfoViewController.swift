@@ -14,9 +14,9 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    @IBAction func unwindDone(_ sender: UIStoryboardSegue) {
-        
-    }
+    @IBAction func doneButtonTapped(_ sender: Any) {
+           navigationController?.popToRootViewController(animated: true)
+       }
     
     
 }
