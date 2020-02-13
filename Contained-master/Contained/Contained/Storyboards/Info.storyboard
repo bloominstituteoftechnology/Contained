@@ -17,17 +17,65 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="suc-tc-aII"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f9c-Ty-jnJ"/>
+                    <navigationItem key="navigationItem" id="f9c-Ty-jnJ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="htC-99-Bqh">
+                            <connections>
+                                <segue destination="VzT-8k-Z3y" kind="show" id="bVZ-JH-Ism"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACC-wN-sSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="986.95652173913049" y="73.660714285714278"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller-->
+        <scene sceneID="ufb-zD-Z2C">
+            <objects>
+                <viewController id="VzT-8k-Z3y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZr-uH-QuR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mYC-f3-41E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ChF-4L-0P7">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="xTv-HO-nLJ">
+                            <connections>
+                                <segue destination="F7u-3G-hTk" kind="show" id="NRy-g6-tfP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEV-TC-uSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="74"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zx8-O9-9hd">
+            <objects>
+                <viewController id="F7u-3G-hTk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXd-cw-WtG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VFK-XW-jtu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XOy-6O-Dsp">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="md3-cI-vlJ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1I-SJ-vfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="74"/>
+        </scene>
+        <!--Info-->
         <scene sceneID="nSN-73-EnX">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="ppm-Xm-Qlu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" selectedImage="info" id="03G-WU-r2c"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l0H-Zk-dOp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,4 +90,7 @@
             <point key="canvasLocation" x="287" y="74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
 </document>
