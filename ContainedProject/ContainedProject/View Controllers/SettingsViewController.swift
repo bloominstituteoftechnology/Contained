@@ -25,4 +25,13 @@ class SettingsViewController: UIViewController {
         
     }
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.fade = sender.isOn
+    }
+    
+    @IBAction func toggleFastMode(_ sender: UISwitch) {
+        Settings.shared.fastMode = sender.isOn
+    }
+    
+    
 }

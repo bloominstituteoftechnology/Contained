@@ -14,6 +14,8 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var fastMode = false
+    var fade = false
     
 }
 

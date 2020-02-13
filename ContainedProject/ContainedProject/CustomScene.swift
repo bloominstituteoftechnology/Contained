@@ -48,5 +48,17 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.5)
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
+        let fadeActionSequence = SKAction.sequence([fadeInAction, fadeOutAction, fadeInAction])
+        
+        if Settings.shared.fade {
+            crab.run(fadeActionSequence)
+        }
+        
+        if Settings.shared.fastMode {
+            self.speed = 2.5
+        }
     }
 }
