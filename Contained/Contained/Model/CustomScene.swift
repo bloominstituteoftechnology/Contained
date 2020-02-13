@@ -41,6 +41,10 @@ class CustomScene: SKScene {
         let zooomAction = SKAction.scale(by: 1.3, duration: 0.3)
         let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
         
+        //Add Fade
+        let fadeInAction = SKAction.fadeIn(withDuration: 0.5)
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
+        
         switch Settings.shared.shouldZoom {
         case false:
             crab.run(moveAction)
@@ -52,6 +56,13 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+        
+        //run fade in
+        if Settings.shared.shouldFade {
+            let seq:SKAction = SKAction.sequence( [ fadeOutAction, fadeInAction])
+            crab.run(seq)
+        }
+
     }
     
 }

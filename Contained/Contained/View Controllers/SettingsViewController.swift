@@ -27,4 +27,7 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleCrab(_ sender: UISwitch) {
         settings.crabAttitude = sender.isOn
     }
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        settings.shouldFade = sender.isOn
+    }
 }

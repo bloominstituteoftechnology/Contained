@@ -15,4 +15,5 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var crabAttitude = false
+    var shouldFade = false
 }
