@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T5a-16-Sb3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play-->
+        <scene sceneID="H98-5c-wLr">
+            <objects>
+                <viewController title="Play" id="3Ph-5H-4XU" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdZ-0L-voW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mps-0v-VWf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mps-0v-VWf" firstAttribute="leading" secondItem="fxG-2s-FcX" secondAttribute="leading" id="0vb-zl-X7K"/>
+                            <constraint firstItem="fxG-2s-FcX" firstAttribute="bottom" secondItem="Mps-0v-VWf" secondAttribute="bottom" id="Z4R-Wo-0uw"/>
+                            <constraint firstItem="Mps-0v-VWf" firstAttribute="top" secondItem="fxG-2s-FcX" secondAttribute="top" id="g9r-NE-wKg"/>
+                            <constraint firstItem="fxG-2s-FcX" firstAttribute="trailing" secondItem="Mps-0v-VWf" secondAttribute="trailing" id="qEQ-my-Mw2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fxG-2s-FcX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Play" selectedImage="gamecontroller.fill" catalog="system" id="9pZ-Hh-kCQ"/>
+                    <connections>
+                        <outlet property="skview" destination="Mps-0v-VWf" id="txh-0X-D2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8q-h9-FUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="748"/>
+        </scene>
+        <!--InfoNavigation-->
+        <scene sceneID="Nv4-F1-yix">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoNavigation" referencedIdentifier="InfoNavigation" id="GOa-1B-F8z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FsG-a5-RlY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYw-YR-nIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="626"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="lGh-uY-U0o">
+            <objects>
+                <viewController title="Settings" id="DkO-qp-TgL" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z4x-Oz-9lW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-Nh-i0U">
+                                <rect key="frame" x="156" y="525" width="102" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tpb-wf-rlV">
+                                        <rect key="frame" x="17" y="0.0" width="85" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rct-YP-TKk">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Keq-pw-Z6C">
+                                                <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="k2O-Ze-032" eventType="valueChanged" id="1Js-3M-fAm"/>
+                                                    <action selector="toggleRoll:" destination="DkO-qp-TgL" eventType="valueChanged" id="lWT-Ee-6M5"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eiR-ax-NeW">
+                                        <rect key="frame" x="0.5" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-9C-4SQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-IS-wGD">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="DkO-qp-TgL" eventType="valueChanged" id="3Sr-Bd-lBb"/>
+                                                    <action selector="toggleZoom:" destination="k2O-Ze-032" eventType="valueChanged" id="9Gc-rx-ACt"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qBv-Nh-i0U" firstAttribute="leading" secondItem="vlT-RG-BZo" secondAttribute="leading" constant="156" id="S3T-CA-pvV"/>
+                            <constraint firstItem="vlT-RG-BZo" firstAttribute="bottom" secondItem="qBv-Nh-i0U" secondAttribute="bottom" constant="218" id="TEj-3S-EeT"/>
+                            <constraint firstItem="qBv-Nh-i0U" firstAttribute="top" secondItem="vlT-RG-BZo" secondAttribute="top" constant="481" id="rGg-x9-Myl"/>
+                            <constraint firstItem="vlT-RG-BZo" firstAttribute="trailing" secondItem="qBv-Nh-i0U" secondAttribute="trailing" constant="156" id="yvu-pv-WXx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vlT-RG-BZo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear" catalog="system" id="F9z-J2-vcf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goH-uQ-rMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="k2O-Ze-032" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="748"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yxY-vi-t5e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="T5a-16-Sb3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0E0-SA-2ef">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Ph-5H-4XU" kind="relationship" relationship="viewControllers" id="iei-zv-Kgp"/>
+                        <segue destination="DkO-qp-TgL" kind="relationship" relationship="viewControllers" id="CmB-WC-3q5"/>
+                        <segue destination="GOa-1B-F8z" kind="relationship" relationship="viewControllers" id="VML-IU-PzC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tU-LW-cXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
