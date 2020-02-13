@@ -17,7 +17,8 @@ var zoomAmount: Double = 0.0
 class CustomScene: SKScene {
     
     let crab = SKSpriteNode()
-       
+    let background = SKSpriteNode(imageNamed: "Blotch ink texture 1")
+
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -27,7 +28,7 @@ class CustomScene: SKScene {
         default:
             whichCrab = "HappyCrab"
         }
-        
+        addChild(background)
         addChild(crab)
         switch Settings.shared.shouldFade {
         case false:
@@ -46,7 +47,7 @@ class CustomScene: SKScene {
         
         switch  Settings.shared.changeBackground {
         case 0:
-            backgroundColor = SKColor.black
+            backgroundColor = SKColor.darkGray
         case 1:
             backgroundColor = SKColor.systemGreen
         case 2:

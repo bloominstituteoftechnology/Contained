@@ -22,5 +22,4 @@ class Settings {
     var rollFast = false
     var zoomClose = false
     var changeBackground = 0
-    
 }
