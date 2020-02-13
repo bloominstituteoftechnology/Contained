@@ -16,6 +16,9 @@
 		9C8256D023F4F0A800AC58E8 /* SKSpriteNode+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8256CF23F4F0A800AC58E8 /* SKSpriteNode+Utility.swift */; };
 		9C8256D223F4F0DF00AC58E8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8256D123F4F0DE00AC58E8 /* Info.storyboard */; };
 		9C8256D523F4F14C00AC58E8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8256D423F4F14C00AC58E8 /* Settings.swift */; };
+		9C8256D823F4FA4B00AC58E8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8256D723F4FA4B00AC58E8 /* GameViewController.swift */; };
+		9C8256DA23F4FA5B00AC58E8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8256D923F4FA5B00AC58E8 /* InfoViewController.swift */; };
+		9C8256DC23F4FAB300AC58E8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8256DB23F4FAB300AC58E8 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +30,12 @@
 		9C8256C423F4EE5800AC58E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C8256C623F4EE5800AC58E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8256CD23F4F06600AC58E8 /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../../Crab.xcassets; sourceTree = "<group>"; };
-		9C8256CF23F4F0A800AC58E8 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		9C8256CF23F4F0A800AC58E8 /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
 		9C8256D123F4F0DE00AC58E8 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		9C8256D423F4F14C00AC58E8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9C8256D723F4FA4B00AC58E8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9C8256D923F4FA5B00AC58E8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		9C8256DB23F4FAB300AC58E8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,7 @@
 		9C8256B723F4EE5400AC58E8 /* Contained */ = {
 			isa = PBXGroup;
 			children = (
-				9C8256CF23F4F0A800AC58E8 /* SKSpriteNode+Utility.swift */,
+				9C8256D623F4FA2500AC58E8 /* View Controllers */,
 				9C8256D323F4F0F300AC58E8 /* Storyboards */,
 				9C8256CC23F4EECF00AC58E8 /* References */,
 				9C8256C623F4EE5800AC58E8 /* Info.plist */,
@@ -74,6 +80,7 @@
 		9C8256CC23F4EECF00AC58E8 /* References */ = {
 			isa = PBXGroup;
 			children = (
+				9C8256CF23F4F0A800AC58E8 /* SKSpriteNode+Utility.swift */,
 				9C8256B823F4EE5500AC58E8 /* AppDelegate.swift */,
 				9C8256BA23F4EE5500AC58E8 /* SceneDelegate.swift */,
 				9C8256C123F4EE5800AC58E8 /* Assets.xcassets */,
@@ -90,6 +97,16 @@
 				9C8256D123F4F0DE00AC58E8 /* Info.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9C8256D623F4FA2500AC58E8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C8256D723F4FA4B00AC58E8 /* GameViewController.swift */,
+				9C8256D923F4FA5B00AC58E8 /* InfoViewController.swift */,
+				9C8256DB23F4FAB300AC58E8 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8256D823F4FA4B00AC58E8 /* GameViewController.swift in Sources */,
 				9C8256D023F4F0A800AC58E8 /* SKSpriteNode+Utility.swift in Sources */,
+				9C8256DC23F4FAB300AC58E8 /* SettingsViewController.swift in Sources */,
 				9C8256B923F4EE5500AC58E8 /* AppDelegate.swift in Sources */,
 				9C8256D523F4F14C00AC58E8 /* Settings.swift in Sources */,
+				9C8256DA23F4FA5B00AC58E8 /* InfoViewController.swift in Sources */,
 				9C8256BB23F4EE5500AC58E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
