@@ -94,11 +94,36 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-yK-6cZ">
+                                <rect key="frame" x="80" y="491" width="254.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-Ah-TVp">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7jy-xO-kO7">
+                                        <rect key="frame" x="99" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleCrab:" destination="vaC-yo-rM9" eventType="valueChanged" id="cAY-zG-Wg0"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting Crab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZJ-Fb-zO5">
+                                        <rect key="frame" x="156" y="0.0" width="98.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="q3M-yK-6cZ" firstAttribute="top" secondItem="fNW-px-DN2" secondAttribute="bottom" constant="8" id="D70-zz-UGz"/>
                             <constraint firstItem="fNW-px-DN2" firstAttribute="centerY" secondItem="PVC-ta-hhb" secondAttribute="centerY" id="KPH-dF-De6"/>
                             <constraint firstItem="fNW-px-DN2" firstAttribute="centerX" secondItem="PVC-ta-hhb" secondAttribute="centerX" id="Kvz-u0-xlw"/>
+                            <constraint firstItem="q3M-yK-6cZ" firstAttribute="centerX" secondItem="PVC-ta-hhb" secondAttribute="centerX" id="yUZ-bC-8Wg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ISG-8c-hx8"/>
                     </view>
