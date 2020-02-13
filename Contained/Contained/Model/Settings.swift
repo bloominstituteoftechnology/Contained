@@ -13,5 +13,5 @@ class Settings {
     private init() {}
     
     var shouldRoll = false
-    var shouldZoon = false
+    var shouldZoom = false
 }
