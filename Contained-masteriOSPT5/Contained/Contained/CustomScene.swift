@@ -17,7 +17,7 @@ var zoomAmount: Double = 0.0
 class CustomScene: SKScene {
     
     let crab = SKSpriteNode()
-        
+       
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -25,7 +25,8 @@ class CustomScene: SKScene {
         case false:
             whichCrab = "WaitingCrab"
         default:
-            whichCrab = "HappyCrab"        }
+            whichCrab = "HappyCrab"
+        }
         
         addChild(crab)
         switch Settings.shared.shouldFade {
@@ -42,7 +43,21 @@ class CustomScene: SKScene {
         }
     }
     override func didMove(to view: SKView) {
-        backgroundColor = SKColor.cyan
+        
+        switch  Settings.shared.changeBackground {
+        case 0:
+            backgroundColor = SKColor.black
+        case 1:
+            backgroundColor = SKColor.systemGreen
+        case 2:
+            backgroundColor = SKColor.systemRed
+        case 3:
+            backgroundColor = SKColor.systemOrange
+        case 4:
+            backgroundColor = SKColor.systemBlue
+        default:
+            break
+        }
     }
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,7 +82,7 @@ class CustomScene: SKScene {
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
         if Settings.shared.rollFast {
-         rollAmount = 4
+         rollAmount = 6
         } else {
             rollAmount = 2
         }

@@ -9,6 +9,7 @@
 import Foundation
 import SpriteKit
 
+
 class Settings {
     static let shared = Settings()
     private init() {}
@@ -20,4 +21,6 @@ class Settings {
     var lastPosition: CGPoint = CGPoint(x: 0.0, y: 0.0)
     var rollFast = false
     var zoomClose = false
+    var changeBackground = 0
+    
 }

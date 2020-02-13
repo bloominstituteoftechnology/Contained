@@ -75,4 +75,8 @@ class SettingsViewController: UIViewController {
         }
         Settings.shared.zoomClose = !Settings.shared.zoomClose
     }
+    @IBAction func changeColorPressed(_ sender: UIButton) {
+        Settings.shared.changeBackground = sender.tag
+       // sender.alpha = 0.75
+    }
 }

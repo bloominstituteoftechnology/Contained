@@ -118,8 +118,8 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-Ua-WfA">
-                                <rect key="frame" x="302.5" y="415" width="104" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2CO-Ua-WfA">
+                                <rect key="frame" x="302.5" y="415" width="109" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfU-12-WGA">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
@@ -128,11 +128,62 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-m0-uzs">
-                                        <rect key="frame" x="55" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="60" y="0.0" width="51" height="31"/>
                                         <connections>
                                             <action selector="toggleCloseZoomePressed:" destination="GHG-Yd-GKY" eventType="valueChanged" id="Mfo-Mh-nfI"/>
                                         </connections>
                                     </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="veL-dP-7Mc">
+                                <rect key="frame" x="80.5" y="535" width="253" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cE-xa-99l">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Vx-bz0">
+                                        <rect key="frame" x="103" y="0.0" width="150" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znV-Qz-uqx">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="changeColorPressed:" destination="GHG-Yd-GKY" eventType="touchUpInside" id="hF8-K7-Jhc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y7-Yl-Ds1">
+                                                <rect key="frame" x="30" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorPressed:" destination="GHG-Yd-GKY" eventType="touchUpInside" id="mK3-nr-86c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-q4-A1Y">
+                                                <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorPressed:" destination="GHG-Yd-GKY" eventType="touchUpInside" id="fZ8-I9-Hga"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-un-drs">
+                                                <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorPressed:" destination="GHG-Yd-GKY" eventType="touchUpInside" id="Tc6-eh-337"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7S-tz-wRl">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="changeColorPressed:" destination="GHG-Yd-GKY" eventType="touchUpInside" id="J1O-ml-O99"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -145,6 +196,8 @@
                             <constraint firstItem="4sD-YS-0lV" firstAttribute="bottom" secondItem="2CO-Ua-WfA" secondAttribute="bottom" constant="367" id="TD8-Fi-Rol"/>
                             <constraint firstItem="9bh-9N-lfv" firstAttribute="centerY" secondItem="cph-WP-rrl" secondAttribute="centerY" id="WnS-of-c3r"/>
                             <constraint firstItem="2CO-Ua-WfA" firstAttribute="top" secondItem="ujX-jy-Qfs" secondAttribute="bottom" id="deU-Xu-AyV"/>
+                            <constraint firstItem="veL-dP-7Mc" firstAttribute="top" secondItem="9bh-9N-lfv" secondAttribute="bottom" constant="25" id="fQA-Xn-36t"/>
+                            <constraint firstItem="veL-dP-7Mc" firstAttribute="centerX" secondItem="cph-WP-rrl" secondAttribute="centerX" id="jxq-DL-GjT"/>
                             <constraint firstItem="ujX-jy-Qfs" firstAttribute="top" secondItem="4sD-YS-0lV" secondAttribute="top" constant="340" id="kYH-Ne-mWV"/>
                             <constraint firstItem="2CO-Ua-WfA" firstAttribute="leading" secondItem="9bh-9N-lfv" secondAttribute="trailing" constant="17" id="tVx-tQ-Ogq"/>
                             <constraint firstItem="rsc-mq-1Xq" firstAttribute="leading" secondItem="4sD-YS-0lV" secondAttribute="leading" id="vEP-L2-cdD"/>
