@@ -24,6 +24,10 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
 
+    @IBAction func crabTypeSelected(_ sender: UISegmentedControl) {
+        Settings.shared.crabIsHappy = sender.selectedSegmentIndex == 0
+    }
+
     /*
     // MARK: - Navigation
 
