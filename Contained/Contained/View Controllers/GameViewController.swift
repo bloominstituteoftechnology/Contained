@@ -13,12 +13,17 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var skView: SKView!
 
+    var skScene: CustomScene? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        skScene = CustomScene(size: view.bounds.size)
+        skView.presentScene(skScene)
+    }
 
     /*
     // MARK: - Navigation
@@ -29,5 +34,4 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
