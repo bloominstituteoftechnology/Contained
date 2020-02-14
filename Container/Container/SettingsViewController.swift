@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleZoom(_ sender: Any) {
            guard let button = sender as? UISwitch else { return }
            
-           button.isOn.toggle()
+           button.isSelected.toggle()
        }
 
 }
