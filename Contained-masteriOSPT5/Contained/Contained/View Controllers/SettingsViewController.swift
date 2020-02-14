@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController {
         closeZoomLabel.text = "2X"
         closeZoomSwitchLabel.isHidden = true
         appSlider.isHidden = true
+        appSlider.tintColor = .darkText
         appSlider.setThumbImage(UIImage(named: "sliderThumb2"), for: .normal)
     }
     
@@ -61,7 +62,12 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
         Settings.shared.shouldChangeCrab = sender.isOn
-        updateViews()
+        if Settings.shared.shouldFade {
+            checkForFadedCrab()
+        } else {
+            imageBox.image = UIImage(named: "")
+            appSlider.isHidden = true
+        }
     }
     
     func updateViews() {
@@ -71,7 +77,12 @@ class SettingsViewController: UIViewController {
             imageBox.image = UIImage(named: "waitingcrab000")
         }
         appSlider.setThumbImage(UIImage(named: "\(appSliderThumbImage)"), for: .normal)
-        
+    }
+    
+    func checkForFadedCrab() {
+        if Settings.shared.shouldFade {
+            updateViews()
+        }
     }
     
     @IBAction func toggleFade(_ sender: UISwitch) {
@@ -79,12 +90,22 @@ class SettingsViewController: UIViewController {
         if Settings.shared.shouldFade {
             Settings.shared.gameStart = true
             appSlider.isHidden = false
+            setImage()
         imageBox.image = UIImage(named: crabImage)
         } else {
             imageBox.image = UIImage(named: "")
             appSlider.isHidden = true
         }
     }
+    
+    func setImage() {
+        if Settings.shared.shouldFade && Settings.shared.shouldChangeCrab {
+            crabImage = "happycrab000"
+        } else if Settings.shared.shouldFade && !Settings.shared.shouldChangeCrab {
+            crabImage = "waitingcrab000"
+        }
+    }
+    
     @IBAction func rollSpeedPressed(_ sender: UISwitch) {
         if Settings.shared.rollFast {
         slowFastRollLabel.text = "Fast"
@@ -94,7 +115,7 @@ class SettingsViewController: UIViewController {
         Settings.shared.rollFast = sender.isOn
     }
     
-    @IBAction func toggleCloseZoomePressed(_ sender: UISwitch) {
+    @IBAction func toggleCloseZoomPressed(_ sender: UISwitch) {
         if Settings.shared.zoomClose {
             closeZoomLabel.text = "2X"
         } else {
@@ -119,7 +140,7 @@ class SettingsViewController: UIViewController {
         default:
             break
         }
-        updateViews()
+        checkForFadedCrab()
         sender.alpha = 0.75
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { sender.alpha = 1.0 })
     }
