@@ -20,7 +20,7 @@
         <!--Settings-->
         <scene sceneID="nTo-f5-p3h">
             <objects>
-                <viewController id="EAs-st-Ccd" customClass="SettingsViewController" customModule="Container" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EAs-st-Ccd" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cw-iP-AeS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,20 +82,28 @@
         <!--Play-->
         <scene sceneID="6jF-zb-AUI">
             <objects>
-                <viewController id="A2L-FC-2tB" customClass="GameViewController" customModule="Container" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="A2L-FC-2tB" customClass="GameViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uBR-ZG-E54">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWK-uq-7nJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-mC-elp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f9R-mC-elp" firstAttribute="top" secondItem="lII-hY-COZ" secondAttribute="top" id="Bh5-Hs-E02"/>
+                            <constraint firstItem="lII-hY-COZ" firstAttribute="bottom" secondItem="f9R-mC-elp" secondAttribute="bottom" id="ODF-0f-zrB"/>
+                            <constraint firstItem="f9R-mC-elp" firstAttribute="leading" secondItem="lII-hY-COZ" secondAttribute="leading" id="Zr4-o0-fMs"/>
+                            <constraint firstItem="lII-hY-COZ" firstAttribute="trailing" secondItem="f9R-mC-elp" secondAttribute="trailing" id="sN1-B8-aKD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lII-hY-COZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="E5d-c7-Ibt"/>
+                    <connections>
+                        <outlet property="skview" destination="f9R-mC-elp" id="zi5-Fl-asC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gp9-Yd-mus" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

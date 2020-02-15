@@ -11,8 +11,9 @@ import UIKit
 
 
 
-class GamesViewController: UIViewController {
-    @IBOutlet weak var skview: SKView!
+class GameViewController: UIViewController {
+    
+    @IBOutlet weak var skview: SKView! 
     
     var skscene: CustomScene? = nil
     
