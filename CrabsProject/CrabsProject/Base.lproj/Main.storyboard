@@ -69,6 +69,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4iI-xe-55e">
                                                 <rect key="frame" x="0.0" y="28.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="Wb9-1g-OCw" eventType="valueChanged" id="Nch-2y-ukQ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -83,6 +86,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G46-QA-0bR">
                                                 <rect key="frame" x="0.0" y="28.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="Wb9-1g-OCw" eventType="valueChanged" id="ciT-gy-ojR"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -97,10 +103,6 @@
                         <viewLayoutGuide key="safeArea" id="Dqb-la-OKq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="settings" id="f3o-Bn-6vx"/>
-                    <connections>
-                        <outlet property="toggleRoll" destination="4iI-xe-55e" id="y0h-1I-sVp"/>
-                        <outlet property="toggleZoom" destination="G46-QA-0bR" id="Kfo-qT-Vrh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmK-nC-kWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
