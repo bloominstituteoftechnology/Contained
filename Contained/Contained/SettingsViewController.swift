@@ -9,6 +9,9 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var rollSwitch: UISwitch!
+    
+    @IBOutlet weak var zoomSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +19,16 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func toggleRoll(_ sender: UISwitch) {
+    @IBAction func toggleRoll(_ sender: UISwitch){
         Settings.shared.shouldRoll = sender.isOn
-    }
-    
-    @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom = sender.isOn  // singleton property
-       
+}
 
-    }
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
+}
+    
+    
+   
     
 
 }

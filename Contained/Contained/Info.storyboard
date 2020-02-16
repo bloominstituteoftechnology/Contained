@@ -45,7 +45,7 @@ the crab</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69T-49-1wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="-479"/>
+            <point key="canvasLocation" x="1477" y="830"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="HE4-bB-4Q5">
@@ -83,13 +83,13 @@ the crab</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6X-C2-BwF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="-421"/>
+            <point key="canvasLocation" x="-1429" y="866"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="G4A-n2-LjV">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="sA2-sL-7UU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="info" id="i2I-wa-NuP"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" selectedImage="info" id="i2I-wa-NuP"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bz8-Sr-YPp">
@@ -105,10 +105,10 @@ the crab</string>
             </objects>
             <point key="canvasLocation" x="-616" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="xDb-v6-F70">
             <objects>
-                <viewController id="qff-Bq-QbN" sceneMemberID="viewController">
+                <viewController id="qff-Bq-QbN" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oOF-vy-eHE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,12 +132,16 @@ the crab</string>
                         <viewLayoutGuide key="safeArea" id="pGw-rE-h94"/>
                     </view>
                     <navigationItem key="navigationItem" id="AJs-KQ-KG3">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="K0g-dG-qs3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="K0g-dG-qs3">
+                            <connections>
+                                <action selector="done:" destination="qff-Bq-QbN" id="iV8-ez-Kvj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tef-pX-Vpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1694" y="-445"/>
+            <point key="canvasLocation" x="-680" y="866"/>
         </scene>
     </scenes>
     <resources>
