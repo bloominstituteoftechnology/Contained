@@ -14,10 +14,21 @@
                     <view key="view" contentMode="scaleToFill" id="SbL-IF-MwG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kY-U5-A3P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d2W-Ef-YBN" firstAttribute="bottom" secondItem="2kY-U5-A3P" secondAttribute="bottom" id="28M-JP-2b2"/>
+                            <constraint firstItem="2kY-U5-A3P" firstAttribute="leading" secondItem="d2W-Ef-YBN" secondAttribute="leading" id="AeQ-W9-72M"/>
+                            <constraint firstItem="2kY-U5-A3P" firstAttribute="top" secondItem="d2W-Ef-YBN" secondAttribute="top" id="T1I-bW-MeP"/>
+                            <constraint firstItem="d2W-Ef-YBN" firstAttribute="trailing" secondItem="2kY-U5-A3P" secondAttribute="trailing" id="aH0-kR-9KC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d2W-Ef-YBN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" selectedImage="game_controller" id="PKD-o4-hei"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="PKD-o4-hei"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRT-Sm-ppt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,7 +37,7 @@
         <!--InfoNavigation-->
         <scene sceneID="mlO-SY-I0L">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="fO7-nC-rxb" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="InfoNavigation" storyboardName="Info" referencedIdentifier="InfoNavigation" id="fO7-nC-rxb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NFj-fA-0if"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w77-UA-vdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -40,10 +51,45 @@
                     <view key="view" contentMode="scaleToFill" id="esj-Sh-eal">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-xH-sKk">
+                                <rect key="frame" x="224" y="378" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pVO-1B-ED5">
+                                <rect key="frame" x="224" y="433" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phi-cC-MhQ">
+                                <rect key="frame" x="224" y="488" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcB-aP-sVr">
+                                <rect key="frame" x="170" y="383" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7v2-7w-ydr">
+                                <rect key="frame" x="153" y="438" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happy Crab?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RE-V0-alN">
+                                <rect key="frame" x="98" y="493" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xa1-9B-XUK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="CM5-Ua-wLn"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="CM5-Ua-wLn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYh-IR-V33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +101,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jhh-eo-VJQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="amQ-yu-iBq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
