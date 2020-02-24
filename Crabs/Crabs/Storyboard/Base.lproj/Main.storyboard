@@ -85,14 +85,28 @@
                     <view key="view" contentMode="scaleToFill" id="EGt-SG-K4k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVG-rG-HVv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XVG-rG-HVv" firstAttribute="leading" secondItem="2H9-Qu-R8f" secondAttribute="leading" id="SX2-Ud-qQA"/>
+                            <constraint firstItem="XVG-rG-HVv" firstAttribute="top" secondItem="2H9-Qu-R8f" secondAttribute="top" id="XF5-Xy-YU2"/>
+                            <constraint firstItem="XVG-rG-HVv" firstAttribute="bottom" secondItem="2H9-Qu-R8f" secondAttribute="bottom" id="dec-z3-ObJ"/>
+                            <constraint firstItem="XVG-rG-HVv" firstAttribute="trailing" secondItem="2H9-Qu-R8f" secondAttribute="trailing" id="hl4-KC-cHM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2H9-Qu-R8f"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="bvl-oG-sfH"/>
+                    <connections>
+                        <outlet property="skview" destination="XVG-rG-HVv" id="QvT-x7-by5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oi-IY-RIX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1003" y="492"/>
+            <point key="canvasLocation" x="1002.8985507246377" y="491.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ubt-jZ-gZk">
@@ -100,6 +114,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5Bd-ro-CmI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dro-eW-Xb6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
