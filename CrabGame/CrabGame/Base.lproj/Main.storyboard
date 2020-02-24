@@ -40,7 +40,7 @@
         <!--Settings-->
         <scene sceneID="mn5-eO-IQ6">
             <objects>
-                <viewController id="RiM-rZ-HTs" sceneMemberID="viewController">
+                <viewController id="RiM-rZ-HTs" customClass="SettingsViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nBU-AV-7qX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-CW-kJc">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ALY-CW-kJc">
                                                 <rect key="frame" x="49" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="skZ-Fm-GHa" eventType="valueChanged" id="6wv-dY-XU9"/>
+                                                    <action selector="toggleRoll:" destination="RiM-rZ-HTs" eventType="valueChanged" id="uhF-k1-Chr"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -74,10 +74,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-49-LBm">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-49-LBm">
                                                 <rect key="frame" x="65.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="skZ-Fm-GHa" eventType="valueChanged" id="oeb-oZ-tNf"/>
+                                                    <action selector="toggleZoom:" destination="RiM-rZ-HTs" eventType="valueChanged" id="4HH-TD-r2N"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -91,10 +91,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-rn-q2c">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kJp-rn-q2c">
                                                 <rect key="frame" x="120.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleHappyCrab:" destination="skZ-Fm-GHa" eventType="valueChanged" id="FUZ-Hc-hbf"/>
+                                                    <action selector="toggleHappyCrab:" destination="RiM-rZ-HTs" eventType="valueChanged" id="sdo-ry-5RG"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -112,7 +112,6 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="PhK-r3-h2G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvc-T7-8V6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="skZ-Fm-GHa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="742" y="-760"/>
         </scene>
