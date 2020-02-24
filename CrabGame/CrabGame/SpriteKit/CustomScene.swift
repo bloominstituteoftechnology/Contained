@@ -11,14 +11,21 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+    var lastPositionTapped = CGPoint.zero
     
     // Add and center child, initializing animation sequence
     override func sceneDidLoad() {
         super.sceneDidLoad()
         addChild(crab)
+        
         let selectedTextureName = Settings.shared.happyCrab ? "HappyCrab" : "WaitingCrab"
         crab.loadTextures(named: selectedTextureName, forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        if let lastCrabPosition = Settings.shared.lastCrabPosition {
+            crab.position = lastCrabPosition
+        } else {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        }
     }
     
     //Move to touch
@@ -28,11 +35,11 @@ class CustomScene: SKScene {
         guard !touches.isEmpty, let touch = touches.first else { return }
         
         // Retrieve position
-        let position = touch.location(in: self)
+        lastPositionTapped = touch.location(in: self)
         
         // Create move action
         let actionDuration = 1.0
-        let moveAction = SKAction.move(to: position, duration: actionDuration)
+        let moveAction = SKAction.move(to: lastPositionTapped, duration: actionDuration)
         
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
         let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
@@ -49,5 +56,9 @@ class CustomScene: SKScene {
         if Settings.shared.shouldRoll {
             crab.run(rollAction)
         }
+    }
+    
+    func save() {
+        Settings.shared.lastCrabPosition = lastPositionTapped
     }
 }
