@@ -7,38 +7,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="y8y-Lu-tbc">
             <objects>
-                <viewController id="EyL-6t-a06" sceneMemberID="viewController">
+                <viewController id="EyL-6t-a06" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMy-c2-diT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="PMx-ut-3ow"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sUe-Nk-fBJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="sUe-Nk-fBJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8b-i0-qKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="690"/>
+            <point key="canvasLocation" x="1681" y="698"/>
         </scene>
-        <!--Item-->
+        <!--Play-->
         <scene sceneID="Kbc-JD-zji">
             <objects>
-                <viewController id="1E6-dD-jLm" sceneMemberID="viewController">
+                <viewController id="1E6-dD-jLm" customClass="GameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpF-BU-fUM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pb2-u5-xWC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="51D-bv-cVp"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="51D-bv-cVp"/>
                     <navigationItem key="navigationItem" id="WIb-Hd-bpv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p90-6M-W5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1771" y="690"/>
+            <point key="canvasLocation" x="362" y="698"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QCg-DD-3gQ">
@@ -46,25 +46,34 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BK0-jA-KjE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SO4-j1-oeM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="1E6-dD-jLm" kind="relationship" relationship="viewControllers" id="Jcy-lC-Dsk"/>
                         <segue destination="EyL-6t-a06" kind="relationship" relationship="viewControllers" id="724-lJ-jGQ"/>
+                        <segue destination="ikX-Ae-XPc" kind="relationship" relationship="viewControllers" id="3K5-io-QXh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRe-eN-hbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="-33.482142857142854"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--InfoNavigation-->
         <scene sceneID="Xge-ou-en0">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InfoNavigation" id="ikX-Ae-XPc" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="InfoNavigation" storyboardName="Info" referencedIdentifier="InfoNavigation" id="ikX-Ae-XPc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OTA-5S-tgx"/>
+                    <navigationItem key="navigationItem" id="Q7m-44-psB"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNK-OG-rrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="-78"/>
+            <point key="canvasLocation" x="993" y="613"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="game_controller" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>
