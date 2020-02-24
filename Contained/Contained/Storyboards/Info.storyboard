@@ -14,7 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="JP8-mv-RXC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-gw-iWQ">
+                                <rect key="frame" x="141" y="419" width="132.5" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Id-gw-iWQ" firstAttribute="centerY" secondItem="JP8-mv-RXC" secondAttribute="centerY" id="FIm-Zg-qKC"/>
+                            <constraint firstItem="2Id-gw-iWQ" firstAttribute="centerX" secondItem="JP8-mv-RXC" secondAttribute="centerX" id="MkC-XW-hYG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dfq-RT-VvB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ls6-b7-iFJ">
@@ -36,18 +48,31 @@
                     <view key="view" contentMode="scaleToFill" id="LPR-u1-ler">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emy-yY-iMZ">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Emy-yY-iMZ" firstAttribute="centerX" secondItem="LPR-u1-ler" secondAttribute="centerX" id="Jfu-oI-crF"/>
+                            <constraint firstItem="Emy-yY-iMZ" firstAttribute="centerY" secondItem="LPR-u1-ler" secondAttribute="centerY" id="njo-Pz-G6Z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Ef-zP-cbt"/>
                     </view>
                     <navigationItem key="navigationItem" id="u1Z-37-8rf">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="FQU-Oc-Hep">
                             <connections>
-                                <action selector="unwindToRoot:" destination="fJv-7B-OAw" id="7ug-Ti-GHJ"/>
+                                <segue destination="KJ9-F3-JS6" kind="unwind" unwindAction="unwindToInfo:" id="ErM-BH-Orc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJv-7B-OAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KJ9-F3-JS6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2652" y="-214"/>
         </scene>
@@ -76,7 +101,21 @@
                     <view key="view" contentMode="scaleToFill" id="30x-uc-ebh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lG-jk-pap">
+                                <rect key="frame" x="142" y="419.5" width="130" height="57.5"/>
+                                <string key="text">Tap to move 
+ the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3lG-jk-pap" firstAttribute="centerY" secondItem="30x-uc-ebh" secondAttribute="centerY" id="T1n-xJ-i24"/>
+                            <constraint firstItem="3lG-jk-pap" firstAttribute="centerX" secondItem="30x-uc-ebh" secondAttribute="centerX" id="kGh-aV-146"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k5h-Af-6w0"/>
                     </view>
                     <navigationItem key="navigationItem" id="SXY-an-5AN">
