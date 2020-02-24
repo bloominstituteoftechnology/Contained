@@ -17,7 +17,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        
         if sender.isOn == true {
             Settings.shared.shouldRoll = true
         } else if sender.isOn == false {
@@ -26,10 +25,7 @@ class SettingsViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        
         if sender.isOn == true {
             Settings.shared.shouldZoom = true
         } else if sender.isOn == false {
@@ -37,6 +33,21 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        if sender.isOn == true {
+            Settings.shared.shouldFade = true
+        } else if sender.isOn == false {
+            Settings.shared.shouldFade = false
+        }
+    }
+    
+    @IBAction func toggleWaitingCrab(_ sender: UISwitch) {
+        if sender.isOn == true {
+            Settings.shared.shouldShowWaitingCrab = true
+        } else if sender.isOn == false {
+            Settings.shared.shouldShowWaitingCrab = false
+        }
+    }
     
     /*
     // MARK: - Navigation
