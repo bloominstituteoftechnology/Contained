@@ -13,5 +13,8 @@ class Settings {
     private init() {}
     
     var shouldRoll = false
-    var shouldZoom = false 
+    var shouldZoom = false
+    var fastOrSlow = false
+    var shouldColorize = false
+    var crabType = "HappyCrab"
 }

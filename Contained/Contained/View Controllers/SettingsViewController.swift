@@ -10,23 +10,59 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    // MARK: Properties
-    
-    
     // MARK: IBOutlets
+    @IBOutlet var rollLabel: UILabel!
+    @IBOutlet var zoomLabel: UILabel!
+    @IBOutlet var speedLabel: UILabel!
+    @IBOutlet var colorizeLabel: UILabel!
+    @IBOutlet var crabTypeLabel: UILabel!
     
     
     // MARK: IBActions
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = sender.isOn
+        if sender.isOn {
+            rollLabel.text = "Roll"
+        } else {
+            rollLabel.text = "No Roll"
+        }
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
         Settings.shared.shouldZoom = sender.isOn
+        if sender.isOn {
+            zoomLabel.text = "Zoom"
+        } else {
+            zoomLabel.text = "No Zoom"
+        }
     }
     
     @IBAction func toggleCrab(_ sender: UISwitch) {
+        if sender.isOn {
+            crabTypeLabel.text = "Waiting Crab"
+            Settings.shared.crabType = "WaitingCrab"
+        } else {
+            crabTypeLabel.text = "Happy Crab"
+            Settings.shared.crabType = "HappyCrab"
+        }
+    }
+    
+    @IBAction func toggleSpeed(_ sender: UISwitch) {
+        Settings.shared.fastOrSlow = sender.isOn
+        if sender.isOn {
+            speedLabel.text = "Speed: Fast"
+        } else {
+            speedLabel.text = "Speed: Slow"
+        }
         
+    }
+    @IBAction func toggleColorize(_ sender: UISwitch) {
+        Settings.shared.shouldColorize = sender.isOn
+        if sender.isOn {
+            colorizeLabel.text = "Colorize: Blue"
+        } else {
+            colorizeLabel.text = "No Colorize"
+        }
     }
     
     
