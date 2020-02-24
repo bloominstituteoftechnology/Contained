@@ -16,7 +16,20 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        
+        if sender == sender.
+        Settings.shared.shouldRoll = true
+        
+        
+    }
+    
+    
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
