@@ -16,6 +16,14 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+//FIXME:        shared.shouldRoll != shared.shouldRoll
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+//        shared.shouldZoom != shared.shouldZoom
+    }
+    
     // Steps to making an unwind segue.
     // - Create the IBAction for the unwind segue in the view controller that you want to go back to. Make sure that the send is of type UIStoryboardSegue.
     // - In the storyboard, control + drag to the exit icon (door with arrow) above the view controller and select the unwind action you just made
