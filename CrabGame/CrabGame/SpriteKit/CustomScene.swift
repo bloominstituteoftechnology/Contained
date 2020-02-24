@@ -11,12 +11,14 @@ import SpriteKit
 
 class CustomScene: SKScene {
     let crab = SKSpriteNode()
+
     var sicknessFactor: CGFloat = 0.0 {
         didSet {
+            guard Settings.shared.crabIsHappy else { return }
             if oldValue < 0.6 && sicknessFactor >= 0.6 {
                 crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
             }
-            if oldValue >= 0.3 && sicknessFactor < 0.3 {
+            if oldValue >= 0.2 && sicknessFactor < 0.2 {
                 crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
             }
         }

@@ -14,6 +14,8 @@ class GamesViewController: UIViewController {
     
     var skscene: CustomScene? = nil
     
+    //MARK: - View Lifecycle
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         skscene = CustomScene(size: view.bounds.size)
