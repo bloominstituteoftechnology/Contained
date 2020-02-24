@@ -11,14 +11,28 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBAction func toggleHappy(_ sender: UISwitch) {
-        Settings.shared.waitingCrab = true
+        switch sender.isOn {
+        case true:
+                Settings.shared.waitingCrab = true
+        default:
+                Settings.shared.waitingCrab = false
+        }
     }
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        Settings.shared.shouldRoll = true
-    }
+        switch sender.isOn {
+        case true:
+                Settings.shared.shouldRoll = true
+        default:
+                Settings.shared.shouldRoll = false
+        }    }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom = true
+        switch sender.isOn {
+        case true:
+            Settings.shared.shouldZoom = true
+        default:
+                Settings.shared.shouldZoom = false
+        }
     }
     
 
