@@ -82,10 +82,16 @@
                         <viewLayoutGuide key="safeArea" id="uWr-GT-giy"/>
                     </view>
                     <navigationItem key="navigationItem" id="IIe-g5-hee">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="h9I-JJ-aJN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="h9I-JJ-aJN">
+                            <connections>
+                                <action selector="done:" destination="v32-Pm-u1f" id="LRq-yp-SqU"/>
+                                <segue destination="v32-Pm-u1f" kind="unwind" unwindAction="done:" id="Cps-Gy-eBQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykp-h5-XtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="v32-Pm-u1f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2577" y="53"/>
         </scene>
