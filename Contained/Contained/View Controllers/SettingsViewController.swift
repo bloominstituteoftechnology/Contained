@@ -50,9 +50,9 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleSpeed(_ sender: UISwitch) {
         Settings.shared.fastOrSlow = sender.isOn
         if sender.isOn {
-            speedLabel.text = "Speed: Fast"
-        } else {
             speedLabel.text = "Speed: Slow"
+        } else {
+            speedLabel.text = "Speed: Normal"
         }
         
     }

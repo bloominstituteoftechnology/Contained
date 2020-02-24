@@ -33,13 +33,27 @@ class CustomScene: SKScene {
         // retrieve position
         let position = touch.location(in: self)
         
-        // Create move action
-        let actionDuration = 1.0
-        let moveAction = SKAction.move(to: position, duration: actionDuration)
+        // Create move action, normal or slow mode
+        var actionDuration: Double
+        var positiveDuration: Double
+        var negativeDuration: Double
         
+        if Settings.shared.fastOrSlow {
+            actionDuration = 3.0
+            positiveDuration = 0.9
+            negativeDuration = 0.3
+        } else {
+            actionDuration = 1.0
+            positiveDuration = 0.3
+            negativeDuration = 0.1
+        }
+        
+        let moveAction = SKAction.move(to: position, duration: actionDuration)
         let rollAction = SKAction.rotate(byAngle: CGFloat.pi*2, duration: actionDuration)
-        let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
-        let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
+        let zoomAction = SKAction.scale(by: 1.3, duration: positiveDuration)
+        let unzoomAction = SKAction.scale(to: 1.0, duration: negativeDuration)
+        let colorizeAction = SKAction.colorize(with: .blue, colorBlendFactor: 1.0, duration: positiveDuration)
+        let uncolorizeAction = SKAction.colorize(with: .blue, colorBlendFactor: 0.0, duration: negativeDuration)
         
         switch Settings.shared.shouldZoom {
         case false:
@@ -53,8 +67,9 @@ class CustomScene: SKScene {
             crab.run(rollAction)
         }
         
-//        if Settings.shared.shouldColorize {
-//            
-//        }
+        if Settings.shared.shouldColorize {
+            let sequenceAction = SKAction.sequence([colorizeAction, moveAction, uncolorizeAction])
+            crab.run(sequenceAction)
+        }
     }
 }
