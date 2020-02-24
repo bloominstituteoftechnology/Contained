@@ -18,6 +18,10 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleHappyCrab(_ sender: UISwitch) {
-        Settings.shared.happyCrab = sender.isOn
+        Settings.shared.crabIsHappy = sender.isOn
+    }
+    
+    @IBAction func toggleMotionSickness(_ sender: UISwitch) {
+        Settings.shared.motionSicknessEnabled = sender.isOn
     }
 }

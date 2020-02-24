@@ -14,7 +14,8 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
-    var happyCrab = false
+    var crabIsHappy = false
+    var motionSicknessEnabled = false
     
     var lastCrabPosition: CGPoint?
 }

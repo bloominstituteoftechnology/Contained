@@ -46,10 +46,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="khX-rO-ulW">
-                                <rect key="frame" x="122.5" y="393.5" width="169.5" height="109"/>
+                                <rect key="frame" x="73.5" y="374" width="267.5" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="vNq-ll-iCI">
-                                        <rect key="frame" x="71.5" y="0.0" width="98" height="31"/>
+                                        <rect key="frame" x="169.5" y="0.0" width="98" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-ly-quf">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
@@ -66,7 +66,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="2jf-q0-6eh">
-                                        <rect key="frame" x="55" y="39" width="114.5" height="31"/>
+                                        <rect key="frame" x="153" y="39" width="114.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0B-rc-YV5">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -83,7 +83,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZDr-lG-9Pp">
-                                        <rect key="frame" x="0.0" y="78" width="169.5" height="31"/>
+                                        <rect key="frame" x="98" y="78" width="169.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-a0-NhU">
                                                 <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
@@ -95,6 +95,23 @@
                                                 <rect key="frame" x="120.5" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleHappyCrab:" destination="RiM-rZ-HTs" eventType="valueChanged" id="sdo-ry-5RG"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-mK-FAq">
+                                        <rect key="frame" x="0.0" y="117" width="267.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion sickness enabled?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muh-rH-vVW">
+                                                <rect key="frame" x="0.0" y="0.0" width="197.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-ki-c1N">
+                                                <rect key="frame" x="218.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleMotionSickness:" destination="RiM-rZ-HTs" eventType="valueChanged" id="0Bb-Bb-2EE"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -128,10 +145,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="D2x-HK-adj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b1M-Vf-COq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ig0-4h-SbP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qnH-sA-mm8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -141,6 +158,7 @@
                         <segue destination="OhQ-F1-sME" kind="relationship" relationship="viewControllers" id="xaX-W6-3Pb"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1M-Vf-COq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="351" y="-1481"/>
         </scene>
