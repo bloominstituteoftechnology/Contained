@@ -9,8 +9,8 @@
 import Foundation
 
 class Settings {
-    static let shared = Settings()
-    private init() {}
+    static let shared = Settings() // Singleton pattern
+    private init() {} // There can be only 1. By making it private.
     
     var shouldRoll = false
     var shouldZoom = false
