@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="y8y-Lu-tbc">
             <objects>
-                <viewController id="EyL-6t-a06" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="EyL-6t-a06" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PMy-c2-diT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EUS-Yg-CyG">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="toggleRoll:" destination="EyL-6t-a06" eventType="valueChanged" id="ld0-EI-7qa"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
@@ -48,6 +51,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4mB-GY-5Tq">
                                                 <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="EyL-6t-a06" eventType="valueChanged" id="Cmf-tp-119"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -80,8 +86,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="sUe-Nk-fBJ"/>
                     <connections>
-                        <outlet property="toggleRoll" destination="EUS-Yg-CyG" id="rh1-E5-AD3"/>
-                        <outlet property="toggleZoom" destination="4mB-GY-5Tq" id="HuD-nK-4RT"/>
+                        <outlet property="rollOutput" destination="XCZ-5G-IeJ" id="lmK-i4-b10"/>
+                        <outlet property="zoomOutput" destination="Gg3-Qe-xyY" id="ZCn-5I-gzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8b-i0-qKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,7 +97,7 @@
         <!--Play-->
         <scene sceneID="Kbc-JD-zji">
             <objects>
-                <viewController id="1E6-dD-jLm" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController id="1E6-dD-jLm" customClass="GamesViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpF-BU-fUM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,18 +105,25 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnB-R9-m3C">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsO-o2-NKv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="EnB-R9-m3C" firstAttribute="top" secondItem="pb2-u5-xWC" secondAttribute="top" id="0Vw-t8-jPy"/>
-                            <constraint firstItem="pb2-u5-xWC" firstAttribute="trailing" secondItem="EnB-R9-m3C" secondAttribute="trailing" id="34F-ix-Pqa"/>
-                            <constraint firstItem="EnB-R9-m3C" firstAttribute="leading" secondItem="pb2-u5-xWC" secondAttribute="leading" id="P7f-9h-Sq9"/>
-                            <constraint firstItem="pb2-u5-xWC" firstAttribute="bottom" secondItem="EnB-R9-m3C" secondAttribute="bottom" id="cu5-Zd-Ud9"/>
+                            <constraint firstItem="EnB-R9-m3C" firstAttribute="top" secondItem="pb2-u5-xWC" secondAttribute="top" id="dZH-hj-lVI"/>
+                            <constraint firstItem="EnB-R9-m3C" firstAttribute="leading" secondItem="pb2-u5-xWC" secondAttribute="leading" id="uYB-R2-0mq"/>
+                            <constraint firstItem="pb2-u5-xWC" firstAttribute="bottom" secondItem="EnB-R9-m3C" secondAttribute="bottom" id="y8l-3i-JGH"/>
+                            <constraint firstItem="pb2-u5-xWC" firstAttribute="trailing" secondItem="EnB-R9-m3C" secondAttribute="trailing" id="zti-nY-eGE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pb2-u5-xWC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="51D-bv-cVp"/>
                     <navigationItem key="navigationItem" id="WIb-Hd-bpv"/>
+                    <connections>
+                        <outlet property="skview" destination="ZsO-o2-NKv" id="OfG-GL-Tmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p90-6M-W5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
