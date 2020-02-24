@@ -10,26 +10,30 @@ import UIKit
 
 
 class SettingsViewController: UIViewController {
+    
+
+    // Roll
 
     @IBOutlet weak var rollOutput: UILabel!
 
     @IBAction func toggleRoll(_ sender: UISwitch) {
         if (sender.isOn == true) {
-            rollOutput.text = "Roll is on"
-        } else {
-            rollOutput.text = " Roll is off"
+            Settings.shared.shouldRoll = true
+        } else if sender.isOn == false {
+            Settings.shared.shouldRoll = false
         }
     }
     
     
+    // Zoom
     
     @IBOutlet weak var zoomOutput: UILabel!
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
         if (sender.isOn == true) {
-            zoomOutput.text = "Zoom is on"
-        } else {
-            zoomOutput.text = "Zoom is off"
+            Settings.shared.shouldZoom = true
+        } else if sender.isOn == false {
+            Settings.shared.shouldZoom = false
         }
         
     }
@@ -38,3 +42,4 @@ class SettingsViewController: UIViewController {
     }
     
 }
+// fgfdg d

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {@IBAction func unwindToInfo(_ sender: UIStoryboardSegue) {
+class InfoViewController: UIViewController{
+    @IBAction func unwindToInfo(_ sender: UIStoryboardSegue) {
         
     }
     
