@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Settings {
     static let shared = Settings()
     private init() {}
     
+    var shouldFade = false
     var shouldRoll = false
     var shouldZoom = false
+    var crabFace = "WaitingCrab"
+    
+    var lastPosition: (CGFloat, CGFloat)? = nil
+    
 }

@@ -12,24 +12,57 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet var rollSwitch: UISwitch!
     @IBOutlet var zoomSwitch: UISwitch!
+    @IBOutlet var happySwitch: UISwitch!
+    @IBOutlet var fadeSwitch: UISwitch!
     
+    
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        
+        if Settings.shared.shouldFade == false {
+            fadeSwitch.isOn = true
+            Settings.shared.shouldFade = true
+        } else {
+            fadeSwitch.isOn = false
+            Settings.shared.shouldFade = false
+        }
+        
+    }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        if rollSwitch.isOn == false {
+        
+        if Settings.shared.shouldRoll == false {
             rollSwitch.isOn = true
+            Settings.shared.shouldRoll = true
         } else {
             rollSwitch.isOn = false
+            Settings.shared.shouldRoll = false
         }
+
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        if zoomSwitch.isOn == false {
+        
+        if Settings.shared.shouldZoom == false {
             zoomSwitch.isOn = true
+            Settings.shared.shouldZoom = true
         } else {
             zoomSwitch.isOn = false
+            Settings.shared.shouldZoom = false
         }
+ 
     }
     
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        
+        if Settings.shared.crabFace == "WaitingCrab" {
+            happySwitch.isOn = true
+            Settings.shared.crabFace = "HappyCrab"
+        } else {
+            happySwitch.isOn = false
+            Settings.shared.crabFace = "WaitingCrab"
+        }
+        
+    }
     
     
     override func viewDidLoad() {
