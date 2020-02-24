@@ -42,6 +42,7 @@ class CustomScene: SKScene {
             crab.run(moveAction)
         case true :
             let sequenceAction = SKAction.sequence([zoomAction, moveAction, unzoomAction])
+            crab.run(sequenceAction)
         }
         
         if Settings.shared.shouldRoll {
