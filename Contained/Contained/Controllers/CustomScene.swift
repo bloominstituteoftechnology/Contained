@@ -20,8 +20,11 @@ class CustomScene: SKScene {
         } else {
             crab.loadTextures(named: "WaitingCrab", forKey: SKSpriteNode.textureKey)
         }
-        
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        if let lastPosition = Settings.shared.lastPosition {
+            crab.position = lastPosition
+        } else {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        }
     }
     
     // Move to touch
@@ -32,6 +35,7 @@ class CustomScene: SKScene {
         
         // retrieve position
         let position = touch.location(in: self)
+        Settings.shared.lastPosition = position
         
         // Create move action, normal or slow mode
         var actionDuration: Double

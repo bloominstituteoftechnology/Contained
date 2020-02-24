@@ -10,12 +10,8 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
-    // MARK: Properties
-    
-    
     // MARK: IBOutlets
     @IBOutlet var skview: SKView!
-    
     
     var skscene: CustomScene? = nil
     
@@ -23,11 +19,8 @@ class GameViewController: UIViewController {
         skscene = CustomScene(size: view.bounds.size)
         skview.presentScene(skscene)
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
 }

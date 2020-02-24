@@ -6,7 +6,7 @@
 //  Copyright © 2020 DeVitoC. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -17,4 +17,5 @@ class Settings {
     var fastOrSlow = false
     var shouldColorize = false
     var crabType = "HappyCrab"
+    var lastPosition: CGPoint?
 }
