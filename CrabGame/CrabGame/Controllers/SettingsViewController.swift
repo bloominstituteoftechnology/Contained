@@ -10,6 +10,9 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBAction func toggleHappy(_ sender: UISwitch) {
+        Settings.shared.waitingCrab = true
+    }
     @IBAction func toggleRoll(_ sender: UISwitch) {
         Settings.shared.shouldRoll = true
     }
