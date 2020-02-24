@@ -11,7 +11,8 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
-    @IBOutlet weak var skscene: SKView!
+    
+    @IBOutlet weak var skview: SKView!
     
     var skscene: CustomScene? = nil
     

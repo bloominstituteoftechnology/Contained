@@ -30,17 +30,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="8ct-5h-tfK"/>
                     <connections>
-                        <outlet property="skscene" destination="Hyz-py-uUr" id="VSE-MV-AVm"/>
+                        <outlet property="skview" destination="Hyz-py-uUr" id="xoN-An-SXR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPM-79-LPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="230" y="61"/>
         </scene>
-        <!--InforNavigation-->
+        <!--Info-->
         <scene sceneID="vpq-UW-wJB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InforNavigation" id="hKk-6n-2R8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Info" id="hKk-6n-2R8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vPi-DS-nUN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt7-C5-Aud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,7 +50,7 @@
         <!--Settings-->
         <scene sceneID="i7T-vk-G02">
             <objects>
-                <viewController id="hfZ-Ou-LOq" sceneMemberID="viewController">
+                <viewController id="hfZ-Ou-LOq" customClass="SettingsViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r9F-Lx-RpT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GZe-cu-HrT">
                                                 <rect key="frame" x="53" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="eiG-Iv-FQX" eventType="valueChanged" id="3Ip-WT-99z"/>
+                                                    <action selector="toggleRoll:" destination="hfZ-Ou-LOq" eventType="valueChanged" id="RTM-KW-UrK"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -87,7 +87,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0M3-H5-e7g">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="eiG-Iv-FQX" eventType="valueChanged" id="wak-i8-JGJ"/>
+                                                    <action selector="toggleZoom:" destination="hfZ-Ou-LOq" eventType="valueChanged" id="P12-zT-hbV"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -105,7 +105,6 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="rgu-cV-AFE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qe1-b7-tPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="eiG-Iv-FQX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2066.666666666667" y="60.9375"/>
         </scene>

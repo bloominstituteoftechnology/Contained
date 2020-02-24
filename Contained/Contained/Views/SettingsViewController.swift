@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController {
     @IBAction func toggleRoll(_ sender: UISwitch) {
         settings.shouldRoll = sender.isOn
     }
+    
     @IBAction func toggleZoom(_ sender: UISwitch) {
         settings.shouldZoom = sender.isOn
     }
