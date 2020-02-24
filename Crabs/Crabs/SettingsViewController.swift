@@ -17,11 +17,17 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        Settings.shared.shouldRoll != Settings.shared.shouldRoll
+        print("before: \(Settings.shared.shouldRoll)")
+        Settings.shared.shouldRoll = !Settings.shared.shouldRoll
+        print("after: \(Settings.shared.shouldRoll)")
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        Settings.shared.shouldZoom != Settings.shared.shouldZoom
+        Settings.shared.shouldZoom = !Settings.shared.shouldZoom
+    }
+    
+    @IBAction func toggleCrab(_ sender: UISwitch) {
+        Settings.shared.happyCrab = !Settings.shared.happyCrab
     }
     
     // Steps to making an unwind segue.
