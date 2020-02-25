@@ -6,7 +6,6 @@
 //  Copyright © 2020 Shawn James. All rights reserved.
 //
 
-import Foundation
 import SpriteKit
 
 class CustomScene: SKScene {
