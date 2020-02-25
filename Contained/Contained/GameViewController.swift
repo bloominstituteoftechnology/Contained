@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SpriteKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var skview: SKView!
@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
             skscene = CustomScene(size: view.bounds.size)
             skview.presentScene(skscene)
         }
-    }
+    
 
 
     override func viewDidLoad() {
@@ -38,5 +38,4 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
