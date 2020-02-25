@@ -28,13 +28,6 @@ class SettingsViewController: UIViewController {
         Settings.shared.happyCrab = !Settings.shared.happyCrab
     }
     
-    // Steps to making an unwind segue.
-    // - Create the IBAction for the unwind segue in the view controller that you want to go back to. Make sure that the send is of type UIStoryboardSegue.
-    // - In the storyboard, control + drag to the exit icon (door with arrow) above the view controller and select the unwind action you just made
-    @IBAction func done(_ sender: UIStoryboardSegue) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
     /*
     // MARK: - Navigation
 
