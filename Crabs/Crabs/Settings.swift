@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Settings {
     static let shared = Settings() // Singleton pattern
@@ -15,4 +16,5 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var happyCrab = false
+    var frame = CGPoint(x: 0, y: 0)
 }

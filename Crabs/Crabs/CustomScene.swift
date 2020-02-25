@@ -22,7 +22,14 @@ class CustomScene: SKScene {
         }
 
         crab.loadTextures(named: typeOfCrab, forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        if Settings.shared.frame.x == 0,
+            Settings.shared.frame.y == 0 {
+            
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        } else {
+            crab.position = Settings.shared.frame
+        }
     }
     
     // Move to touch
