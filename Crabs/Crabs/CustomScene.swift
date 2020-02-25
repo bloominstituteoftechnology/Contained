@@ -41,6 +41,8 @@ class CustomScene: SKScene {
         // Retrieve position
         let position = touch.location(in: self)
         
+        Settings.shared.frame = position
+        
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)

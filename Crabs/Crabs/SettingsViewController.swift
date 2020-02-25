@@ -17,9 +17,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        print("before: \(Settings.shared.shouldRoll)")
         Settings.shared.shouldRoll = !Settings.shared.shouldRoll
-        print("after: \(Settings.shared.shouldRoll)")
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
