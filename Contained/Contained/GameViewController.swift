@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var skview: SKView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
