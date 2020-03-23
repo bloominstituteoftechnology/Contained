@@ -30,8 +30,8 @@
 		FE735D9C24294C400063287F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE735D9F24294C400063287F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE735DA124294C400063287F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE735DA724294C8B0063287F /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Crab.xcassets; path = ../../Crab.xcassets; sourceTree = "<group>"; };
-		FE735DA924294CAC0063287F /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SKSpriteNode+Utility.swift"; path = "../../SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
+		FE735DA724294C8B0063287F /* Crab.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Crab.xcassets; sourceTree = "<group>"; };
+		FE735DA924294CAC0063287F /* SKSpriteNode+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Utility.swift"; sourceTree = "<group>"; };
 		FE735DAB24294CBC0063287F /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		FE735DAD24294CD00063287F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FE735DAF242955110063287F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				FE735D9224294C400063287F /* Contained */,
+				FE735DBA24295E040063287F /* Resources */,
 				FE735D9124294C400063287F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,22 +71,53 @@
 		FE735D9224294C400063287F /* Contained */ = {
 			isa = PBXGroup;
 			children = (
+				FE735DB824295DE30063287F /* Storyboards */,
+				FE735DB924295DF30063287F /* Model */,
+				FE735DB724295DCE0063287F /* View Controllers */,
+				FE735DA124294C400063287F /* Info.plist */,
+			);
+			path = Contained;
+			sourceTree = "<group>";
+		};
+		FE735DB724295DCE0063287F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE735DAF242955110063287F /* GameViewController.swift */,
+				FE735DB1242955200063287F /* InfoViewController.swift */,
+				FE735DB32429552D0063287F /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FE735DB824295DE30063287F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FE735D9924294C400063287F /* Main.storyboard */,
+				FE735DAB24294CBC0063287F /* Info.storyboard */,
+				FE735D9E24294C400063287F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FE735DB924295DF30063287F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE735DB5242959450063287F /* CustomScene.swift */,
+				FE735DAD24294CD00063287F /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE735DBA24295E040063287F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FE735D9324294C400063287F /* AppDelegate.swift */,
 				FE735D9524294C400063287F /* SceneDelegate.swift */,
 				FE735D9C24294C400063287F /* Assets.xcassets */,
 				FE735DA724294C8B0063287F /* Crab.xcassets */,
 				FE735DA924294CAC0063287F /* SKSpriteNode+Utility.swift */,
-				FE735D9924294C400063287F /* Main.storyboard */,
-				FE735DB5242959450063287F /* CustomScene.swift */,
-				FE735DAB24294CBC0063287F /* Info.storyboard */,
-				FE735DAF242955110063287F /* GameViewController.swift */,
-				FE735DB1242955200063287F /* InfoViewController.swift */,
-				FE735DB32429552D0063287F /* SettingsViewController.swift */,
-				FE735DAD24294CD00063287F /* Settings.swift */,
-				FE735D9E24294C400063287F /* LaunchScreen.storyboard */,
-				FE735DA124294C400063287F /* Info.plist */,
 			);
-			path = Contained;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
