@@ -101,17 +101,23 @@ Move the crab</string>
                         <viewLayoutGuide key="safeArea" id="o1W-sB-EgB"/>
                     </view>
                     <navigationItem key="navigationItem" id="JNj-D9-nhr">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="BWF-qP-7M7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="BWF-qP-7M7">
+                            <connections>
+                                <segue destination="vEM-c2-88C" kind="unwind" unwindAction="done:" id="1zw-W1-AVA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3a1-hw-NnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vEM-c2-88C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2499" y="153"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="MRo-57-dJe">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="tIi-R3-7Mv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="info" id="jSF-gd-RWc"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sm5-fg-sjw">
@@ -131,4 +137,7 @@ Move the crab</string>
             <point key="canvasLocation" x="-4.3478260869565224" y="152.67857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
 </document>

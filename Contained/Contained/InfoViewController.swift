@@ -8,20 +8,11 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
-
+class InfoViewController: BasicViewController {
     
-    @IBAction func done(_ sender: Any) {
+    @IBAction func done(_ sender: UIStoryboardSegue) {
         navigationController?.popToRootViewController(animated: true)
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
 
     /*
     // MARK: - Navigation
