@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RYu-my-TNw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E4h-VF-oHH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwi-32-9zl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="146"/>
+            <point key="canvasLocation" x="2308.695652173913" y="145.98214285714286"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="BT9-h2-fdH">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vh5-r6-k7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3215.9420289855075" y="144.64285714285714"/>
+            <point key="canvasLocation" x="4126.086956521739" y="144.64285714285714"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="hak-N6-XJ9">
@@ -109,12 +109,13 @@ the crab.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fh4-pa-01X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="145"/>
+            <point key="canvasLocation" x="3200.0000000000005" y="144.64285714285714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Info-->
         <scene sceneID="qCv-Lb-bsd">
             <objects>
                 <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="RYu-my-TNw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="EG4-Mt-Non"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sok-8f-JJo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -127,7 +128,27 @@ the crab.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ab2-wM-dCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1192.753623188406" y="145.98214285714286"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KE9-NK-sjk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E4h-VF-oHH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g0d-4f-trV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RYu-my-TNw" kind="relationship" relationship="viewControllers" id="ORJ-KQ-Axt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KA-4q-3Ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="282.60869565217394" y="145.98214285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
 </document>
