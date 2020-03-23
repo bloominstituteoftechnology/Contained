@@ -56,10 +56,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vr9-sy-hRB">
-                                <rect key="frame" x="129" y="393.5" width="156.5" height="109"/>
+                                <rect key="frame" x="129" y="374" width="156.5" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lfg-oy-Kwl">
-                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="148"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWY-Kx-8QJ">
                                                 <rect key="frame" x="35.5" y="0.0" width="28" height="31"/>
@@ -73,8 +73,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I26-1q-jaw">
+                                                <rect key="frame" x="31" y="78" width="37.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMZ-xD-RwP">
-                                                <rect key="frame" x="0.0" y="78" width="99.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="117" width="99.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -82,7 +88,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-l2-nc5">
-                                        <rect key="frame" x="107.5" y="0.0" width="49" height="109"/>
+                                        <rect key="frame" x="107.5" y="0.0" width="49" height="148"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Lg-Ec-lIZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -96,8 +102,14 @@
                                                     <action selector="toggleZoom:" destination="z3w-49-7go" eventType="valueChanged" id="xHa-sn-cjH"/>
                                                 </connections>
                                             </switch>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-Ce-FoJ">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dy6-dO-oLl">
                                                 <rect key="frame" x="0.0" y="78" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleFade:" destination="z3w-49-7go" eventType="valueChanged" id="ysx-Hb-iZ5"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-Ce-FoJ">
+                                                <rect key="frame" x="0.0" y="117" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="toggleHappy:" destination="z3w-49-7go" eventType="valueChanged" id="DMU-iB-OtH"/>
                                                 </connections>
