@@ -7,17 +7,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!-- -->
         <scene sceneID="iqO-H1-gOB">
             <objects>
                 <viewController id="9W0-FH-If7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DP8-Io-LWV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Crabs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzF-2K-EN0">
+                                <rect key="frame" x="146" y="419" width="133" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lcV-Sk-WCS" firstAttribute="bottom" secondItem="wzF-2K-EN0" secondAttribute="bottom" constant="336" id="1ik-Kc-LLs"/>
+                            <constraint firstItem="wzF-2K-EN0" firstAttribute="top" secondItem="lcV-Sk-WCS" secondAttribute="top" constant="331" id="GMg-ZQ-6Xn"/>
+                            <constraint firstItem="wzF-2K-EN0" firstAttribute="centerY" secondItem="DP8-Io-LWV" secondAttribute="centerY" id="bIm-sI-92l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lcV-Sk-WCS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="x0m-xq-eRe">
+                    <navigationItem key="navigationItem" title=" " id="x0m-xq-eRe">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="23d-li-m2R">
                             <connections>
                                 <segue destination="scQ-yK-L1q" kind="show" id="9W9-04-uDn"/>
@@ -29,18 +42,33 @@
             </objects>
             <point key="canvasLocation" x="-676.81159420289862" y="-537.05357142857144"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="pd1-Lp-IyA">
             <objects>
                 <viewController id="scQ-yK-L1q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccM-ko-9Xa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y83-V8-qwU">
+                                <rect key="frame" x="20" y="419.5" width="374" height="57.5"/>
+                                <string key="text">Tap to move the crab
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y83-V8-qwU" firstAttribute="leading" secondItem="fdi-RL-z6L" secondAttribute="leading" constant="20" id="K7o-z3-Pdk"/>
+                            <constraint firstItem="Y83-V8-qwU" firstAttribute="centerY" secondItem="ccM-ko-9Xa" secondAttribute="centerY" id="SO2-Gi-cO2"/>
+                            <constraint firstItem="fdi-RL-z6L" firstAttribute="trailing" secondItem="Y83-V8-qwU" secondAttribute="trailing" constant="20" id="kWq-Ri-NmP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fdi-RL-z6L"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="nI7-2y-7k7">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="CTz-pJ-2fd">
+                    <navigationItem key="navigationItem" id="nI7-2y-7k7">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="CTz-pJ-2fd">
                             <connections>
                                 <segue destination="Xmb-k1-tMZ" kind="show" id="aBA-az-eN5"/>
                             </connections>
@@ -49,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6W-cT-UMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="-539"/>
+            <point key="canvasLocation" x="159.42028985507247" y="-539.0625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eOu-hh-vta">
@@ -76,12 +104,32 @@
                     <view key="view" contentMode="scaleToFill" id="o6Q-Vi-QdQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets Play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUZ-ca-Pkl">
+                                <rect key="frame" x="157" y="420" width="100.5" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AUZ-ca-Pkl" firstAttribute="top" secondItem="zxs-ga-M12" secondAttribute="top" constant="332" id="LhQ-7P-uZZ"/>
+                            <constraint firstItem="zxs-ga-M12" firstAttribute="bottom" secondItem="AUZ-ca-Pkl" secondAttribute="bottom" constant="335.5" id="au6-W6-drF"/>
+                            <constraint firstItem="AUZ-ca-Pkl" firstAttribute="centerX" secondItem="o6Q-Vi-QdQ" secondAttribute="centerX" id="uTv-ZK-SKd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zxs-ga-M12"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0JX-hC-EPH"/>
+                    <navigationItem key="navigationItem" id="0JX-hC-EPH">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="CUa-Qg-tgl">
+                            <connections>
+                                <action selector="backToRootButton:" destination="1bx-EN-jXa" id="z81-f1-sG3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7U-Ji-Tgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1bx-EN-jXa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="993" y="-537"/>
         </scene>
