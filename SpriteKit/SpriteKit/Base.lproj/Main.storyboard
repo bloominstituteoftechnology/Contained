@@ -10,12 +10,12 @@
         <!--Play-->
         <scene sceneID="QVy-8I-YhO">
             <objects>
-                <viewController id="gyL-BS-odx" customClass="GameViewController" customModule="SpriteKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gyL-BS-odx" customClass="GameViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0j-z9-hoc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-Nj-TFX">
+                            <skView contentMode="scaleToFill" sceneName="CustomScene" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-Nj-TFX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
@@ -50,7 +50,7 @@
         <!--Settings-->
         <scene sceneID="uuW-5d-Tqw">
             <objects>
-                <viewController id="FPh-BF-BgI" customClass="SettingsViewController" customModule="SpriteKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FPh-BF-BgI" customClass="SettingsViewController" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ukA-eM-Nvq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdt-j8-NuY">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-Ox-dhA">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-Ox-dhA">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="FPh-BF-BgI" eventType="valueChanged" id="Ps1-jR-lJP"/>
+                                                    <action selector="toggleRoll:" destination="FPh-BF-BgI" eventType="primaryActionTriggered" id="TtN-l5-t6C"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6O-T7-P1E">
@@ -78,10 +78,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-kR-bpI">
                                         <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-Ij-wZo">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-Ij-wZo">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="FPh-BF-BgI" eventType="valueChanged" id="F8m-KE-EYW"/>
+                                                    <action selector="toggleZoom:" destination="FPh-BF-BgI" eventType="primaryActionTriggered" id="aU3-17-iB6"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-yM-zJo">
@@ -104,7 +104,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Yyn-zN-sVT"/>
                     <connections>
+                        <outlet property="rollSwitch" destination="hbe-Ox-dhA" id="e9D-NE-CfC"/>
                         <outlet property="toggleRoll" destination="hbe-Ox-dhA" id="s4y-yb-PZq"/>
+                        <outlet property="zoomSwitch" destination="xkj-Ij-wZo" id="9q0-1d-LSM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1q-ix-02N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,7 +118,9 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6k4-nl-uB7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q7D-NZ-L9C">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

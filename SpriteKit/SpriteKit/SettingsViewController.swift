@@ -9,15 +9,20 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-
-
-    @IBAction func toggleRoll(_ sender: UISwitch) {
-       
-    }
+   
     
+
+    
+    
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        if sender.isOn == true {
+            
+}
+    }
     @IBAction func toggleZoom(_ sender: UISwitch) {
-      
+        if sender.isOn == true {
+            
+        }
     }
     
 
