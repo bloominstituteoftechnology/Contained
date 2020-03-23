@@ -15,6 +15,18 @@ class SettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func toggleRoll(_ sender: UISwitch) {
+        Settings.shared.shouldRoll = sender.isOn
+    }
+    
+    @IBAction func toggleZoom(_ sender: UISwitch) {
+        Settings.shared.shouldZoom = sender.isOn
+    }
+    
+    @IBAction func togglerHappyCrab(_ sender: UISwitch) {
+        //Nothing
+    }
+    
     
 
     /*

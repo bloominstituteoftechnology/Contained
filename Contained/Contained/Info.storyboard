@@ -14,7 +14,19 @@
                     <view key="view" contentMode="scaleToFill" id="9P2-MQ-kjf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-0L-NIX">
+                                <rect key="frame" x="140.5" y="419" width="133" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jLB-0L-NIX" firstAttribute="centerY" secondItem="9P2-MQ-kjf" secondAttribute="centerY" id="Ph1-KI-bcG"/>
+                            <constraint firstItem="jLB-0L-NIX" firstAttribute="centerX" secondItem="9P2-MQ-kjf" secondAttribute="centerX" id="UEF-hi-7II"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1v5-7u-zxA"/>
                     </view>
                     <navigationItem key="navigationItem" id="NET-dZ-4hb">
@@ -24,19 +36,34 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFw-sg-lGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="905.79710144927549" y="152.67857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic View Controller-->
         <scene sceneID="AY8-N2-xJk">
             <objects>
-                <viewController id="UWq-od-fbZ" sceneMemberID="viewController">
+                <viewController id="UWq-od-fbZ" customClass="BasicViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2n3-O8-PTk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twH-3z-i5f">
+                                <rect key="frame" x="133.5" y="419.5" width="147.5" height="57.5"/>
+                                <string key="text">Tap to
+Move the crab</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="twH-3z-i5f" firstAttribute="centerX" secondItem="2n3-O8-PTk" secondAttribute="centerX" id="3EN-90-Z42"/>
+                            <constraint firstItem="twH-3z-i5f" firstAttribute="centerY" secondItem="2n3-O8-PTk" secondAttribute="centerY" id="LmT-as-rwa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uFt-zo-52p"/>
                     </view>
                     <navigationItem key="navigationItem" id="F5d-AQ-ZIy">
@@ -51,14 +78,26 @@
             </objects>
             <point key="canvasLocation" x="1730" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic View Controller-->
         <scene sceneID="ras-Vj-mRz">
             <objects>
-                <viewController id="Zkq-lS-hcj" sceneMemberID="viewController">
+                <viewController id="Zkq-lS-hcj" customClass="BasicViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OZX-XT-e7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="269-kJ-9jw">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="269-kJ-9jw" firstAttribute="centerY" secondItem="OZX-XT-e7P" secondAttribute="centerY" id="5ju-fL-elt"/>
+                            <constraint firstItem="269-kJ-9jw" firstAttribute="centerX" secondItem="OZX-XT-e7P" secondAttribute="centerX" id="X3b-rP-6L0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o1W-sB-EgB"/>
                     </view>
                     <navigationItem key="navigationItem" id="JNj-D9-nhr">
