@@ -16,6 +16,7 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func done(_ sender: UIStoryboardSegue) {
+        tabBarController?.selectedIndex = 0
         navigationController?.popToRootViewController(animated: true)
     }
     
