@@ -5,8 +5,7 @@
 //  Created by Shawn James on 2/24/20.
 //  Copyright © 2020 Shawn James. All rights reserved.
 //
-
-import Foundation
+import UIKit
 
 class Settings {
     static let shared = Settings()
@@ -15,4 +14,7 @@ class Settings {
     var shouldRoll = false
     var shouldZoom = false
     var happyCrab = false
+    
+    var savedPreviousCrabPosition: CGPoint?
+
 }
