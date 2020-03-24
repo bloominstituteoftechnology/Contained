@@ -30,7 +30,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="gamecontroller.fill" catalog="system" id="3po-ES-le4"/>
                     <connections>
-                        <outlet property="skview" destination="YGl-Nj-TFX" id="DaQ-i8-eGz"/>
+                        <outlet property="skview" destination="YGl-Nj-TFX" id="B3V-rc-TTl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnM-3I-Tla" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -38,14 +38,14 @@
             <point key="canvasLocation" x="95.652173913043484" y="470.75892857142856"/>
         </scene>
         <!--InfoNavigation-->
-        <scene sceneID="AbG-Ok-amZ">
+        <scene sceneID="EuH-vh-da6">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="wAj-1x-ial" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="NGa-ap-XnY"/>
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="Lbf-Fx-7qQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle" catalog="system" id="Wa0-gA-6OW"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8a-yF-ZZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNF-LQ-Oea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="416"/>
+            <point key="canvasLocation" x="955" y="439"/>
         </scene>
         <!--Settings-->
         <scene sceneID="uuW-5d-Tqw">
@@ -61,10 +61,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zdt-j8-NuY">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-Ox-dhA">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-Ox-dhA" userLabel="Toggle Roll">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleRoll:" destination="FPh-BF-BgI" eventType="primaryActionTriggered" id="TtN-l5-t6C"/>
+                                                    <action selector="toggleRoll:" destination="FPh-BF-BgI" eventType="valueChanged" id="ulB-Zb-SGh"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6O-T7-P1E">
@@ -78,10 +78,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-kR-bpI">
                                         <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-Ij-wZo">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-Ij-wZo" userLabel="Toggle Zoom">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="toggleZoom:" destination="FPh-BF-BgI" eventType="primaryActionTriggered" id="aU3-17-iB6"/>
+                                                    <action selector="toggleZoom:" destination="FPh-BF-BgI" eventType="valueChanged" id="0N0-0a-WWr"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-yM-zJo">
@@ -103,11 +103,6 @@
                         <viewLayoutGuide key="safeArea" id="uPd-xM-T1S"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Yyn-zN-sVT"/>
-                    <connections>
-                        <outlet property="rollSwitch" destination="hbe-Ox-dhA" id="e9D-NE-CfC"/>
-                        <outlet property="toggleRoll" destination="hbe-Ox-dhA" id="s4y-yb-PZq"/>
-                        <outlet property="zoomSwitch" destination="xkj-Ij-wZo" id="9q0-1d-LSM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1q-ix-02N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +122,7 @@
                     <connections>
                         <segue destination="gyL-BS-odx" kind="relationship" relationship="viewControllers" id="YJu-kr-nPU"/>
                         <segue destination="FPh-BF-BgI" kind="relationship" relationship="viewControllers" id="SRv-a1-h8F"/>
-                        <segue destination="wAj-1x-ial" kind="relationship" relationship="viewControllers" id="5w4-1y-N3X"/>
+                        <segue destination="Lbf-Fx-7qQ" kind="relationship" relationship="viewControllers" id="BLs-dp-5Pe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAS-HF-f4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,6 +133,6 @@
     <resources>
         <image name="gamecontroller.fill" catalog="system" width="64" height="40"/>
         <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="info.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
