@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Info-->
+        <!--InfoNavigation-->
         <scene sceneID="VBI-io-P1X">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="InfoNavigation" storyboardName="Info" id="WfM-hz-55R" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="InfoNavigation" storyboardName="Info" referencedIdentifier="InfoNavigation" id="WfM-hz-55R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="VMv-R2-RZI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exz-Zl-qEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -20,12 +20,12 @@
         <!--Play-->
         <scene sceneID="PdZ-kH-iuW">
             <objects>
-                <viewController id="4Xa-lm-qHa" customClass="GameViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Xa-lm-qHa" customClass="GamesViewController" customModule="Crabs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5DN-Rv-RfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuj-OK-ixt" customClass="I">
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuj-OK-ixt">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
@@ -41,7 +41,6 @@
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="ulq-ug-dqd"/>
                     <connections>
                         <outlet property="skView" destination="Fuj-OK-ixt" id="iBZ-E5-nAY"/>
-                        <outlet property="skview" destination="Fuj-OK-ixt" id="Av2-hF-j0m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rj-md-iix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -104,10 +103,6 @@
                         <viewLayoutGuide key="safeArea" id="Mdt-zV-QHA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setings" image="settings" id="KJ0-9e-kws"/>
-                    <connections>
-                        <outlet property="toggleRoll" destination="CfP-nh-Icg" id="pjz-zu-J8O"/>
-                        <outlet property="toggleZoom" destination="arY-EX-UIt" id="dvi-SF-gaG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoA-am-ECq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
