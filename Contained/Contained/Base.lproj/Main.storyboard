@@ -29,6 +29,9 @@
                         <viewLayoutGuide key="safeArea" id="Tjf-Zw-EWr"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" id="ZIH-RT-axy"/>
+                    <connections>
+                        <outlet property="skview" destination="ZQ9-UA-Qj7" id="CE4-Bp-EU9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEV-a7-t9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="93O-8T-zCD">
-                                <rect key="frame" x="152" y="413" width="110" height="71"/>
+                                <rect key="frame" x="152" y="412.5" width="110" height="71"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hfT-z8-Oa7">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="31"/>
@@ -84,9 +87,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="93O-8T-zCD" firstAttribute="leading" secondItem="gj7-v4-ujT" secondAttribute="leading" constant="152" id="5pM-hD-wwg"/>
-                            <constraint firstItem="93O-8T-zCD" firstAttribute="top" secondItem="gj7-v4-ujT" secondAttribute="top" constant="369" id="NN3-UL-OM3"/>
-                            <constraint firstItem="gj7-v4-ujT" firstAttribute="trailing" secondItem="93O-8T-zCD" secondAttribute="trailing" constant="152" id="Pas-WM-1XH"/>
+                            <constraint firstItem="93O-8T-zCD" firstAttribute="centerX" secondItem="48J-Ty-kO0" secondAttribute="centerX" id="kmD-FE-VBU"/>
+                            <constraint firstItem="93O-8T-zCD" firstAttribute="centerY" secondItem="48J-Ty-kO0" secondAttribute="centerY" id="mkb-1b-9CH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gj7-v4-ujT"/>
                     </view>

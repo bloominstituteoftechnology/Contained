@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ud8-yC-trs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Info View Controller-->
+        <!--Info-->
         <scene sceneID="gh4-Jy-N66">
             <objects>
                 <viewController id="qjv-FZ-Nva" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRx-8h-PTz">
-                                <rect key="frame" x="0.0" y="419" width="414" height="58"/>
+                                <rect key="frame" x="141" y="419" width="132.5" height="58"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -24,12 +24,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZRx-8h-PTz" firstAttribute="leading" secondItem="Gi8-4W-YDu" secondAttribute="leading" id="DQL-ix-kdv"/>
-                            <constraint firstItem="Gi8-4W-YDu" firstAttribute="bottom" secondItem="ZRx-8h-PTz" secondAttribute="bottom" constant="385" id="oT7-j8-TLE"/>
-                            <constraint firstItem="Gi8-4W-YDu" firstAttribute="trailing" secondItem="ZRx-8h-PTz" secondAttribute="trailing" id="tk3-Y2-9p8"/>
+                            <constraint firstItem="ZRx-8h-PTz" firstAttribute="centerY" secondItem="OjV-jV-ArQ" secondAttribute="centerY" id="XWK-I8-pC7"/>
+                            <constraint firstItem="ZRx-8h-PTz" firstAttribute="centerX" secondItem="OjV-jV-ArQ" secondAttribute="centerX" id="xo8-UI-XFK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gi8-4W-YDu"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="pwK-Qt-ikn"/>
                     <navigationItem key="navigationItem" id="eQS-6U-NJs">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="HQ1-nB-Q6z">
                             <connections>
@@ -37,6 +37,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmr-NC-Lod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xm-dN-pWV">
-                                <rect key="frame" x="0.0" y="419.5" width="414" height="57.5"/>
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
                                 <string key="text">Tap to move
  the crab</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -61,9 +62,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="FNZ-mU-GVU" firstAttribute="trailing" secondItem="2Xm-dN-pWV" secondAttribute="trailing" id="1rC-yN-0iT"/>
-                            <constraint firstItem="FNZ-mU-GVU" firstAttribute="bottom" secondItem="2Xm-dN-pWV" secondAttribute="bottom" constant="385" id="HsY-sV-w8m"/>
-                            <constraint firstItem="2Xm-dN-pWV" firstAttribute="leading" secondItem="FNZ-mU-GVU" secondAttribute="leading" id="J36-ke-iFN"/>
+                            <constraint firstItem="2Xm-dN-pWV" firstAttribute="centerX" secondItem="aQr-OO-13g" secondAttribute="centerX" id="Uor-8F-dWH"/>
+                            <constraint firstItem="2Xm-dN-pWV" firstAttribute="centerY" secondItem="aQr-OO-13g" secondAttribute="centerY" id="yEc-J6-Ywu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FNZ-mU-GVU"/>
                     </view>
@@ -87,15 +87,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-nA-co8">
-                                <rect key="frame" x="0.0" y="420" width="414" height="57.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-nA-co8">
+                                <rect key="frame" x="154" y="433.5" width="106" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H0X-nA-co8" firstAttribute="centerX" secondItem="xSl-F6-hG1" secondAttribute="centerX" id="0LT-0B-9YN"/>
+                            <constraint firstItem="H0X-nA-co8" firstAttribute="centerY" secondItem="xSl-F6-hG1" secondAttribute="centerY" id="QRz-1u-fxr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WXS-YG-on3"/>
                     </view>
                     <navigationItem key="navigationItem" id="HEK-cl-SX8">
@@ -129,4 +132,7 @@
             <point key="canvasLocation" x="-1313.0434782608697" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
 </document>
