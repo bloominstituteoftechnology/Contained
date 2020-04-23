@@ -17,17 +17,27 @@ class CustomScene: SKScene {
         super.sceneDidLoad()
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        print(Settings.shared.position)
+        if Settings.shared.tracker == 0 {
+            crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        } else {
+            crab.position = Settings.shared.position
+        }
+        print(crab.position)
     }
     
     // Move to touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        Settings.shared.tracker += 1
         
         // Fetch a touch or leave
         guard !touches.isEmpty, let touch = touches.first else { return }
         
         // Retrieve position
         let position = touch.location(in: self)
+        Settings.shared.position = position
+        print(position)
+        print(Settings.shared.position)
         
         // Create move action
         let actionDuration = 1.0

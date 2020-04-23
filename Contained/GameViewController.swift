@@ -20,5 +20,11 @@ class GameViewController: UIViewController {
         skscene = CustomScene(size: view.bounds.size)
         skView.presentScene(skscene)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            Settings.shared.position = touch.location(in: view)
+        }
+    }
 
 }
