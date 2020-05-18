@@ -9,7 +9,8 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +28,7 @@ class InfoViewController: UIViewController {
     }
     */
 
+    @IBAction func done(_ sender: Any) {
+          navigationController?.popToRootViewController(animated: true)
+    }
 }
