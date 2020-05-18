@@ -2,10 +2,6 @@
 
 This challenge allows you to practice the concepts and techniques learned in today's guided lesson and apply them in a concrete project. Your lesson explored view controller containment using Navigation and Tab Bar controllers. You will demonstrate proficiency by creating an application that showcases the same features you learned in class.
 
-## Instructions
-
-This is an individual assessment but you are permitted to consult with and support other members of your cohort. You are encouraged to follow the twenty-minute rule and seek support from your TL and Instructor in your cohort help channel on Slack. 
-
 ## Commits
 
 Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead.
