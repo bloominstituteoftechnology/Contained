@@ -10,11 +10,20 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBAction func rollToggle(_ sender: UISwitch) {
+    sender.isSelected.toggle()
+    }
+    
+    @IBAction func zoomToggle(_ sender: UISwitch) {
+    sender.isSelected.toggle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
