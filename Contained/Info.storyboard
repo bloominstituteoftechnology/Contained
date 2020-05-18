@@ -10,7 +10,7 @@
         <!--Info View Controller-->
         <scene sceneID="Xwj-K6-vGR">
             <objects>
-                <viewController storyboardIdentifier="InfoNavigation" title="Info View Controller" id="1ON-Zh-reX" sceneMemberID="viewController">
+                <viewController title="Info View Controller" id="1ON-Zh-reX" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LbC-AU-Qpz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,7 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="wwF-v5-rs2"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="gac-eW-Of9"/>
+                    <navigationItem key="navigationItem" id="gac-eW-Of9">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="wg1-YH-3iz">
+                            <connections>
+                                <segue destination="CL3-QD-WMx" kind="show" id="Ux7-YG-Dk0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JY-dP-87w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,11 +41,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rxb-xx-1oV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8B6-fT-sI9"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8B6-fT-sI9">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Hfg-Tb-e0b">
+                            <connections>
+                                <segue destination="Hsj-YD-29s" kind="show" id="S3y-fD-NWa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnB-3X-kxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671.0144927536232" y="813.61607142857144"/>
+            <point key="canvasLocation" x="1813" y="183"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Eyr-ER-Kld">
@@ -51,16 +65,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Xq7-Ob-2Oj"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZYF-Ft-zHE"/>
+                    <navigationItem key="navigationItem" id="ZYF-Ft-zHE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yoY-8I-zYa"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIK-ff-dF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331.8840579710145" y="164.73214285714286"/>
+            <point key="canvasLocation" x="2619" y="183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="avi-Pd-EVI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yJp-c1-E2O" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="yJp-c1-E2O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yYD-BA-dhJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
