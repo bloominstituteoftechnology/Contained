@@ -87,18 +87,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOF-NP-tUx">
-                                <rect key="frame" x="186" y="351" width="8" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-RV-KyM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BHq-RV-KyM" firstAttribute="leading" secondItem="JEJ-76-Clg" secondAttribute="leading" id="0ID-p2-llP"/>
+                            <constraint firstItem="BHq-RV-KyM" firstAttribute="top" secondItem="JEJ-76-Clg" secondAttribute="top" id="E2i-aZ-fqv"/>
+                            <constraint firstItem="JEJ-76-Clg" firstAttribute="bottom" secondItem="BHq-RV-KyM" secondAttribute="bottom" id="Tpr-5h-gcH"/>
+                            <constraint firstItem="JEJ-76-Clg" firstAttribute="trailing" secondItem="BHq-RV-KyM" secondAttribute="trailing" id="VOd-gs-kYF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JEJ-76-Clg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="play" catalog="system" id="lss-Od-mNr"/>
+                    <connections>
+                        <outlet property="skyView" destination="BHq-RV-KyM" id="gRE-R8-1Z7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgk-UM-hYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
