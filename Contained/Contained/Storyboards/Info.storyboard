@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j7O-dO-Zme">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="57.589285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="9rx-Uw-VaW">
             <objects>
-                <viewController id="PdZ-T8-rwf" sceneMemberID="viewController">
+                <viewController id="PdZ-T8-rwf" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcT-Il-5Nu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1919" y="58"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="t8I-Wt-ECP">
             <objects>
-                <viewController id="H5o-XO-xUM" sceneMemberID="viewController">
+                <viewController id="H5o-XO-xUM" customClass="InfoViewController" customModule="Contained" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OIp-rV-Ihu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,11 @@
                         <viewLayoutGuide key="safeArea" id="UTG-sA-byU"/>
                     </view>
                     <navigationItem key="navigationItem" id="GlZ-uX-7Cp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gS2-IZ-tR2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gS2-IZ-tR2">
+                            <connections>
+                                <action selector="done:" destination="H5o-XO-xUM" id="lmk-aD-EY6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUS-qC-VdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
