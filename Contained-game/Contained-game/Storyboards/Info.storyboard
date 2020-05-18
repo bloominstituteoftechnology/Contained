@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="HFG-2N-NTD">
+            <objects>
+                <viewController id="dPP-3v-xfE" customClass="InfoViewController" customModule="Contained_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vsf-y1-qdb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="720-xv-TwJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e7K-va-wMQ">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="ZQS-gh-pjp">
+                            <connections>
+                                <segue destination="7Nx-pN-ged" kind="show" id="VMY-hu-FhG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pj-oL-Ryo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="-245.08928571428569"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="WUO-x1-OH8">
+            <objects>
+                <viewController id="7Nx-pN-ged" customClass="InfoViewController" customModule="Contained_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0d-A0-Xce">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w4a-ae-Zo9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Mog-h9-7gB">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Bvk-OR-Imr">
+                            <connections>
+                                <segue destination="46c-lI-8gU" kind="show" id="3lv-8u-qhn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx5-MC-rdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-245"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="h5E-JJ-TrQ">
+            <objects>
+                <viewController id="46c-lI-8gU" customClass="InfoViewController" customModule="Contained_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cDp-bp-sMN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HUG-2E-j4K"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Sy8-Bo-jms">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gVS-Ks-3bn"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tz-Gi-xs5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432" y="-245"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fmd-5Q-Ly1">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="Qu1-gx-1lG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IKr-lj-UqU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dPP-3v-xfE" kind="relationship" relationship="rootViewController" id="Bar-dG-7Li"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0V-AD-cay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="-245.08928571428569"/>
+        </scene>
+    </scenes>
+</document>
