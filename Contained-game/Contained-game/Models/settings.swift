@@ -1,5 +1,5 @@
 //
-//  settings.swift
+//  Settings.swift
 //  Contained-game
 //
 //  Created by Mike Nichols on 5/18/20.
@@ -9,9 +9,9 @@
 import Foundation
 
 class Settings {
-    static let shared = Settings!
+    static let shared = Settings()
     private init() {}
     
-    var shouldRoll= false
+    var shouldRoll = false
     var shouldZoom = false
 }
