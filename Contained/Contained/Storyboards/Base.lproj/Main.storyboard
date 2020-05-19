@@ -76,19 +76,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-L0-2Ip">
-                                <rect key="frame" x="87" y="352" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-L0-2Ip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6wr-KN-jgb" firstAttribute="trailing" secondItem="hFF-L0-2Ip" secondAttribute="trailing" id="RbU-ND-fTr"/>
+                            <constraint firstItem="hFF-L0-2Ip" firstAttribute="top" secondItem="6wr-KN-jgb" secondAttribute="top" id="WaW-8g-lvw"/>
+                            <constraint firstItem="hFF-L0-2Ip" firstAttribute="leading" secondItem="6wr-KN-jgb" secondAttribute="leading" id="XYI-zF-cOI"/>
+                            <constraint firstItem="6wr-KN-jgb" firstAttribute="bottom" secondItem="hFF-L0-2Ip" secondAttribute="bottom" id="vsn-DF-tzC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6wr-KN-jgb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="dPh-q7-g83"/>
+                    <connections>
+                        <outlet property="skView" destination="hFF-L0-2Ip" id="8if-Sp-vfP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlW-so-827" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="-135"/>
+            <point key="canvasLocation" x="1463.768115942029" y="-135.26785714285714"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ymj-9H-P3X">
