@@ -16,3 +16,4 @@ class Settings {
     var shouldZoom = false
 }
 
+
