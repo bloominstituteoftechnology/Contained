@@ -72,22 +72,36 @@
         <scene sceneID="ecs-gW-lB2">
             <objects>
                 <viewController id="G3w-XO-ENT" customClass="GameViewController" customModule="Contained_game" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xMB-DU-Z2e" customClass="play">
+                    <view key="view" contentMode="scaleToFill" id="xMB-DU-Z2e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzJ-ga-xp8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7hT-bi-3ws" firstAttribute="bottom" secondItem="RzJ-ga-xp8" secondAttribute="bottom" id="59C-zt-gx7"/>
+                            <constraint firstItem="7hT-bi-3ws" firstAttribute="trailing" secondItem="RzJ-ga-xp8" secondAttribute="trailing" id="R75-YQ-O04"/>
+                            <constraint firstItem="RzJ-ga-xp8" firstAttribute="top" secondItem="7hT-bi-3ws" secondAttribute="top" id="dyB-PY-seE"/>
+                            <constraint firstItem="RzJ-ga-xp8" firstAttribute="leading" secondItem="7hT-bi-3ws" secondAttribute="leading" id="uJF-KH-HSz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7hT-bi-3ws"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="play.circle.fill" catalog="system" selectedImage="info.circle.fill" id="rah-P1-SMz"/>
+                    <connections>
+                        <outlet property="skview" destination="RzJ-ga-xp8" id="1rt-bz-Vob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0f-JS-F3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2636.231884057971" y="-46.205357142857139"/>
         </scene>
-        <!--Info-->
+        <!--InfoNavigation-->
         <scene sceneID="7eA-aB-Tfc">
             <objects>
-                <viewControllerPlaceholder storyboardName="Info" id="AXW-WK-dhG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoNavigation" id="AXW-WK-dhG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info.circle.fill" catalog="system" id="3zB-AC-Tf1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XP-TU-Y2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,6 +114,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fOO-53-dCM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZUE-Ii-No7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
