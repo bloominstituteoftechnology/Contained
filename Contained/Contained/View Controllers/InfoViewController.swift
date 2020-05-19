@@ -14,8 +14,9 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
-    
+    @IBAction func unwindToInfoVC (_ sender: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation
