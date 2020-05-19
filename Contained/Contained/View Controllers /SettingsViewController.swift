@@ -15,18 +15,16 @@ class SettingsViewController: UIViewController {
 
     }
     
-
+    
     @IBAction func shouldRoll(_ sender: UISwitch) {
-        sender.isOn == true ? Settings.shared.shouldRoll == false : Settings.shared.shouldRoll
-//        Settings.shared.shouldRoll == true ? sender.isOn = false : sender.isOn = true
-       
+        Settings.shared.shouldRoll = sender.isOn
     }
     
     
     
     
     @IBAction func shouldZoom(_ sender: UISwitch) {
-        sender.isOn = true ? Settings.shared.shouldZoom == true : Settings.shared.shouldRoll == false
+        Settings.shared.shouldZoom = sender.isOn ? true : false 
     }
     
     
