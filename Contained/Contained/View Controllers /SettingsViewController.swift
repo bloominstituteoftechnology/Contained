@@ -17,8 +17,8 @@ class SettingsViewController: UIViewController {
     
 
     @IBAction func shouldRoll(_ sender: UISwitch) {
-        sender.isOn == true ? Settings.shared.shouldRoll == false : Settings.shared.shouldRoll == true
-            
+        sender.isOn == true ? Settings.shared.shouldRoll == false : Settings.shared.shouldRoll
+//        Settings.shared.shouldRoll == true ? sender.isOn = false : sender.isOn = true
        
     }
     

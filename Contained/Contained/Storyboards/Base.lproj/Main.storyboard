@@ -75,7 +75,18 @@
                     <view key="view" contentMode="scaleToFill" id="IXc-gx-nS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-TO-8QI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ret-pw-fKw" firstAttribute="trailing" secondItem="jDW-TO-8QI" secondAttribute="trailing" id="Fob-Eh-LVa"/>
+                            <constraint firstItem="jDW-TO-8QI" firstAttribute="leading" secondItem="ret-pw-fKw" secondAttribute="leading" id="GKd-H9-FJh"/>
+                            <constraint firstItem="ret-pw-fKw" firstAttribute="bottom" secondItem="jDW-TO-8QI" secondAttribute="bottom" id="Tqg-hv-IHb"/>
+                            <constraint firstItem="jDW-TO-8QI" firstAttribute="top" secondItem="ret-pw-fKw" secondAttribute="top" id="cbu-Ay-mda"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ret-pw-fKw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="Mun-uM-RFR"/>
