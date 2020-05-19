@@ -14,10 +14,32 @@
                     <view key="view" contentMode="scaleToFill" id="bk4-oL-dZ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSp-7M-Mbu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="bottom" secondItem="cKA-l7-6LR" secondAttribute="bottom" id="1zQ-r0-mJc"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="leading" secondItem="cKA-l7-6LR" secondAttribute="leading" id="CJc-uw-Jzy"/>
+                            <constraint firstItem="cKA-l7-6LR" firstAttribute="trailing" secondItem="mSp-7M-Mbu" secondAttribute="trailing" id="D60-nc-dJm"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="leading" secondItem="cKA-l7-6LR" secondAttribute="leading" id="Dps-Gs-jrC"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="leading" secondItem="cKA-l7-6LR" secondAttribute="leading" id="H60-XF-llZ"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="bottom" secondItem="cKA-l7-6LR" secondAttribute="bottom" id="LjR-36-tw6"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="trailing" secondItem="cKA-l7-6LR" secondAttribute="trailing" id="Th1-lx-HOO"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="trailing" secondItem="cKA-l7-6LR" secondAttribute="trailing" id="bmd-EQ-kbH"/>
+                            <constraint firstItem="cKA-l7-6LR" firstAttribute="bottom" secondItem="mSp-7M-Mbu" secondAttribute="bottom" id="tpQ-VU-kxq"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="top" secondItem="cKA-l7-6LR" secondAttribute="top" id="trS-lB-Yk2"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="top" secondItem="cKA-l7-6LR" secondAttribute="top" id="trm-e8-INf"/>
+                            <constraint firstItem="mSp-7M-Mbu" firstAttribute="top" secondItem="cKA-l7-6LR" secondAttribute="top" id="xec-gt-CpE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cKA-l7-6LR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="game_controller" selectedImage="game_controller" id="EYe-xX-qGo"/>
+                    <connections>
+                        <outlet property="skview" destination="mSp-7M-Mbu" id="HX7-rq-jHf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecR-Y4-M0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,6 +122,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NEf-1T-Lsk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="npC-rl-6ib">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

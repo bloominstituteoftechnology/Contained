@@ -9,7 +9,8 @@
 import UIKit
 
 class InfoDetailViewController: InfoViewController {
-    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+    
+    @IBAction func done(_ sender: Any) { navigationController?.popToRootViewController(animated: true)
     }
     
 }
