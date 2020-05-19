@@ -14,4 +14,7 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var happyCrab = false
 }
+
+

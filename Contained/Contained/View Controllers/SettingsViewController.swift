@@ -16,19 +16,39 @@ class SettingsViewController: UIViewController {
     
     @IBAction func toggleRoll(_ sender: UISwitch) {
         // toggle switch from isOn to isOff
-        if sender.isOn  == true {
-            Settings.shared.shouldRoll = true
-        } else {
-            Settings.shared.shouldRoll = false
-        }
+        Settings.shared.shouldRoll = sender.isOn
     }
+//        if sender.isOn  == true {
+//            Settings.shared.shouldRoll = true
+//        } else {
+//            Settings.shared.shouldRoll = false
+//        }
+//    }
     
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        if sender.isOn == true {
-            Settings.shared.shouldZoom = true
+        Settings.shared.shouldZoom = sender.isOn
+}
+        //        if sender.isOn == true {
+//            Settings.shared.shouldZoom = true
+//        } else {
+//            Settings.shared.shouldZoom = false
+//        }
+//    }
+//}
+    
+    @IBAction func crabToggle(_ sender: UISwitch) {
+        Settings.shared.happyCrab = sender.isOn
+        if sender.isOn {
+            crabLabel.text = "Waiting Crab"
         } else {
-            Settings.shared.shouldZoom = false
+            crabLabel.text = "Happy Crab"
         }
     }
+    
+    
+    @IBOutlet weak var crabLabel: UILabel!
+    
 }
+
+
