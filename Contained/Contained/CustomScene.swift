@@ -1,0 +1,60 @@
+//
+//  CustomScene.swift
+//  Contained
+//
+//  Created by Sameera Leola on 11/14/18.
+//  Copyright © 2018 Sameera Leola. All rights reserved.
+//
+
+import SpriteKit
+
+class CustomScene: SKScene {
+    let crab = SKSpriteNode()
+    
+    // Add and center child, initializing animation sequence
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        addChild(crab)
+        //Get the crab sprite to play from Model
+        crab.loadTextures(named: Model.shared.getCrab(), forKey: SKSpriteNode.textureKey)
+         //crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
+        //Original code: crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        //Now the crab's position is set based on the postion stored in the Model
+        crab.position = Model.shared.getLastPosition()
+    }
+    
+    // Move to touch
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // Fetch a touch or leave
+        guard !touches.isEmpty, let touch = touches.first else { return }
+        
+        // Retrieve position
+        let position = touch.location(in: self)
+        //Save the last position when we resume play
+        Model.shared.saveLastPosition(position: position)
+        
+        // Create move action
+        let actionDuration = 1.0
+        let moveAction = SKAction.move(to: position, duration: actionDuration)
+        
+        let rollAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
+        let zoomAction = SKAction.scale(by: 1.3, duration: 0.3)
+        let unzoomAction = SKAction.scale(to: 1.0, duration: 0.1)
+        //Added fade out and fade in for transporting crab!
+        let doFadeOut = SKAction.fadeOut(withDuration: 0.1)
+        let doFadeIn = SKAction.fadeIn(withDuration: 0.1)
+        
+        switch Model.shared.shouldZoom {
+        case false:
+            crab.run(moveAction)
+        case true:
+            let sequenceAction = SKAction.sequence([zoomAction, doFadeOut, moveAction, doFadeIn, unzoomAction])
+            crab.run(sequenceAction)
+        }
+        
+        if Model.shared.shouldRoll {
+            crab.run(rollAction)
+        }
+    }
+}
