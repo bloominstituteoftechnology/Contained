@@ -16,6 +16,8 @@ class Settings {
     
     var shouldRoll = false
     var shouldZoom = false
+    var shouldFade = false
+    var shouldDance = false
     var texture = "HappyCrab"
     var lastPosition: CGPoint? = nil
 }

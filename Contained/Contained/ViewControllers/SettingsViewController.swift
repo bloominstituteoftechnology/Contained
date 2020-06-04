@@ -15,28 +15,37 @@ class SettingsViewController: UIViewController {
 
     }
     
+    @IBOutlet weak var toggleRoll: UISwitch!
+    @IBOutlet weak var toggleDance: UISwitch!
+    
     @IBAction func toggleRoll(_ sender: UISwitch) {
-        if Settings.shared.shouldRoll == false {
-            Settings.shared.shouldRoll = true
-        } else {
-            Settings.shared.shouldRoll = false
+        Settings.shared.shouldRoll = sender.isOn
+        if sender.isOn {
+            toggleDance.setOn(false, animated: true)
+            Settings.shared.shouldDance = false
         }
     }
     
     @IBAction func toggleZoom(_ sender: UISwitch) {
-        if Settings.shared.shouldZoom == false {
-            Settings.shared.shouldZoom = true
-        } else {
-            Settings.shared.shouldZoom = false
-        }
+        Settings.shared.shouldZoom = sender.isOn
     }
 
-    @IBOutlet weak var toggleTexture: UISegmentedControl!
+    @IBAction func toggleFade(_ sender: UISwitch) {
+        Settings.shared.shouldFade = sender.isOn
+    }
+    
+    @IBAction func toggleDance(_ sender: UISwitch) {
+        Settings.shared.shouldDance = sender.isOn
+        if sender.isOn {
+            toggleRoll.setOn(false, animated: true)
+            Settings.shared.shouldRoll = false
+        }
+    }
+    
     @IBAction func toggleTexture(_ sender: UISegmentedControl) {
-        switch toggleTexture.selectedSegmentIndex {
-        case 1:
+        if sender.selectedSegmentIndex == 1 {
             Settings.shared.texture = "WaitingCrab"
-        default:
+        } else {
             Settings.shared.texture = "HappyCrab"
         }
     }
