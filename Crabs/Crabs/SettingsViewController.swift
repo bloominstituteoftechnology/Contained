@@ -11,12 +11,18 @@ import UIKit
 class SettingsViewController: UIViewController {
  
     @IBOutlet weak var toggleRoll: UISwitch!
-    func toggleRollOn (isOn: Bool) {
-        if toggleRoll.isOn == true {
-            
-        }
+    func toggleRollOn(_: Bool, animated: Bool){
+        
+        
     }
+    
+   
+
     @IBOutlet weak var toggleZoom: UISwitch!
+    func toggleZoomOn(_: Bool, animated: Bool) {
+        
+    }
+
     
     
     override func viewDidLoad() {
@@ -25,7 +31,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+}
     /*
     // MARK: - Navigation
 
@@ -36,4 +42,4 @@ class SettingsViewController: UIViewController {
     }
     */
 
-}
+
