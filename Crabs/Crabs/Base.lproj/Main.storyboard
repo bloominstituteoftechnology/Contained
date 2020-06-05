@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9RY-Kj-EyS">
-                                <rect key="frame" x="129" y="381.5" width="156.5" height="133"/>
+                                <rect key="frame" x="156.5" y="372" width="101.5" height="152"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Hc-Dx-sqM">
-                                        <rect key="frame" x="35.5" y="0.0" width="85" height="31"/>
+                                        <rect key="frame" x="8" y="0.0" width="85" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evi-XS-o3X">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
@@ -30,11 +30,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wi-U6-V7i">
                                                 <rect key="frame" x="36" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="pWf-Tz-5of" eventType="valueChanged" id="kfw-R8-Uro"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-K4-Gpo">
-                                        <rect key="frame" x="27.5" y="51" width="101.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="51" width="101.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKu-pW-8ga">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
@@ -44,22 +47,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-dF-WKc">
                                                 <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="pWf-Tz-5of" eventType="valueChanged" id="e3s-OL-5tu"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7FW-Ci-1JS">
-                                        <rect key="frame" x="0.0" y="102" width="156.5" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Crab?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVP-yp-pPg">
-                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-O7-yKg">
-                                                <rect key="frame" x="107.5" y="0.0" width="51" height="31"/>
-                                            </switch>
-                                        </subviews>
+                                        <rect key="frame" x="25.5" y="102" width="50" height="50"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -99,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O4-QH-fsr" customClass="ARSKView">
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O4-QH-fsr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </skView>
                         </subviews>
