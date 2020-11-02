@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dMt-7F-KoV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First InfoVC-->
+        <scene sceneID="xZu-vZ-AFh">
+            <objects>
+                <viewController id="JbR-qL-0xH" customClass="FirstInfoVC" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q2S-FE-Za1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uUf-f0-ltq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qOK-AZ-nNx">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="3vc-ql-Dhh">
+                            <connections>
+                                <segue destination="OMN-iX-aJE" kind="show" id="zKa-2o-zO8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1f-b4-Vo3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="187.5"/>
+        </scene>
+        <!--Second InfoVC-->
+        <scene sceneID="TaC-PB-LVl">
+            <objects>
+                <viewController id="OMN-iX-aJE" customClass="SecondInfoVC" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uoq-Lf-Gun">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IWj-eJ-xbv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WjP-JG-84u">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Hzm-iH-e5G">
+                            <connections>
+                                <segue destination="3FV-LL-qCv" kind="show" id="wYb-7v-XIK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEj-E3-Okx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2870" y="205"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="htv-eF-vLG">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNavigation" automaticallyAdjustsScrollViewInsets="NO" id="dMt-7F-KoV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="i5E-fo-wT6"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gax-We-JUW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JbR-qL-0xH" kind="relationship" relationship="rootViewController" id="e8A-JI-SJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="768-Au-ktM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="187.5"/>
+        </scene>
+        <!--Third InfoVC-->
+        <scene sceneID="af5-GO-5XL">
+            <objects>
+                <viewController id="3FV-LL-qCv" customClass="ThirdInfoVC" customModule="CrabGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QBf-tb-jdG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TmJ-hx-fXB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="STy-Iy-zrO">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Vja-Re-78s">
+                            <connections>
+                                <action selector="doneTapped:" destination="3FV-LL-qCv" id="XkK-Pg-Km4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWN-6x-u8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3729" y="216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+    </resources>
+</document>
