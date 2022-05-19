@@ -18,4 +18,8 @@ class SettingsViewController: UIViewController {
         Settings.shared.shouldZoom = sender.isOn
     }
     
+    @IBAction func toggleHappyCrab(_ sender: UISwitch) {
+        Settings.shared.happyCrab = sender.isOn
+    }
+    
 }
