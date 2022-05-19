@@ -29,7 +29,10 @@
                             <constraint firstItem="nOY-Dz-m2d" firstAttribute="top" secondItem="n66-a9-kEx" secondAttribute="top" id="wl8-3J-Uv7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" id="Zka-cL-CLY"/>
+                    <tabBarItem key="tabBarItem" title="Play" selectedImage="gamecontroller.fill" catalog="system" id="Zka-cL-CLY"/>
+                    <connections>
+                        <outlet property="skView" destination="nOY-Dz-m2d" id="n2c-tA-jcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqq-DV-WqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +107,7 @@
                             <constraint firstItem="RnT-jM-CPE" firstAttribute="centerY" secondItem="Xjf-AI-cmZ" secondAttribute="centerY" id="h7D-Ge-rdS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="BaH-3v-Hbc"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gear.circle.fill" catalog="system" id="BaH-3v-Hbc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnJ-d5-q6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,9 +123,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xga-6B-DHD" kind="relationship" relationship="viewControllers" id="xKY-lH-Ehd"/>
-                        <segue destination="0me-AI-6ET" kind="relationship" relationship="viewControllers" id="YrH-qI-ciQ"/>
-                        <segue destination="tEB-fa-USn" kind="relationship" relationship="viewControllers" id="TWa-l3-HXp"/>
+                        <segue destination="tEB-fa-USn" kind="relationship" relationship="viewControllers" id="Iz9-CJ-DHs"/>
+                        <segue destination="xga-6B-DHD" kind="relationship" relationship="viewControllers" id="arW-1C-znB"/>
+                        <segue destination="0me-AI-6ET" kind="relationship" relationship="viewControllers" id="Pos-Dl-4La"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEg-Ub-c5R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,6 +144,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
