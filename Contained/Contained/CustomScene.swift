@@ -16,7 +16,7 @@ class CustomScene: SKScene {
         super.sceneDidLoad()
         addChild(crab)
         crab.loadTextures(named: "HappyCrab", forKey: SKSpriteNode.textureKey)
-        crab.position = CGPoint(x: frame.midX, y: frame.midY)
+        crab.position = Settings.shared.lastCrabPosition ?? CGPoint(x: frame.midX, y: frame.midY)
     }
     
     // Move to touch
@@ -27,6 +27,7 @@ class CustomScene: SKScene {
         
         // Retrieve position
         let position = touch.location(in: self)
+        Settings.shared.lastCrabPosition = position
         
         // Create move action
         let actionDuration = 1.0
